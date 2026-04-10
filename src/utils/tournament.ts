@@ -119,9 +119,10 @@ function createGroupMatches(teams: Country[], groupName: string): GroupMatch[] {
 }
 
 // 랭킹 기반 골 기대값 계산 (랭킹 높을수록 더 많은 골 기대)
-function rankToStrength(rank: number): number {
-	// 1위 → 3.0, 50위 → 1.5, 140위 → 0.8
-	return Math.max(0.8, 3.0 - (rank - 1) * 0.016);
+// modifier: -2 ~ +2 (각 레벨당 ±0.4 강도 변동)
+function rankToStrength(rank: number, modifier = 0): number {
+	const base = Math.max(0.8, 3.0 - (rank - 1) * 0.016);
+	return Math.max(0.4, base + modifier * 0.4);
 }
 
 function weightedGoals(strength: number): number {
@@ -138,10 +139,15 @@ function weightedGoals(strength: number): number {
 	return goals;
 }
 
-// 단일 조별 매치 시뮬레이션 (무승부 허용, 랭킹 반영)
-export function simulateGroupMatch(match: GroupMatch): GroupMatch {
-	const s1 = rankToStrength(match.team1.rank);
-	const s2 = rankToStrength(match.team2.rank);
+// 단일 조별 매치 시뮬레이션 (무승부 허용, 랭킹+modifier 반영)
+export function simulateGroupMatch(
+	match: GroupMatch,
+	modifiers?: Map<string, number>,
+): GroupMatch {
+	const m1 = modifiers?.get(match.team1.code) ?? 0;
+	const m2 = modifiers?.get(match.team2.code) ?? 0;
+	const s1 = rankToStrength(match.team1.rank, m1);
+	const s2 = rankToStrength(match.team2.rank, m2);
 	const score1 = weightedGoals(s1);
 	const score2 = weightedGoals(s2);
 	return { ...match, score1, score2, played: true };
@@ -203,9 +209,12 @@ export function recalcStandings(group: Group): GroupStanding[] {
 }
 
 // 조별 리그 전체 시뮬레이션
-export function simulateGroup(group: Group): Group {
+export function simulateGroup(
+	group: Group,
+	modifiers?: Map<string, number>,
+): Group {
 	const matches = group.matches.map((m) =>
-		m.played ? m : simulateGroupMatch(m),
+		m.played ? m : simulateGroupMatch(m, modifiers),
 	);
 	const updated = { ...group, matches };
 	const standings = recalcStandings(updated);
@@ -297,10 +306,15 @@ export function createMatches(teams: Country[], roundPrefix: string): Match[] {
 	return matches;
 }
 
-// 토너먼트 단일 매치 시뮬레이션 (무승부 없음, 승부차기, 랭킹 반영)
-export function simulateMatch(match: Match): Match {
-	const s1 = rankToStrength(match.team1.rank);
-	const s2 = rankToStrength(match.team2.rank);
+// 토너먼트 단일 매치 시뮬레이션 (무승부 없음, 승부차기, 랭킹+modifier 반영)
+export function simulateMatch(
+	match: Match,
+	modifiers?: Map<string, number>,
+): Match {
+	const m1 = modifiers?.get(match.team1.code) ?? 0;
+	const m2 = modifiers?.get(match.team2.code) ?? 0;
+	const s1 = rankToStrength(match.team1.rank, m1);
+	const s2 = rankToStrength(match.team2.rank, m2);
 	let score1 = weightedGoals(s1);
 	let score2 = weightedGoals(s2);
 
@@ -323,8 +337,11 @@ export function simulateMatch(match: Match): Match {
 	};
 }
 
-export function simulateRound(matches: Match[]): Match[] {
-	return matches.map((m) => (m.played ? m : simulateMatch(m)));
+export function simulateRound(
+	matches: Match[],
+	modifiers?: Map<string, number>,
+): Match[] {
+	return matches.map((m) => (m.played ? m : simulateMatch(m, modifiers)));
 }
 
 export function getWinners(matches: Match[]): Country[] {

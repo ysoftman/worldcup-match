@@ -8,7 +8,11 @@ interface GroupViewProps {
 	onPlayMatch: (groupName: string, matchId: string) => void;
 	swapSelection: { groupName: string; team: Country } | null;
 	onSwapSelect: (groupName: string, team: Country) => void;
+	teamModifiers: Map<string, number>;
+	onChangeModifier: (teamCode: string, delta: number) => void;
 }
+
+const MOD_LABELS = ["▼▼", "▼", "", "▲", "▲▲"];
 
 export function GroupView({
 	group,
@@ -16,6 +20,8 @@ export function GroupView({
 	onPlayMatch,
 	swapSelection,
 	onSwapSelect,
+	teamModifiers,
+	onChangeModifier,
 }: GroupViewProps) {
 	const hasPlayedMatches = group.matches.some((m) => m.played);
 	const canSwap = !hasPlayedMatches;
@@ -24,7 +30,7 @@ export function GroupView({
 		<div className="group-card">
 			<h3 className="group-name">{group.name}</h3>
 
-			{/* 팀 목록 (경기 시작 전: 원형 배치, 클릭으로 교환 가능) */}
+			{/* 팀 목록 (경기 시작 전: 원형 배치, 클릭으로 교환 + 승률 조절) */}
 			{!hasPlayedMatches && (
 				<div className="group-circle">
 					{group.teams.map((t, idx) => {
@@ -38,17 +44,53 @@ export function GroupView({
 						const radius = 38;
 						const x = 50 + radius * Math.cos(rad);
 						const y = 50 + radius * Math.sin(rad);
+						const mod = teamModifiers.get(t.code) ?? 0;
 						return (
-							<button
-								type="button"
+							<div
 								key={t.code}
-								className={`circle-team ${isSelected ? "swap-selected" : ""} ${isSwapTarget ? "swap-target" : ""}`}
+								className="circle-slot"
 								style={{ left: `${x}%`, top: `${y}%` }}
-								onClick={() => canSwap && onSwapSelect(group.name, t)}
 							>
-								<span className="circle-flag">{t.flag}</span>
-								<span className="circle-name">{t.nameKo}</span>
-							</button>
+								<div className="circle-row">
+									<button
+										type="button"
+										className="mod-btn"
+										disabled={mod <= -2}
+										onClick={(e) => {
+											e.stopPropagation();
+											onChangeModifier(t.code, -1);
+										}}
+									>
+										-
+									</button>
+									<button
+										type="button"
+										className={`circle-team ${isSelected ? "swap-selected" : ""} ${isSwapTarget ? "swap-target" : ""}`}
+										onClick={() => canSwap && onSwapSelect(group.name, t)}
+									>
+										<span className="circle-flag">{t.flag}</span>
+										<span className="circle-name">{t.nameKo}</span>
+										{mod !== 0 && (
+											<span
+												className={`mod-indicator ${mod > 0 ? "mod-up" : "mod-down"}`}
+											>
+												{MOD_LABELS[mod + 2]}
+											</span>
+										)}
+									</button>
+									<button
+										type="button"
+										className="mod-btn"
+										disabled={mod >= 2}
+										onClick={(e) => {
+											e.stopPropagation();
+											onChangeModifier(t.code, 1);
+										}}
+									>
+										+
+									</button>
+								</div>
+							</div>
 						);
 					})}
 				</div>
@@ -77,6 +119,7 @@ export function GroupView({
 							const stats = teamStats.get(s.team.code);
 							const gd = s.goalsFor - s.goalsAgainst;
 							const allDone = group.played;
+							const mod = teamModifiers.get(s.team.code) ?? 0;
 							return (
 								<tr
 									key={s.team.code}
@@ -88,6 +131,13 @@ export function GroupView({
 									<td className="team-cell">
 										<span className="flag-sm">{s.team.flag}</span>
 										{s.team.nameKo}
+										{mod !== 0 && (
+											<span
+												className={`mod-badge ${mod > 0 ? "mod-up" : "mod-down"}`}
+											>
+												{MOD_LABELS[mod + 2]}
+											</span>
+										)}
 									</td>
 									<td>{s.played}</td>
 									<td>{s.wins}</td>

@@ -61,6 +61,9 @@ function App() {
 	const [currentRoundIndex, setCurrentRoundIndex] = useState(-1);
 	const [champion, setChampion] = useState<Country | null>(null);
 	const [animating, setAnimating] = useState(false);
+	const [teamModifiers, setTeamModifiers] = useState<Map<string, number>>(
+		() => new Map(),
+	);
 	const [swapSelection, setSwapSelection] = useState<{
 		groupName: string;
 		team: Country;
@@ -205,6 +208,21 @@ function App() {
 		[swapSelection],
 	);
 
+	// 팀 승률 modifier 변경
+	const changeModifier = useCallback((teamCode: string, delta: number) => {
+		setTeamModifiers((prev) => {
+			const next = new Map(prev);
+			const cur = next.get(teamCode) ?? 0;
+			const val = Math.max(-2, Math.min(2, cur + delta));
+			if (val === 0) {
+				next.delete(teamCode);
+			} else {
+				next.set(teamCode, val);
+			}
+			return next;
+		});
+	}, []);
+
 	// 조별 리그 개별 매치 진행 (순위 업데이트는 애니메이션 후 지연)
 	const playGroupMatch = useCallback(
 		(groupName: string, matchId: string) => {
@@ -215,7 +233,9 @@ function App() {
 			const newGroups = groups.map((g) => {
 				if (g.name !== groupName) return g;
 				const newMatches = g.matches.map((m) =>
-					m.id === matchId && !m.played ? simulateGroupMatch(m) : m,
+					m.id === matchId && !m.played
+						? simulateGroupMatch(m, teamModifiers)
+						: m,
 				);
 				return { ...g, matches: newMatches };
 			});
@@ -235,15 +255,15 @@ function App() {
 				setAnimating(false);
 			}, SCORE_ANIM_DELAY);
 		},
-		[groups, animating],
+		[groups, animating, teamModifiers],
 	);
 
 	// 조별 리그 전체 진행
 	const playAllGroupMatches = useCallback(() => {
 		playClick();
-		const simulated = groups.map(simulateGroup);
+		const simulated = groups.map((g) => simulateGroup(g, teamModifiers));
 		setGroups(simulated);
-	}, [groups]);
+	}, [groups, teamModifiers]);
 
 	// 조별 리그 → 토너먼트 전환
 	const advanceToKnockout = useCallback(() => {
@@ -266,7 +286,7 @@ function App() {
 			playWhistle();
 			const current = rounds[currentRoundIndex];
 			const newMatches = current.matches.map((m) =>
-				m.id === matchId && !m.played ? simulateMatch(m) : m,
+				m.id === matchId && !m.played ? simulateMatch(m, teamModifiers) : m,
 			);
 			const updatedRounds = [...rounds];
 			updatedRounds[currentRoundIndex] = { ...current, matches: newMatches };
@@ -298,7 +318,7 @@ function App() {
 				setRounds(updatedRounds);
 			}
 		},
-		[rounds, currentRoundIndex, roundOrder, recordWinner],
+		[rounds, currentRoundIndex, roundOrder, recordWinner, teamModifiers],
 	);
 
 	// 토너먼트 현재 라운드 전체 진행 (완료 시 자동 다음 라운드 생성)
@@ -306,7 +326,7 @@ function App() {
 		if (currentRoundIndex < 0 || champion) return;
 		playClick();
 		const current = rounds[currentRoundIndex];
-		const simulatedMatches = simulateRound(current.matches);
+		const simulatedMatches = simulateRound(current.matches, teamModifiers);
 		const updatedRounds = [...rounds];
 		updatedRounds[currentRoundIndex] = {
 			...current,
@@ -333,12 +353,20 @@ function App() {
 			setRounds(updatedRounds);
 			setCurrentRoundIndex(currentRoundIndex + 1);
 		}
-	}, [rounds, currentRoundIndex, champion, roundOrder, recordWinner]);
+	}, [
+		rounds,
+		currentRoundIndex,
+		champion,
+		roundOrder,
+		recordWinner,
+		teamModifiers,
+	]);
 
 	// 새 대회
 	const resetTournament = useCallback(() => {
 		clearTimeout(animTimer.current);
 		setAnimating(false);
+		setTeamModifiers(new Map());
 		setSelectedTeams(selectTeams(tournamentSize));
 		setGroups([]);
 		setRounds([]);
@@ -502,6 +530,8 @@ function App() {
 								onPlayMatch={playGroupMatch}
 								swapSelection={swapSelection}
 								onSwapSelect={handleSwapSelect}
+								teamModifiers={teamModifiers}
+								onChangeModifier={changeModifier}
 							/>
 						))}
 					</div>

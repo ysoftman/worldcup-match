@@ -42,10 +42,11 @@ function playSoundFile(key: string, volume = 0.4) {
 	src.start(0);
 }
 
-// 앱 시작 시 사전 로드
-loadSound("whistle", "/sounds/whistle.wav");
-loadSound("goal", "/sounds/goal.wav");
-loadSound("victory", "/sounds/victory.wav");
+// 앱 시작 시 사전 로드 (Vite base path 반영)
+const base = import.meta.env.BASE_URL;
+loadSound("whistle", `${base}sounds/whistle.wav`);
+loadSound("goal", `${base}sounds/goal.wav`);
+loadSound("victory", `${base}sounds/victory.wav`);
 
 export function isMuted(): boolean {
 	return muted;

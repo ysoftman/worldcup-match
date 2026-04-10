@@ -826,6 +826,77 @@
 	text-align: center;
 }
 
+/* 원형 슬롯 (- 국가 +) */
+.circle-slot {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.circle-row {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+
+.circle-slot .circle-team {
+	position: static;
+	transform: none;
+}
+
+/* 승률 +/- 버튼 */
+.mod-btn {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #dee2e6;
+	border-radius: 50%;
+	background: #fff;
+	font-size: 0.75rem;
+	font-weight: 700;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	color: #7f8c8d;
+	transition: all 0.15s;
+	font-family: inherit;
+	flex-shrink: 0;
+}
+
+.mod-btn:hover:not(:disabled) {
+	background: #3498db;
+	color: #fff;
+	border-color: #3498db;
+	transform: scale(1.15);
+}
+
+.mod-btn:disabled {
+	opacity: 0.25;
+	cursor: default;
+}
+
+/* 국기 안 modifier 표시 */
+.mod-indicator {
+	font-size: 0.5rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.mod-up {
+	color: #27ae60;
+}
+
+.mod-down {
+	color: #e74c3c;
+}
+
+/* 순위표 modifier 배지 */
+.mod-badge {
+	font-size: 0.6rem;
+	font-weight: 700;
+	margin-left: 2px;
+}
+
 .swap-hint {
 	text-align: center;
 	font-size: 0.85rem;
@@ -1726,6 +1797,18 @@
 
 	.group-circle::before {
 		border-color: rgba(212, 172, 13, 0.15);
+	}
+
+	.mod-btn {
+		background: #34495e;
+		border-color: #4a6274;
+		color: #bdc3c7;
+	}
+
+	.mod-btn:hover:not(:disabled) {
+		background: #3498db;
+		border-color: #3498db;
+		color: #fff;
 	}
 
 	.standings-table th {

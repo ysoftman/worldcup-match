@@ -46,9 +46,7 @@ interface RoundData {
 function getInitialTheme(): "light" | "dark" {
 	const saved = localStorage.getItem("theme");
 	if (saved === "light" || saved === "dark") return saved;
-	return window.matchMedia("(prefers-color-scheme: dark)").matches
-		? "dark"
-		: "light";
+	return "dark";
 }
 
 function App() {

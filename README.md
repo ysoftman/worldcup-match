@@ -4,9 +4,9 @@ FIFA 210 member nations, group stage and knockout tournament simulation web app.
 
 ## Features
 
-- 210 FIFA member nations with real rankings (April 2025)
+- 210 FIFA member nations with real rankings (April 2026)
 - 32-team (8 groups) and 48-team (12 groups) tournament formats
-- Presets: 2022 Qatar World Cup, 2026 North America World Cup
+- Presets: 2002, 2006, 2010, 2014, 2018, 2022, 2026 World Cup
 - Region-based random selection (Asia, Europe, Africa, Americas, Oceania, etc.)
 - Group stage with standings table and wildcard 3rd-place advancement (48-team)
 - Knockout bracket with visual connectors and final match circle layout
@@ -47,7 +47,7 @@ bun run build
 src/
 ├── data/
 │   ├── countries.ts         # 210 FIFA nations (name, code, flag, rank, confederation)
-│   └── presets.ts           # Tournament presets (2022, 2026 World Cup)
+│   └── presets.ts           # Tournament presets (2002-2026 World Cup)
 ├── types.ts                 # Type definitions (Match, Group, Round, etc.)
 ├── utils/
 │   ├── tournament.ts        # Tournament logic (simulation, groups, brackets)

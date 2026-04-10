@@ -86,4 +86,92 @@ export const PRESET_2018: Preset = {
 	],
 };
 
-export const ALL_PRESETS: Preset[] = [PRESET_2026, PRESET_2022, PRESET_2018];
+/** 2014 브라질 월드컵 (32팀, 8조) */
+export const PRESET_2014: Preset = {
+	id: "2014",
+	label: "2014 브라질 월드컵",
+	size: 32,
+	groups: [
+		{ name: "A조", teams: [find("BR"), find("HR"), find("MX"), find("CM")] },
+		{ name: "B조", teams: [find("ES"), find("NL"), find("CL"), find("AU")] },
+		{ name: "C조", teams: [find("CO"), find("GR"), find("CI"), find("JP")] },
+		{
+			name: "D조",
+			teams: [find("UY"), find("CR"), find("GB-ENG"), find("IT")],
+		},
+		{ name: "E조", teams: [find("CH"), find("EC"), find("FR"), find("HN")] },
+		{ name: "F조", teams: [find("AR"), find("BA"), find("IR"), find("NG")] },
+		{ name: "G조", teams: [find("DE"), find("PT"), find("GH"), find("US")] },
+		{ name: "H조", teams: [find("BE"), find("DZ"), find("RU"), find("KR")] },
+	],
+};
+
+/** 2010 남아공 월드컵 (32팀, 8조) */
+export const PRESET_2010: Preset = {
+	id: "2010",
+	label: "2010 남아공 월드컵",
+	size: 32,
+	groups: [
+		{ name: "A조", teams: [find("ZA"), find("MX"), find("UY"), find("FR")] },
+		{ name: "B조", teams: [find("AR"), find("NG"), find("KR"), find("GR")] },
+		{
+			name: "C조",
+			teams: [find("GB-ENG"), find("US"), find("DZ"), find("SI")],
+		},
+		{ name: "D조", teams: [find("DE"), find("AU"), find("RS"), find("GH")] },
+		{ name: "E조", teams: [find("NL"), find("DK"), find("JP"), find("CM")] },
+		{ name: "F조", teams: [find("IT"), find("PY"), find("NZ"), find("SK")] },
+		{ name: "G조", teams: [find("BR"), find("KP"), find("CI"), find("PT")] },
+		{ name: "H조", teams: [find("ES"), find("CH"), find("HN"), find("CL")] },
+	],
+};
+
+/** 2006 독일 월드컵 (32팀, 8조) */
+export const PRESET_2006: Preset = {
+	id: "2006",
+	label: "2006 독일 월드컵",
+	size: 32,
+	groups: [
+		{ name: "A조", teams: [find("DE"), find("CR"), find("PL"), find("EC")] },
+		{
+			name: "B조",
+			teams: [find("GB-ENG"), find("PY"), find("TT"), find("SE")],
+		},
+		{ name: "C조", teams: [find("AR"), find("CI"), find("RS"), find("NL")] },
+		{ name: "D조", teams: [find("MX"), find("IR"), find("AO"), find("PT")] },
+		{ name: "E조", teams: [find("IT"), find("GH"), find("US"), find("CZ")] },
+		{ name: "F조", teams: [find("BR"), find("HR"), find("AU"), find("JP")] },
+		{ name: "G조", teams: [find("FR"), find("CH"), find("KR"), find("TG")] },
+		{ name: "H조", teams: [find("ES"), find("UA"), find("TN"), find("SA")] },
+	],
+};
+
+/** 2002 한일 월드컵 (32팀, 8조) */
+export const PRESET_2002: Preset = {
+	id: "2002",
+	label: "2002 한일 월드컵",
+	size: 32,
+	groups: [
+		{ name: "A조", teams: [find("FR"), find("SN"), find("UY"), find("DK")] },
+		{ name: "B조", teams: [find("ES"), find("SI"), find("PY"), find("ZA")] },
+		{ name: "C조", teams: [find("BR"), find("TR"), find("CN"), find("CR")] },
+		{ name: "D조", teams: [find("KR"), find("PL"), find("US"), find("PT")] },
+		{ name: "E조", teams: [find("DE"), find("SA"), find("IE"), find("CM")] },
+		{
+			name: "F조",
+			teams: [find("AR"), find("NG"), find("GB-ENG"), find("SE")],
+		},
+		{ name: "G조", teams: [find("IT"), find("EC"), find("HR"), find("MX")] },
+		{ name: "H조", teams: [find("JP"), find("BE"), find("RU"), find("TN")] },
+	],
+};
+
+export const ALL_PRESETS: Preset[] = [
+	PRESET_2026,
+	PRESET_2022,
+	PRESET_2018,
+	PRESET_2014,
+	PRESET_2010,
+	PRESET_2006,
+	PRESET_2002,
+];

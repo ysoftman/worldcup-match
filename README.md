@@ -1,45 +1,69 @@
-# FIFA 월드컵 시뮬레이터
+# FIFA World Cup Simulator
 
-56개국 중 32개국을 랜덤 선택하여 토너먼트를 진행하는 가상 월드컵 웹앱입니다.
+FIFA 210 member nations, group stage and knockout tournament simulation web app.
 
-## 기능
+## Features
 
-- 56개국 중 32개국 랜덤 추첨
-- 버튼 클릭으로 라운드별 경기 진행 (32강 -> 16강 -> 8강 -> 4강 -> 결승)
-- 동점 시 승부차기 자동 처리
-- 우승팀 트로피 애니메이션
-- 다크 모드 지원
+- 210 FIFA member nations with real rankings (April 2025)
+- 32-team (8 groups) and 48-team (12 groups) tournament formats
+- Presets: 2022 Qatar World Cup, 2026 North America World Cup
+- Region-based random selection (Asia, Europe, Africa, Americas, Oceania, etc.)
+- Group stage with standings table and wildcard 3rd-place advancement (48-team)
+- Knockout bracket with visual connectors and final match circle layout
+- Match simulation based on FIFA ranking (Poisson distribution)
+- Team strength modifier (-2 to +2) and team swap between groups
+- Win/lose/draw color indicators (green/red/orange)
+- Winner history stored in localStorage
+- Dark/light mode toggle
+- Sound effects (whistle, goal, victory, crowd ambience)
+- Responsive design (desktop and mobile)
+- FIFA ranking popup with confederation filter
 
-## 기술 스택
+## Match Simulation
+
+Match results are determined by a Poisson distribution based on FIFA ranking:
+
+1. Ranking to strength: `max(0.8, 3.0 - (rank - 1) * 0.016) + modifier * 0.4`
+2. Goals: random draw from Poisson distribution with strength as mean
+3. Knockout ties: penalty shootout with slight advantage to higher-ranked team
+
+## Tech Stack
 
 - Vite + React + TypeScript
-- bun (패키지 매니저)
+- Biome (linter/formatter)
+- bun (package manager)
 
-## 실행 방법
+## Getting Started
 
 ```bash
-# 의존성 설치
 bun install
-
-# 개발 서버 실행
 bun run dev
-
-# 프로덕션 빌드
 bun run build
 ```
 
-## 프로젝트 구조
+## Project Structure
 
 ```text
 src/
-├── data/countries.ts        # 국가 데이터 (이름, 코드, 국기)
-├── types.ts                 # 타입 정의 (Match, Round 등)
-├── utils/tournament.ts      # 토너먼트 로직 (셔플, 매치 생성, 시뮬레이션)
+├── data/
+│   ├── countries.ts         # 210 FIFA nations (name, code, flag, rank, confederation)
+│   └── presets.ts           # Tournament presets (2022, 2026 World Cup)
+├── types.ts                 # Type definitions (Match, Group, Round, etc.)
+├── utils/
+│   ├── tournament.ts        # Tournament logic (simulation, groups, brackets)
+│   └── sounds.ts            # Sound effects management
 ├── components/
-│   ├── MatchCard.tsx        # 개별 매치 카드 컴포넌트
-│   ├── RoundView.tsx        # 라운드별 매치 목록 컴포넌트
-│   └── Champion.tsx         # 우승팀 표시 컴포넌트
-├── App.tsx                  # 메인 앱 (토너먼트 상태 관리)
-├── App.css                  # 앱 스타일 (다크모드 포함)
-└── index.css                # 글로벌 스타일
+│   ├── BracketView.tsx      # Knockout bracket with connectors
+│   ├── GroupView.tsx         # Group stage standings and matches
+│   ├── GroupMatchCard.tsx    # Group match card
+│   ├── MatchCard.tsx         # Knockout match card
+│   ├── Champion.tsx          # Winner celebration display
+│   ├── TeamSelector.tsx      # Team selection with region filters
+│   ├── WinnerHistory.tsx     # Winner history panel
+│   ├── AnimatedScore.tsx     # Goal count-up animation
+│   ├── FifaRanking.tsx       # FIFA ranking popup
+│   └── RoundView.tsx         # Round view component
+├── App.tsx                   # Main app (tournament state management)
+├── App.css                   # App styles (dark mode, bracket, etc.)
+└── index.css                 # Global styles
 ```

@@ -3,6 +3,7 @@
 	margin: 0 auto;
 	padding: 20px;
 	position: relative;
+	overflow-x: hidden;
 }
 
 /* 우측 상단 패널 컨테이너 */
@@ -1947,6 +1948,7 @@
 
 	.size-selector {
 		gap: 6px;
+		flex-wrap: wrap;
 	}
 
 	.btn-size {
@@ -1976,6 +1978,7 @@
 
 	.group-card {
 		padding: 10px;
+		overflow: hidden;
 	}
 
 	.group-circle {
@@ -1999,6 +2002,15 @@
 
 	.standings-table {
 		font-size: 0.7rem;
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.standings-table thead,
+	.standings-table tbody {
+		display: table;
+		width: 100%;
 	}
 
 	.standings-table th,
@@ -2016,6 +2028,7 @@
 
 	.match-card {
 		padding: 8px 10px;
+		min-width: 0;
 	}
 
 	.team .flag {
@@ -2050,6 +2063,10 @@
 
 	.group-matches .match-card .name {
 		font-size: 0.7rem;
+	}
+
+	.team .name .name-en {
+		display: none;
 	}
 
 	.round-title,
@@ -2106,26 +2123,46 @@
 		gap: 8px;
 	}
 
+	.top-panels {
+		right: 6px;
+		top: 6px;
+		gap: 4px;
+		max-width: calc(100vw - 12px);
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+
 	.sound-toggle {
-		width: 30px;
-		height: 30px;
-		font-size: 0.9rem;
+		width: 28px;
+		height: 28px;
+		font-size: 0.8rem;
 	}
 
 	.theme-toggle {
-		width: 30px;
-		height: 30px;
-		font-size: 0.9rem;
+		width: 28px;
+		height: 28px;
+		font-size: 0.8rem;
 	}
 
 	.ranking-toggle {
-		padding: 4px 10px;
-		font-size: 0.7rem;
+		padding: 3px 8px;
+		font-size: 0.65rem;
+	}
+
+	.history-toggle {
+		padding: 3px 8px;
+		font-size: 0.65rem;
 	}
 
 	.ranking-body {
-		width: 280px;
+		width: min(280px, calc(100vw - 24px));
 		max-height: 400px;
+		right: 0;
+	}
+
+	.history-body {
+		width: min(280px, calc(100vw - 24px));
+		right: 0;
 	}
 
 	/* 모바일 대진표 */

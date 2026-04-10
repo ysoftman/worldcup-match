@@ -24,7 +24,8 @@ export function GroupMatchCard({ match, onClick }: GroupMatchCardProps) {
 			>
 				<span className="flag">{team1.flag}</span>
 				<span className="name">
-					{team1.nameKo}({team1.name})
+					{team1.nameKo}
+					<span className="name-en">({team1.name})</span>
 				</span>
 				<AnimatedScore target={score1} active={played} className="score" />
 			</div>
@@ -34,7 +35,8 @@ export function GroupMatchCard({ match, onClick }: GroupMatchCardProps) {
 			>
 				<AnimatedScore target={score2} active={played} className="score" />
 				<span className="name">
-					{team2.nameKo}({team2.name})
+					{team2.nameKo}
+					<span className="name-en">({team2.name})</span>
 				</span>
 				<span className="flag">{team2.flag}</span>
 			</div>

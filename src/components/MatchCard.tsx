@@ -24,7 +24,8 @@ export function MatchCard({ match, teamStats, onClick }: MatchCardProps) {
 			>
 				<span className="flag">{team1.flag}</span>
 				<span className="name">
-					{team1.nameKo}({team1.name})
+					{team1.nameKo}
+					<span className="name-en">({team1.name})</span>
 				</span>
 				{stats1 && <span className="winrate-badge">{stats1.winRate}%</span>}
 				<AnimatedScore target={score1} active={played} className="score" />
@@ -36,7 +37,8 @@ export function MatchCard({ match, teamStats, onClick }: MatchCardProps) {
 				<AnimatedScore target={score2} active={played} className="score" />
 				{stats2 && <span className="winrate-badge">{stats2.winRate}%</span>}
 				<span className="name">
-					{team2.nameKo}({team2.name})
+					{team2.nameKo}
+					<span className="name-en">({team2.name})</span>
 				</span>
 				<span className="flag">{team2.flag}</span>
 			</div>

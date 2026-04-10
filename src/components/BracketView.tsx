@@ -314,15 +314,19 @@ export function BracketView({
 				{/* 결승 */}
 				<div className="bracket-center">
 					<div className="b-label">{ROUND_LABELS.final}</div>
-					{finalRound ? (
-						<FinalMatchCard
-							match={finalRound.matches[0]}
-							teamStats={teamStats}
-							onClick={() => onPlayMatch(finalRound.matches[0].id)}
-						/>
-					) : (
-						<FinalPlaceholder />
-					)}
+					<div className="final-wrapper">
+						<div className="final-line" />
+						{finalRound ? (
+							<FinalMatchCard
+								match={finalRound.matches[0]}
+								teamStats={teamStats}
+								onClick={() => onPlayMatch(finalRound.matches[0].id)}
+							/>
+						) : (
+							<FinalPlaceholder />
+						)}
+						<div className="final-line" />
+					</div>
 				</div>
 
 				{/* 결승 연결선 (우) */}

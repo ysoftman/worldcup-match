@@ -5,12 +5,20 @@
 	position: relative;
 }
 
-/* 우승 기록 패널 */
-.history-panel {
+/* 우측 상단 패널 컨테이너 */
+.top-panels {
 	position: fixed;
 	top: 12px;
 	right: 12px;
 	z-index: 100;
+	display: flex;
+	gap: 8px;
+	align-items: flex-start;
+}
+
+/* 우승 기록 패널 */
+.history-panel {
+	position: relative;
 }
 
 .history-toggle {
@@ -134,10 +142,6 @@
 
 /* 사운드 토글 */
 .sound-toggle {
-	position: fixed;
-	top: 12px;
-	right: 200px;
-	z-index: 100;
 	width: 36px;
 	height: 36px;
 	border: 2px solid #dee2e6;
@@ -165,10 +169,6 @@
 
 /* 테마 토글 */
 .theme-toggle {
-	position: fixed;
-	top: 12px;
-	right: 244px;
-	z-index: 100;
 	width: 36px;
 	height: 36px;
 	border: 2px solid #dee2e6;
@@ -210,10 +210,7 @@
 
 /* FIFA 랭킹 패널 */
 .ranking-panel {
-	position: fixed;
-	top: 12px;
-	right: 288px;
-	z-index: 100;
+	position: relative;
 }
 
 .ranking-toggle {
@@ -1583,33 +1580,46 @@
 	background: #c5a028;
 }
 
-/* 결승 연결선 */
+/* 결승 연결선: bracket-half 슬롯패딩(8px)까지 커버 */
 .b-final-line {
-	width: 0;
-	min-width: 0;
+	width: 16px;
+	min-width: 16px;
+	display: flex;
+	align-items: center;
 	padding-top: 22px;
-	position: relative;
+	overflow: visible;
 }
 
 .b-final-line::after {
 	content: "";
-	position: absolute;
-	left: -150px;
-	right: -150px;
-	top: calc(50% + 11px);
+	flex: 0 0 calc(100% + 8px);
+	margin-left: -8px;
 	height: 2px;
 	background: #c5a028;
-	z-index: 0;
 }
 
 /* 결승 중앙 */
 .bracket-center {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: stretch;
 	justify-content: center;
-	padding: 0 12px;
-	min-width: 220px;
+	padding: 0 20px;
+	min-width: 260px;
+}
+
+/* 결승 카드 + 좌우 연결선 래퍼 */
+.final-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+/* 결승 연결선: bracket-center 패딩에서 카드 가장자리까지 (카드 위로 가지 않음) */
+.final-line {
+	flex: 1;
+	height: 2px;
+	background: #c5a028;
+	min-width: 4px;
 }
 
 .bracket-center .b-label {
@@ -1653,11 +1663,6 @@
 
 .final-card:disabled {
 	cursor: default;
-}
-
-.final-card.final-placeholder {
-	opacity: 0.35;
-	border-style: dashed;
 }
 
 .final-team {
@@ -1739,6 +1744,19 @@
 	flex-shrink: 0;
 }
 
+.final-card.final-placeholder {
+	border-style: dashed;
+	border-color: #c0c0c0;
+	background: #eef0f2;
+}
+
+.final-card.final-placeholder .final-circle,
+.final-card.final-placeholder .final-name,
+.final-card.final-placeholder .final-score,
+.final-card.final-placeholder .final-vs {
+	opacity: 0.3;
+}
+
 /* 결승 다크모드 */
 [data-theme="dark"] .final-card {
 	background: linear-gradient(135deg, #2c2a1a, #3d3520);
@@ -1781,7 +1799,7 @@
 }
 
 [data-theme="dark"] .final-card.final-placeholder {
-	background: #2a2e38;
+	background: #1e2230;
 	border-color: #3d4f63;
 }
 
@@ -2103,21 +2121,15 @@
 	}
 
 	.sound-toggle {
-		right: 160px;
 		width: 30px;
 		height: 30px;
 		font-size: 0.9rem;
 	}
 
 	.theme-toggle {
-		right: 198px;
 		width: 30px;
 		height: 30px;
 		font-size: 0.9rem;
-	}
-
-	.ranking-panel {
-		right: 236px;
 	}
 
 	.ranking-toggle {
@@ -2128,7 +2140,6 @@
 	.ranking-body {
 		width: 280px;
 		max-height: 400px;
-		right: -100px;
 	}
 
 	/* 모바일 대진표 */
@@ -2157,11 +2168,6 @@
 	.b-conn {
 		width: 20px;
 		min-width: 20px;
-	}
-
-	.b-final-line {
-		width: 0;
-		min-width: 0;
 	}
 
 	.bracket-center {
@@ -2567,6 +2573,7 @@
 [data-theme="dark"] .b-conn-right .b-conn-pair::after,
 [data-theme="dark"] .b-conn-right .b-conn-top::after,
 [data-theme="dark"] .b-conn-right .b-conn-bot::after,
-[data-theme="dark"] .b-final-line::after {
+[data-theme="dark"] .b-final-line::after,
+[data-theme="dark"] .final-line {
 	background: #8b7420;
 }

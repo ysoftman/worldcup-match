@@ -412,24 +412,26 @@ function App() {
 
 	return (
 		<div className="app">
-			<FifaRanking />
-			<WinnerHistory />
-			<button
-				type="button"
-				className="theme-toggle"
-				onClick={toggleTheme}
-				title={theme === "dark" ? "라이트 모드" : "다크 모드"}
-			>
-				{theme === "dark" ? "☀️" : "🌙"}
-			</button>
-			<button
-				type="button"
-				className={`sound-toggle ${soundOn ? "on" : "off"}`}
-				onClick={toggleSound}
-				title={soundOn ? "사운드 끄기" : "사운드 켜기"}
-			>
-				{soundOn ? "🔊" : "🔇"}
-			</button>
+			<div className="top-panels">
+				<button
+					type="button"
+					className="theme-toggle"
+					onClick={toggleTheme}
+					title={theme === "dark" ? "라이트 모드" : "다크 모드"}
+				>
+					{theme === "dark" ? "☀️" : "🌙"}
+				</button>
+				<button
+					type="button"
+					className={`sound-toggle ${soundOn ? "on" : "off"}`}
+					onClick={toggleSound}
+					title={soundOn ? "사운드 끄기" : "사운드 켜기"}
+				>
+					{soundOn ? "🔊" : "🔇"}
+				</button>
+				<FifaRanking />
+				<WinnerHistory />
+			</div>
 			<header className="header">
 				<h1 className="title">
 					<span className="title-author">윤준영의</span>

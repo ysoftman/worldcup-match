@@ -1,0 +1,39 @@
+import type { GroupMatch } from "../types";
+import { AnimatedScore } from "./AnimatedScore";
+
+interface GroupMatchCardProps {
+	match: GroupMatch;
+	onClick: () => void;
+}
+
+export function GroupMatchCard({ match, onClick }: GroupMatchCardProps) {
+	const { team1, team2, score1, score2, played } = match;
+	const isDraw = played && score1 === score2;
+	const team1Win = played && score1 > score2;
+	const team2Win = played && score2 > score1;
+
+	return (
+		<button
+			type="button"
+			className={`match-card clickable ${played ? "played" : "pending"}`}
+			onClick={onClick}
+			disabled={played}
+		>
+			<div className={`team ${team1Win ? "winner" : ""}`}>
+				<span className="flag">{team1.flag}</span>
+				<span className="name">
+					{team1.nameKo}({team1.name})
+				</span>
+				<AnimatedScore target={score1} active={played} className="score" />
+			</div>
+			<div className="vs">{played ? (isDraw ? "무" : "-") : "vs"}</div>
+			<div className={`team ${team2Win ? "winner" : ""}`}>
+				<AnimatedScore target={score2} active={played} className="score" />
+				<span className="name">
+					{team2.nameKo}({team2.name})
+				</span>
+				<span className="flag">{team2.flag}</span>
+			</div>
+		</button>
+	);
+}

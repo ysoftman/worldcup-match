@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BracketView } from "./components/BracketView";
 import { Champion } from "./components/Champion";
 import { GroupView } from "./components/GroupView";
@@ -43,7 +43,26 @@ interface RoundData {
 	matches: Match[];
 }
 
+function getInitialTheme(): "light" | "dark" {
+	const saved = localStorage.getItem("theme");
+	if (saved === "light" || saved === "dark") return saved;
+	return window.matchMedia("(prefers-color-scheme: dark)").matches
+		? "dark"
+		: "light";
+}
+
 function App() {
+	const [theme, setTheme] = useState<"light" | "dark">(getInitialTheme);
+
+	useEffect(() => {
+		document.documentElement.setAttribute("data-theme", theme);
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
+	const toggleTheme = useCallback(() => {
+		setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+	}, []);
+
 	const [soundOn, setSoundOn] = useState(!isMuted());
 	const toggleSound = useCallback(() => {
 		const next = !soundOn;
@@ -380,6 +399,14 @@ function App() {
 	return (
 		<div className="app">
 			<WinnerHistory />
+			<button
+				type="button"
+				className="theme-toggle"
+				onClick={toggleTheme}
+				title={theme === "dark" ? "라이트 모드" : "다크 모드"}
+			>
+				{theme === "dark" ? "☀️" : "🌙"}
+			</button>
 			<button
 				type="button"
 				className={`sound-toggle ${soundOn ? "on" : "off"}`}

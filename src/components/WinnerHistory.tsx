@@ -67,13 +67,17 @@ export function WinnerHistory() {
 											i
 										}`}
 									>
-										<span className="history-rank">#{i + 1}</span>
-										<span className="history-flag">{r.flag}</span>
-										<span className="history-name">{r.nameKo}</span>
-										<span className="history-meta">
-											{r.size}강 | 승률 {r.winRate}%
-										</span>
-										<span className="history-date">{r.date}</span>
+										<div className="history-row1">
+											<span className="history-rank">#{i + 1}</span>
+											<span className="history-flag">{r.flag}</span>
+											<span className="history-name">{r.nameKo}</span>
+										</div>
+										<div className="history-row2">
+											<span className="history-meta">
+												{r.size}강 | 승률 {r.winRate}%
+											</span>
+											<span className="history-date">{r.date}</span>
+										</div>
 									</div>
 								))}
 							</div>

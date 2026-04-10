@@ -75,12 +75,25 @@
 
 .history-item {
 	display: flex;
-	align-items: center;
-	gap: 6px;
+	flex-direction: column;
+	gap: 2px;
 	padding: 6px 8px;
 	border-radius: 8px;
 	background: #f8f9fa;
 	font-size: 0.78rem;
+}
+
+.history-row1 {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.history-row2 {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding-left: 28px;
 }
 
 .history-item:first-child {
@@ -374,8 +387,8 @@
 
 .selector-header {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	flex-direction: column;
+	gap: 8px;
 	margin-bottom: 12px;
 }
 
@@ -383,6 +396,17 @@
 	font-size: 1.2rem;
 	color: #1a5276;
 	margin: 0;
+}
+
+.region-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.region-filters .btn-shuffle {
+	padding: 5px 12px;
+	font-size: 0.8rem;
 }
 
 .country-grid {
@@ -1427,19 +1451,21 @@
 
 /* 결승 연결선 */
 .b-final-line {
-	width: 20px;
-	min-width: 20px;
-	display: flex;
-	align-items: center;
+	width: 0;
+	min-width: 0;
 	padding-top: 22px;
+	position: relative;
 }
 
 .b-final-line::after {
 	content: "";
-	width: calc(100% + 24px);
-	margin: 0 -12px;
+	position: absolute;
+	left: -150px;
+	right: -150px;
+	top: calc(50% + 11px);
 	height: 2px;
 	background: #c5a028;
+	z-index: 0;
 }
 
 /* 결승 중앙 */
@@ -1985,8 +2011,8 @@
 	}
 
 	.b-final-line {
-		width: 14px;
-		min-width: 14px;
+		width: 0;
+		min-width: 0;
 	}
 
 	.bracket-center {

@@ -71,6 +71,7 @@ function App() {
 
 	const [phase, setPhase] = useState<Phase>("select");
 	const [tournamentSize, setTournamentSize] = useState<TournamentSize>(32);
+	const [presetLabel, setPresetLabel] = useState<string | null>(null);
 	const [selectedTeams, setSelectedTeams] = useState<Country[]>(() =>
 		selectTeams(32),
 	);
@@ -139,6 +140,7 @@ function App() {
 	// 프리셋 적용
 	const applyPreset = useCallback((preset: Preset) => {
 		setTournamentSize(preset.size);
+		setPresetLabel(preset.label);
 		const allTeams = preset.groups.flatMap((g) => g.teams);
 		setSelectedTeams(allTeams);
 		const newGroups = createGroupsFromPreset(preset.groups);
@@ -152,6 +154,7 @@ function App() {
 	// 대회 시작
 	const startTournament = useCallback(() => {
 		if (selectedTeams.length !== tournamentSize) return;
+		setPresetLabel(null);
 		const shuffled = [...selectedTeams].sort(() => Math.random() - 0.5);
 		const newGroups = createGroups(shuffled, tournamentSize);
 		setGroups(newGroups);
@@ -535,16 +538,23 @@ function App() {
 			)}
 
 			{rounds.length > 0 && (
-				<BracketView
-					rounds={rounds}
-					teamStats={teamStats}
-					onPlayMatch={playKnockoutMatch}
-				/>
+				<div>
+					<h2 className="section-title">
+						{presetLabel ? `${presetLabel} ` : ""}토너먼트
+					</h2>
+					<BracketView
+						rounds={rounds}
+						teamStats={teamStats}
+						onPlayMatch={playKnockoutMatch}
+					/>
+				</div>
 			)}
 
 			{groups.length > 0 && (
 				<div className="groups-section">
-					<h2 className="section-title">조별 리그</h2>
+					<h2 className="section-title">
+						{presetLabel ? `${presetLabel} ` : ""}조별 리그
+					</h2>
 					{swapSelection && (
 						<p className="swap-hint">
 							{swapSelection.team.flag} {swapSelection.team.nameKo} 선택됨

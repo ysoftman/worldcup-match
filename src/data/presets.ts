@@ -46,4 +46,24 @@ export const PRESET_2026: Preset = {
 	],
 };
 
-export const ALL_PRESETS: Preset[] = [PRESET_2026];
+/** 2022 카타르 월드컵 (32팀, 8조) */
+export const PRESET_2022: Preset = {
+	id: "2022",
+	label: "2022 카타르 월드컵",
+	size: 32,
+	groups: [
+		{ name: "A조", teams: [find("QA"), find("EC"), find("SN"), find("NL")] },
+		{
+			name: "B조",
+			teams: [find("GB-ENG"), find("IR"), find("US"), find("GB-WLS")],
+		},
+		{ name: "C조", teams: [find("AR"), find("SA"), find("MX"), find("PL")] },
+		{ name: "D조", teams: [find("FR"), find("AU"), find("DK"), find("TN")] },
+		{ name: "E조", teams: [find("ES"), find("CR"), find("DE"), find("JP")] },
+		{ name: "F조", teams: [find("BE"), find("CA"), find("MA"), find("HR")] },
+		{ name: "G조", teams: [find("BR"), find("RS"), find("CH"), find("CM")] },
+		{ name: "H조", teams: [find("PT"), find("GH"), find("UY"), find("KR")] },
+	],
+};
+
+export const ALL_PRESETS: Preset[] = [PRESET_2026, PRESET_2022];

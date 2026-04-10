@@ -10,6 +10,7 @@ interface GroupViewProps {
 	onSwapSelect: (groupName: string, team: Country) => void;
 	teamModifiers: Map<string, number>;
 	onChangeModifier: (teamCode: string, delta: number) => void;
+	wildcardCodes: Set<string>;
 }
 
 const MOD_LABELS = ["▼▼", "▼", "", "▲", "▲▲"];
@@ -22,6 +23,7 @@ export function GroupView({
 	onSwapSelect,
 	teamModifiers,
 	onChangeModifier,
+	wildcardCodes,
 }: GroupViewProps) {
 	const hasPlayedMatches = group.matches.some((m) => m.played);
 	const canSwap = !hasPlayedMatches;
@@ -120,17 +122,21 @@ export function GroupView({
 							const gd = s.goalsFor - s.goalsAgainst;
 							const allDone = group.played;
 							const mod = teamModifiers.get(s.team.code) ?? 0;
+							const isWildcard =
+								allDone && idx === 2 && wildcardCodes.has(s.team.code);
+							let rowClass = "";
+							if (allDone) {
+								if (idx < 2) rowClass = "qualified";
+								else if (isWildcard) rowClass = "qualified-wildcard";
+								else rowClass = "eliminated";
+							}
 							return (
-								<tr
-									key={s.team.code}
-									className={
-										allDone ? (idx < 2 ? "qualified" : "eliminated") : ""
-									}
-								>
+								<tr key={s.team.code} className={rowClass}>
 									<td className="rank">{idx + 1}</td>
 									<td className="team-cell">
 										<span className="flag-sm">{s.team.flag}</span>
 										{s.team.nameKo}
+										{isWildcard && <span className="wildcard-badge">WC</span>}
 										{mod !== 0 && (
 											<span
 												className={`mod-badge ${mod > 0 ? "mod-up" : "mod-down"}`}

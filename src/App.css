@@ -1008,6 +1008,21 @@
 	background: #eafaf1;
 }
 
+.standings-table tr.qualified-wildcard {
+	background: #fef9e7;
+}
+
+.wildcard-badge {
+	font-size: 0.55rem;
+	font-weight: 700;
+	color: #d4ac0d;
+	background: rgba(212, 172, 13, 0.15);
+	padding: 1px 4px;
+	border-radius: 6px;
+	margin-left: 3px;
+	white-space: nowrap;
+}
+
 .standings-table tr.eliminated {
 	opacity: 0.6;
 }
@@ -1859,6 +1874,15 @@
 
 [data-theme="dark"] .standings-table tr.qualified {
 	background: #1a3a2a;
+}
+
+[data-theme="dark"] .standings-table tr.qualified-wildcard {
+	background: #2c2a1a;
+}
+
+[data-theme="dark"] .wildcard-badge {
+	color: #f1c40f;
+	background: rgba(241, 196, 15, 0.2);
 }
 
 [data-theme="dark"] .standings-table .team-cell {

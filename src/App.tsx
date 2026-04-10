@@ -22,6 +22,7 @@ import {
 	createGroupsFromPreset,
 	createMatches,
 	getGroupAdvancers,
+	getWildcardThirds,
 	getWinners,
 	recalcStandings,
 	selectTeams,
@@ -97,6 +98,14 @@ function App() {
 		() => calcTeamStats(groups, allKnockoutMatches),
 		[groups, allKnockoutMatches],
 	);
+
+	// 48강: 3위 와일드카드 진출 팀 코드 Set
+	const wildcardCodes = useMemo(() => {
+		if (tournamentSize !== 48 || !groups.every((g) => g.played)) {
+			return new Set<string>();
+		}
+		return getWildcardThirds(groups);
+	}, [groups, tournamentSize]);
 
 	// 우승 기록 저장
 	const recordWinner = useCallback(
@@ -557,6 +566,7 @@ function App() {
 								onSwapSelect={handleSwapSelect}
 								teamModifiers={teamModifiers}
 								onChangeModifier={changeModifier}
+								wildcardCodes={wildcardCodes}
 							/>
 						))}
 					</div>

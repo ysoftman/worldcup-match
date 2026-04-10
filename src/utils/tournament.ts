@@ -235,14 +235,29 @@ export function getGroupAdvancers32(groups: Group[]): Country[] {
 	return advancers;
 }
 
+// 48팀 대회: 3위 중 상위 8팀 코드 Set 반환
+export function getWildcardThirds(groups: Group[]): Set<string> {
+	const thirds: GroupStanding[] = [];
+	for (const g of groups) {
+		if (g.standings.length >= 3) {
+			thirds.push(g.standings[2]);
+		}
+	}
+	thirds.sort((a, b) => {
+		if (b.points !== a.points) return b.points - a.points;
+		const gdA = a.goalsFor - a.goalsAgainst;
+		const gdB = b.goalsFor - b.goalsAgainst;
+		if (gdB !== gdA) return gdB - gdA;
+		return b.goalsFor - a.goalsFor;
+	});
+	return new Set(thirds.slice(0, 8).map((s) => s.team.code));
+}
+
 // 48팀 대회: 각 조 상위 2팀 + 3위 중 상위 8팀 = 32팀
 export function getGroupAdvancers48(groups: Group[]): Country[] {
-	const top2: Country[] = [];
 	const thirds: GroupStanding[] = [];
 
 	for (const g of groups) {
-		top2.push(g.standings[0].team);
-		top2.push(g.standings[1].team);
 		thirds.push(g.standings[2]);
 	}
 

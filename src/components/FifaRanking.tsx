@@ -36,7 +36,7 @@ export function FifaRanking() {
 			{open && (
 				<div className="ranking-body">
 					<div className="ranking-source">
-						FIFA/Coca-Cola 세계 랭킹 · 2025년 4월 기준
+						FIFA/Coca-Cola 세계 랭킹 · 2026년 4월 기준
 					</div>
 					<div className="ranking-filters">
 						<button

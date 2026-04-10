@@ -21,7 +21,7 @@ export interface Country {
 	nameKo: string;
 	code: string;
 	flag: string;
-	/** FIFA 랭킹 (2025년 4월 기준) */
+	/** FIFA 랭킹 2026년 4월 기준 (https://www.whereig.com/football/fifa-world-rankings.html) */
 	rank: number;
 	/** FIFA 대륙 연맹 */
 	conf: Confederation;
@@ -33,7 +33,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아르헨티나",
 		code: "AR",
 		flag: "🇦🇷",
-		rank: 1,
+		rank: 3,
 		conf: "CONMEBOL",
 	},
 	{
@@ -41,7 +41,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "프랑스",
 		code: "FR",
 		flag: "🇫🇷",
-		rank: 2,
+		rank: 1,
 		conf: "UEFA",
 	},
 	{
@@ -49,7 +49,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "스페인",
 		code: "ES",
 		flag: "🇪🇸",
-		rank: 3,
+		rank: 2,
 		conf: "UEFA",
 	},
 	{
@@ -65,7 +65,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "브라질",
 		code: "BR",
 		flag: "🇧🇷",
-		rank: 5,
+		rank: 6,
 		conf: "CONMEBOL",
 	},
 	{
@@ -73,7 +73,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "벨기에",
 		code: "BE",
 		flag: "🇧🇪",
-		rank: 6,
+		rank: 9,
 		conf: "UEFA",
 	},
 	{
@@ -89,7 +89,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "포르투갈",
 		code: "PT",
 		flag: "🇵🇹",
-		rank: 8,
+		rank: 5,
 		conf: "UEFA",
 	},
 	{
@@ -97,7 +97,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "콜롬비아",
 		code: "CO",
 		flag: "🇨🇴",
-		rank: 9,
+		rank: 13,
 		conf: "CONMEBOL",
 	},
 	{
@@ -105,7 +105,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "이탈리아",
 		code: "IT",
 		flag: "🇮🇹",
-		rank: 10,
+		rank: 12,
 		conf: "UEFA",
 	},
 	{
@@ -113,7 +113,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "독일",
 		code: "DE",
 		flag: "🇩🇪",
-		rank: 11,
+		rank: 10,
 		conf: "UEFA",
 	},
 	{
@@ -121,7 +121,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "우루과이",
 		code: "UY",
 		flag: "🇺🇾",
-		rank: 12,
+		rank: 17,
 		conf: "CONMEBOL",
 	},
 	{
@@ -129,7 +129,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "크로아티아",
 		code: "HR",
 		flag: "🇭🇷",
-		rank: 13,
+		rank: 11,
 		conf: "UEFA",
 	},
 	{
@@ -137,7 +137,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "모로코",
 		code: "MA",
 		flag: "🇲🇦",
-		rank: 14,
+		rank: 8,
 		conf: "CAF",
 	},
 	{
@@ -145,7 +145,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "미국",
 		code: "US",
 		flag: "🇺🇸",
-		rank: 15,
+		rank: 16,
 		conf: "CONCACAF",
 	},
 	{
@@ -153,7 +153,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "멕시코",
 		code: "MX",
 		flag: "🇲🇽",
-		rank: 16,
+		rank: 15,
 		conf: "CONCACAF",
 	},
 	{
@@ -161,7 +161,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "스위스",
 		code: "CH",
 		flag: "🇨🇭",
-		rank: 17,
+		rank: 19,
 		conf: "UEFA",
 	},
 	{
@@ -177,7 +177,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "덴마크",
 		code: "DK",
 		flag: "🇩🇰",
-		rank: 19,
+		rank: 20,
 		conf: "UEFA",
 	},
 	{
@@ -185,7 +185,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "오스트리아",
 		code: "AT",
 		flag: "🇦🇹",
-		rank: 20,
+		rank: 24,
 		conf: "UEFA",
 	},
 	{
@@ -193,7 +193,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "세네갈",
 		code: "SN",
 		flag: "🇸🇳",
-		rank: 21,
+		rank: 14,
 		conf: "CAF",
 	},
 	{
@@ -209,7 +209,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "호주",
 		code: "AU",
 		flag: "🇦🇺",
-		rank: 23,
+		rank: 27,
 		conf: "AFC",
 	},
 	{
@@ -217,7 +217,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "대한민국",
 		code: "KR",
 		flag: "🇰🇷",
-		rank: 24,
+		rank: 25,
 		conf: "AFC",
 	},
 	{
@@ -225,7 +225,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "우크라이나",
 		code: "UA",
 		flag: "🇺🇦",
-		rank: 25,
+		rank: 32,
 		conf: "UEFA",
 	},
 	{
@@ -233,7 +233,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "에콰도르",
 		code: "EC",
 		flag: "🇪🇨",
-		rank: 26,
+		rank: 23,
 		conf: "CONMEBOL",
 	},
 	{
@@ -241,7 +241,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "이란",
 		code: "IR",
 		flag: "🇮🇷",
-		rank: 27,
+		rank: 21,
 		conf: "AFC",
 	},
 	{
@@ -249,7 +249,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "스웨덴",
 		code: "SE",
 		flag: "🇸🇪",
-		rank: 28,
+		rank: 38,
 		conf: "UEFA",
 	},
 	{
@@ -257,7 +257,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "페루",
 		code: "PE",
 		flag: "🇵🇪",
-		rank: 29,
+		rank: 53,
 		conf: "CONMEBOL",
 	},
 	{
@@ -265,7 +265,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "세르비아",
 		code: "RS",
 		flag: "🇷🇸",
-		rank: 30,
+		rank: 39,
 		conf: "UEFA",
 	},
 	{
@@ -273,7 +273,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "헝가리",
 		code: "HU",
 		flag: "🇭🇺",
-		rank: 31,
+		rank: 42,
 		conf: "UEFA",
 	},
 	{
@@ -281,7 +281,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "폴란드",
 		code: "PL",
 		flag: "🇵🇱",
-		rank: 32,
+		rank: 35,
 		conf: "UEFA",
 	},
 	{
@@ -289,7 +289,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "체코",
 		code: "CZ",
 		flag: "🇨🇿",
-		rank: 33,
+		rank: 41,
 		conf: "UEFA",
 	},
 	{
@@ -297,7 +297,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "알제리",
 		code: "DZ",
 		flag: "🇩🇿",
-		rank: 34,
+		rank: 28,
 		conf: "CAF",
 	},
 	{
@@ -305,7 +305,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "나이지리아",
 		code: "NG",
 		flag: "🇳🇬",
-		rank: 35,
+		rank: 26,
 		conf: "CAF",
 	},
 	{
@@ -313,7 +313,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "스코틀랜드",
 		code: "GB-SCT",
 		flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-		rank: 36,
+		rank: 43,
 		conf: "UEFA",
 	},
 	{
@@ -321,7 +321,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "루마니아",
 		code: "RO",
 		flag: "🇷🇴",
-		rank: 37,
+		rank: 56,
 		conf: "UEFA",
 	},
 	{
@@ -329,7 +329,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "노르웨이",
 		code: "NO",
 		flag: "🇳🇴",
-		rank: 38,
+		rank: 31,
 		conf: "UEFA",
 	},
 	{
@@ -337,7 +337,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "코트디부아르",
 		code: "CI",
 		flag: "🇨🇮",
-		rank: 39,
+		rank: 34,
 		conf: "CAF",
 	},
 	{
@@ -353,7 +353,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "이집트",
 		code: "EG",
 		flag: "🇪🇬",
-		rank: 41,
+		rank: 29,
 		conf: "CAF",
 	},
 	{
@@ -361,7 +361,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "웨일스",
 		code: "GB-WLS",
 		flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-		rank: 42,
+		rank: 37,
 		conf: "UEFA",
 	},
 	{
@@ -369,7 +369,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "슬로바키아",
 		code: "SK",
 		flag: "🇸🇰",
-		rank: 43,
+		rank: 48,
 		conf: "UEFA",
 	},
 	{
@@ -377,7 +377,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "칠레",
 		code: "CL",
 		flag: "🇨🇱",
-		rank: 44,
+		rank: 54,
 		conf: "CONMEBOL",
 	},
 	{
@@ -385,7 +385,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "그리스",
 		code: "GR",
 		flag: "🇬🇷",
-		rank: 45,
+		rank: 47,
 		conf: "UEFA",
 	},
 	{
@@ -393,7 +393,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "튀니지",
 		code: "TN",
 		flag: "🇹🇳",
-		rank: 46,
+		rank: 44,
 		conf: "CAF",
 	},
 	{
@@ -401,7 +401,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "캐나다",
 		code: "CA",
 		flag: "🇨🇦",
-		rank: 47,
+		rank: 30,
 		conf: "CONCACAF",
 	},
 	{
@@ -409,7 +409,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "카메룬",
 		code: "CM",
 		flag: "🇨🇲",
-		rank: 48,
+		rank: 45,
 		conf: "CAF",
 	},
 	{
@@ -417,7 +417,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "코스타리카",
 		code: "CR",
 		flag: "🇨🇷",
-		rank: 49,
+		rank: 51,
 		conf: "CONCACAF",
 	},
 	{
@@ -425,7 +425,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "가나",
 		code: "GH",
 		flag: "🇬🇭",
-		rank: 50,
+		rank: 74,
 		conf: "CAF",
 	},
 	{
@@ -433,7 +433,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "사우디아라비아",
 		code: "SA",
 		flag: "🇸🇦",
-		rank: 51,
+		rank: 61,
 		conf: "AFC",
 	},
 	{
@@ -441,7 +441,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "러시아",
 		code: "RU",
 		flag: "🇷🇺",
-		rank: 52,
+		rank: 36,
 		conf: "UEFA",
 	},
 	{
@@ -449,7 +449,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "파나마",
 		code: "PA",
 		flag: "🇵🇦",
-		rank: 53,
+		rank: 33,
 		conf: "CONCACAF",
 	},
 	{
@@ -457,7 +457,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아일랜드",
 		code: "IE",
 		flag: "🇮🇪",
-		rank: 54,
+		rank: 59,
 		conf: "UEFA",
 	},
 	{
@@ -465,7 +465,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "자메이카",
 		code: "JM",
 		flag: "🇯🇲",
-		rank: 55,
+		rank: 71,
 		conf: "CONCACAF",
 	},
 	{
@@ -473,7 +473,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "보스니아",
 		code: "BA",
 		flag: "🇧🇦",
-		rank: 56,
+		rank: 65,
 		conf: "UEFA",
 	},
 	{
@@ -481,7 +481,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "카타르",
 		code: "QA",
 		flag: "🇶🇦",
-		rank: 57,
+		rank: 55,
 		conf: "AFC",
 	},
 	{
@@ -489,7 +489,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "온두라스",
 		code: "HN",
 		flag: "🇭🇳",
-		rank: 58,
+		rank: 66,
 		conf: "CONCACAF",
 	},
 	{
@@ -497,7 +497,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아이슬란드",
 		code: "IS",
 		flag: "🇮🇸",
-		rank: 59,
+		rank: 75,
 		conf: "UEFA",
 	},
 	{
@@ -505,7 +505,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "불가리아",
 		code: "BG",
 		flag: "🇧🇬",
-		rank: 60,
+		rank: 86,
 		conf: "UEFA",
 	},
 	{
@@ -513,7 +513,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "뉴질랜드",
 		code: "NZ",
 		flag: "🇳🇿",
-		rank: 61,
+		rank: 85,
 		conf: "OFC",
 	},
 	{
@@ -521,7 +521,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "콩고민주공화국",
 		code: "CD",
 		flag: "🇨🇩",
-		rank: 62,
+		rank: 46,
 		conf: "CAF",
 	},
 	{
@@ -529,7 +529,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "중국",
 		code: "CN",
 		flag: "🇨🇳",
-		rank: 63,
+		rank: 94,
 		conf: "AFC",
 	},
 	{
@@ -537,7 +537,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "베트남",
 		code: "VN",
 		flag: "🇻🇳",
-		rank: 116,
+		rank: 99,
 		conf: "AFC",
 	},
 	{
@@ -545,7 +545,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "태국",
 		code: "TH",
 		flag: "🇹🇭",
-		rank: 101,
+		rank: 93,
 		conf: "AFC",
 	},
 	{
@@ -553,7 +553,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "인도",
 		code: "IN",
 		flag: "🇮🇳",
-		rank: 126,
+		rank: 136,
 		conf: "AFC",
 	},
 	{
@@ -561,7 +561,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "인도네시아",
 		code: "ID",
 		flag: "🇮🇩",
-		rank: 133,
+		rank: 122,
 		conf: "AFC",
 	},
 	{
@@ -569,7 +569,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "필리핀",
 		code: "PH",
 		flag: "🇵🇭",
-		rank: 139,
+		rank: 135,
 		conf: "AFC",
 	},
 	{
@@ -577,7 +577,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "카보베르데",
 		code: "CV",
 		flag: "🇨🇻",
-		rank: 72,
+		rank: 69,
 		conf: "CAF",
 	},
 	{
@@ -585,7 +585,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "퀴라소",
 		code: "CW",
 		flag: "🇨🇼",
-		rank: 86,
+		rank: 82,
 		conf: "CONCACAF",
 	},
 	{
@@ -593,7 +593,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아이티",
 		code: "HT",
 		flag: "🇭🇹",
-		rank: 87,
+		rank: 83,
 		conf: "CONCACAF",
 	},
 	{
@@ -601,7 +601,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "요르단",
 		code: "JO",
 		flag: "🇯🇴",
-		rank: 68,
+		rank: 63,
 		conf: "AFC",
 	},
 	{
@@ -609,7 +609,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "우즈베키스탄",
 		code: "UZ",
 		flag: "🇺🇿",
-		rank: 64,
+		rank: 50,
 		conf: "AFC",
 	},
 	{
@@ -617,7 +617,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "이라크",
 		code: "IQ",
 		flag: "🇮🇶",
-		rank: 65,
+		rank: 57,
 		conf: "AFC",
 	},
 	{
@@ -625,7 +625,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "남아프리카공화국",
 		code: "ZA",
 		flag: "🇿🇦",
-		rank: 69,
+		rank: 60,
 		conf: "CAF",
 	},
 	// ── 추가 FIFA 회원국 ──
@@ -634,7 +634,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "베네수엘라",
 		code: "VE",
 		flag: "🇻🇪",
-		rank: 66,
+		rank: 49,
 		conf: "CONMEBOL",
 	},
 	{
@@ -642,7 +642,15 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "조지아",
 		code: "GE",
 		flag: "🇬🇪",
-		rank: 67,
+		rank: 72,
+		conf: "UEFA",
+	},
+	{
+		name: "Northern Ireland",
+		nameKo: "북아일랜드",
+		code: "GB-NIR",
+		flag: "🏴󠁧󠁢󠁮󠁩󠁲󠁿",
+		rank: 70,
 		conf: "UEFA",
 	},
 	{
@@ -650,7 +658,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "몬테네그로",
 		code: "ME",
 		flag: "🇲🇪",
-		rank: 70,
+		rank: 81,
 		conf: "UEFA",
 	},
 	{
@@ -658,7 +666,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "북마케도니아",
 		code: "MK",
 		flag: "🇲🇰",
-		rank: 71,
+		rank: 67,
 		conf: "UEFA",
 	},
 	{
@@ -666,7 +674,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "알바니아",
 		code: "AL",
 		flag: "🇦🇱",
-		rank: 73,
+		rank: 64,
 		conf: "UEFA",
 	},
 	{
@@ -674,7 +682,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "핀란드",
 		code: "FI",
 		flag: "🇫🇮",
-		rank: 74,
+		rank: 73,
 		conf: "UEFA",
 	},
 	{
@@ -682,7 +690,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "말리",
 		code: "ML",
 		flag: "🇲🇱",
-		rank: 75,
+		rank: 52,
 		conf: "CAF",
 	},
 	{
@@ -690,7 +698,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "부르키나파소",
 		code: "BF",
 		flag: "🇧🇫",
-		rank: 76,
+		rank: 62,
 		conf: "CAF",
 	},
 	{
@@ -698,7 +706,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "볼리비아",
 		code: "BO",
 		flag: "🇧🇴",
-		rank: 77,
+		rank: 76,
 		conf: "CONMEBOL",
 	},
 	{
@@ -706,7 +714,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "엘살바도르",
 		code: "SV",
 		flag: "🇸🇻",
-		rank: 78,
+		rank: 100,
 		conf: "CONCACAF",
 	},
 	{
@@ -714,7 +722,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "이스라엘",
 		code: "IL",
 		flag: "🇮🇱",
-		rank: 79,
+		rank: 77,
 		conf: "UEFA",
 	},
 	{
@@ -722,7 +730,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "잠비아",
 		code: "ZM",
 		flag: "🇿🇲",
-		rank: 80,
+		rank: 92,
 		conf: "CAF",
 	},
 	{
@@ -730,7 +738,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "바레인",
 		code: "BH",
 		flag: "🇧🇭",
-		rank: 81,
+		rank: 91,
 		conf: "AFC",
 	},
 	{
@@ -738,7 +746,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "룩셈부르크",
 		code: "LU",
 		flag: "🇱🇺",
-		rank: 82,
+		rank: 98,
 		conf: "UEFA",
 	},
 	{
@@ -746,7 +754,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "슬로베니아",
 		code: "SI",
 		flag: "🇸🇮",
-		rank: 83,
+		rank: 58,
 		conf: "UEFA",
 	},
 	{
@@ -754,7 +762,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "벨라루스",
 		code: "BY",
 		flag: "🇧🇾",
-		rank: 84,
+		rank: 97,
 		conf: "UEFA",
 	},
 	{
@@ -762,7 +770,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아랍에미리트",
 		code: "AE",
 		flag: "🇦🇪",
-		rank: 85,
+		rank: 68,
 		conf: "AFC",
 	},
 	{
@@ -770,7 +778,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "콩고",
 		code: "CG",
 		flag: "🇨🇬",
-		rank: 88,
+		rank: 133,
 		conf: "CAF",
 	},
 	{
@@ -778,7 +786,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "오만",
 		code: "OM",
 		flag: "🇴🇲",
-		rank: 89,
+		rank: 79,
 		conf: "AFC",
 	},
 	{
@@ -794,7 +802,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "시리아",
 		code: "SY",
 		flag: "🇸🇾",
-		rank: 91,
+		rank: 84,
 		conf: "AFC",
 	},
 	{
@@ -802,7 +810,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "가봉",
 		code: "GA",
 		flag: "🇬🇦",
-		rank: 92,
+		rank: 87,
 		conf: "CAF",
 	},
 	{
@@ -810,7 +818,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "기니",
 		code: "GN",
 		flag: "🇬🇳",
-		rank: 93,
+		rank: 80,
 		conf: "CAF",
 	},
 	{
@@ -818,7 +826,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "우간다",
 		code: "UG",
 		flag: "🇺🇬",
-		rank: 94,
+		rank: 88,
 		conf: "CAF",
 	},
 	{
@@ -826,7 +834,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "케냐",
 		code: "KE",
 		flag: "🇰🇪",
-		rank: 95,
+		rank: 111,
 		conf: "CAF",
 	},
 	{
@@ -834,7 +842,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아르메니아",
 		code: "AM",
 		flag: "🇦🇲",
-		rank: 96,
+		rank: 106,
 		conf: "UEFA",
 	},
 	{
@@ -842,7 +850,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "팔레스타인",
 		code: "PS",
 		flag: "🇵🇸",
-		rank: 97,
+		rank: 95,
 		conf: "AFC",
 	},
 	{
@@ -850,7 +858,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "모잠비크",
 		code: "MZ",
 		flag: "🇲🇿",
-		rank: 98,
+		rank: 101,
 		conf: "CAF",
 	},
 	{
@@ -858,7 +866,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "마다가스카르",
 		code: "MG",
 		flag: "🇲🇬",
-		rank: 99,
+		rank: 104,
 		conf: "CAF",
 	},
 	{
@@ -866,7 +874,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "나미비아",
 		code: "NA",
 		flag: "🇳🇦",
-		rank: 100,
+		rank: 120,
 		conf: "CAF",
 	},
 	{
@@ -874,7 +882,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "탄자니아",
 		code: "TZ",
 		flag: "🇹🇿",
-		rank: 102,
+		rank: 113,
 		conf: "CAF",
 	},
 	{
@@ -882,7 +890,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "카자흐스탄",
 		code: "KZ",
 		flag: "🇰🇿",
-		rank: 103,
+		rank: 110,
 		conf: "UEFA",
 	},
 	{
@@ -890,7 +898,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "앙골라",
 		code: "AO",
 		flag: "🇦🇴",
-		rank: 104,
+		rank: 89,
 		conf: "CAF",
 	},
 	{
@@ -898,7 +906,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "트리니다드토바고",
 		code: "TT",
 		flag: "🇹🇹",
-		rank: 105,
+		rank: 102,
 		conf: "CONCACAF",
 	},
 	{
@@ -906,7 +914,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "토고",
 		code: "TG",
 		flag: "🇹🇬",
-		rank: 106,
+		rank: 121,
 		conf: "CAF",
 	},
 	{
@@ -914,7 +922,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "코소보",
 		code: "XK",
 		flag: "🇽🇰",
-		rank: 107,
+		rank: 78,
 		conf: "UEFA",
 	},
 	{
@@ -922,7 +930,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아제르바이잔",
 		code: "AZ",
 		flag: "🇦🇿",
-		rank: 108,
+		rank: 124,
 		conf: "UEFA",
 	},
 	{
@@ -930,7 +938,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "적도기니",
 		code: "GQ",
 		flag: "🇬🇶",
-		rank: 109,
+		rank: 105,
 		conf: "CAF",
 	},
 	{
@@ -938,7 +946,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "짐바브웨",
 		code: "ZW",
 		flag: "🇿🇼",
-		rank: 110,
+		rank: 130,
 		conf: "CAF",
 	},
 	{
@@ -946,7 +954,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "쿠바",
 		code: "CU",
 		flag: "🇨🇺",
-		rank: 111,
+		rank: 164,
 		conf: "CONCACAF",
 	},
 	{
@@ -954,7 +962,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "에스토니아",
 		code: "EE",
 		flag: "🇪🇪",
-		rank: 112,
+		rank: 129,
 		conf: "UEFA",
 	},
 	{
@@ -962,7 +970,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "타지키스탄",
 		code: "TJ",
 		flag: "🇹🇯",
-		rank: 113,
+		rank: 103,
 		conf: "AFC",
 	},
 	{
@@ -970,7 +978,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "르완다",
 		code: "RW",
 		flag: "🇷🇼",
-		rank: 114,
+		rank: 128,
 		conf: "CAF",
 	},
 	{
@@ -978,7 +986,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "리비아",
 		code: "LY",
 		flag: "🇱🇾",
-		rank: 115,
+		rank: 112,
 		conf: "CAF",
 	},
 	{
@@ -986,7 +994,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "페로제도",
 		code: "FO",
 		flag: "🇫🇴",
-		rank: 117,
+		rank: 123,
 		conf: "UEFA",
 	},
 	{
@@ -994,7 +1002,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "과테말라",
 		code: "GT",
 		flag: "🇬🇹",
-		rank: 118,
+		rank: 96,
 		conf: "CONCACAF",
 	},
 	{
@@ -1002,7 +1010,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "키르기스스탄",
 		code: "KG",
 		flag: "🇰🇬",
-		rank: 119,
+		rank: 107,
 		conf: "AFC",
 	},
 	{
@@ -1010,7 +1018,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "수단",
 		code: "SD",
 		flag: "🇸🇩",
-		rank: 120,
+		rank: 117,
 		conf: "CAF",
 	},
 	{
@@ -1018,7 +1026,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "레바논",
 		code: "LB",
 		flag: "🇱🇧",
-		rank: 121,
+		rank: 108,
 		conf: "AFC",
 	},
 	{
@@ -1026,7 +1034,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "코모로",
 		code: "KM",
 		flag: "🇰🇲",
-		rank: 122,
+		rank: 109,
 		conf: "CAF",
 	},
 	{
@@ -1034,7 +1042,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "키프로스",
 		code: "CY",
 		flag: "🇨🇾",
-		rank: 123,
+		rank: 126,
 		conf: "UEFA",
 	},
 	{
@@ -1042,7 +1050,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "말라위",
 		code: "MW",
 		flag: "🇲🇼",
-		rank: 124,
+		rank: 127,
 		conf: "CAF",
 	},
 	{
@@ -1050,7 +1058,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "모리타니",
 		code: "MR",
 		flag: "🇲🇷",
-		rank: 125,
+		rank: 115,
 		conf: "CAF",
 	},
 	{
@@ -1058,7 +1066,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "중앙아프리카공화국",
 		code: "CF",
 		flag: "🇨🇫",
-		rank: 127,
+		rank: 139,
 		conf: "CAF",
 	},
 	{
@@ -1066,7 +1074,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "니제르",
 		code: "NE",
 		flag: "🇳🇪",
-		rank: 128,
+		rank: 114,
 		conf: "CAF",
 	},
 	{
@@ -1074,7 +1082,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "감비아",
 		code: "GM",
 		flag: "🇬🇲",
-		rank: 129,
+		rank: 116,
 		conf: "CAF",
 	},
 	{
@@ -1082,7 +1090,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "보츠와나",
 		code: "BW",
 		flag: "🇧🇼",
-		rank: 130,
+		rank: 146,
 		conf: "CAF",
 	},
 	{
@@ -1090,7 +1098,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "리투아니아",
 		code: "LT",
 		flag: "🇱🇹",
-		rank: 131,
+		rank: 148,
 		conf: "UEFA",
 	},
 	{
@@ -1098,7 +1106,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "시에라리온",
 		code: "SL",
 		flag: "🇸🇱",
-		rank: 132,
+		rank: 119,
 		conf: "CAF",
 	},
 	{
@@ -1106,7 +1114,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "부룬디",
 		code: "BI",
 		flag: "🇧🇮",
-		rank: 134,
+		rank: 142,
 		conf: "CAF",
 	},
 	{
@@ -1114,7 +1122,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "에티오피아",
 		code: "ET",
 		flag: "🇪🇹",
-		rank: 135,
+		rank: 144,
 		conf: "CAF",
 	},
 	{
@@ -1122,7 +1130,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "도미니카공화국",
 		code: "DO",
 		flag: "🇩🇴",
-		rank: 136,
+		rank: 143,
 		conf: "CONCACAF",
 	},
 	{
@@ -1138,7 +1146,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "쿠웨이트",
 		code: "KW",
 		flag: "🇰🇼",
-		rank: 138,
+		rank: 134,
 		conf: "AFC",
 	},
 	{
@@ -1146,7 +1154,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "북한",
 		code: "KP",
 		flag: "🇰🇵",
-		rank: 140,
+		rank: 118,
 		conf: "AFC",
 	},
 	{
@@ -1162,7 +1170,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "미얀마",
 		code: "MM",
 		flag: "🇲🇲",
-		rank: 142,
+		rank: 158,
 		conf: "AFC",
 	},
 	{
@@ -1170,7 +1178,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "니카라과",
 		code: "NI",
 		flag: "🇳🇮",
-		rank: 143,
+		rank: 131,
 		conf: "CONCACAF",
 	},
 	{
@@ -1178,7 +1186,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "라이베리아",
 		code: "LR",
 		flag: "🇱🇷",
-		rank: 144,
+		rank: 140,
 		conf: "CAF",
 	},
 	{
@@ -1186,7 +1194,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "기니비사우",
 		code: "GW",
 		flag: "🇬🇼",
-		rank: 145,
+		rank: 132,
 		conf: "CAF",
 	},
 	{
@@ -1194,7 +1202,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "홍콩",
 		code: "HK",
 		flag: "🇭🇰",
-		rank: 146,
+		rank: 155,
 		conf: "AFC",
 	},
 	{
@@ -1202,7 +1210,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "말레이시아",
 		code: "MY",
 		flag: "🇲🇾",
-		rank: 147,
+		rank: 138,
 		conf: "AFC",
 	},
 	{
@@ -1210,7 +1218,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아프가니스탄",
 		code: "AF",
 		flag: "🇦🇫",
-		rank: 148,
+		rank: 169,
 		conf: "AFC",
 	},
 	{
@@ -1218,7 +1226,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "싱가포르",
 		code: "SG",
 		flag: "🇸🇬",
-		rank: 149,
+		rank: 147,
 		conf: "AFC",
 	},
 	{
@@ -1226,7 +1234,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "레소토",
 		code: "LS",
 		flag: "🇱🇸",
-		rank: 150,
+		rank: 145,
 		conf: "CAF",
 	},
 	{
@@ -1234,7 +1242,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "네팔",
 		code: "NP",
 		flag: "🇳🇵",
-		rank: 151,
+		rank: 176,
 		conf: "AFC",
 	},
 	{
@@ -1242,7 +1250,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "수리남",
 		code: "SR",
 		flag: "🇸🇷",
-		rank: 152,
+		rank: 125,
 		conf: "CONCACAF",
 	},
 	{
@@ -1250,7 +1258,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "에스와티니",
 		code: "SZ",
 		flag: "🇸🇿",
-		rank: 153,
+		rank: 165,
 		conf: "CAF",
 	},
 	{
@@ -1258,7 +1266,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "가이아나",
 		code: "GY",
 		flag: "🇬🇾",
-		rank: 154,
+		rank: 150,
 		conf: "CONCACAF",
 	},
 	{
@@ -1266,7 +1274,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "그레나다",
 		code: "GD",
 		flag: "🇬🇩",
-		rank: 155,
+		rank: 163,
 		conf: "CONCACAF",
 	},
 	{
@@ -1274,7 +1282,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "세인트키츠네비스",
 		code: "KN",
 		flag: "🇰🇳",
-		rank: 156,
+		rank: 152,
 		conf: "CONCACAF",
 	},
 	{
@@ -1282,7 +1290,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "방글라데시",
 		code: "BD",
 		flag: "🇧🇩",
-		rank: 157,
+		rank: 181,
 		conf: "AFC",
 	},
 	{
@@ -1290,7 +1298,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "세인트빈센트그레나딘",
 		code: "VC",
 		flag: "🇻🇨",
-		rank: 158,
+		rank: 171,
 		conf: "CONCACAF",
 	},
 	{
@@ -1298,7 +1306,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "바베이도스",
 		code: "BB",
 		flag: "🇧🇧",
-		rank: 159,
+		rank: 179,
 		conf: "CONCACAF",
 	},
 	{
@@ -1306,7 +1314,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "캄보디아",
 		code: "KH",
 		flag: "🇰🇭",
-		rank: 160,
+		rank: 177,
 		conf: "AFC",
 	},
 	{
@@ -1314,7 +1322,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "안도라",
 		code: "AD",
 		flag: "🇦🇩",
-		rank: 161,
+		rank: 173,
 		conf: "UEFA",
 	},
 	{
@@ -1330,7 +1338,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "스리랑카",
 		code: "LK",
 		flag: "🇱🇰",
-		rank: 163,
+		rank: 191,
 		conf: "AFC",
 	},
 	{
@@ -1338,7 +1346,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "피지",
 		code: "FJ",
 		flag: "🇫🇯",
-		rank: 164,
+		rank: 154,
 		conf: "OFC",
 	},
 	{
@@ -1346,7 +1354,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "몰디브",
 		code: "MV",
 		flag: "🇲🇻",
-		rank: 165,
+		rank: 172,
 		conf: "AFC",
 	},
 	{
@@ -1354,7 +1362,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "파푸아뉴기니",
 		code: "PG",
 		flag: "🇵🇬",
-		rank: 166,
+		rank: 168,
 		conf: "OFC",
 	},
 	{
@@ -1362,7 +1370,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "모리셔스",
 		code: "MU",
 		flag: "🇲🇺",
-		rank: 167,
+		rank: 178,
 		conf: "CAF",
 	},
 	{
@@ -1370,7 +1378,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "몽골",
 		code: "MN",
 		flag: "🇲🇳",
-		rank: 168,
+		rank: 187,
 		conf: "AFC",
 	},
 	{
@@ -1378,7 +1386,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "몰타",
 		code: "MT",
 		flag: "🇲🇹",
-		rank: 169,
+		rank: 161,
 		conf: "UEFA",
 	},
 	{
@@ -1386,7 +1394,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "파키스탄",
 		code: "PK",
 		flag: "🇵🇰",
-		rank: 170,
+		rank: 202,
 		conf: "AFC",
 	},
 	{
@@ -1394,7 +1402,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "차드",
 		code: "TD",
 		flag: "🇹🇩",
-		rank: 171,
+		rank: 183,
 		conf: "CAF",
 	},
 	{
@@ -1402,7 +1410,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "세인트루시아",
 		code: "LC",
 		flag: "🇱🇨",
-		rank: 172,
+		rank: 167,
 		conf: "CONCACAF",
 	},
 	{
@@ -1410,7 +1418,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "라오스",
 		code: "LA",
 		flag: "🇱🇦",
-		rank: 173,
+		rank: 185,
 		conf: "AFC",
 	},
 	{
@@ -1418,7 +1426,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "벨리즈",
 		code: "BZ",
 		flag: "🇧🇿",
-		rank: 174,
+		rank: 180,
 		conf: "CONCACAF",
 	},
 	{
@@ -1426,7 +1434,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "몰도바",
 		code: "MD",
 		flag: "🇲🇩",
-		rank: 175,
+		rank: 159,
 		conf: "UEFA",
 	},
 	{
@@ -1434,7 +1442,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "예멘",
 		code: "YE",
 		flag: "🇾🇪",
-		rank: 176,
+		rank: 149,
 		conf: "AFC",
 	},
 	{
@@ -1442,7 +1450,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "버뮤다",
 		code: "BM",
 		flag: "🇧🇲",
-		rank: 177,
+		rank: 166,
 		conf: "CONCACAF",
 	},
 	{
@@ -1450,7 +1458,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "솔로몬제도",
 		code: "SB",
 		flag: "🇸🇧",
-		rank: 178,
+		rank: 153,
 		conf: "OFC",
 	},
 	{
@@ -1458,7 +1466,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "부탄",
 		code: "BT",
 		flag: "🇧🇹",
-		rank: 179,
+		rank: 186,
 		conf: "AFC",
 	},
 	{
@@ -1466,7 +1474,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "지부티",
 		code: "DJ",
 		flag: "🇩🇯",
-		rank: 180,
+		rank: 197,
 		conf: "CAF",
 	},
 	{
@@ -1474,7 +1482,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "차이니즈타이베이",
 		code: "TW",
 		flag: "🇹🇼",
-		rank: 181,
+		rank: 174,
 		conf: "AFC",
 	},
 	{
@@ -1482,7 +1490,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "타히티",
 		code: "PF",
 		flag: "🇵🇫",
-		rank: 182,
+		rank: 157,
 		conf: "OFC",
 	},
 	{
@@ -1490,7 +1498,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "상투메프린시페",
 		code: "ST",
 		flag: "🇸🇹",
-		rank: 183,
+		rank: 196,
 		conf: "CAF",
 	},
 	{
@@ -1498,7 +1506,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "바누아투",
 		code: "VU",
 		flag: "🇻🇺",
-		rank: 184,
+		rank: 160,
 		conf: "OFC",
 	},
 	{
@@ -1506,7 +1514,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "푸에르토리코",
 		code: "PR",
 		flag: "🇵🇷",
-		rank: 185,
+		rank: 156,
 		conf: "CONCACAF",
 	},
 	{
@@ -1514,7 +1522,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "소말리아",
 		code: "SO",
 		flag: "🇸🇴",
-		rank: 186,
+		rank: 198,
 		conf: "CAF",
 	},
 	{
@@ -1522,7 +1530,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "브루나이",
 		code: "BN",
 		flag: "🇧🇳",
-		rank: 187,
+		rank: 193,
 		conf: "AFC",
 	},
 	{
@@ -1530,7 +1538,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "도미니카",
 		code: "DM",
 		flag: "🇩🇲",
-		rank: 188,
+		rank: 182,
 		conf: "CONCACAF",
 	},
 	{
@@ -1538,7 +1546,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "케이맨제도",
 		code: "KY",
 		flag: "🇰🇾",
-		rank: 189,
+		rank: 195,
 		conf: "CONCACAF",
 	},
 	{
@@ -1546,7 +1554,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "남수단",
 		code: "SS",
 		flag: "🇸🇸",
-		rank: 190,
+		rank: 170,
 		conf: "CAF",
 	},
 	{
@@ -1554,7 +1562,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "괌",
 		code: "GU",
 		flag: "🇬🇺",
-		rank: 191,
+		rank: 201,
 		conf: "AFC",
 	},
 	{
@@ -1562,7 +1570,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "바하마",
 		code: "BS",
 		flag: "🇧🇸",
-		rank: 192,
+		rank: 207,
 		conf: "CONCACAF",
 	},
 	{
@@ -1570,7 +1578,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "뉴칼레도니아",
 		code: "NC",
 		flag: "🇳🇨",
-		rank: 193,
+		rank: 151,
 		conf: "OFC",
 	},
 	{
@@ -1578,7 +1586,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "동티모르",
 		code: "TL",
 		flag: "🇹🇱",
-		rank: 194,
+		rank: 200,
 		conf: "AFC",
 	},
 	{
@@ -1586,7 +1594,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "에리트레아",
 		code: "ER",
 		flag: "🇪🇷",
-		rank: 195,
+		rank: 184,
 		conf: "CAF",
 	},
 	{
@@ -1594,7 +1602,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "리히텐슈타인",
 		code: "LI",
 		flag: "🇱🇮",
-		rank: 196,
+		rank: 206,
 		conf: "UEFA",
 	},
 	{
@@ -1602,7 +1610,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "세이셸",
 		code: "SC",
 		flag: "🇸🇨",
-		rank: 197,
+		rank: 204,
 		conf: "CAF",
 	},
 	{
@@ -1610,7 +1618,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "지브롤터",
 		code: "GI",
 		flag: "🇬🇮",
-		rank: 198,
+		rank: 203,
 		conf: "UEFA",
 	},
 	{
@@ -1618,7 +1626,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "마카오",
 		code: "MO",
 		flag: "🇲🇴",
-		rank: 199,
+		rank: 194,
 		conf: "AFC",
 	},
 	{
@@ -1626,7 +1634,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "아루바",
 		code: "AW",
 		flag: "🇦🇼",
-		rank: 200,
+		rank: 189,
 		conf: "CONCACAF",
 	},
 	{
@@ -1634,7 +1642,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "사모아",
 		code: "WS",
 		flag: "🇼🇸",
-		rank: 201,
+		rank: 190,
 		conf: "OFC",
 	},
 	{
@@ -1642,7 +1650,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "통가",
 		code: "TO",
 		flag: "🇹🇴",
-		rank: 202,
+		rank: 199,
 		conf: "OFC",
 	},
 	{
@@ -1650,7 +1658,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "미국령버진아일랜드",
 		code: "VI",
 		flag: "🇻🇮",
-		rank: 203,
+		rank: 209,
 		conf: "CONCACAF",
 	},
 	{
@@ -1658,7 +1666,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "몬트세랫",
 		code: "MS",
 		flag: "🇲🇸",
-		rank: 204,
+		rank: 175,
 		conf: "CONCACAF",
 	},
 	{
@@ -1666,7 +1674,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "영국령버진아일랜드",
 		code: "VG",
 		flag: "🇻🇬",
-		rank: 205,
+		rank: 208,
 		conf: "CONCACAF",
 	},
 	{
@@ -1674,7 +1682,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "터크스케이커스제도",
 		code: "TC",
 		flag: "🇹🇨",
-		rank: 206,
+		rank: 205,
 		conf: "CONCACAF",
 	},
 	{
@@ -1682,7 +1690,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "쿡제도",
 		code: "CK",
 		flag: "🇨🇰",
-		rank: 207,
+		rank: 188,
 		conf: "OFC",
 	},
 	{
@@ -1690,7 +1698,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "앵귈라",
 		code: "AI",
 		flag: "🇦🇮",
-		rank: 208,
+		rank: 210,
 		conf: "CONCACAF",
 	},
 	{
@@ -1698,7 +1706,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "산마리노",
 		code: "SM",
 		flag: "🇸🇲",
-		rank: 209,
+		rank: 211,
 		conf: "UEFA",
 	},
 	{
@@ -1706,7 +1714,7 @@ export const ALL_COUNTRIES: Country[] = [
 		nameKo: "미국령사모아",
 		code: "AS",
 		flag: "🇦🇸",
-		rank: 210,
+		rank: 192,
 		conf: "OFC",
 	},
 ];

@@ -440,7 +440,7 @@ function App() {
 						<span className="title-worldcup">World Cup</span>
 					</span>
 				</h1>
-				<p className="update-date">FIFA 랭킹 데이터: 2025년 4월 기준</p>
+				<p className="update-date">FIFA 랭킹 데이터: 2026년 4월 기준</p>
 			</header>
 
 			{/* 대회 규모 선택 + 프리셋 */}

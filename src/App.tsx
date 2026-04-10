@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BracketView } from "./components/BracketView";
 import { Champion } from "./components/Champion";
+import { FifaRanking } from "./components/FifaRanking";
 import { GroupView } from "./components/GroupView";
 import { TeamSelector } from "./components/TeamSelector";
 import { saveWinner, WinnerHistory } from "./components/WinnerHistory";
@@ -411,6 +412,7 @@ function App() {
 
 	return (
 		<div className="app">
+			<FifaRanking />
 			<WinnerHistory />
 			<button
 				type="button"

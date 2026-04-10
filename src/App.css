@@ -208,6 +208,140 @@
 	color: white;
 }
 
+/* FIFA 랭킹 패널 */
+.ranking-panel {
+	position: fixed;
+	top: 12px;
+	right: 288px;
+	z-index: 100;
+}
+
+.ranking-toggle {
+	padding: 6px 14px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	border: 2px solid #3498db;
+	border-radius: 20px;
+	background: linear-gradient(135deg, #ebf5fb, #d6eaf8);
+	color: #2471a3;
+	cursor: pointer;
+	font-family: inherit;
+	transition: all 0.2s;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-toggle:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.ranking-body {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	margin-top: 8px;
+	width: 320px;
+	max-height: 480px;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border: 2px solid #3498db;
+	border-radius: 12px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+	animation: history-open 0.25s ease-out;
+}
+
+.ranking-source {
+	padding: 8px 12px 0;
+	font-size: 0.65rem;
+	color: #95a5a6;
+	text-align: center;
+}
+
+.ranking-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 8px 12px;
+	border-bottom: 1px solid #eee;
+}
+
+.ranking-filter {
+	padding: 3px 10px;
+	font-size: 0.7rem;
+	font-weight: 600;
+	border: 1px solid #dee2e6;
+	border-radius: 12px;
+	background: #f8f9fa;
+	color: #7f8c8d;
+	cursor: pointer;
+	font-family: inherit;
+	transition: all 0.15s;
+}
+
+.ranking-filter:hover {
+	border-color: #3498db;
+	color: #3498db;
+}
+
+.ranking-filter.active {
+	background: #3498db;
+	border-color: #3498db;
+	color: white;
+}
+
+.ranking-list {
+	flex: 1;
+	overflow-y: auto;
+	padding: 8px 12px 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.ranking-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 5px 8px;
+	border-radius: 6px;
+	font-size: 0.78rem;
+	transition: background 0.15s;
+}
+
+.ranking-item:hover {
+	background: #f0f7fd;
+}
+
+.ranking-pos {
+	font-weight: 700;
+	color: #7f8c8d;
+	min-width: 28px;
+	text-align: right;
+}
+
+.ranking-item:nth-child(-n + 3) .ranking-pos {
+	color: #d4ac0d;
+}
+
+.ranking-flag {
+	font-size: 1.1rem;
+}
+
+.ranking-name {
+	flex: 1;
+	font-weight: 600;
+	color: #2c3e50;
+}
+
+.ranking-conf {
+	font-size: 0.65rem;
+	color: #95a5a6;
+	padding: 2px 6px;
+	background: #f0f0f0;
+	border-radius: 8px;
+}
+
 .header {
 	text-align: center;
 	margin-bottom: 24px;
@@ -1982,6 +2116,21 @@
 		font-size: 0.9rem;
 	}
 
+	.ranking-panel {
+		right: 236px;
+	}
+
+	.ranking-toggle {
+		padding: 4px 10px;
+		font-size: 0.7rem;
+	}
+
+	.ranking-body {
+		width: 280px;
+		max-height: 400px;
+		right: -100px;
+	}
+
 	/* 모바일 대진표 */
 	.bm-card {
 		width: 110px;
@@ -2051,6 +2200,56 @@
 }
 
 /* 다크 모드 */
+[data-theme="dark"] .ranking-toggle {
+	background: linear-gradient(135deg, #1a2a3c, #1e3a5c);
+	color: #5dade2;
+	border-color: #2471a3;
+}
+
+[data-theme="dark"] .ranking-body {
+	background: #1a1a2e;
+	border-color: #2471a3;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .ranking-source {
+	color: #7f8c8d;
+}
+
+[data-theme="dark"] .ranking-filters {
+	border-bottom-color: #34495e;
+}
+
+[data-theme="dark"] .ranking-filter {
+	background: #2c3e50;
+	border-color: #34495e;
+	color: #95a5a6;
+}
+
+[data-theme="dark"] .ranking-filter:hover {
+	border-color: #5dade2;
+	color: #5dade2;
+}
+
+[data-theme="dark"] .ranking-filter.active {
+	background: #2471a3;
+	border-color: #2471a3;
+	color: white;
+}
+
+[data-theme="dark"] .ranking-item:hover {
+	background: rgba(52, 152, 219, 0.1);
+}
+
+[data-theme="dark"] .ranking-name {
+	color: #ecf0f1;
+}
+
+[data-theme="dark"] .ranking-conf {
+	background: #34495e;
+	color: #95a5a6;
+}
+
 [data-theme="dark"] .history-toggle {
 	background: linear-gradient(135deg, #2c2a1a, #3d3520);
 	color: #d4ac0d;

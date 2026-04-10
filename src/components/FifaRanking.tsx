@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
 	ALL_COUNTRIES,
 	CONFEDERATION_LABELS,
@@ -17,14 +17,27 @@ const CONF_ORDER: Confederation[] = [
 export function FifaRanking() {
 	const [open, setOpen] = useState(false);
 	const [filter, setFilter] = useState<Confederation | "ALL">("ALL");
+	const panelRef = useRef<HTMLDivElement>(null);
 
-	const filtered =
+	useEffect(() => {
+		if (!open) return;
+		const handleClick = (e: MouseEvent) => {
+			if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
+				setOpen(false);
+			}
+		};
+		document.addEventListener("mousedown", handleClick);
+		return () => document.removeEventListener("mousedown", handleClick);
+	}, [open]);
+
+	const filtered = (
 		filter === "ALL"
 			? ALL_COUNTRIES
-			: ALL_COUNTRIES.filter((c) => c.conf === filter);
+			: ALL_COUNTRIES.filter((c) => c.conf === filter)
+	).toSorted((a, b) => a.rank - b.rank);
 
 	return (
-		<div className={`ranking-panel ${open ? "open" : ""}`}>
+		<div ref={panelRef} className={`ranking-panel ${open ? "open" : ""}`}>
 			<button
 				type="button"
 				className="ranking-toggle"

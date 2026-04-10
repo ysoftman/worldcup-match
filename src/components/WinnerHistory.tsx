@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export interface WinnerRecord {
 	flag: string;
@@ -35,6 +35,18 @@ export function clearHistory() {
 export function WinnerHistory() {
 	const [open, setOpen] = useState(false);
 	const [history, setHistory] = useState(loadHistory);
+	const panelRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		if (!open) return;
+		const handleClick = (e: MouseEvent) => {
+			if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
+				setOpen(false);
+			}
+		};
+		document.addEventListener("mousedown", handleClick);
+		return () => document.removeEventListener("mousedown", handleClick);
+	}, [open]);
 
 	const handleToggle = () => {
 		if (!open) setHistory(loadHistory()); // 열 때마다 최신 기록 로드
@@ -47,7 +59,7 @@ export function WinnerHistory() {
 	};
 
 	return (
-		<div className={`history-panel ${open ? "open" : ""}`}>
+		<div ref={panelRef} className={`history-panel ${open ? "open" : ""}`}>
 			<button type="button" className="history-toggle" onClick={handleToggle}>
 				🏆 {open ? "닫기" : `우승 기록 (${loadHistory().length})`}
 			</button>
@@ -68,7 +80,9 @@ export function WinnerHistory() {
 										}`}
 									>
 										<div className="history-row1">
-											<span className="history-rank">#{i + 1}</span>
+											<span className="history-rank">
+												#{history.length - i}
+											</span>
 											<span className="history-flag">{r.flag}</span>
 											<span className="history-name">{r.nameKo}</span>
 										</div>

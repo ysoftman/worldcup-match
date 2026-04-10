@@ -1418,13 +1418,13 @@
 .bracket {
 	display: flex;
 	align-items: stretch;
-	min-width: max-content;
+	width: fit-content;
 	min-height: 360px;
+	margin: 0 auto;
 }
 
 .bracket-half {
 	display: flex;
-	flex: 1;
 }
 
 .bracket-left {
@@ -1580,46 +1580,32 @@
 	background: #c5a028;
 }
 
-/* 결승 연결선: bracket-half 슬롯패딩(8px)까지 커버 */
+/* 결승 연결선: 4강 카드 ~ 결승 카드 사이를 하나의 선으로 연결 */
 .b-final-line {
-	width: 16px;
-	min-width: 16px;
-	display: flex;
-	align-items: center;
+	width: 20px;
+	min-width: 20px;
 	padding-top: 22px;
-	overflow: visible;
+	position: relative;
 }
 
 .b-final-line::after {
 	content: "";
-	flex: 0 0 calc(100% + 8px);
-	margin-left: -8px;
 	height: 2px;
 	background: #c5a028;
+	position: absolute;
+	top: calc(50% + 11px);
+	left: -8px;
+	right: -8px;
 }
 
-/* 결승 중앙 */
+/* 결승 중앙: fit-content로 카드에 딱 맞춰서 갭 제거 */
 .bracket-center {
 	display: flex;
 	flex-direction: column;
-	align-items: stretch;
-	justify-content: center;
-	padding: 0 20px;
-	min-width: 260px;
-}
-
-/* 결승 카드 + 좌우 연결선 래퍼 */
-.final-wrapper {
-	display: flex;
 	align-items: center;
-}
-
-/* 결승 연결선: bracket-center 패딩에서 카드 가장자리까지 (카드 위로 가지 않음) */
-.final-line {
-	flex: 1;
-	height: 2px;
-	background: #c5a028;
-	min-width: 4px;
+	justify-content: center;
+	padding: 0;
+	width: fit-content;
 }
 
 .bracket-center .b-label {
@@ -2171,7 +2157,7 @@
 	}
 
 	.bracket-center {
-		min-width: 130px;
+		width: fit-content;
 	}
 
 	.final-card {
@@ -2573,7 +2559,6 @@
 [data-theme="dark"] .b-conn-right .b-conn-pair::after,
 [data-theme="dark"] .b-conn-right .b-conn-top::after,
 [data-theme="dark"] .b-conn-right .b-conn-bot::after,
-[data-theme="dark"] .b-final-line::after,
-[data-theme="dark"] .final-line {
+[data-theme="dark"] .b-final-line::after {
 	background: #8b7420;
 }

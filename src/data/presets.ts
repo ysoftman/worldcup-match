@@ -66,4 +66,24 @@ export const PRESET_2022: Preset = {
 	],
 };
 
-export const ALL_PRESETS: Preset[] = [PRESET_2026, PRESET_2022];
+/** 2018 러시아 월드컵 (32팀, 8조) */
+export const PRESET_2018: Preset = {
+	id: "2018",
+	label: "2018 러시아 월드컵",
+	size: 32,
+	groups: [
+		{ name: "A조", teams: [find("RU"), find("SA"), find("EG"), find("UY")] },
+		{ name: "B조", teams: [find("PT"), find("ES"), find("MA"), find("IR")] },
+		{ name: "C조", teams: [find("FR"), find("AU"), find("PE"), find("DK")] },
+		{ name: "D조", teams: [find("AR"), find("IS"), find("HR"), find("NG")] },
+		{ name: "E조", teams: [find("BR"), find("CH"), find("CR"), find("RS")] },
+		{ name: "F조", teams: [find("DE"), find("MX"), find("SE"), find("KR")] },
+		{
+			name: "G조",
+			teams: [find("BE"), find("PA"), find("TN"), find("GB-ENG")],
+		},
+		{ name: "H조", teams: [find("PL"), find("SN"), find("CO"), find("JP")] },
+	],
+};
+
+export const ALL_PRESETS: Preset[] = [PRESET_2026, PRESET_2022, PRESET_2018];

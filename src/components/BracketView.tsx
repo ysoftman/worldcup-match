@@ -36,7 +36,7 @@ function BracketMatchCard({
 			disabled={played}
 		>
 			<div
-				className={`bm-team ${played && winner?.code === team1.code ? "bm-win" : ""}`}
+				className={`bm-team ${played ? (winner?.code === team1.code ? "bm-win" : "bm-lose") : ""}`}
 			>
 				<span className="bm-flag">{team1.flag}</span>
 				<span className="bm-name">{team1.nameKo}</span>
@@ -44,7 +44,7 @@ function BracketMatchCard({
 				<AnimatedScore target={score1} active={played} className="bm-score" />
 			</div>
 			<div
-				className={`bm-team ${played && winner?.code === team2.code ? "bm-win" : ""}`}
+				className={`bm-team ${played ? (winner?.code === team2.code ? "bm-win" : "bm-lose") : ""}`}
 			>
 				<span className="bm-flag">{team2.flag}</span>
 				<span className="bm-name">{team2.nameKo}</span>
@@ -65,6 +65,84 @@ function PlaceholderCard() {
 			<div className="bm-team">
 				<span className="bm-name">?</span>
 				<span className="bm-score">-</span>
+			</div>
+		</div>
+	);
+}
+
+/* 결승전 전용 카드 (원형 국기 좌우 대칭) */
+function FinalMatchCard({
+	match,
+	teamStats,
+	onClick,
+}: {
+	match: Match;
+	teamStats: Map<string, TeamStats>;
+	onClick: () => void;
+}) {
+	const { team1, team2, score1, score2, played, winner } = match;
+	const s1 = teamStats.get(team1.code);
+	const s2 = teamStats.get(team2.code);
+	const t1Win = played && winner?.code === team1.code;
+	const t2Win = played && winner?.code === team2.code;
+
+	return (
+		<button
+			type="button"
+			className={`final-card ${played ? "final-played" : "final-pending"}`}
+			onClick={onClick}
+			disabled={played}
+		>
+			<div
+				className={`final-team ${played ? (t1Win ? "final-win" : "final-lose") : ""}`}
+			>
+				<div className="final-circle">
+					<span className="final-flag">{team1.flag}</span>
+				</div>
+				<span className="final-name">{team1.nameKo}</span>
+				<AnimatedScore
+					target={score1}
+					active={played}
+					className="final-score"
+				/>
+				{s1 && <span className="final-rate">{s1.winRate}%</span>}
+			</div>
+			<div className="final-vs">{played ? "-" : "VS"}</div>
+			<div
+				className={`final-team ${played ? (t2Win ? "final-win" : "final-lose") : ""}`}
+			>
+				<div className="final-circle">
+					<span className="final-flag">{team2.flag}</span>
+				</div>
+				<span className="final-name">{team2.nameKo}</span>
+				<AnimatedScore
+					target={score2}
+					active={played}
+					className="final-score"
+				/>
+				{s2 && <span className="final-rate">{s2.winRate}%</span>}
+			</div>
+		</button>
+	);
+}
+
+function FinalPlaceholder() {
+	return (
+		<div className="final-card final-placeholder">
+			<div className="final-team">
+				<div className="final-circle">
+					<span className="final-flag">?</span>
+				</div>
+				<span className="final-name">?</span>
+				<span className="final-score">-</span>
+			</div>
+			<div className="final-vs">VS</div>
+			<div className="final-team">
+				<div className="final-circle">
+					<span className="final-flag">?</span>
+				</div>
+				<span className="final-name">?</span>
+				<span className="final-score">-</span>
 			</div>
 		</div>
 	);
@@ -237,13 +315,13 @@ export function BracketView({
 				<div className="bracket-center">
 					<div className="b-label">{ROUND_LABELS.final}</div>
 					{finalRound ? (
-						<BracketMatchCard
+						<FinalMatchCard
 							match={finalRound.matches[0]}
 							teamStats={teamStats}
 							onClick={() => onPlayMatch(finalRound.matches[0].id)}
 						/>
 					) : (
-						<PlaceholderCard />
+						<FinalPlaceholder />
 					)}
 				</div>
 

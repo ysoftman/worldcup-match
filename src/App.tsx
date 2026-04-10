@@ -315,7 +315,10 @@ function App() {
 				m.id === matchId && !m.played ? simulateMatch(m, teamModifiers) : m,
 			);
 			const updatedRounds = [...rounds];
-			updatedRounds[currentRoundIndex] = { ...current, matches: newMatches };
+			updatedRounds[currentRoundIndex] = {
+				...current,
+				matches: newMatches,
+			};
 
 			const allDone = newMatches.every((m) => m.played);
 

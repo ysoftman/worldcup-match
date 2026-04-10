@@ -1,5 +1,5 @@
 .app {
-	max-width: 960px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 20px;
 	position: relative;
@@ -1154,6 +1154,7 @@
 }
 
 .team .name {
+	flex: 1;
 	font-size: 0.85rem;
 	color: #2c3e50;
 	overflow: hidden;
@@ -1171,7 +1172,20 @@
 }
 
 .team.winner .score {
+	color: #27ae60;
 	animation: score-pop 0.5s ease-out 0.2s both;
+}
+
+.team.loser {
+	opacity: 0.5;
+}
+
+.team.loser .score {
+	color: #e74c3c;
+}
+
+.team.draw .score {
+	color: #f39c12;
 }
 
 @keyframes score-pop {
@@ -1270,7 +1284,7 @@
 .b-round {
 	display: flex;
 	flex-direction: column;
-	min-width: 130px;
+	min-width: 146px;
 }
 
 .b-label {
@@ -1294,7 +1308,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 3px 0;
+	padding: 3px 8px;
 }
 
 /* 커넥터 컬럼 */
@@ -1313,54 +1327,100 @@
 	position: relative;
 }
 
-.b-conn-top {
-	flex: 1;
-}
-
+.b-conn-top,
 .b-conn-bot {
 	flex: 1;
+	position: relative;
 }
 
-/* 좌측 대진표 커넥터: ──┤ 형태 */
-.b-conn-left .b-conn-top {
-	border-right: 2px solid #c5a028;
-	border-bottom: 2px solid #c5a028;
+/* ── 좌측 대진표 커넥터: ──┐ ├── ──┘ ── */
+
+/* 수직선: 상단 매치 중심(25%)에서 하단 매치 중심(75%)까지만 */
+.b-conn-left .b-conn-pair::before {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 25%;
+	bottom: 25%;
+	width: 2px;
+	background: #c5a028;
 }
 
-.b-conn-left .b-conn-bot {
-	border-right: 2px solid #c5a028;
-	border-top: 2px solid #c5a028;
-}
-
-/* 좌측: 합류점에서 오른쪽으로 연장선 */
+/* 합류점(50%)에서 다음 라운드 패딩까지 수평 연장 */
 .b-conn-left .b-conn-pair::after {
 	content: "";
 	position: absolute;
-	right: -1px;
+	right: -8px;
 	top: calc(50% - 1px);
-	width: 14px;
+	width: 8px;
 	height: 2px;
 	background: #c5a028;
 }
 
-/* 우측 대진표 커넥터: ├── 형태 (좌우 반전) */
-.b-conn-right .b-conn-top {
-	border-left: 2px solid #c5a028;
-	border-bottom: 2px solid #c5a028;
+/* 상단 매치에서 수직선까지 (이전 라운드 패딩 포함) */
+.b-conn-left .b-conn-top::after {
+	content: "";
+	position: absolute;
+	left: -8px;
+	right: 0;
+	top: calc(50% - 1px);
+	height: 2px;
+	background: #c5a028;
 }
 
-.b-conn-right .b-conn-bot {
-	border-left: 2px solid #c5a028;
-	border-top: 2px solid #c5a028;
+/* 하단 매치에서 수직선까지 (이전 라운드 패딩 포함) */
+.b-conn-left .b-conn-bot::after {
+	content: "";
+	position: absolute;
+	left: -8px;
+	right: 0;
+	top: calc(50% - 1px);
+	height: 2px;
+	background: #c5a028;
 }
 
-/* 우측: 합류점에서 왼쪽으로 연장선 */
+/* ── 우측 대진표 커넥터: ┌── ──┤ └── (좌우 반전) ── */
+
+/* 수직선: 상단 매치 중심(25%)에서 하단 매치 중심(75%)까지만 */
+.b-conn-right .b-conn-pair::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 25%;
+	bottom: 25%;
+	width: 2px;
+	background: #c5a028;
+}
+
+/* 합류점(50%)에서 다음 라운드 패딩까지 수평 연장 */
 .b-conn-right .b-conn-pair::after {
 	content: "";
 	position: absolute;
-	left: -1px;
+	left: -8px;
 	top: calc(50% - 1px);
-	width: 14px;
+	width: 8px;
+	height: 2px;
+	background: #c5a028;
+}
+
+/* 상단 매치에서 수직선까지 (입력 라운드 패딩 포함) */
+.b-conn-right .b-conn-top::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: -8px;
+	top: calc(50% - 1px);
+	height: 2px;
+	background: #c5a028;
+}
+
+/* 하단 매치에서 수직선까지 (입력 라운드 패딩 포함) */
+.b-conn-right .b-conn-bot::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: -8px;
+	top: calc(50% - 1px);
 	height: 2px;
 	background: #c5a028;
 }
@@ -1376,7 +1436,8 @@
 
 .b-final-line::after {
 	content: "";
-	width: 100%;
+	width: calc(100% + 24px);
+	margin: 0 -12px;
 	height: 2px;
 	background: #c5a028;
 }
@@ -1387,13 +1448,181 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0 4px;
-	min-width: 140px;
+	padding: 0 12px;
+	min-width: 220px;
 }
 
 .bracket-center .b-label {
 	font-size: 0.8rem;
 	color: #e67e22;
+}
+
+/* ── 결승전 카드 ── */
+.final-card {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px 20px;
+	border: 2px solid #d4ac0d;
+	border-radius: 16px;
+	background: linear-gradient(135deg, #fef9e7, #fdebd0);
+	font-family: inherit;
+	color: inherit;
+	text-align: center;
+	transition: all 0.2s;
+	position: relative;
+	z-index: 1;
+}
+
+.final-card.final-played {
+	border-color: #27ae60;
+	background: linear-gradient(135deg, #eafaf1, #d5f5e3);
+	animation: match-result 0.6s ease-out;
+}
+
+.final-card.final-pending {
+	cursor: pointer;
+	opacity: 0.85;
+}
+
+.final-card.final-pending:hover:not(:disabled) {
+	opacity: 1;
+	transform: scale(1.03);
+	box-shadow: 0 4px 20px rgba(212, 172, 13, 0.4);
+}
+
+.final-card:disabled {
+	cursor: default;
+}
+
+.final-card.final-placeholder {
+	opacity: 0.35;
+	border-style: dashed;
+}
+
+.final-team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	min-width: 70px;
+}
+
+.final-circle {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	border: 3px solid #d4ac0d;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s;
+}
+
+.final-flag {
+	font-size: 1.8rem;
+	line-height: 1;
+}
+
+.final-name {
+	font-size: 0.82rem;
+	font-weight: 600;
+	color: #2c3e50;
+	white-space: nowrap;
+}
+
+.final-team.final-win .final-circle {
+	box-shadow: 0 0 16px rgba(39, 174, 96, 0.5);
+	border-color: #27ae60;
+}
+
+.final-score {
+	font-size: 1.3rem;
+	font-weight: 800;
+	color: #1a5276;
+}
+
+.final-team.final-win .final-name {
+	font-weight: 700;
+}
+
+.final-team.final-lose {
+	opacity: 0.5;
+}
+
+.final-team.final-lose .final-circle {
+	border-color: #e74c3c;
+	box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+}
+
+.final-team.final-lose .final-score {
+	color: #e74c3c;
+}
+
+.final-team.final-lose .final-name {
+	text-decoration: line-through;
+	text-decoration-color: rgba(231, 76, 60, 0.5);
+}
+
+.final-rate {
+	font-size: 0.65rem;
+	font-weight: 600;
+	color: #8e44ad;
+}
+
+.final-vs {
+	font-size: 1rem;
+	font-weight: 800;
+	color: #d4ac0d;
+	letter-spacing: 2px;
+	flex-shrink: 0;
+}
+
+/* 결승 다크모드 */
+[data-theme="dark"] .final-card {
+	background: linear-gradient(135deg, #2c2a1a, #3d3520);
+	border-color: #d4ac0d;
+}
+
+[data-theme="dark"] .final-card.final-played {
+	background: linear-gradient(135deg, #1a3a2a, #1d4030);
+	border-color: #27ae60;
+}
+
+[data-theme="dark"] .final-circle {
+	background: #2c3e50;
+	border-color: #d4ac0d;
+}
+
+[data-theme="dark"] .final-team.final-win .final-circle {
+	border-color: #2ecc71;
+}
+
+[data-theme="dark"] .final-team.final-lose .final-circle {
+	border-color: #e74c3c;
+	box-shadow: 0 0 10px rgba(231, 76, 60, 0.4);
+}
+
+[data-theme="dark"] .final-team.final-lose .final-score {
+	color: #e74c3c;
+}
+
+[data-theme="dark"] .final-name {
+	color: #ecf0f1;
+}
+
+[data-theme="dark"] .final-score {
+	color: #3498db;
+}
+
+[data-theme="dark"] .final-rate {
+	color: #c39bd3;
+}
+
+[data-theme="dark"] .final-card.final-placeholder {
+	background: #2a2e38;
+	border-color: #3d4f63;
 }
 
 /* ── 대진표 매치 카드 ── */
@@ -1408,6 +1637,8 @@
 	color: inherit;
 	text-align: left;
 	transition: all 0.2s;
+	position: relative;
+	z-index: 1;
 }
 
 .bm-card.bm-played {
@@ -1476,6 +1707,20 @@
 
 .bm-win .bm-score {
 	color: #27ae60;
+}
+
+.bm-lose {
+	opacity: 0.5;
+	background: rgba(231, 76, 60, 0.06);
+}
+
+.bm-lose .bm-name {
+	text-decoration: line-through;
+	text-decoration-color: rgba(231, 76, 60, 0.4);
+}
+
+.bm-lose .bm-score {
+	color: #e74c3c;
 }
 
 .bm-rate {
@@ -1717,7 +1962,7 @@
 	}
 
 	.b-round {
-		min-width: 110px;
+		min-width: 126px;
 	}
 
 	.bm-team {
@@ -1745,7 +1990,37 @@
 	}
 
 	.bracket-center {
-		min-width: 115px;
+		min-width: 130px;
+	}
+
+	.final-card {
+		gap: 10px;
+		padding: 12px 14px;
+	}
+
+	.final-circle {
+		width: 44px;
+		height: 44px;
+	}
+
+	.final-flag {
+		font-size: 1.4rem;
+	}
+
+	.final-name {
+		font-size: 0.7rem;
+	}
+
+	.final-score {
+		font-size: 1.1rem;
+	}
+
+	.final-vs {
+		font-size: 0.8rem;
+	}
+
+	.final-team {
+		min-width: 50px;
 	}
 }
 
@@ -1945,6 +2220,18 @@
 	color: #3498db;
 }
 
+[data-theme="dark"] .team.winner .score {
+	color: #2ecc71;
+}
+
+[data-theme="dark"] .team.loser .score {
+	color: #e74c3c;
+}
+
+[data-theme="dark"] .team.draw .score {
+	color: #f39c12;
+}
+
 [data-theme="dark"] .rank-badge {
 	color: #f39c12;
 	background: rgba(243, 156, 18, 0.15);
@@ -2039,18 +2326,22 @@
 	color: #2ecc71;
 }
 
-[data-theme="dark"] .b-conn-left .b-conn-top,
-[data-theme="dark"] .b-conn-left .b-conn-bot {
-	border-color: #8b7420;
+[data-theme="dark"] .bm-lose {
+	background: rgba(231, 76, 60, 0.1);
 }
 
-[data-theme="dark"] .b-conn-right .b-conn-top,
-[data-theme="dark"] .b-conn-right .b-conn-bot {
-	border-color: #8b7420;
+[data-theme="dark"] .bm-lose .bm-score {
+	color: #e74c3c;
 }
 
+[data-theme="dark"] .b-conn-left .b-conn-pair::before,
 [data-theme="dark"] .b-conn-left .b-conn-pair::after,
+[data-theme="dark"] .b-conn-left .b-conn-top::after,
+[data-theme="dark"] .b-conn-left .b-conn-bot::after,
+[data-theme="dark"] .b-conn-right .b-conn-pair::before,
 [data-theme="dark"] .b-conn-right .b-conn-pair::after,
+[data-theme="dark"] .b-conn-right .b-conn-top::after,
+[data-theme="dark"] .b-conn-right .b-conn-bot::after,
 [data-theme="dark"] .b-final-line::after {
 	background: #8b7420;
 }

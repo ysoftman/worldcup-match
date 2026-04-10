@@ -19,7 +19,9 @@ export function GroupMatchCard({ match, onClick }: GroupMatchCardProps) {
 			onClick={onClick}
 			disabled={played}
 		>
-			<div className={`team ${team1Win ? "winner" : ""}`}>
+			<div
+				className={`team ${played ? (team1Win ? "winner" : isDraw ? "draw" : "loser") : ""}`}
+			>
 				<span className="flag">{team1.flag}</span>
 				<span className="name">
 					{team1.nameKo}({team1.name})
@@ -27,7 +29,9 @@ export function GroupMatchCard({ match, onClick }: GroupMatchCardProps) {
 				<AnimatedScore target={score1} active={played} className="score" />
 			</div>
 			<div className="vs">{played ? (isDraw ? "무" : "-") : "vs"}</div>
-			<div className={`team ${team2Win ? "winner" : ""}`}>
+			<div
+				className={`team ${played ? (team2Win ? "winner" : isDraw ? "draw" : "loser") : ""}`}
+			>
 				<AnimatedScore target={score2} active={played} className="score" />
 				<span className="name">
 					{team2.nameKo}({team2.name})

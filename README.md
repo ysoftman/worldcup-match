@@ -11,17 +11,18 @@ FIFA 211 member nations, group stage and knockout tournament simulation web app.
 - Group stage with standings table and wildcard 3rd-place advancement (48-team)
 - Knockout bracket with visual connectors and final match circle layout
 - Match simulation based on FIFA ranking (Poisson distribution)
-- Squad viewer per team with 26-player roster (position, stats, height, age)
+- Squad viewer per team with player roster (position, stats, height, age, photo)
 - Starting XI selection with auto-select by formation
 - Player ability ratings (OVR, pace, shooting, passing, dribbling, defending, physical)
-- Real player data via API-Football integration (fallback: generated players)
+- Player photo zoom on click
+- Real player data for 44 countries via API-Football (fallback: generated players marked with `*`)
 - Formation selector for group stage teams (8 formations with attack/defense modifiers)
 - Team strength modifier (-2 to +2) and team swap between groups
 - Win/lose/draw color indicators (green/red/orange)
 - Winner history stored in localStorage
 - Dark/light mode toggle
 - Sound effects (whistle, goal, victory, crowd ambience)
-- Responsive design (desktop and mobile)
+- Responsive design with horizontal scroll for squad table on mobile
 - FIFA ranking popup with confederation filter
 
 ## Match Simulation
@@ -29,8 +30,10 @@ FIFA 211 member nations, group stage and knockout tournament simulation web app.
 Match results are determined by a Poisson distribution based on FIFA ranking:
 
 1. Ranking to strength: `max(0.8, 3.0 - (rank - 1) * 0.016) + modifier * 0.4`
-2. Goals: random draw from Poisson distribution with strength as mean
-3. Knockout ties: penalty shootout with slight advantage to higher-ranked team
+2. Formation modifier: `strength += atkMod - opponent.defMod`
+3. Starting XI modifier: average OVR difference from squad average (±0.2)
+4. Goals: random draw from Poisson distribution with strength as mean
+5. Knockout ties: penalty shootout with slight advantage to higher-ranked team
 
 ## Tech Stack
 
@@ -48,9 +51,17 @@ bun run build
 
 ## Player Data
 
-Real player data for 8 countries is included in `src/data/players.json` (sourced from API-Football).
-All other countries use algorithmically generated players based on FIFA ranking.
+Real player data for 44 countries is stored in `src/data/players/` as per-country JSON files (sourced from API-Football).
+Remaining countries use algorithmically generated players based on FIFA ranking and 30 cultural-region name pools.
 Generated (fallback) players are marked with `*` in the squad modal.
+
+To fetch additional countries:
+
+```bash
+API_FOOTBALL_KEY=your_key bun run scripts/fetchWorldcup.ts
+```
+
+Already downloaded countries are skipped automatically.
 
 ## Project Structure
 
@@ -60,7 +71,11 @@ src/
 │   ├── countries.ts         # 211 FIFA nations (name, code, flag, rank, confederation)
 │   ├── presets.ts           # Tournament presets (2002-2026 World Cup)
 │   ├── playerNames.ts       # Region-specific name pools (30 cultural groups)
-│   └── players.json         # API-Football player data (populated by fetch script)
+│   └── players/             # Per-country player data (44 countries)
+│       ├── index.ts         # Aggregated import/export
+│       ├── ar.json          # Argentina
+│       ├── fr.json          # France
+│       └── ...
 ├── types.ts                 # Type definitions (Match, Group, Round, Player, etc.)
 ├── utils/
 │   ├── tournament.ts        # Tournament logic (simulation, groups, brackets)
@@ -77,9 +92,11 @@ src/
 │   ├── TeamSelector.tsx      # Team selection with region filters
 │   ├── WinnerHistory.tsx     # Winner history panel
 │   ├── AnimatedScore.tsx     # Goal count-up animation
-│   ├── FifaRanking.tsx       # FIFA ranking popup
-│   └── RoundView.tsx         # Round view component
+│   └── FifaRanking.tsx       # FIFA ranking popup
 ├── App.tsx                   # Main app (tournament state management)
 ├── App.css                   # App styles (dark mode, bracket, etc.)
 └── index.css                 # Global styles
+scripts/
+├── fetchWorldcup.ts          # API-Football squad fetch script
+└── generatePlayers.ts        # Hardcoded player data generator
 ```

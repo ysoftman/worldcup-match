@@ -1072,6 +1072,47 @@
 	color: #e74c3c;
 }
 
+/* 포메이션 선택 */
+.formation-select {
+	display: block;
+	margin: 3px auto 0;
+	padding: 1px 2px;
+	font-size: 0.6rem;
+	font-weight: 600;
+	font-family: inherit;
+	border: 1px solid #bdc3c7;
+	border-radius: 4px;
+	background: #fff;
+	color: #2c3e50;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.15s;
+	max-width: 72px;
+}
+
+.formation-select:hover {
+	border-color: #3498db;
+	box-shadow: 0 1px 4px rgba(52, 152, 219, 0.25);
+}
+
+.formation-select:focus {
+	outline: none;
+	border-color: #3498db;
+	box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* 순위표 포메이션 배지 */
+.formation-badge {
+	font-size: 0.55rem;
+	font-weight: 600;
+	margin-left: 3px;
+	padding: 1px 4px;
+	border-radius: 3px;
+	background: #eaf2f8;
+	color: #2980b9;
+	white-space: nowrap;
+}
+
 /* 순위표 modifier 배지 */
 .mod-badge {
 	font-size: 0.6rem;
@@ -2000,6 +2041,12 @@
 		max-width: 48px;
 	}
 
+	.formation-select {
+		font-size: 0.5rem;
+		max-width: 58px;
+		padding: 0 1px;
+	}
+
 	.standings-table {
 		font-size: 0.7rem;
 		display: block;
@@ -2386,6 +2433,21 @@
 	background: #3498db;
 	border-color: #3498db;
 	color: #fff;
+}
+
+[data-theme="dark"] .formation-select {
+	background: #34495e;
+	border-color: #4a6274;
+	color: #ecf0f1;
+}
+
+[data-theme="dark"] .formation-select:hover {
+	border-color: #3498db;
+}
+
+[data-theme="dark"] .formation-badge {
+	background: #1a3a5c;
+	color: #5dade2;
 }
 
 [data-theme="dark"] .standings-table th {

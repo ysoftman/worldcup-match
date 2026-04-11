@@ -1,5 +1,6 @@
 import type { Country } from "../data/countries";
 import type { Group, TeamStats } from "../types";
+import { DEFAULT_FORMATION_ID, FORMATIONS } from "../types";
 import { GroupMatchCard } from "./GroupMatchCard";
 
 interface GroupViewProps {
@@ -10,6 +11,8 @@ interface GroupViewProps {
 	onSwapSelect: (groupName: string, team: Country) => void;
 	teamModifiers: Map<string, number>;
 	onChangeModifier: (teamCode: string, delta: number) => void;
+	teamFormations: Map<string, string>;
+	onChangeFormation: (teamCode: string, formationId: string) => void;
 	wildcardCodes: Set<string>;
 }
 
@@ -23,6 +26,8 @@ export function GroupView({
 	onSwapSelect,
 	teamModifiers,
 	onChangeModifier,
+	teamFormations,
+	onChangeFormation,
 	wildcardCodes,
 }: GroupViewProps) {
 	const hasPlayedMatches = group.matches.some((m) => m.played);
@@ -47,6 +52,8 @@ export function GroupView({
 						const x = 50 + radius * Math.cos(rad);
 						const y = 50 + radius * Math.sin(rad);
 						const mod = teamModifiers.get(t.code) ?? 0;
+						const formation =
+							teamFormations.get(t.code) ?? DEFAULT_FORMATION_ID;
 						return (
 							<div
 								key={t.code}
@@ -92,6 +99,21 @@ export function GroupView({
 										+
 									</button>
 								</div>
+								<select
+									className="formation-select"
+									value={formation}
+									onChange={(e) => {
+										e.stopPropagation();
+										onChangeFormation(t.code, e.target.value);
+									}}
+									onClick={(e) => e.stopPropagation()}
+								>
+									{FORMATIONS.map((f) => (
+										<option key={f.id} value={f.id}>
+											{f.label}
+										</option>
+									))}
+								</select>
 							</div>
 						);
 					})}
@@ -122,6 +144,8 @@ export function GroupView({
 							const gd = s.goalsFor - s.goalsAgainst;
 							const allDone = group.played;
 							const mod = teamModifiers.get(s.team.code) ?? 0;
+							const formation =
+								teamFormations.get(s.team.code) ?? DEFAULT_FORMATION_ID;
 							const isWildcard =
 								allDone && idx === 2 && wildcardCodes.has(s.team.code);
 							let rowClass = "";
@@ -137,6 +161,9 @@ export function GroupView({
 										<span className="flag-sm">{s.team.flag}</span>
 										{s.team.nameKo}
 										{isWildcard && <span className="wildcard-badge">WC</span>}
+										{formation !== DEFAULT_FORMATION_ID && (
+											<span className="formation-badge">{formation}</span>
+										)}
 										{mod !== 0 && (
 											<span
 												className={`mod-badge ${mod > 0 ? "mod-up" : "mod-down"}`}

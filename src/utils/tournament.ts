@@ -8,6 +8,7 @@ import type {
 	TeamStats,
 	TournamentSize,
 } from "../types";
+import { getFormation } from "../types";
 
 function shuffle<T>(array: T[]): T[] {
 	const arr = [...array];
@@ -139,15 +140,24 @@ function weightedGoals(strength: number): number {
 	return goals;
 }
 
-// 단일 조별 매치 시뮬레이션 (무승부 허용, 랭킹+modifier 반영)
+// 단일 조별 매치 시뮬레이션 (무승부 허용, 랭킹+modifier+포메이션 반영)
 export function simulateGroupMatch(
 	match: GroupMatch,
 	modifiers?: Map<string, number>,
+	formations?: Map<string, string>,
 ): GroupMatch {
 	const m1 = modifiers?.get(match.team1.code) ?? 0;
 	const m2 = modifiers?.get(match.team2.code) ?? 0;
-	const s1 = rankToStrength(match.team1.rank, m1);
-	const s2 = rankToStrength(match.team2.rank, m2);
+	const f1 = getFormation(formations?.get(match.team1.code));
+	const f2 = getFormation(formations?.get(match.team2.code));
+	const s1 = Math.max(
+		0.4,
+		rankToStrength(match.team1.rank, m1) + f1.atkMod - f2.defMod,
+	);
+	const s2 = Math.max(
+		0.4,
+		rankToStrength(match.team2.rank, m2) + f2.atkMod - f1.defMod,
+	);
 	const score1 = weightedGoals(s1);
 	const score2 = weightedGoals(s2);
 	return { ...match, score1, score2, played: true };
@@ -212,9 +222,10 @@ export function recalcStandings(group: Group): GroupStanding[] {
 export function simulateGroup(
 	group: Group,
 	modifiers?: Map<string, number>,
+	formations?: Map<string, string>,
 ): Group {
 	const matches = group.matches.map((m) =>
-		m.played ? m : simulateGroupMatch(m, modifiers),
+		m.played ? m : simulateGroupMatch(m, modifiers, formations),
 	);
 	const updated = { ...group, matches };
 	const standings = recalcStandings(updated);
@@ -321,15 +332,24 @@ export function createMatches(teams: Country[], roundPrefix: string): Match[] {
 	return matches;
 }
 
-// 토너먼트 단일 매치 시뮬레이션 (무승부 없음, 승부차기, 랭킹+modifier 반영)
+// 토너먼트 단일 매치 시뮬레이션 (무승부 없음, 승부차기, 랭킹+modifier+포메이션 반영)
 export function simulateMatch(
 	match: Match,
 	modifiers?: Map<string, number>,
+	formations?: Map<string, string>,
 ): Match {
 	const m1 = modifiers?.get(match.team1.code) ?? 0;
 	const m2 = modifiers?.get(match.team2.code) ?? 0;
-	const s1 = rankToStrength(match.team1.rank, m1);
-	const s2 = rankToStrength(match.team2.rank, m2);
+	const f1 = getFormation(formations?.get(match.team1.code));
+	const f2 = getFormation(formations?.get(match.team2.code));
+	const s1 = Math.max(
+		0.4,
+		rankToStrength(match.team1.rank, m1) + f1.atkMod - f2.defMod,
+	);
+	const s2 = Math.max(
+		0.4,
+		rankToStrength(match.team2.rank, m2) + f2.atkMod - f1.defMod,
+	);
 	let score1 = weightedGoals(s1);
 	let score2 = weightedGoals(s2);
 
@@ -355,8 +375,11 @@ export function simulateMatch(
 export function simulateRound(
 	matches: Match[],
 	modifiers?: Map<string, number>,
+	formations?: Map<string, string>,
 ): Match[] {
-	return matches.map((m) => (m.played ? m : simulateMatch(m, modifiers)));
+	return matches.map((m) =>
+		m.played ? m : simulateMatch(m, modifiers, formations),
+	);
 }
 
 export function getWinners(matches: Match[]): Country[] {

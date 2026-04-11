@@ -83,7 +83,12 @@ async function getSquad(teamId: number): Promise<ApiPlayer[]> {
 async function main() {
 	const cache = loadCache();
 	const codes = Object.keys(WC_COUNTRIES);
-	const remaining = codes.filter((c) => !cache[c]);
+	// 캐시에 있거나 이미 파일이 존재하는 국가는 건너뜀
+	const remaining = codes.filter((c) => {
+		if (cache[c]) return false;
+		const filePath = resolve(OUTPUT_DIR, `${c.toLowerCase()}.json`);
+		return !existsSync(filePath);
+	});
 
 	console.log(`📋 총 ${codes.length}개국, 캐시 ${Object.keys(cache).length}개, 남은 ${remaining.length}개`);
 
@@ -143,10 +148,14 @@ async function main() {
 	let saved = 0;
 	for (const [code, entry] of Object.entries(cache)) {
 		if (entry.players.length > 0) {
-			const players = entry.players.map((p) => ({
-				id: p.id, name: p.name, position: p.position,
-				age: p.age, number: p.number ?? 0, photo: p.photo,
-			}));
+			const players = entry.players.map((p) => {
+				const obj: Record<string, unknown> = {
+					id: p.id, name: p.name, position: p.position,
+					age: p.age ?? 0, number: p.number ?? 0,
+				};
+				if (p.photo) obj.photo = p.photo;
+				return obj;
+			});
 			const filePath = resolve(OUTPUT_DIR, `${code.toLowerCase()}.json`);
 			writeFileSync(filePath, JSON.stringify(players, null, 2));
 			saved++;

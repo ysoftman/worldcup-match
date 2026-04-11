@@ -1,3 +1,4 @@
+import type { Country } from "../data/countries";
 import type { GroupMatch } from "../types";
 import { DEFAULT_FORMATION_ID } from "../types";
 import { AnimatedScore } from "./AnimatedScore";
@@ -10,6 +11,7 @@ interface GroupMatchCardProps {
 	teamModifiers: Map<string, number>;
 	teamFormations: Map<string, string>;
 	isAnimating: boolean;
+	onOpenSquad: (team: Country) => void;
 }
 
 export function GroupMatchCard({
@@ -18,6 +20,7 @@ export function GroupMatchCard({
 	teamModifiers,
 	teamFormations,
 	isAnimating,
+	onOpenSquad,
 }: GroupMatchCardProps) {
 	const { team1, team2, score1, score2, played } = match;
 	const isDraw = played && score1 === score2;
@@ -32,17 +35,35 @@ export function GroupMatchCard({
 	const hasSettings2 = mod2 !== 0 || f2 !== DEFAULT_FORMATION_ID;
 
 	return (
-		<button
-			type="button"
+		// biome-ignore lint/a11y/noStaticElementInteractions: 경기 카드 클릭으로 시뮬레이션 실행
+		// biome-ignore lint/a11y/useKeyWithClickEvents: 경기 카드 클릭으로 시뮬레이션 실행
+		<div
 			className={`match-card clickable ${played ? "played" : "pending"} ${isAnimating ? "laser-active" : ""}`}
-			onClick={onClick}
-			disabled={played}
+			onClick={played ? undefined : onClick}
 		>
 			<div
 				className={`team ${played ? (team1Win ? "winner" : isDraw ? "draw" : "loser") : ""}`}
 			>
-				<span className="flag">{team1.flag}</span>
-				<span className="name">
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="flag team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
+					{team1.flag}
+				</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
 					{team1.nameKo}
 					<span className="name-en">({team1.name})</span>
 					{hasSettings1 && (
@@ -67,7 +88,15 @@ export function GroupMatchCard({
 				className={`team ${played ? (team2Win ? "winner" : isDraw ? "draw" : "loser") : ""}`}
 			>
 				<AnimatedScore target={score2} active={played} className="score" />
-				<span className="name">
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
 					{team2.nameKo}
 					<span className="name-en">({team2.name})</span>
 					{hasSettings2 && (
@@ -85,8 +114,18 @@ export function GroupMatchCard({
 						</span>
 					)}
 				</span>
-				<span className="flag">{team2.flag}</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="flag team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
+					{team2.flag}
+				</span>
 			</div>
-		</button>
+		</div>
 	);
 }

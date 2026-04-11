@@ -1291,6 +1291,7 @@
 	background: #eafaf1;
 	animation: match-result 0.6s ease-out;
 	overflow: visible;
+	cursor: default;
 }
 
 .match-card.played::before {
@@ -1371,8 +1372,26 @@
 	transform: scale(0.98);
 }
 
-.match-card:disabled {
-	cursor: default;
+/* 국기/국가이름 클릭으로 스쿼드 팝업 열기 */
+.team-clickable {
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background 0.15s;
+}
+
+.team-clickable:hover {
+	background: rgba(52, 152, 219, 0.15);
+	text-decoration: underline;
+}
+
+[data-theme="dark"] .team-clickable:hover {
+	background: rgba(52, 152, 219, 0.25);
+}
+
+/* 결승전 원형 국기 클릭 스타일 */
+.final-circle.team-clickable:hover {
+	text-decoration: none;
+	transform: scale(1.05);
 }
 
 /* 경기 결과 애니메이션 */
@@ -1815,7 +1834,7 @@
 	box-shadow: 0 4px 20px rgba(212, 172, 13, 0.4);
 }
 
-.final-card:disabled {
+.final-card.final-played {
 	cursor: default;
 }
 
@@ -2029,7 +2048,7 @@
 	box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
 }
 
-.bm-card:disabled {
+.bm-card.bm-played {
 	cursor: default;
 }
 

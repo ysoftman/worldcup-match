@@ -630,6 +630,7 @@ function App() {
 						rounds={rounds}
 						teamStats={teamStats}
 						onPlayMatch={playKnockoutMatch}
+						onOpenSquad={setSquadModalTeam}
 					/>
 				</div>
 			)}

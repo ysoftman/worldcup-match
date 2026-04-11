@@ -1,3 +1,4 @@
+import type { Country } from "../data/countries";
 import type { Match, TeamStats } from "../types";
 import { AnimatedScore } from "./AnimatedScore";
 
@@ -5,9 +6,15 @@ interface MatchCardProps {
 	match: Match;
 	teamStats: Map<string, TeamStats>;
 	onClick: () => void;
+	onOpenSquad: (team: Country) => void;
 }
 
-export function MatchCard({ match, teamStats, onClick }: MatchCardProps) {
+export function MatchCard({
+	match,
+	teamStats,
+	onClick,
+	onOpenSquad,
+}: MatchCardProps) {
 	const { team1, team2, score1, score2, played, winner } = match;
 	const stats1 = teamStats.get(team1.code);
 	const stats2 = teamStats.get(team2.code);
@@ -22,8 +29,26 @@ export function MatchCard({ match, teamStats, onClick }: MatchCardProps) {
 			<div
 				className={`team ${played && winner?.code === team1.code ? "winner" : ""}`}
 			>
-				<span className="flag">{team1.flag}</span>
-				<span className="name">
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="flag team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
+					{team1.flag}
+				</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
 					{team1.nameKo}
 					<span className="name-en">({team1.name})</span>
 				</span>
@@ -36,11 +61,29 @@ export function MatchCard({ match, teamStats, onClick }: MatchCardProps) {
 			>
 				<AnimatedScore target={score2} active={played} className="score" />
 				{stats2 && <span className="winrate-badge">{stats2.winRate}%</span>}
-				<span className="name">
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
 					{team2.nameKo}
 					<span className="name-en">({team2.name})</span>
 				</span>
-				<span className="flag">{team2.flag}</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="flag team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
+					{team2.flag}
+				</span>
 			</div>
 		</button>
 	);

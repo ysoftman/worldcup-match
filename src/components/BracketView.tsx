@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import type { Country } from "../data/countries";
 import type { Match, RoundName, TeamStats } from "../types";
 import { ROUND_LABELS, ROUND_ORDER_32, ROUND_ORDER_48 } from "../types";
 import { AnimatedScore } from "./AnimatedScore";
@@ -13,6 +14,7 @@ interface BracketViewProps {
 	rounds: BracketRound[];
 	teamStats: Map<string, TeamStats>;
 	onPlayMatch: (matchId: string) => void;
+	onOpenSquad: (team: Country) => void;
 }
 
 /* 대진표용 소형 매치 카드 */
@@ -20,38 +22,80 @@ function BracketMatchCard({
 	match,
 	teamStats,
 	onClick,
+	onOpenSquad,
 }: {
 	match: Match;
 	teamStats: Map<string, TeamStats>;
 	onClick: () => void;
+	onOpenSquad: (team: Country) => void;
 }) {
 	const { team1, team2, score1, score2, played, winner } = match;
 	const s1 = teamStats.get(team1.code);
 	const s2 = teamStats.get(team2.code);
 	return (
-		<button
-			type="button"
+		// biome-ignore lint/a11y/noStaticElementInteractions: 경기 카드 클릭으로 시뮬레이션 실행
+		// biome-ignore lint/a11y/useKeyWithClickEvents: 경기 카드 클릭으로 시뮬레이션 실행
+		<div
 			className={`bm-card ${played ? "bm-played" : "bm-pending"}`}
-			onClick={onClick}
-			disabled={played}
+			onClick={played ? undefined : onClick}
 		>
 			<div
 				className={`bm-team ${played ? (winner?.code === team1.code ? "bm-win" : "bm-lose") : ""}`}
 			>
-				<span className="bm-flag">{team1.flag}</span>
-				<span className="bm-name">{team1.nameKo}</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 div가 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="bm-flag team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
+					{team1.flag}
+				</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="bm-name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
+					{team1.nameKo}
+				</span>
 				{s1 && <span className="bm-rate">{s1.winRate}%</span>}
 				<AnimatedScore target={score1} active={played} className="bm-score" />
 			</div>
 			<div
 				className={`bm-team ${played ? (winner?.code === team2.code ? "bm-win" : "bm-lose") : ""}`}
 			>
-				<span className="bm-flag">{team2.flag}</span>
-				<span className="bm-name">{team2.nameKo}</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="bm-flag team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
+					{team2.flag}
+				</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="bm-name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
+					{team2.nameKo}
+				</span>
 				{s2 && <span className="bm-rate">{s2.winRate}%</span>}
 				<AnimatedScore target={score2} active={played} className="bm-score" />
 			</div>
-		</button>
+		</div>
 	);
 }
 
@@ -75,10 +119,12 @@ function FinalMatchCard({
 	match,
 	teamStats,
 	onClick,
+	onOpenSquad,
 }: {
 	match: Match;
 	teamStats: Map<string, TeamStats>;
 	onClick: () => void;
+	onOpenSquad: (team: Country) => void;
 }) {
 	const { team1, team2, score1, score2, played, winner } = match;
 	const s1 = teamStats.get(team1.code);
@@ -87,19 +133,37 @@ function FinalMatchCard({
 	const t2Win = played && winner?.code === team2.code;
 
 	return (
-		<button
-			type="button"
+		// biome-ignore lint/a11y/noStaticElementInteractions: 경기 카드 클릭으로 시뮬레이션 실행
+		// biome-ignore lint/a11y/useKeyWithClickEvents: 경기 카드 클릭으로 시뮬레이션 실행
+		<div
 			className={`final-card ${played ? "final-played" : "final-pending"}`}
-			onClick={onClick}
-			disabled={played}
+			onClick={played ? undefined : onClick}
 		>
 			<div
 				className={`final-team ${played ? (t1Win ? "final-win" : "final-lose") : ""}`}
 			>
-				<div className="final-circle">
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<div
+					className="final-circle team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
 					<span className="final-flag">{team1.flag}</span>
 				</div>
-				<span className="final-name">{team1.nameKo}</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="final-name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team1);
+					}}
+				>
+					{team1.nameKo}
+				</span>
 				<AnimatedScore
 					target={score1}
 					active={played}
@@ -111,10 +175,28 @@ function FinalMatchCard({
 			<div
 				className={`final-team ${played ? (t2Win ? "final-win" : "final-lose") : ""}`}
 			>
-				<div className="final-circle">
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<div
+					className="final-circle team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
 					<span className="final-flag">{team2.flag}</span>
 				</div>
-				<span className="final-name">{team2.nameKo}</span>
+				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
+				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
+				<span
+					className="final-name team-clickable"
+					onClick={(e) => {
+						e.stopPropagation();
+						onOpenSquad(team2);
+					}}
+				>
+					{team2.nameKo}
+				</span>
 				<AnimatedScore
 					target={score2}
 					active={played}
@@ -122,7 +204,7 @@ function FinalMatchCard({
 				/>
 				{s2 && <span className="final-rate">{s2.winRate}%</span>}
 			</div>
-		</button>
+		</div>
 	);
 }
 
@@ -153,10 +235,12 @@ function RoundColumn({
 	round,
 	teamStats,
 	onPlayMatch,
+	onOpenSquad,
 }: {
 	round: BracketRound | null;
 	teamStats: Map<string, TeamStats>;
 	onPlayMatch: (id: string) => void;
+	onOpenSquad: (team: Country) => void;
 }) {
 	if (!round) return null;
 	return (
@@ -169,6 +253,7 @@ function RoundColumn({
 							match={m}
 							teamStats={teamStats}
 							onClick={() => onPlayMatch(m.id)}
+							onOpenSquad={onOpenSquad}
 						/>
 					</div>
 				))}
@@ -229,6 +314,7 @@ export function BracketView({
 	rounds,
 	teamStats,
 	onPlayMatch,
+	onOpenSquad,
 }: BracketViewProps) {
 	// 결승 분리 + 좌/우 분할
 	const leftRounds: (BracketRound | null)[] = [];
@@ -296,6 +382,7 @@ export function BracketView({
 										round={round}
 										teamStats={teamStats}
 										onPlayMatch={onPlayMatch}
+										onOpenSquad={onOpenSquad}
 									/>
 								) : (
 									<PlaceholderColumn label={label} count={matchCount} />
@@ -322,6 +409,7 @@ export function BracketView({
 							match={finalRound.matches[0]}
 							teamStats={teamStats}
 							onClick={() => onPlayMatch(finalRound.matches[0].id)}
+							onOpenSquad={onOpenSquad}
 						/>
 					) : (
 						<FinalPlaceholder />
@@ -363,6 +451,7 @@ export function BracketView({
 										round={round}
 										teamStats={teamStats}
 										onPlayMatch={onPlayMatch}
+										onOpenSquad={onOpenSquad}
 									/>
 								) : (
 									<PlaceholderColumn label={label} count={matchCount} />

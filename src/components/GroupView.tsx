@@ -253,6 +253,7 @@ export function GroupView({
 						teamModifiers={teamModifiers}
 						teamFormations={teamFormations}
 						isAnimating={animatingMatchId === m.id}
+						onOpenSquad={onOpenSquad}
 					/>
 				))}
 			</div>

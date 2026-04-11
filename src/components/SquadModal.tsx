@@ -58,29 +58,43 @@ export function SquadModal({
 	const [localXI, setLocalXI] = useState<Set<number>>(
 		() => new Set(selectedXI),
 	);
+	const [zoomPhoto, setZoomPhoto] = useState<{
+		src: string;
+		name: string;
+	} | null>(null);
 
 	const squad = useMemo(() => getSquad(team), [team]);
 	const isReal = hasRealPlayers(team.code);
 
-	// 외부 클릭으로 닫기
+	// 외부 클릭으로 닫기 (사진 확대 중이면 사진만 닫기)
 	useEffect(() => {
 		const handleClick = (e: MouseEvent) => {
 			if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-				onClose();
+				if (zoomPhoto) {
+					setZoomPhoto(null);
+				} else {
+					onClose();
+				}
 			}
 		};
 		document.addEventListener("mousedown", handleClick);
 		return () => document.removeEventListener("mousedown", handleClick);
-	}, [onClose]);
+	}, [onClose, zoomPhoto]);
 
-	// ESC로 닫기
+	// ESC로 닫기 (사진 확대 중이면 사진만 닫기)
 	useEffect(() => {
 		const handleKey = (e: KeyboardEvent) => {
-			if (e.key === "Escape") onClose();
+			if (e.key === "Escape") {
+				if (zoomPhoto) {
+					setZoomPhoto(null);
+				} else {
+					onClose();
+				}
+			}
 		};
 		document.addEventListener("keydown", handleKey);
 		return () => document.removeEventListener("keydown", handleKey);
-	}, [onClose]);
+	}, [onClose, zoomPhoto]);
 
 	const togglePlayer = (playerId: number) => {
 		const next = new Set(localXI);
@@ -227,6 +241,16 @@ export function SquadModal({
 													src={p.photo}
 													alt={p.name}
 													loading="lazy"
+													onClick={(e) => {
+														e.stopPropagation();
+														setZoomPhoto({ src: p.photo!, name: p.name });
+													}}
+													onKeyDown={(e) => {
+														if (e.key === "Enter") {
+															e.stopPropagation();
+															setZoomPhoto({ src: p.photo!, name: p.name });
+														}
+													}}
 												/>
 											)}
 											<span>{p.name}</span>
@@ -280,6 +304,22 @@ export function SquadModal({
 					</button>
 				</div>
 			</div>
+			{zoomPhoto && (
+				<button
+					type="button"
+					className="photo-zoom-overlay"
+					onClick={(e) => {
+						e.stopPropagation();
+						setZoomPhoto(null);
+					}}
+					onMouseDown={(e) => e.stopPropagation()}
+				>
+					<div className="photo-zoom-card">
+						<img src={zoomPhoto.src} alt={zoomPhoto.name} />
+						<span className="photo-zoom-name">{zoomPhoto.name}</span>
+					</div>
+				</button>
+			)}
 		</div>
 	);
 }

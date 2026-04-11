@@ -3174,6 +3174,51 @@
 	border-radius: 50%;
 	object-fit: cover;
 	flex-shrink: 0;
+	cursor: pointer;
+	transition: transform 0.15s;
+}
+
+.player-photo:hover {
+	transform: scale(1.3);
+}
+
+/* Photo Zoom Overlay */
+.photo-zoom-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1100;
+	cursor: pointer;
+}
+
+.photo-zoom-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	animation: modal-enter 0.2s ease-out;
+}
+
+.photo-zoom-card img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid #fff;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.photo-zoom-name {
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 600;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .name-local {

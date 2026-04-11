@@ -15,7 +15,7 @@ interface GroupViewProps {
 	onChangeFormation: (teamCode: string, formationId: string) => void;
 	wildcardCodes: Set<string>;
 	animatingMatchId: string | null;
-	onOpenSquad: (team: Country) => void;
+	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }
 
 const MOD_LABELS = ["🛡️🛡️", "🛡️", "", "🗡️", "🗡️🗡️"];
@@ -69,7 +69,7 @@ export function GroupView({
 									className="squad-btn"
 									onClick={(e) => {
 										e.stopPropagation();
-										onOpenSquad(t);
+										onOpenSquad(t, false);
 									}}
 									title="스쿼드 보기"
 								>

@@ -11,7 +11,7 @@ interface GroupMatchCardProps {
 	teamModifiers: Map<string, number>;
 	teamFormations: Map<string, string>;
 	isAnimating: boolean;
-	onOpenSquad: (team: Country) => void;
+	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }
 
 export function GroupMatchCard({
@@ -50,7 +50,7 @@ export function GroupMatchCard({
 					className="flag team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					{team1.flag}
@@ -61,7 +61,7 @@ export function GroupMatchCard({
 					className="name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					{team1.nameKo}
@@ -94,7 +94,7 @@ export function GroupMatchCard({
 					className="name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					{team2.nameKo}
@@ -120,7 +120,7 @@ export function GroupMatchCard({
 					className="flag team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					{team2.flag}

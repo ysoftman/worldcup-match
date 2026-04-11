@@ -10,6 +10,7 @@ interface SquadModalProps {
 	selectedXI: Set<number>;
 	onChangeXI: (teamCode: string, xi: Set<number>) => void;
 	onClose: () => void;
+	readOnly?: boolean;
 }
 
 const POSITION_ORDER: Position[] = ["GK", "DEF", "MID", "FWD"];
@@ -52,12 +53,14 @@ export function SquadModal({
 	selectedXI,
 	onChangeXI,
 	onClose,
+	readOnly = false,
 }: SquadModalProps) {
 	const modalRef = useRef<HTMLDivElement>(null);
 	const [filter, setFilter] = useState<Position | "ALL">("ALL");
-	const [localXI, setLocalXI] = useState<Set<number>>(
-		() => new Set(selectedXI),
-	);
+	const [localXI, setLocalXI] = useState<Set<number>>(() => {
+		if (selectedXI.size > 0) return new Set(selectedXI);
+		return new Set<number>();
+	});
 	const [zoomPhoto, setZoomPhoto] = useState<{
 		src: string;
 		name: string;
@@ -65,6 +68,15 @@ export function SquadModal({
 
 	const squad = useMemo(() => getSquad(team), [team]);
 	const isReal = hasRealPlayers(team.code);
+
+	// 선택된 XI가 없으면 자동 선택 후 저장
+	useEffect(() => {
+		if (selectedXI.size === 0 && squad.length > 0) {
+			const auto = autoSelectXI(squad, formationId);
+			setLocalXI(auto);
+			onChangeXI(team.code, auto);
+		}
+	}, [selectedXI.size, squad, formationId, team.code, onChangeXI]);
 
 	// 외부 클릭으로 닫기 (사진 확대 중이면 사진만 닫기)
 	useEffect(() => {
@@ -97,6 +109,7 @@ export function SquadModal({
 	}, [onClose, zoomPhoto]);
 
 	const togglePlayer = (playerId: number) => {
+		if (readOnly) return;
 		const next = new Set(localXI);
 		if (next.has(playerId)) {
 			next.delete(playerId);
@@ -200,7 +213,7 @@ export function SquadModal({
 					<table className="squad-table">
 						<thead>
 							<tr>
-								<th className="th-check">선발</th>
+								{!readOnly && <th className="th-check">선발</th>}
 								<th className="th-num">#</th>
 								<th className="th-name">이름</th>
 								<th className="th-pos">포지션</th>
@@ -222,17 +235,19 @@ export function SquadModal({
 									<tr
 										key={p.id}
 										className={`squad-row ${isSelected ? "selected-row" : ""}`}
-										onClick={() => togglePlayer(p.id)}
+										onClick={readOnly ? undefined : () => togglePlayer(p.id)}
 									>
-										<td className="check-cell">
-											<input
-												type="checkbox"
-												checked={isSelected}
-												disabled={!isSelected && localXI.size >= 11}
-												onChange={() => togglePlayer(p.id)}
-												onClick={(e) => e.stopPropagation()}
-											/>
-										</td>
+										{!readOnly && (
+											<td className="check-cell">
+												<input
+													type="checkbox"
+													checked={isSelected}
+													disabled={!isSelected && localXI.size >= 11}
+													onChange={() => togglePlayer(p.id)}
+													onClick={(e) => e.stopPropagation()}
+												/>
+											</td>
+										)}
 										<td className="num-cell">{p.number}</td>
 										<td className="name-cell">
 											{p.photo && (
@@ -293,29 +308,31 @@ export function SquadModal({
 					</table>
 				</div>
 
-				<div className="squad-actions">
-					<button
-						type="button"
-						className="btn btn-auto"
-						onClick={handleAutoSelect}
-					>
-						자동 선택
-					</button>
-					<button
-						type="button"
-						className="btn btn-squad-reset"
-						onClick={handleReset}
-					>
-						초기화
-					</button>
-					<button
-						type="button"
-						className="btn btn-confirm"
-						onClick={handleConfirm}
-					>
-						확인
-					</button>
-				</div>
+				{!readOnly && (
+					<div className="squad-actions">
+						<button
+							type="button"
+							className="btn btn-auto"
+							onClick={handleAutoSelect}
+						>
+							자동 선택
+						</button>
+						<button
+							type="button"
+							className="btn btn-squad-reset"
+							onClick={handleReset}
+						>
+							초기화
+						</button>
+						<button
+							type="button"
+							className="btn btn-confirm"
+							onClick={handleConfirm}
+						>
+							확인
+						</button>
+					</div>
+				)}
 			</div>
 			{zoomPhoto && (
 				<button

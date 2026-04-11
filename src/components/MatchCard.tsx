@@ -6,7 +6,7 @@ interface MatchCardProps {
 	match: Match;
 	teamStats: Map<string, TeamStats>;
 	onClick: () => void;
-	onOpenSquad: (team: Country) => void;
+	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }
 
 export function MatchCard({
@@ -35,7 +35,7 @@ export function MatchCard({
 					className="flag team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					{team1.flag}
@@ -46,7 +46,7 @@ export function MatchCard({
 					className="name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					{team1.nameKo}
@@ -67,7 +67,7 @@ export function MatchCard({
 					className="name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					{team2.nameKo}
@@ -79,7 +79,7 @@ export function MatchCard({
 					className="flag team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					{team2.flag}

@@ -109,7 +109,10 @@ function App() {
 		groupName: string;
 		team: Country;
 	} | null>(null);
-	const [squadModalTeam, setSquadModalTeam] = useState<Country | null>(null);
+	const [squadModal, setSquadModal] = useState<{
+		team: Country;
+		readOnly: boolean;
+	} | null>(null);
 	const [selectedXI, setSelectedXI] = useState<Map<string, Set<number>>>(
 		() => new Map(),
 	);
@@ -479,7 +482,7 @@ function App() {
 		setTeamModifiers(new Map());
 		setTeamFormations(new Map());
 		setSelectedXI(new Map());
-		setSquadModalTeam(null);
+		setSquadModal(null);
 		setSelectedTeams(selectTeams(tournamentSize));
 		setGroups([]);
 		setRounds([]);
@@ -630,7 +633,7 @@ function App() {
 						rounds={rounds}
 						teamStats={teamStats}
 						onPlayMatch={playKnockoutMatch}
-						onOpenSquad={setSquadModalTeam}
+						onOpenSquad={(team, readOnly) => setSquadModal({ team, readOnly })}
 					/>
 				</div>
 			)}
@@ -668,19 +671,22 @@ function App() {
 								onChangeFormation={changeFormation}
 								wildcardCodes={wildcardCodes}
 								animatingMatchId={animatingMatchId}
-								onOpenSquad={setSquadModalTeam}
+								onOpenSquad={(team, readOnly) =>
+									setSquadModal({ team, readOnly })
+								}
 							/>
 						))}
 					</div>
 				</div>
 			)}
-			{squadModalTeam && (
+			{squadModal && (
 				<SquadModal
-					team={squadModalTeam}
-					formationId={teamFormations.get(squadModalTeam.code) ?? "4-4-2"}
-					selectedXI={selectedXI.get(squadModalTeam.code) ?? new Set()}
+					team={squadModal.team}
+					formationId={teamFormations.get(squadModal.team.code) ?? "4-4-2"}
+					selectedXI={selectedXI.get(squadModal.team.code) ?? new Set()}
 					onChangeXI={changeXI}
-					onClose={() => setSquadModalTeam(null)}
+					onClose={() => setSquadModal(null)}
+					readOnly={squadModal.readOnly}
 				/>
 			)}
 		</div>

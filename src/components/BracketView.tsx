@@ -14,7 +14,7 @@ interface BracketViewProps {
 	rounds: BracketRound[];
 	teamStats: Map<string, TeamStats>;
 	onPlayMatch: (matchId: string) => void;
-	onOpenSquad: (team: Country) => void;
+	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }
 
 /* 대진표용 소형 매치 카드 */
@@ -27,7 +27,7 @@ function BracketMatchCard({
 	match: Match;
 	teamStats: Map<string, TeamStats>;
 	onClick: () => void;
-	onOpenSquad: (team: Country) => void;
+	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }) {
 	const { team1, team2, score1, score2, played, winner } = match;
 	const s1 = teamStats.get(team1.code);
@@ -48,7 +48,7 @@ function BracketMatchCard({
 					className="bm-flag team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					{team1.flag}
@@ -59,7 +59,7 @@ function BracketMatchCard({
 					className="bm-name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					{team1.nameKo}
@@ -76,7 +76,7 @@ function BracketMatchCard({
 					className="bm-flag team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					{team2.flag}
@@ -87,7 +87,7 @@ function BracketMatchCard({
 					className="bm-name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					{team2.nameKo}
@@ -124,7 +124,7 @@ function FinalMatchCard({
 	match: Match;
 	teamStats: Map<string, TeamStats>;
 	onClick: () => void;
-	onOpenSquad: (team: Country) => void;
+	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }) {
 	const { team1, team2, score1, score2, played, winner } = match;
 	const s1 = teamStats.get(team1.code);
@@ -148,7 +148,7 @@ function FinalMatchCard({
 					className="final-circle team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					<span className="final-flag">{team1.flag}</span>
@@ -159,7 +159,7 @@ function FinalMatchCard({
 					className="final-name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team1);
+						onOpenSquad(team1, played);
 					}}
 				>
 					{team1.nameKo}
@@ -181,7 +181,7 @@ function FinalMatchCard({
 					className="final-circle team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					<span className="final-flag">{team2.flag}</span>
@@ -192,7 +192,7 @@ function FinalMatchCard({
 					className="final-name team-clickable"
 					onClick={(e) => {
 						e.stopPropagation();
-						onOpenSquad(team2);
+						onOpenSquad(team2, played);
 					}}
 				>
 					{team2.nameKo}
@@ -240,7 +240,7 @@ function RoundColumn({
 	round: BracketRound | null;
 	teamStats: Map<string, TeamStats>;
 	onPlayMatch: (id: string) => void;
-	onOpenSquad: (team: Country) => void;
+	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }) {
 	if (!round) return null;
 	return (

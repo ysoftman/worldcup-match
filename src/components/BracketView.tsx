@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import type { Match, RoundName, TeamStats } from "../types";
-import { ROUND_LABELS } from "../types";
+import { ROUND_LABELS, ROUND_ORDER_32, ROUND_ORDER_48 } from "../types";
 import { AnimatedScore } from "./AnimatedScore";
 
 interface BracketRound {
@@ -264,10 +264,13 @@ export function BracketView({
 		rightRounds.push(null);
 	}
 
-	// 예상 라운드 라벨 계산
-	const roundLabels = rounds
-		.filter((r) => r.name !== "final")
-		.map((r) => r.label);
+	// 전체 라운드 순서에서 결승 제외한 라벨 (플레이스홀더용)
+	const firstRoundName = rounds.length > 0 ? rounds[0].name : "round16";
+	const fullOrder =
+		firstRoundName === "round32" ? ROUND_ORDER_48 : ROUND_ORDER_32;
+	const roundLabels = fullOrder
+		.filter((r) => r !== "final")
+		.map((r) => ROUND_LABELS[r]);
 
 	// 우측 대진표는 뒤집어서 렌더 (4강→8강→16강 순으로 표시)
 	const reversedRight = [...rightRounds].reverse();

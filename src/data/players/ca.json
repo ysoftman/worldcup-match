@@ -1,0 +1,202 @@
+[
+	{
+		"id": 330833,
+		"name": "E. Burns",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 31,
+		"photo": "https://media.api-sports.io/football/players/330833.png"
+	},
+	{
+		"id": 646455,
+		"name": "Melissa Dagenais",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 35,
+		"photo": "https://media.api-sports.io/football/players/646455.png"
+	},
+	{
+		"id": 68941,
+		"name": "K. Sheridan",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/68941.png"
+	},
+	{
+		"id": 68955,
+		"name": "G. Carle",
+		"position": "Defender",
+		"age": 27,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/68955.png"
+	},
+	{
+		"id": 413089,
+		"name": "S. Collins",
+		"position": "Defender",
+		"age": 26,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/413089.png"
+	},
+	{
+		"id": 536158,
+		"name": "B. Courtnall",
+		"position": "Defender",
+		"age": 22,
+		"number": 34,
+		"photo": "https://media.api-sports.io/football/players/536158.png"
+	},
+	{
+		"id": 68944,
+		"name": "V. Gilles",
+		"position": "Defender",
+		"age": 29,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/68944.png"
+	},
+	{
+		"id": 203884,
+		"name": "M. Levasseur",
+		"position": "Defender",
+		"age": 28,
+		"number": 28,
+		"photo": "https://media.api-sports.io/football/players/203884.png"
+	},
+	{
+		"id": 362388,
+		"name": "M. Reid",
+		"position": "Defender",
+		"age": 29,
+		"number": 33,
+		"photo": "https://media.api-sports.io/football/players/362388.png"
+	},
+	{
+		"id": 68951,
+		"name": "J. Rose",
+		"position": "Defender",
+		"age": 22,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/68951.png"
+	},
+	{
+		"id": 68954,
+		"name": "J. Beckie",
+		"position": "Defender",
+		"age": 31,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/68954.png"
+	},
+	{
+		"id": 380094,
+		"name": "S. Awujo",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/380094.png"
+	},
+	{
+		"id": 68947,
+		"name": "J. Fleming",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/68947.png"
+	},
+	{
+		"id": 536114,
+		"name": "J. Grosso",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/536114.png"
+	},
+	{
+		"id": 414291,
+		"name": "E. Regan",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/414291.png"
+	},
+	{
+		"id": 380028,
+		"name": "O. Smith",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/380028.png"
+	},
+	{
+		"id": 144859,
+		"name": "M. Alidou",
+		"position": "Attacker",
+		"age": 30,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/144859.png"
+	},
+	{
+		"id": 614762,
+		"name": "Annabelle Chukwu",
+		"position": "Attacker",
+		"age": 18,
+		"number": 29,
+		"photo": "https://media.api-sports.io/football/players/614762.png"
+	},
+	{
+		"id": 68956,
+		"name": "J. Huitema",
+		"position": "Attacker",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/68956.png"
+	},
+	{
+		"id": 549902,
+		"name": "K. Hunter",
+		"position": "Attacker",
+		"age": 18,
+		"number": 30,
+		"photo": "https://media.api-sports.io/football/players/549902.png"
+	},
+	{
+		"id": 290326,
+		"name": "C. Lacasse",
+		"position": "Attacker",
+		"age": 32,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/290326.png"
+	},
+	{
+		"id": 313415,
+		"name": "D. Pridham",
+		"position": "Attacker",
+		"age": 28,
+		"number": 32,
+		"photo": "https://media.api-sports.io/football/players/313415.png"
+	},
+	{
+		"id": 68958,
+		"name": "N. Prince",
+		"position": "Attacker",
+		"age": 30,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/68958.png"
+	},
+	{
+		"id": 228906,
+		"name": "\u00c9. Viens",
+		"position": "Attacker",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/228906.png"
+	},
+	{
+		"id": 614763,
+		"name": "Holly Ward",
+		"position": "Attacker",
+		"age": 22,
+		"number": 27,
+		"photo": "https://media.api-sports.io/football/players/614763.png"
+	}
+]

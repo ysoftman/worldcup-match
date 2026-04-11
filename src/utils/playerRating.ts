@@ -170,17 +170,49 @@ export function attachRatings(
 	const rng = mulberry32(hashCode(country.code));
 	const base = teamBaseRating(country.rank);
 
-	// overall 순으로 정렬하기 위해 먼저 생성
-	const playersWithOverall = rawPlayers.map((raw, idx) => {
-		const position = mapPosition(raw.position);
-		const overall = generateOverall(rng, base, idx);
-		return { raw, position, overall };
-	});
+	// 포지션별로 분류 후 각 포지션 내에서 순번으로 등급 배정
+	// (JSON 순서가 GK 먼저인 경우 GK가 스타급을 받는 문제 방지)
+	const mapped = rawPlayers.map((raw) => ({
+		raw,
+		position: mapPosition(raw.position),
+	}));
+
+	const byPos: Record<string, typeof mapped> = {};
+	for (const m of mapped) {
+		if (!byPos[m.position]) byPos[m.position] = [];
+		byPos[m.position].push(m);
+	}
+
+	// 전체 스쿼드 순번: 각 포지션에서 번갈아 뽑아 균등 분배
+	const ordered: typeof mapped = [];
+	const posKeys = ["FWD", "MID", "DEF", "GK"];
+	const posIdxs: Record<string, number> = { FWD: 0, MID: 0, DEF: 0, GK: 0 };
+	const total = mapped.length;
+
+	while (ordered.length < total) {
+		let added = false;
+		for (const pos of posKeys) {
+			const arr = byPos[pos];
+			if (arr && posIdxs[pos] < arr.length) {
+				ordered.push(arr[posIdxs[pos]]);
+				posIdxs[pos]++;
+				added = true;
+				if (ordered.length >= total) break;
+			}
+		}
+		if (!added) break;
+	}
+
+	// 순번으로 overall 생성 (idx 0~2 스타, 3~10 주전, ...)
+	const withOverall = ordered.map((m, idx) => ({
+		...m,
+		overall: generateOverall(rng, base, idx),
+	}));
 
 	// overall 내림차순 정렬
-	playersWithOverall.sort((a, b) => b.overall - a.overall);
+	withOverall.sort((a, b) => b.overall - a.overall);
 
-	return playersWithOverall.map((p, idx) => {
+	return withOverall.map((p, idx) => {
 		const phys =
 			p.raw.height && p.raw.weight
 				? { height: p.raw.height, weight: p.raw.weight }

@@ -1,0 +1,370 @@
+[
+	{
+		"id": 10111,
+		"name": "Bento",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/10111.png"
+	},
+	{
+		"id": 617,
+		"name": "Ederson",
+		"position": "Goalkeeper",
+		"age": 32,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/617.png"
+	},
+	{
+		"id": 123759,
+		"name": "Hugo Souza",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/123759.png"
+	},
+	{
+		"id": 70366,
+		"name": "John",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/70366.png"
+	},
+	{
+		"id": 860,
+		"name": "Alex Sandro",
+		"position": "Defender",
+		"age": 34,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/860.png"
+	},
+	{
+		"id": 307835,
+		"name": "Beraldo",
+		"position": "Defender",
+		"age": 22,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/307835.png"
+	},
+	{
+		"id": 30497,
+		"name": "Bremer",
+		"position": "Defender",
+		"age": 28,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/30497.png"
+	},
+	{
+		"id": 10316,
+		"name": "Caio Henrique",
+		"position": "Defender",
+		"age": 28,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/10316.png"
+	},
+	{
+		"id": 618,
+		"name": "Danilo",
+		"position": "Defender",
+		"age": 34,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/618.png"
+	},
+	{
+		"id": 372,
+		"name": "\u00c9der Milit\u00e3o",
+		"position": "Defender",
+		"age": 27,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/372.png"
+	},
+	{
+		"id": 10089,
+		"name": "Fabr\u00edcio Bruno",
+		"position": "Defender",
+		"age": 29,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/10089.png"
+	},
+	{
+		"id": 22224,
+		"name": "Gabriel Magalh\u00e3es",
+		"position": "Defender",
+		"age": 28,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/22224.png"
+	},
+	{
+		"id": 30424,
+		"name": "Iba\u00f1ez",
+		"position": "Defender",
+		"age": 27,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/30424.png"
+	},
+	{
+		"id": 309792,
+		"name": "Kaiki",
+		"position": "Defender",
+		"age": 22,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/309792.png"
+	},
+	{
+		"id": 10124,
+		"name": "L\u00e9o Pereira",
+		"position": "Defender",
+		"age": 29,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/10124.png"
+	},
+	{
+		"id": 197383,
+		"name": "Luciano Juba",
+		"position": "Defender",
+		"age": 26,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/197383.png"
+	},
+	{
+		"id": 257,
+		"name": "Marquinhos",
+		"position": "Defender",
+		"age": 31,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/257.png"
+	},
+	{
+		"id": 133910,
+		"name": "Paulo Henrique",
+		"position": "Defender",
+		"age": 29,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/133910.png"
+	},
+	{
+		"id": 24866,
+		"name": "Douglas Santos",
+		"position": "Defender",
+		"age": 31,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/24866.png"
+	},
+	{
+		"id": 8661,
+		"name": "Vitinho",
+		"position": "Defender",
+		"age": 26,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/8661.png"
+	},
+	{
+		"id": 349001,
+		"name": "Wesley",
+		"position": "Defender",
+		"age": 22,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/349001.png"
+	},
+	{
+		"id": 265784,
+		"name": "Andr\u00e9",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/265784.png"
+	},
+	{
+		"id": 305834,
+		"name": "Andrey Santos",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/305834.png"
+	},
+	{
+		"id": 10135,
+		"name": "Bruno Guimar\u00e3es",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/10135.png"
+	},
+	{
+		"id": 10238,
+		"name": "Carlos Augusto",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/10238.png"
+	},
+	{
+		"id": 747,
+		"name": "Casemiro",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/747.png"
+	},
+	{
+		"id": 275170,
+		"name": "Danilo",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/275170.png"
+	},
+	{
+		"id": 299,
+		"name": "Fabinho",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/299.png"
+	},
+	{
+		"id": 80552,
+		"name": "Gabriel Sara",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/80552.png"
+	},
+	{
+		"id": 195103,
+		"name": "Jo\u00e3o Gomes",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/195103.png"
+	},
+	{
+		"id": 723,
+		"name": "Joelinton",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/723.png"
+	},
+	{
+		"id": 1646,
+		"name": "Lucas Paquet\u00e1",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/1646.png"
+	},
+	{
+		"id": 1165,
+		"name": "Matheus Cunha",
+		"position": "Attacker",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/1165.png"
+	},
+	{
+		"id": 377122,
+		"name": "Endrick",
+		"position": "Attacker",
+		"age": 19,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/377122.png"
+	},
+	{
+		"id": 425733,
+		"name": "Est\u00eav\u00e3o",
+		"position": "Attacker",
+		"age": 18,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/425733.png"
+	},
+	{
+		"id": 9366,
+		"name": "Igor Jesus",
+		"position": "Attacker",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/9366.png"
+	},
+	{
+		"id": 10329,
+		"name": "Jo\u00e3o Pedro",
+		"position": "Attacker",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/10329.png"
+	},
+	{
+		"id": 265785,
+		"name": "Luiz Henrique",
+		"position": "Attacker",
+		"age": 24,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/265785.png"
+	},
+	{
+		"id": 127769,
+		"name": "Gabriel Martinelli",
+		"position": "Attacker",
+		"age": 24,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/127769.png"
+	},
+	{
+		"id": 1496,
+		"name": "Raphinha",
+		"position": "Attacker",
+		"age": 29,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/1496.png"
+	},
+	{
+		"id": 407806,
+		"name": "Rayan",
+		"position": "Attacker",
+		"age": 19,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/407806.png"
+	},
+	{
+		"id": 2413,
+		"name": "Richarlison",
+		"position": "Attacker",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/2413.png"
+	},
+	{
+		"id": 10009,
+		"name": "Rodrygo",
+		"position": "Attacker",
+		"age": 24,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/10009.png"
+	},
+	{
+		"id": 196156,
+		"name": "Thiago",
+		"position": "Attacker",
+		"age": 24,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/196156.png"
+	},
+	{
+		"id": 762,
+		"name": "Vin\u00edcius J\u00fanior",
+		"position": "Attacker",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/762.png"
+	},
+	{
+		"id": 340279,
+		"name": "Vitor Roque",
+		"position": "Attacker",
+		"age": 20,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/340279.png"
+	}
+]

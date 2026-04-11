@@ -1,0 +1,218 @@
+[
+	{
+		"id": 42504,
+		"name": "M. Aioani",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/42504.png"
+	},
+	{
+		"id": 43289,
+		"name": "C. C\u0103buz",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/43289.png"
+	},
+	{
+		"id": 43040,
+		"name": "L. Popescu",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/43040.png"
+	},
+	{
+		"id": 30765,
+		"name": "I. Radu",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/30765.png"
+	},
+	{
+		"id": 43048,
+		"name": "N. Bancu",
+		"position": "Defender",
+		"age": 33,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/43048.png"
+	},
+	{
+		"id": 43204,
+		"name": "A. Burc\u0103",
+		"position": "Defender",
+		"age": 32,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/43204.png"
+	},
+	{
+		"id": 395878,
+		"name": "K. Ciubotaru",
+		"position": "Defender",
+		"age": 21,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/395878.png"
+	},
+	{
+		"id": 336687,
+		"name": "A. Coubi\u0219",
+		"position": "Defender",
+		"age": 22,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/336687.png"
+	},
+	{
+		"id": 162498,
+		"name": "R. Dr\u0103gu\u0219in",
+		"position": "Defender",
+		"age": 23,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/162498.png"
+	},
+	{
+		"id": 43074,
+		"name": "V. Ghi\u021b\u0103",
+		"position": "Defender",
+		"age": 27,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/43074.png"
+	},
+	{
+		"id": 1703,
+		"name": "A. Ra\u021biu",
+		"position": "Defender",
+		"age": 27,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/1703.png"
+	},
+	{
+		"id": 43129,
+		"name": "A. Rus",
+		"position": "Defender",
+		"age": 29,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/43129.png"
+	},
+	{
+		"id": 104481,
+		"name": "V. Screciu",
+		"position": "Defender",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/104481.png"
+	},
+	{
+		"id": 31397,
+		"name": "V. Dragomir",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/31397.png"
+	},
+	{
+		"id": 43084,
+		"name": "I. Hagi",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/43084.png"
+	},
+	{
+		"id": 2118,
+		"name": "R. Marin",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/2118.png"
+	},
+	{
+		"id": 43194,
+		"name": "D. Sorescu",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/43194.png"
+	},
+	{
+		"id": 44439,
+		"name": "N. Stanciu",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/44439.png"
+	},
+	{
+		"id": 43038,
+		"name": "F. T\u0103nase",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/43038.png"
+	},
+	{
+		"id": 119077,
+		"name": "\u0218. Baiaram",
+		"position": "Attacker",
+		"age": 23,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/119077.png"
+	},
+	{
+		"id": 126892,
+		"name": "D. B\u00eerligea",
+		"position": "Attacker",
+		"age": 25,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/126892.png"
+	},
+	{
+		"id": 42557,
+		"name": "M. Coman",
+		"position": "Attacker",
+		"age": 29,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/42557.png"
+	},
+	{
+		"id": 18047,
+		"name": "A. Dobre",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/18047.png"
+	},
+	{
+		"id": 43036,
+		"name": "D. Man",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/43036.png"
+	},
+	{
+		"id": 42687,
+		"name": "D. Miculescu",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/42687.png"
+	},
+	{
+		"id": 43056,
+		"name": "V. Mih\u0103il\u0103",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/43056.png"
+	},
+	{
+		"id": 42999,
+		"name": "C. Petrila",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/42999.png"
+	}
+]

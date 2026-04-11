@@ -1,0 +1,306 @@
+[
+	{
+		"id": 533062,
+		"name": "M. Akhbari",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/533062.png"
+	},
+	{
+		"id": 2682,
+		"name": "A. Beiranvand",
+		"position": "Goalkeeper",
+		"age": 33,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/2682.png"
+	},
+	{
+		"id": 29755,
+		"name": "H. Hosseini",
+		"position": "Goalkeeper",
+		"age": 33,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/29755.png"
+	},
+	{
+		"id": 532988,
+		"name": "M. Khalifeh",
+		"position": "Goalkeeper",
+		"age": 21,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/532988.png"
+	},
+	{
+		"id": 2681,
+		"name": "P. Niazmand",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/2681.png"
+	},
+	{
+		"id": 532925,
+		"name": "A. Abdullayev",
+		"position": "Defender",
+		"age": 19,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/532925.png"
+	},
+	{
+		"id": 341844,
+		"name": "M. Ghorbani",
+		"position": "Defender",
+		"age": 24,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/341844.png"
+	},
+	{
+		"id": 136880,
+		"name": "Saleh Hardani",
+		"position": "Defender",
+		"age": 27,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/136880.png"
+	},
+	{
+		"id": 343086,
+		"name": "M. Hazbavi",
+		"position": "Defender",
+		"age": 22,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/343086.png"
+	},
+	{
+		"id": 2686,
+		"name": "M. Hosseini",
+		"position": "Defender",
+		"age": 29,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/2686.png"
+	},
+	{
+		"id": 2687,
+		"name": "H. Kanani",
+		"position": "Defender",
+		"age": 31,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/2687.png"
+	},
+	{
+		"id": 29704,
+		"name": "S. Khalilzadeh",
+		"position": "Defender",
+		"age": 36,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/29704.png"
+	},
+	{
+		"id": 2688,
+		"name": "M. Mohammadi",
+		"position": "Defender",
+		"age": 32,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/2688.png"
+	},
+	{
+		"id": 533035,
+		"name": "A. Nemati",
+		"position": "Defender",
+		"age": 29,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/533035.png"
+	},
+	{
+		"id": 2691,
+		"name": "R. Rezaeian",
+		"position": "Defender",
+		"age": 35,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/2691.png"
+	},
+	{
+		"id": 343405,
+		"name": "A. Yousefi",
+		"position": "Defender",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/343405.png"
+	},
+	{
+		"id": 543669,
+		"name": "M. Mohazabieh",
+		"position": "Defender",
+		"age": 22,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/543669.png"
+	},
+	{
+		"id": 533061,
+		"name": "H. Abarghouei",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/533061.png"
+	},
+	{
+		"id": 19614,
+		"name": "S. Ezatolahi",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/19614.png"
+	},
+	{
+		"id": 2699,
+		"name": "S. Ghoddos",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/2699.png"
+	},
+	{
+		"id": 532944,
+		"name": "M. Murodov",
+		"position": "Midfielder",
+		"age": 16,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/532944.png"
+	},
+	{
+		"id": 29991,
+		"name": "M. Khodabandelou",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/29991.png"
+	},
+	{
+		"id": 290554,
+		"name": "M. Mohebi",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/290554.png"
+	},
+	{
+		"id": 29775,
+		"name": "O. Noorafkan",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/29775.png"
+	},
+	{
+		"id": 423753,
+		"name": "A. Razzaghinia",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 28,
+		"photo": "https://media.api-sports.io/football/players/423753.png"
+	},
+	{
+		"id": 29720,
+		"name": "A. Alipour",
+		"position": "Attacker",
+		"age": 30,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/29720.png"
+	},
+	{
+		"id": 357029,
+		"name": "M. Hashemnejad",
+		"position": "Attacker",
+		"age": 24,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/357029.png"
+	},
+	{
+		"id": 409419,
+		"name": "M. Hosseinnezhad",
+		"position": "Attacker",
+		"age": 22,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/409419.png"
+	},
+	{
+		"id": 29937,
+		"name": "A. Hosseinzadeh",
+		"position": "Attacker",
+		"age": 25,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/29937.png"
+	},
+	{
+		"id": 2700,
+		"name": "A. Jahanbakhsh",
+		"position": "Attacker",
+		"age": 32,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/2700.png"
+	},
+	{
+		"id": 29992,
+		"name": "A. Koushki",
+		"position": "Attacker",
+		"age": 25,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/29992.png"
+	},
+	{
+		"id": 613145,
+		"name": "A. Mahmoudi",
+		"position": "Attacker",
+		"age": 19,
+		"number": 31,
+		"photo": "https://media.api-sports.io/football/players/613145.png"
+	},
+	{
+		"id": 89982,
+		"name": "S. Moghanlou",
+		"position": "Attacker",
+		"age": 31,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/89982.png"
+	},
+	{
+		"id": 134217,
+		"name": "M. Mohebi",
+		"position": "Attacker",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/134217.png"
+	},
+	{
+		"id": 29784,
+		"name": "A. Sayyadmanesh",
+		"position": "Attacker",
+		"age": 24,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/29784.png"
+	},
+	{
+		"id": 532825,
+		"name": "K. Taheri",
+		"position": "Attacker",
+		"age": 19,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/532825.png"
+	},
+	{
+		"id": 42315,
+		"name": "M. Taremi",
+		"position": "Attacker",
+		"age": 33,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/42315.png"
+	},
+	{
+		"id": 532798,
+		"name": "M. Tikdari",
+		"position": "Attacker",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/532798.png"
+	}
+]

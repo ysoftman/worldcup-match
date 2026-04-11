@@ -2984,7 +2984,7 @@
 .squad-xi-info {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	gap: 16px;
 	padding: 10px 20px;
 	font-size: 0.85rem;
 	color: #aaa;
@@ -3162,7 +3162,63 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 130px;
+	max-width: 180px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.player-photo {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+.name-local {
+	display: block;
+	font-size: 0.85rem;
+	line-height: 1.2;
+}
+
+.name-latin {
+	display: block;
+	font-size: 0.68rem;
+	color: #888;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+[data-theme="light"] .name-latin {
+	color: #999;
+}
+
+.name-generated {
+	color: #e67e22;
+	font-size: 0.7rem;
+	margin-left: 3px;
+	vertical-align: super;
+}
+
+.squad-legend {
+	padding: 6px 20px;
+	font-size: 0.75rem;
+	color: #888;
+}
+
+[data-theme="light"] .squad-legend {
+	color: #999;
+}
+
+.xi-legend {
+	font-size: 0.75rem;
+	color: #888;
+	margin-left: auto;
+}
+
+[data-theme="light"] .xi-legend {
+	color: #999;
 }
 
 .pos-cell {

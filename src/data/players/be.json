@@ -1,0 +1,250 @@
+[
+	{
+		"id": 730,
+		"name": "T. Courtois",
+		"position": "Goalkeeper",
+		"age": 33,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/730.png"
+	},
+	{
+		"id": 162511,
+		"name": "S. Lammens",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/162511.png"
+	},
+	{
+		"id": 340151,
+		"name": "M. Penders",
+		"position": "Goalkeeper",
+		"age": 20,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/340151.png"
+	},
+	{
+		"id": 2919,
+		"name": "M. Sels",
+		"position": "Goalkeeper",
+		"age": 33,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/2919.png"
+	},
+	{
+		"id": 1924,
+		"name": "M. Vandevoordt",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/1924.png"
+	},
+	{
+		"id": 2920,
+		"name": "T. Castagne",
+		"position": "Defender",
+		"age": 30,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/2920.png"
+	},
+	{
+		"id": 162007,
+		"name": "M. De Cuyper",
+		"position": "Defender",
+		"age": 25,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/162007.png"
+	},
+	{
+		"id": 162141,
+		"name": "K. De Winter",
+		"position": "Defender",
+		"age": 23,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/162141.png"
+	},
+	{
+		"id": 304228,
+		"name": "Z. Debast",
+		"position": "Defender",
+		"age": 22,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/304228.png"
+	},
+	{
+		"id": 69,
+		"name": "B. Mechele",
+		"position": "Defender",
+		"age": 32,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/69.png"
+	},
+	{
+		"id": 264,
+		"name": "T. Meunier",
+		"position": "Defender",
+		"age": 34,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/264.png"
+	},
+	{
+		"id": 375974,
+		"name": "J. Seys",
+		"position": "Defender",
+		"age": 20,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/375974.png"
+	},
+	{
+		"id": 204043,
+		"name": "A. Theate",
+		"position": "Defender",
+		"age": 25,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/204043.png"
+	},
+	{
+		"id": 629,
+		"name": "K. De Bruyne",
+		"position": "Midfielder",
+		"age": 34,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/629.png"
+	},
+	{
+		"id": 453903,
+		"name": "Nathan De Cat",
+		"position": "Midfielder",
+		"age": 17,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/453903.png"
+	},
+	{
+		"id": 147859,
+		"name": "C. De Ketelaere",
+		"position": "Attacker",
+		"age": 24,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/147859.png"
+	},
+	{
+		"id": 335056,
+		"name": "Diego Moreira",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/335056.png"
+	},
+	{
+		"id": 162714,
+		"name": "A. Onana",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/162714.png"
+	},
+	{
+		"id": 2120,
+		"name": "N. Raskin",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/2120.png"
+	},
+	{
+		"id": 1417,
+		"name": "A. Saelemaekers",
+		"position": "Attacker",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/1417.png"
+	},
+	{
+		"id": 2926,
+		"name": "Y. Tielemans",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/2926.png"
+	},
+	{
+		"id": 78,
+		"name": "H. Vanaken",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/78.png"
+	},
+	{
+		"id": 8680,
+		"name": "C. Vanhoutte",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/8680.png"
+	},
+	{
+		"id": 20,
+		"name": "A. Witsel",
+		"position": "Midfielder",
+		"age": 36,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/20.png"
+	},
+	{
+		"id": 2927,
+		"name": "M. Batshuayi",
+		"position": "Attacker",
+		"age": 32,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/2927.png"
+	},
+	{
+		"id": 1422,
+		"name": "J. Doku",
+		"position": "Attacker",
+		"age": 23,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/1422.png"
+	},
+	{
+		"id": 361348,
+		"name": "M. Fofana",
+		"position": "Attacker",
+		"age": 20,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/361348.png"
+	},
+	{
+		"id": 25458,
+		"name": "D. Lukebakio",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/25458.png"
+	},
+	{
+		"id": 86,
+		"name": "L. Openda",
+		"position": "Attacker",
+		"age": 25,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/86.png"
+	},
+	{
+		"id": 1946,
+		"name": "L. Trossard",
+		"position": "Attacker",
+		"age": 31,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/1946.png"
+	},
+	{
+		"id": 271276,
+		"name": "R. Vermant",
+		"position": "Attacker",
+		"age": 21,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/271276.png"
+	}
+]

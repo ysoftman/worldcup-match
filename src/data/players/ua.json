@@ -1,0 +1,226 @@
+[
+	{
+		"id": 154864,
+		"name": "R. Neshcheret",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/154864.png"
+	},
+	{
+		"id": 1500,
+		"name": "D. Riznyk",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/1500.png"
+	},
+	{
+		"id": 675,
+		"name": "A. Trubin",
+		"position": "Goalkeeper",
+		"age": 24,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/675.png"
+	},
+	{
+		"id": 676,
+		"name": "V. Bondar",
+		"position": "Defender",
+		"age": 26,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/676.png"
+	},
+	{
+		"id": 125418,
+		"name": "Y. Konoplya",
+		"position": "Defender",
+		"age": 26,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/125418.png"
+	},
+	{
+		"id": 682,
+		"name": "M. Matvienko",
+		"position": "Defender",
+		"age": 29,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/682.png"
+	},
+	{
+		"id": 385027,
+		"name": "T. Mykhavko",
+		"position": "Defender",
+		"age": 20,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/385027.png"
+	},
+	{
+		"id": 63446,
+		"name": "B. Mykhailichenko",
+		"position": "Defender",
+		"age": 28,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/63446.png"
+	},
+	{
+		"id": 2165,
+		"name": "V. Mykolenko",
+		"position": "Defender",
+		"age": 26,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/2165.png"
+	},
+	{
+		"id": 130944,
+		"name": "E. Sarapiy",
+		"position": "Defender",
+		"age": 26,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/130944.png"
+	},
+	{
+		"id": 14333,
+		"name": "O. Svatok",
+		"position": "Defender",
+		"age": 31,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/14333.png"
+	},
+	{
+		"id": 161671,
+		"name": "I. Zabarnyi",
+		"position": "Defender",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/161671.png"
+	},
+	{
+		"id": 63682,
+		"name": "I. Kalyuzhnyi",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/63682.png"
+	},
+	{
+		"id": 1938,
+		"name": "R. Malinovskyi",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/1938.png"
+	},
+	{
+		"id": 161946,
+		"name": "O. Ocheretko",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/161946.png"
+	},
+	{
+		"id": 63420,
+		"name": "O. Pikhalyonok",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/63420.png"
+	},
+	{
+		"id": 2177,
+		"name": "M. Shaparenko",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/2177.png"
+	},
+	{
+		"id": 161945,
+		"name": "H. Sudakov",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/161945.png"
+	},
+	{
+		"id": 2182,
+		"name": "V. Tsygankov",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/2182.png"
+	},
+	{
+		"id": 63434,
+		"name": "O. Tymchyk",
+		"position": "Defender",
+		"age": 28,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/63434.png"
+	},
+	{
+		"id": 263538,
+		"name": "Y. Yarmolyuk",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/263538.png"
+	},
+	{
+		"id": 15811,
+		"name": "A. Dovbyk",
+		"position": "Attacker",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/15811.png"
+	},
+	{
+		"id": 63543,
+		"name": "O. Gutsulyak",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/63543.png"
+	},
+	{
+		"id": 395550,
+		"name": "M. Ponomarenko",
+		"position": "Attacker",
+		"age": 19,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/395550.png"
+	},
+	{
+		"id": 161670,
+		"name": "V. Vanat",
+		"position": "Attacker",
+		"age": 23,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/161670.png"
+	},
+	{
+		"id": 198391,
+		"name": "N. Voloshyn",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/198391.png"
+	},
+	{
+		"id": 8493,
+		"name": "R. Yaremchuk",
+		"position": "Attacker",
+		"age": 30,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/8493.png"
+	},
+	{
+		"id": 105320,
+		"name": "O. Zubkov",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/105320.png"
+	}
+]

@@ -1,0 +1,242 @@
+[
+	{
+		"id": 18886,
+		"name": "M. D\u00fabravka",
+		"position": "Goalkeeper",
+		"age": 36,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/18886.png"
+	},
+	{
+		"id": 19657,
+		"name": "M. Rod\u00e1k",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/19657.png"
+	},
+	{
+		"id": 1378,
+		"name": "D. Tak\u00e1\u010d",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/1378.png"
+	},
+	{
+		"id": 31389,
+		"name": "N. Gy\u00f6mb\u00e9r",
+		"position": "Defender",
+		"age": 33,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/31389.png"
+	},
+	{
+		"id": 30399,
+		"name": "D. Hancko",
+		"position": "Defender",
+		"age": 28,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/30399.png"
+	},
+	{
+		"id": 204854,
+		"name": "D. Kr\u010d\u00edk",
+		"position": "Defender",
+		"age": 26,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/204854.png"
+	},
+	{
+		"id": 1393,
+		"name": "I. Mes\u00edk",
+		"position": "Defender",
+		"age": 24,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/1393.png"
+	},
+	{
+		"id": 321744,
+		"name": "A. Obert",
+		"position": "Defender",
+		"age": 23,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/321744.png"
+	},
+	{
+		"id": 25343,
+		"name": "P. Pekar\u00edk",
+		"position": "Defender",
+		"age": 39,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/25343.png"
+	},
+	{
+		"id": 55949,
+		"name": "\u013d. \u0160atka",
+		"position": "Defender",
+		"age": 30,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/55949.png"
+	},
+	{
+		"id": 198,
+		"name": "M. \u0160kriniar",
+		"position": "Defender",
+		"age": 30,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/198.png"
+	},
+	{
+		"id": 46738,
+		"name": "M. Valjent",
+		"position": "Defender",
+		"age": 30,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/46738.png"
+	},
+	{
+		"id": 1291,
+		"name": "D. Vavro",
+		"position": "Defender",
+		"age": 29,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/1291.png"
+	},
+	{
+		"id": 24962,
+		"name": "L. B\u00e9nes",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/24962.png"
+	},
+	{
+		"id": 37122,
+		"name": "M. Bero",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/37122.png"
+	},
+	{
+		"id": 25349,
+		"name": "O. Duda",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/25349.png"
+	},
+	{
+		"id": 807,
+		"name": "P. Hro\u0161ovsk\u00fd",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/807.png"
+	},
+	{
+		"id": 47439,
+		"name": "S. Lobotka",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/47439.png"
+	},
+	{
+		"id": 290211,
+		"name": "T. Rigo",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/290211.png"
+	},
+	{
+		"id": 304140,
+		"name": "M. Sauer",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/304140.png"
+	},
+	{
+		"id": 194837,
+		"name": "T. Suslov",
+		"position": "Attacker",
+		"age": 23,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/194837.png"
+	},
+	{
+		"id": 61245,
+		"name": "R. Bo\u017een\u00edk",
+		"position": "Attacker",
+		"age": 26,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/61245.png"
+	},
+	{
+		"id": 61234,
+		"name": "D. \u010euri\u0161",
+		"position": "Attacker",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/61234.png"
+	},
+	{
+		"id": 40446,
+		"name": "L. Harasl\u00edn",
+		"position": "Attacker",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/40446.png"
+	},
+	{
+		"id": 204752,
+		"name": "A. Kapr\u00e1lik",
+		"position": "Attacker",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/204752.png"
+	},
+	{
+		"id": 30999,
+		"name": "S. Mr\u00e1z",
+		"position": "Attacker",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/30999.png"
+	},
+	{
+		"id": 342163,
+		"name": "L. Sauer",
+		"position": "Attacker",
+		"age": 20,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/342163.png"
+	},
+	{
+		"id": 15328,
+		"name": "I. Schranz",
+		"position": "Attacker",
+		"age": 32,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/15328.png"
+	},
+	{
+		"id": 61156,
+		"name": "D. Strelec",
+		"position": "Attacker",
+		"age": 24,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/61156.png"
+	},
+	{
+		"id": 30943,
+		"name": "\u013d. Tupta",
+		"position": "Attacker",
+		"age": 27,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/30943.png"
+	}
+]

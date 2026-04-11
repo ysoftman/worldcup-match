@@ -1,0 +1,218 @@
+[
+	{
+		"id": 50132,
+		"name": "A. Bay\u0131nd\u0131r",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/50132.png"
+	},
+	{
+		"id": 49866,
+		"name": "U. \u00c7ak\u0131r",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/49866.png"
+	},
+	{
+		"id": 49837,
+		"name": "M. G\u00fcnok",
+		"position": "Goalkeeper",
+		"age": 36,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/49837.png"
+	},
+	{
+		"id": 62490,
+		"name": "S. Akaydin",
+		"position": "Defender",
+		"age": 31,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/62490.png"
+	},
+	{
+		"id": 25448,
+		"name": "K. Ayhan",
+		"position": "Defender",
+		"age": 31,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/25448.png"
+	},
+	{
+		"id": 61837,
+		"name": "A. Bardakc\u0131",
+		"position": "Defender",
+		"age": 31,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/61837.png"
+	},
+	{
+		"id": 22222,
+		"name": "Z. \u00c7elik",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/22222.png"
+	},
+	{
+		"id": 30521,
+		"name": "M. Demiral",
+		"position": "Defender",
+		"age": 27,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/30521.png"
+	},
+	{
+		"id": 50057,
+		"name": "E. Elmal\u0131",
+		"position": "Defender",
+		"age": 25,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/50057.png"
+	},
+	{
+		"id": 26300,
+		"name": "O. Kabak",
+		"position": "Defender",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/26300.png"
+	},
+	{
+		"id": 1361,
+		"name": "F. Kad\u0131o\u011flu",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/1361.png"
+	},
+	{
+		"id": 1719,
+		"name": "M. M\u00fcld\u00fcr",
+		"position": "Defender",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/1719.png"
+	},
+	{
+		"id": 134590,
+		"name": "O. Ayd\u0131n",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/134590.png"
+	},
+	{
+		"id": 1640,
+		"name": "H. \u00c7alhano\u011flu",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/1640.png"
+	},
+	{
+		"id": 62323,
+		"name": "M. Eskihella\u00e7",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/62323.png"
+	},
+	{
+		"id": 291964,
+		"name": "A. G\u00fcler",
+		"position": "Attacker",
+		"age": 20,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/291964.png"
+	},
+	{
+		"id": 24963,
+		"name": "A. Karazor",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/24963.png"
+	},
+	{
+		"id": 37155,
+		"name": "O. Ko\u0308k\u00e7u\u0308",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/37155.png"
+	},
+	{
+		"id": 24807,
+		"name": "S. \u00d6zcan",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/24807.png"
+	},
+	{
+		"id": 214463,
+		"name": "\u0130. Y\u00fcksek",
+		"position": "Defender",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/214463.png"
+	},
+	{
+		"id": 454,
+		"name": "Y. Akg\u00fcn",
+		"position": "Attacker",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/454.png"
+	},
+	{
+		"id": 142959,
+		"name": "K. Akt\u00fcrko\u011flu",
+		"position": "Attacker",
+		"age": 27,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/142959.png"
+	},
+	{
+		"id": 388570,
+		"name": "D. G\u00fcl",
+		"position": "Attacker",
+		"age": 21,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/388570.png"
+	},
+	{
+		"id": 49857,
+		"name": "\u0130. Kahveci",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/49857.png"
+	},
+	{
+		"id": 161790,
+		"name": "A. \u015eim\u015fir",
+		"position": "Attacker",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/161790.png"
+	},
+	{
+		"id": 339883,
+		"name": "K. Y\u0131ld\u0131z",
+		"position": "Attacker",
+		"age": 20,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/339883.png"
+	},
+	{
+		"id": 63274,
+		"name": "B. Y\u0131lmaz",
+		"position": "Attacker",
+		"age": 25,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/63274.png"
+	}
+]

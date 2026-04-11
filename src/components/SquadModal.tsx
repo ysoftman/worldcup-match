@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Country } from "../data/countries";
 import type { Position } from "../types";
 import { POSITION_LABELS } from "../types";
-import { autoSelectXI, getSquad } from "../utils/playerLoader";
+import { autoSelectXI, getSquad, hasRealPlayers } from "../utils/playerLoader";
 
 interface SquadModalProps {
 	team: Country;
@@ -60,6 +60,7 @@ export function SquadModal({
 	);
 
 	const squad = useMemo(() => getSquad(team), [team]);
+	const isReal = hasRealPlayers(team.code);
 
 	// 외부 클릭으로 닫기
 	useEffect(() => {
@@ -161,6 +162,11 @@ export function SquadModal({
 						GK:{xiCounts.GK} / DF:{xiCounts.DEF} / MF:{xiCounts.MID} / FW:
 						{xiCounts.FWD}
 					</span>
+					{!isReal && (
+						<span className="xi-legend">
+							<span className="name-generated">*</span>가상 선수
+						</span>
+					)}
 				</div>
 
 				<div className="squad-filters">
@@ -214,7 +220,18 @@ export function SquadModal({
 											/>
 										</td>
 										<td className="num-cell">{p.number}</td>
-										<td className="name-cell">{p.name}</td>
+										<td className="name-cell">
+											{p.photo && (
+												<img
+													className="player-photo"
+													src={p.photo}
+													alt={p.name}
+													loading="lazy"
+												/>
+											)}
+											<span>{p.name}</span>
+											{!isReal && <span className="name-generated">*</span>}
+										</td>
 										<td className={`pos-cell pos-${p.position.toLowerCase()}`}>
 											{POSITION_LABELS[p.position]}
 										</td>

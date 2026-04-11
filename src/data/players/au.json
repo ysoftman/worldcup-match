@@ -1,0 +1,202 @@
+[
+	{
+		"id": 353883,
+		"name": "P. Beach",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/353883.png"
+	},
+	{
+		"id": 6870,
+		"name": "P. Izzo",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/6870.png"
+	},
+	{
+		"id": 2741,
+		"name": "M. Ryan",
+		"position": "Goalkeeper",
+		"age": 33,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/2741.png"
+	},
+	{
+		"id": 225,
+		"name": "A. Behich",
+		"position": "Defender",
+		"age": 35,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/225.png"
+	},
+	{
+		"id": 337587,
+		"name": "J. Bos",
+		"position": "Defender",
+		"age": 23,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/337587.png"
+	},
+	{
+		"id": 20457,
+		"name": "C. Burgess",
+		"position": "Defender",
+		"age": 30,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/20457.png"
+	},
+	{
+		"id": 348568,
+		"name": "A. Circati",
+		"position": "Defender",
+		"age": 22,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/348568.png"
+	},
+	{
+		"id": 33847,
+		"name": "J. Geria",
+		"position": "Defender",
+		"age": 32,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/33847.png"
+	},
+	{
+		"id": 426480,
+		"name": "L. Herrington",
+		"position": "Defender",
+		"age": 18,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/426480.png"
+	},
+	{
+		"id": 2742,
+		"name": "M. Degenek",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/2742.png"
+	},
+	{
+		"id": 38123,
+		"name": "A. Hrusti\u0107",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/38123.png"
+	},
+	{
+		"id": 6808,
+		"name": "J. Italiano",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/6808.png"
+	},
+	{
+		"id": 6913,
+		"name": "R. McGree",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/6913.png"
+	},
+	{
+		"id": 7050,
+		"name": "A. O&apos;Neill",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/7050.png"
+	},
+	{
+		"id": 441269,
+		"name": "Paul Michael Junior Okon-Engstler",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/441269.png"
+	},
+	{
+		"id": 288109,
+		"name": "A. Robertson",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/288109.png"
+	},
+	{
+		"id": 153622,
+		"name": "K. Trewin",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/153622.png"
+	},
+	{
+		"id": 269539,
+		"name": "P. Yazbek",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/269539.png"
+	},
+	{
+		"id": 44843,
+		"name": "M. Boyle",
+		"position": "Attacker",
+		"age": 32,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/44843.png"
+	},
+	{
+		"id": 338014,
+		"name": "N. Irankunda",
+		"position": "Attacker",
+		"age": 19,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/338014.png"
+	},
+	{
+		"id": 14887,
+		"name": "D. Juri\u0107",
+		"position": "Attacker",
+		"age": 28,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/14887.png"
+	},
+	{
+		"id": 2755,
+		"name": "A. Mabil",
+		"position": "Attacker",
+		"age": 30,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/2755.png"
+	},
+	{
+		"id": 6904,
+		"name": "C. Metcalfe",
+		"position": "Attacker",
+		"age": 26,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/6904.png"
+	},
+	{
+		"id": 316161,
+		"name": "A. \u0160uto",
+		"position": "Attacker",
+		"age": 25,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/316161.png"
+	},
+	{
+		"id": 312459,
+		"name": "N. Velupillay",
+		"position": "Attacker",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/312459.png"
+	}
+]

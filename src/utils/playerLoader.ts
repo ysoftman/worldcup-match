@@ -1,6 +1,6 @@
 import type { Country } from "../data/countries";
 import { getNamePool } from "../data/playerNames";
-import rawData from "../data/players.json";
+import playersMap from "../data/players";
 import type { Player, Position } from "../types";
 import {
 	attachRatings,
@@ -9,12 +9,9 @@ import {
 	generateStats,
 	hashCode,
 	mulberry32,
-	type RawPlayer,
 	randInt,
 	teamBaseRating,
 } from "./playerRating";
-
-const typedRawData = rawData as Record<string, RawPlayer[]>;
 
 const squadCache = new Map<string, Player[]>();
 
@@ -52,7 +49,7 @@ const POSITION_DIST: Position[] = [
 function generateFallbackSquad(country: Country): Player[] {
 	const rng = mulberry32(hashCode(country.code));
 	const base = teamBaseRating(country.rank);
-	const namePool = getNamePool(country.conf);
+	const namePool = getNamePool(country.code, country.conf);
 	const usedNames = new Set<string>();
 	const players: Player[] = [];
 
@@ -97,17 +94,24 @@ export function getSquad(country: Country): Player[] {
 		return squadCache.get(country.code)!;
 	}
 
-	const apiPlayers = typedRawData[country.code];
+	// API-Football(worldcup) → fallback 가상 선수 생성
+	const wcPlayers = playersMap[country.code];
 	let squad: Player[];
 
-	if (apiPlayers && apiPlayers.length > 0) {
-		squad = attachRatings(apiPlayers, country);
+	if (wcPlayers && wcPlayers.length > 0) {
+		squad = attachRatings(wcPlayers, country);
 	} else {
 		squad = generateFallbackSquad(country);
 	}
 
 	squadCache.set(country.code, squad);
 	return squad;
+}
+
+// 실제 선수 데이터가 있는 국가인지 확인
+export function hasRealPlayers(countryCode: string): boolean {
+	const wc = playersMap[countryCode];
+	return !!wc && wc.length > 0;
 }
 
 // 포메이션에 맞는 최적 11명 자동 선택

@@ -1,0 +1,242 @@
+[
+	{
+		"id": 15870,
+		"name": "M. Hermansen",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/15870.png"
+	},
+	{
+		"id": 277175,
+		"name": "A. Jungdal",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/277175.png"
+	},
+	{
+		"id": 1798,
+		"name": "F. R\u00f8nnow",
+		"position": "Goalkeeper",
+		"age": 33,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/1798.png"
+	},
+	{
+		"id": 2728,
+		"name": "K. Schmeichel",
+		"position": "Goalkeeper",
+		"age": 39,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/2728.png"
+	},
+	{
+		"id": 2729,
+		"name": "J. Andersen",
+		"position": "Defender",
+		"age": 29,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/2729.png"
+	},
+	{
+		"id": 15623,
+		"name": "A. Bah",
+		"position": "Defender",
+		"age": 28,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/15623.png"
+	},
+	{
+		"id": 2282,
+		"name": "A. Christensen",
+		"position": "Defender",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/2282.png"
+	},
+	{
+		"id": 382452,
+		"name": "P. Dorgu",
+		"position": "Defender",
+		"age": 21,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/382452.png"
+	},
+	{
+		"id": 396193,
+		"name": "L. H\u00f8gsberg",
+		"position": "Defender",
+		"age": 19,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/396193.png"
+	},
+	{
+		"id": 533,
+		"name": "R. Kristensen",
+		"position": "Defender",
+		"age": 28,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/533.png"
+	},
+	{
+		"id": 1930,
+		"name": "J. M\u00e6hle",
+		"position": "Defender",
+		"age": 28,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/1930.png"
+	},
+	{
+		"id": 24806,
+		"name": "N. Nartey",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/24806.png"
+	},
+	{
+		"id": 15912,
+		"name": "V. Nelsson",
+		"position": "Defender",
+		"age": 27,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/15912.png"
+	},
+	{
+		"id": 350857,
+		"name": "O. Provstgaard",
+		"position": "Defender",
+		"age": 22,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/350857.png"
+	},
+	{
+		"id": 18943,
+		"name": "J. Vestergaard",
+		"position": "Defender",
+		"age": 33,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/18943.png"
+	},
+	{
+		"id": 2734,
+		"name": "P. Billing",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/2734.png"
+	},
+	{
+		"id": 15908,
+		"name": "M. Damsgaard",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/15908.png"
+	},
+	{
+		"id": 174,
+		"name": "C. Eriksen",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/174.png"
+	},
+	{
+		"id": 388872,
+		"name": "Victor Mow Froholdt",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/388872.png"
+	},
+	{
+		"id": 7712,
+		"name": "M. Hjulmand",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/7712.png"
+	},
+	{
+		"id": 2735,
+		"name": "P. H\u00f8jbjerg",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/2735.png"
+	},
+	{
+		"id": 47438,
+		"name": "M. Jensen",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/47438.png"
+	},
+	{
+		"id": 15884,
+		"name": "J. Lindstr\u00f8m",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/15884.png"
+	},
+	{
+		"id": 361352,
+		"name": "N. Nartey",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/361352.png"
+	},
+	{
+		"id": 30407,
+		"name": "C. N\u00f8rgaard",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/30407.png"
+	},
+	{
+		"id": 45017,
+		"name": "A. Dreyer",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/45017.png"
+	},
+	{
+		"id": 15704,
+		"name": "K. H\u00f8gh",
+		"position": "Attacker",
+		"age": 25,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/15704.png"
+	},
+	{
+		"id": 288006,
+		"name": "R. H\u00f8jlund",
+		"position": "Attacker",
+		"age": 22,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/288006.png"
+	},
+	{
+		"id": 135519,
+		"name": "G. Isaksen",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/135519.png"
+	},
+	{
+		"id": 315237,
+		"name": "W. Osula",
+		"position": "Attacker",
+		"age": 22,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/315237.png"
+	}
+]

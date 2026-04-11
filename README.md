@@ -11,6 +11,10 @@ FIFA 211 member nations, group stage and knockout tournament simulation web app.
 - Group stage with standings table and wildcard 3rd-place advancement (48-team)
 - Knockout bracket with visual connectors and final match circle layout
 - Match simulation based on FIFA ranking (Poisson distribution)
+- Squad viewer per team with 26-player roster (position, stats, height, age)
+- Starting XI selection with auto-select by formation
+- Player ability ratings (OVR, pace, shooting, passing, dribbling, defending, physical)
+- Real player data via API-Football integration (fallback: generated players)
 - Formation selector for group stage teams (8 formations with attack/defense modifiers)
 - Team strength modifier (-2 to +2) and team swap between groups
 - Win/lose/draw color indicators (green/red/orange)
@@ -42,22 +46,33 @@ bun run dev
 bun run build
 ```
 
+## Player Data
+
+Real player data for 8 countries is included in `src/data/players.json` (sourced from API-Football).
+All other countries use algorithmically generated players based on FIFA ranking.
+Generated (fallback) players are marked with `*` in the squad modal.
+
 ## Project Structure
 
 ```text
 src/
 ├── data/
 │   ├── countries.ts         # 211 FIFA nations (name, code, flag, rank, confederation)
-│   └── presets.ts           # Tournament presets (2002-2026 World Cup)
-├── types.ts                 # Type definitions (Match, Group, Round, etc.)
+│   ├── presets.ts           # Tournament presets (2002-2026 World Cup)
+│   ├── playerNames.ts       # Region-specific name pools (30 cultural groups)
+│   └── players.json         # API-Football player data (populated by fetch script)
+├── types.ts                 # Type definitions (Match, Group, Round, Player, etc.)
 ├── utils/
 │   ├── tournament.ts        # Tournament logic (simulation, groups, brackets)
+│   ├── playerRating.ts      # Player rating generation (seeded PRNG, position bias)
+│   ├── playerLoader.ts      # Player data loading, caching, auto XI selection
 │   └── sounds.ts            # Sound effects management
 ├── components/
 │   ├── BracketView.tsx      # Knockout bracket with connectors
 │   ├── GroupView.tsx         # Group stage standings and matches
 │   ├── GroupMatchCard.tsx    # Group match card
 │   ├── MatchCard.tsx         # Knockout match card
+│   ├── SquadModal.tsx        # Squad viewer with starting XI selection
 │   ├── Champion.tsx          # Winner celebration display
 │   ├── TeamSelector.tsx      # Team selection with region filters
 │   ├── WinnerHistory.tsx     # Winner history panel

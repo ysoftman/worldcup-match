@@ -1,0 +1,298 @@
+[
+	{
+		"id": 702,
+		"name": "O. Baumann",
+		"position": "Goalkeeper",
+		"age": 35,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/702.png"
+	},
+	{
+		"id": 25903,
+		"name": "F. Dahmen",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/25903.png"
+	},
+	{
+		"id": 399,
+		"name": "A. N\u00fcbel",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/399.png"
+	},
+	{
+		"id": 25368,
+		"name": "W. Anton",
+		"position": "Defender",
+		"age": 29,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/25368.png"
+	},
+	{
+		"id": 280074,
+		"name": "N. Brown",
+		"position": "Defender",
+		"age": 22,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/280074.png"
+	},
+	{
+		"id": 26238,
+		"name": "R. Koch",
+		"position": "Defender",
+		"age": 29,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/26238.png"
+	},
+	{
+		"id": 25158,
+		"name": "D. Raum",
+		"position": "Defender",
+		"age": 27,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/25158.png"
+	},
+	{
+		"id": 2285,
+		"name": "A. R\u00fcdiger",
+		"position": "Defender",
+		"age": 32,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/2285.png"
+	},
+	{
+		"id": 26243,
+		"name": "N. Schlotterbeck",
+		"position": "Defender",
+		"age": 26,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/26243.png"
+	},
+	{
+		"id": 972,
+		"name": "J. Tah",
+		"position": "Defender",
+		"age": 29,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/972.png"
+	},
+	{
+		"id": 163189,
+		"name": "M. Thiaw",
+		"position": "Defender",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/163189.png"
+	},
+	{
+		"id": 24868,
+		"name": "J. Vagnoman",
+		"position": "Defender",
+		"age": 25,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/24868.png"
+	},
+	{
+		"id": 714,
+		"name": "N. Amiri",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/714.png"
+	},
+	{
+		"id": 24903,
+		"name": "R. Andrich",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/24903.png"
+	},
+	{
+		"id": 25917,
+		"name": "R. Baku",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/25917.png"
+	},
+	{
+		"id": 432310,
+		"name": "S. El Mala",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/432310.png"
+	},
+	{
+		"id": 511,
+		"name": "L. Goretzka",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/511.png"
+	},
+	{
+		"id": 18970,
+		"name": "P. Gro\u00df",
+		"position": "Midfielder",
+		"age": 34,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/18970.png"
+	},
+	{
+		"id": 494131,
+		"name": "L. Karl",
+		"position": "Midfielder",
+		"age": 17,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/494131.png"
+	},
+	{
+		"id": 502,
+		"name": "J. Kimmich",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/502.png"
+	},
+	{
+		"id": 637,
+		"name": "F. Nmecha",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/637.png"
+	},
+	{
+		"id": 380978,
+		"name": "A. Ou\u00e9draogo",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/380978.png"
+	},
+	{
+		"id": 328033,
+		"name": "A. Pavlovi\u0107",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/328033.png"
+	},
+	{
+		"id": 178077,
+		"name": "K. Schade",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/178077.png"
+	},
+	{
+		"id": 177665,
+		"name": "A. Stach",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/177665.png"
+	},
+	{
+		"id": 137210,
+		"name": "A. Stiller",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/137210.png"
+	},
+	{
+		"id": 203224,
+		"name": "F. Wirtz",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/203224.png"
+	},
+	{
+		"id": 7334,
+		"name": "K. Adeyemi",
+		"position": "Attacker",
+		"age": 23,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/7334.png"
+	},
+	{
+		"id": 158644,
+		"name": "M. Beier",
+		"position": "Attacker",
+		"age": 23,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/158644.png"
+	},
+	{
+		"id": 25926,
+		"name": "J. Burkardt",
+		"position": "Attacker",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/25926.png"
+	},
+	{
+		"id": 24798,
+		"name": "C. F\u00fchrich",
+		"position": "Attacker",
+		"age": 27,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/24798.png"
+	},
+	{
+		"id": 510,
+		"name": "S. Gnabry",
+		"position": "Attacker",
+		"age": 30,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/510.png"
+	},
+	{
+		"id": 978,
+		"name": "K. Havertz",
+		"position": "Attacker",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/978.png"
+	},
+	{
+		"id": 128533,
+		"name": "J. Leweling",
+		"position": "Attacker",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/128533.png"
+	},
+	{
+		"id": 644,
+		"name": "L. San\u00e9",
+		"position": "Attacker",
+		"age": 30,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/644.png"
+	},
+	{
+		"id": 26475,
+		"name": "D. Undav",
+		"position": "Attacker",
+		"age": 29,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/26475.png"
+	},
+	{
+		"id": 158054,
+		"name": "N. Woltemade",
+		"position": "Attacker",
+		"age": 23,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/158054.png"
+	}
+]

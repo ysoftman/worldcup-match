@@ -1,0 +1,234 @@
+[
+	{
+		"id": 180728,
+		"name": "S. Nwabali",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/180728.png"
+	},
+	{
+		"id": 434123,
+		"name": "A. Obasogie",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/434123.png"
+	},
+	{
+		"id": 15396,
+		"name": "F. Uzoho",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/15396.png"
+	},
+	{
+		"id": 2769,
+		"name": "S. Ajayi",
+		"position": "Defender",
+		"age": 32,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/2769.png"
+	},
+	{
+		"id": 278107,
+		"name": "R. Alebiosu",
+		"position": "Defender",
+		"age": 24,
+		"number": 27,
+		"photo": "https://media.api-sports.io/football/players/278107.png"
+	},
+	{
+		"id": 50026,
+		"name": "C. Awaziem",
+		"position": "Defender",
+		"age": 29,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/50026.png"
+	},
+	{
+		"id": 152967,
+		"name": "C. Bassey",
+		"position": "Defender",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/152967.png"
+	},
+	{
+		"id": 1174,
+		"name": "I. Ogbu",
+		"position": "Defender",
+		"age": 25,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/1174.png"
+	},
+	{
+		"id": 278196,
+		"name": "S. Onyemaechi",
+		"position": "Defender",
+		"age": 26,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/278196.png"
+	},
+	{
+		"id": 19588,
+		"name": "B. Osayi-Samuel",
+		"position": "Defender",
+		"age": 28,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/19588.png"
+	},
+	{
+		"id": 126899,
+		"name": "Z. Sanusi",
+		"position": "Defender",
+		"age": 28,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/126899.png"
+	},
+	{
+		"id": 408635,
+		"name": "E. Akinsanmiro",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/408635.png"
+	},
+	{
+		"id": 144740,
+		"name": "F. Dele-Bashiru",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/144740.png"
+	},
+	{
+		"id": 1455,
+		"name": "A. Iwobi",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/1455.png"
+	},
+	{
+		"id": 18786,
+		"name": "W. Ndidi",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/18786.png"
+	},
+	{
+		"id": 354298,
+		"name": "T. Nnadi",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 28,
+		"photo": "https://media.api-sports.io/football/players/354298.png"
+	},
+	{
+		"id": 162219,
+		"name": "R. Onyedika",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/162219.png"
+	},
+	{
+		"id": 15799,
+		"name": "F. Onyeka",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/15799.png"
+	},
+	{
+		"id": 651093,
+		"name": "F. Umole",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651093.png"
+	},
+	{
+		"id": 57446,
+		"name": "A. Adams",
+		"position": "Attacker",
+		"age": 25,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/57446.png"
+	},
+	{
+		"id": 1696,
+		"name": "S. Chukwueze",
+		"position": "Attacker",
+		"age": 26,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/1696.png"
+	},
+	{
+		"id": 37186,
+		"name": "C. Dessers",
+		"position": "Attacker",
+		"age": 31,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/37186.png"
+	},
+	{
+		"id": 39121,
+		"name": "C. Ejuke",
+		"position": "Attacker",
+		"age": 27,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/39121.png"
+	},
+	{
+		"id": 546460,
+		"name": "S. Lawal",
+		"position": "Attacker",
+		"age": 22,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/546460.png"
+	},
+	{
+		"id": 18767,
+		"name": "A. Lookman",
+		"position": "Attacker",
+		"age": 28,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/18767.png"
+	},
+	{
+		"id": 554233,
+		"name": "U. Mohammed",
+		"position": "Attacker",
+		"age": 31,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/554233.png"
+	},
+	{
+		"id": 15812,
+		"name": "P. Onuachu",
+		"position": "Attacker",
+		"age": 31,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/15812.png"
+	},
+	{
+		"id": 2780,
+		"name": "V. Osimhen",
+		"position": "Attacker",
+		"age": 27,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/2780.png"
+	},
+	{
+		"id": 2781,
+		"name": "M. Simon",
+		"position": "Attacker",
+		"age": 30,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/2781.png"
+	}
+]

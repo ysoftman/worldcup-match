@@ -1,0 +1,282 @@
+[
+	{
+		"id": 19465,
+		"name": "David Raya",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/19465.png"
+	},
+	{
+		"id": 47269,
+		"name": "\u00c1lex Remiro",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/47269.png"
+	},
+	{
+		"id": 47270,
+		"name": "Unai Sim\u00f3n",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/47270.png"
+	},
+	{
+		"id": 396623,
+		"name": "Pau Cubars\u00ed Paredes",
+		"position": "Defender",
+		"age": 18,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/396623.png"
+	},
+	{
+		"id": 47380,
+		"name": "Marc Cucurella",
+		"position": "Defender",
+		"age": 27,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/47380.png"
+	},
+	{
+		"id": 563,
+		"name": "\u00c1lex Grimaldo",
+		"position": "Defender",
+		"age": 30,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/563.png"
+	},
+	{
+		"id": 361497,
+		"name": "D. Huijsen",
+		"position": "Defender",
+		"age": 20,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/361497.png"
+	},
+	{
+		"id": 622,
+		"name": "Aymeric Laporte",
+		"position": "Defender",
+		"age": 31,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/622.png"
+	},
+	{
+		"id": 47301,
+		"name": "Robin Le Normand",
+		"position": "Defender",
+		"age": 29,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/47301.png"
+	},
+	{
+		"id": 753,
+		"name": "Marcos Llorente",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/753.png"
+	},
+	{
+		"id": 333682,
+		"name": "Cristhian Mosquera",
+		"position": "Defender",
+		"age": 21,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/333682.png"
+	},
+	{
+		"id": 47519,
+		"name": "Pedro Porro",
+		"position": "Defender",
+		"age": 26,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/47519.png"
+	},
+	{
+		"id": 47278,
+		"name": "Dani Vivian",
+		"position": "Defender",
+		"age": 26,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/47278.png"
+	},
+	{
+		"id": 336594,
+		"name": "Pablo Barrios",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/336594.png"
+	},
+	{
+		"id": 340626,
+		"name": "Ferm\u00edn",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/340626.png"
+	},
+	{
+		"id": 1697,
+		"name": "Pablo Fornals",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/1697.png"
+	},
+	{
+		"id": 47516,
+		"name": "Aleix Garc\u00eda",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/47516.png"
+	},
+	{
+		"id": 47311,
+		"name": "Mikel Merino",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/47311.png"
+	},
+	{
+		"id": 1323,
+		"name": "Dani Olmo",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/1323.png"
+	},
+	{
+		"id": 133609,
+		"name": "Pedri",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/133609.png"
+	},
+	{
+		"id": 44,
+		"name": "Rodri",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/44.png"
+	},
+	{
+		"id": 443162,
+		"name": "Jes\u00fas Rodr\u00edguez",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/443162.png"
+	},
+	{
+		"id": 328,
+		"name": "Fabi\u00e1n Ruiz",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/328.png"
+	},
+	{
+		"id": 930,
+		"name": "Carlos Soler",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/930.png"
+	},
+	{
+		"id": 47315,
+		"name": "Mart\u00edn Zubimendi",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/47315.png"
+	},
+	{
+		"id": 182219,
+		"name": "\u00c1lex Baena",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/182219.png"
+	},
+	{
+		"id": 47317,
+		"name": "Barrenetxea",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/47317.png"
+	},
+	{
+		"id": 47348,
+		"name": "Borja Iglesias",
+		"position": "Attacker",
+		"age": 32,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/47348.png"
+	},
+	{
+		"id": 386828,
+		"name": "Lamine Yamal",
+		"position": "Midfielder",
+		"age": 18,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/386828.png"
+	},
+	{
+		"id": 338751,
+		"name": "V\u00edctor Mu\u00f1oz",
+		"position": "Attacker",
+		"age": 22,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/338751.png"
+	},
+	{
+		"id": 47323,
+		"name": "Mikel Oyarzabal",
+		"position": "Attacker",
+		"age": 28,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/47323.png"
+	},
+	{
+		"id": 184226,
+		"name": "Yeremy Pino",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/184226.png"
+	},
+	{
+		"id": 358628,
+		"name": "Samu",
+		"position": "Attacker",
+		"age": 21,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/358628.png"
+	},
+	{
+		"id": 931,
+		"name": "Ferran Torres",
+		"position": "Attacker",
+		"age": 25,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/931.png"
+	},
+	{
+		"id": 128582,
+		"name": "Jorge de Frutos",
+		"position": "Attacker",
+		"age": 28,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/128582.png"
+	}
+]

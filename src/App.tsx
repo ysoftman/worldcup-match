@@ -9,7 +9,12 @@ import type { Country } from "./data/countries";
 import type { Preset } from "./data/presets";
 import { ALL_PRESETS } from "./data/presets";
 import type { Group, Match, RoundName, TournamentSize } from "./types";
-import { ROUND_LABELS, ROUND_ORDER_32, ROUND_ORDER_48 } from "./types";
+import {
+	FORMATIONS,
+	ROUND_LABELS,
+	ROUND_ORDER_32,
+	ROUND_ORDER_48,
+} from "./types";
 import {
 	isMuted,
 	playClick,
@@ -49,6 +54,17 @@ function getInitialTheme(): "light" | "dark" {
 	const saved = localStorage.getItem("theme");
 	if (saved === "light" || saved === "dark") return saved;
 	return "dark";
+}
+
+function randomFormations(teams: Country[]): Map<string, string> {
+	const map = new Map<string, string>();
+	for (const t of teams) {
+		const f = FORMATIONS[Math.floor(Math.random() * FORMATIONS.length)];
+		if (f.id !== "4-4-2") {
+			map.set(t.code, f.id);
+		}
+	}
+	return map;
 }
 
 function App() {
@@ -149,6 +165,7 @@ function App() {
 		setSelectedTeams(allTeams);
 		const newGroups = createGroupsFromPreset(preset.groups);
 		setGroups(newGroups);
+		setTeamFormations(randomFormations(allTeams));
 		setRounds([]);
 		setCurrentRoundIndex(-1);
 		setChampion(null);
@@ -162,6 +179,7 @@ function App() {
 		const shuffled = [...selectedTeams].sort(() => Math.random() - 0.5);
 		const newGroups = createGroups(shuffled, tournamentSize);
 		setGroups(newGroups);
+		setTeamFormations(randomFormations(shuffled));
 		setRounds([]);
 		setCurrentRoundIndex(-1);
 		setChampion(null);

@@ -902,6 +902,7 @@
 	border: 2px solid #e9ecef;
 	border-radius: 12px;
 	padding: 14px;
+	overflow: visible;
 }
 
 .group-name {
@@ -934,8 +935,9 @@
 	position: relative;
 	width: 100%;
 	aspect-ratio: 1;
-	max-width: 260px;
+	max-width: 300px;
 	margin: 0 auto 8px;
+	overflow: visible;
 }
 
 .group-circle::before {
@@ -1099,6 +1101,25 @@
 	outline: none;
 	border-color: #3498db;
 	box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* 포메이션 공격/수비 효과 표시 */
+.formation-stats {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+	margin-top: 2px;
+	font-size: 0.55rem;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.formation-stats .stat-up {
+	color: #27ae60;
+}
+
+.formation-stats .stat-down {
+	color: #e74c3c;
 }
 
 /* 순위표 포메이션 배지 */
@@ -1961,6 +1982,28 @@
 	font-size: 0.95rem;
 }
 
+/* 매치 카드 내 팀 설정 표시 */
+.match-team-settings {
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	margin-left: 4px;
+	vertical-align: middle;
+}
+
+.match-formation {
+	font-size: 0.6rem;
+	font-weight: 600;
+	padding: 1px 3px;
+	border-radius: 3px;
+	background: #eaf2f8;
+	color: #2980b9;
+}
+
+.match-mod {
+	font-size: 0.6rem;
+}
+
 /* 모바일 반응형 */
 @media (max-width: 768px) {
 	.app {
@@ -2023,7 +2066,7 @@
 	}
 
 	.group-circle {
-		max-width: 200px;
+		max-width: 230px;
 	}
 
 	.circle-team {
@@ -2446,6 +2489,11 @@
 }
 
 [data-theme="dark"] .formation-badge {
+	background: #1a3a5c;
+	color: #5dade2;
+}
+
+[data-theme="dark"] .match-formation {
 	background: #1a3a5c;
 	color: #5dade2;
 }

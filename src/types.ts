@@ -60,13 +60,13 @@ export interface Formation {
 
 export const FORMATIONS: Formation[] = [
 	{ id: "4-4-2", label: "4-4-2", atkMod: 0, defMod: 0 },
-	{ id: "4-3-3", label: "4-3-3", atkMod: 0.2, defMod: -0.1 },
-	{ id: "4-2-3-1", label: "4-2-3-1", atkMod: 0.1, defMod: 0.05 },
-	{ id: "3-5-2", label: "3-5-2", atkMod: 0, defMod: 0.1 },
-	{ id: "3-4-3", label: "3-4-3", atkMod: 0.3, defMod: -0.2 },
-	{ id: "5-3-2", label: "5-3-2", atkMod: -0.15, defMod: 0.25 },
-	{ id: "5-4-1", label: "5-4-1", atkMod: -0.25, defMod: 0.3 },
-	{ id: "4-5-1", label: "4-5-1", atkMod: -0.1, defMod: 0.15 },
+	{ id: "4-3-3", label: "4-3-3", atkMod: 0.4, defMod: -0.2 },
+	{ id: "4-2-3-1", label: "4-2-3-1", atkMod: 0.2, defMod: 0.1 },
+	{ id: "3-5-2", label: "3-5-2", atkMod: 0, defMod: 0.25 },
+	{ id: "3-4-3", label: "3-4-3", atkMod: 0.6, defMod: -0.4 },
+	{ id: "5-3-2", label: "5-3-2", atkMod: -0.3, defMod: 0.5 },
+	{ id: "5-4-1", label: "5-4-1", atkMod: -0.5, defMod: 0.6 },
+	{ id: "4-5-1", label: "4-5-1", atkMod: -0.2, defMod: 0.35 },
 ];
 
 export const DEFAULT_FORMATION_ID = "4-4-2";

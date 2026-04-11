@@ -1,6 +1,6 @@
 import type { Country } from "../data/countries";
 import type { Group, TeamStats } from "../types";
-import { DEFAULT_FORMATION_ID, FORMATIONS } from "../types";
+import { DEFAULT_FORMATION_ID, FORMATIONS, getFormation } from "../types";
 import { GroupMatchCard } from "./GroupMatchCard";
 
 interface GroupViewProps {
@@ -16,7 +16,7 @@ interface GroupViewProps {
 	wildcardCodes: Set<string>;
 }
 
-const MOD_LABELS = ["▼▼", "▼", "", "▲", "▲▲"];
+const MOD_LABELS = ["🛡️🛡️", "🛡️", "", "🗡️", "🗡️🗡️"];
 
 export function GroupView({
 	group,
@@ -48,7 +48,7 @@ export function GroupView({
 							swapSelection !== null && swapSelection.groupName !== group.name;
 						const angle = (idx / group.teams.length) * 360 - 90;
 						const rad = (angle * Math.PI) / 180;
-						const radius = 38;
+						const radius = 35;
 						const x = 50 + radius * Math.cos(rad);
 						const y = 50 + radius * Math.sin(rad);
 						const mod = teamModifiers.get(t.code) ?? 0;
@@ -70,7 +70,7 @@ export function GroupView({
 											onChangeModifier(t.code, -1);
 										}}
 									>
-										-
+										🛡️
 									</button>
 									<button
 										type="button"
@@ -96,7 +96,7 @@ export function GroupView({
 											onChangeModifier(t.code, 1);
 										}}
 									>
-										+
+										🗡️
 									</button>
 								</div>
 								<select
@@ -114,6 +114,40 @@ export function GroupView({
 										</option>
 									))}
 								</select>
+								{formation !== DEFAULT_FORMATION_ID &&
+									(() => {
+										const f = getFormation(formation);
+										return (
+											<div className="formation-stats">
+												<span
+													className={
+														f.atkMod > 0
+															? "stat-up"
+															: f.atkMod < 0
+																? "stat-down"
+																: ""
+													}
+												>
+													🗡️
+													{f.atkMod > 0 ? "+" : ""}
+													{f.atkMod}
+												</span>
+												<span
+													className={
+														f.defMod > 0
+															? "stat-up"
+															: f.defMod < 0
+																? "stat-down"
+																: ""
+													}
+												>
+													🛡️
+													{f.defMod > 0 ? "+" : ""}
+													{f.defMod}
+												</span>
+											</div>
+										);
+									})()}
 							</div>
 						);
 					})}
@@ -201,6 +235,8 @@ export function GroupView({
 						key={m.id}
 						match={m}
 						onClick={() => onPlayMatch(group.name, m.id)}
+						teamModifiers={teamModifiers}
+						teamFormations={teamFormations}
 					/>
 				))}
 			</div>

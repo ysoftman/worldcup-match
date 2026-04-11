@@ -1,16 +1,17 @@
 # FIFA World Cup Simulator
 
-FIFA 210 member nations, group stage and knockout tournament simulation web app.
+FIFA 211 member nations, group stage and knockout tournament simulation web app.
 
 ## Features
 
-- 210 FIFA member nations with real rankings (April 2026)
+- 211 FIFA member nations with real rankings (April 2026)
 - 32-team (8 groups) and 48-team (12 groups) tournament formats
 - Presets: 2002, 2006, 2010, 2014, 2018, 2022, 2026 World Cup
 - Region-based random selection (Asia, Europe, Africa, Americas, Oceania, etc.)
 - Group stage with standings table and wildcard 3rd-place advancement (48-team)
 - Knockout bracket with visual connectors and final match circle layout
 - Match simulation based on FIFA ranking (Poisson distribution)
+- Formation selector for group stage teams (8 formations with attack/defense modifiers)
 - Team strength modifier (-2 to +2) and team swap between groups
 - Win/lose/draw color indicators (green/red/orange)
 - Winner history stored in localStorage
@@ -46,7 +47,7 @@ bun run build
 ```text
 src/
 ├── data/
-│   ├── countries.ts         # 210 FIFA nations (name, code, flag, rank, confederation)
+│   ├── countries.ts         # 211 FIFA nations (name, code, flag, rank, confederation)
 │   └── presets.ts           # Tournament presets (2002-2026 World Cup)
 ├── types.ts                 # Type definitions (Match, Group, Round, etc.)
 ├── utils/

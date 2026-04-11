@@ -253,7 +253,20 @@ export function SquadModal({
 													}}
 												/>
 											)}
-											<span>{p.name}</span>
+											{p.photo ? (
+												<button
+													type="button"
+													className="name-clickable"
+													onClick={(e) => {
+														e.stopPropagation();
+														setZoomPhoto({ src: p.photo!, name: p.name });
+													}}
+												>
+													{p.name}
+												</button>
+											) : (
+												<span>{p.name}</span>
+											)}
 											{!isReal && <span className="name-generated">*</span>}
 										</td>
 										<td className={`pos-cell pos-${p.position.toLowerCase()}`}>

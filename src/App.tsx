@@ -103,6 +103,7 @@ function App() {
 	const [teamFormations, setTeamFormations] = useState<Map<string, string>>(
 		() => new Map(),
 	);
+	const [animatingMatchId, setAnimatingMatchId] = useState<string | null>(null);
 	const [swapSelection, setSwapSelection] = useState<{
 		groupName: string;
 		team: Country;
@@ -308,6 +309,7 @@ function App() {
 			});
 			setGroups(newGroups);
 			setAnimating(true);
+			setAnimatingMatchId(matchId);
 
 			// 지연: 골 애니메이션이 끝난 후 순위 업데이트
 			clearTimeout(animTimer.current);
@@ -320,6 +322,7 @@ function App() {
 					}),
 				);
 				setAnimating(false);
+				setAnimatingMatchId(null);
 			}, SCORE_ANIM_DELAY);
 		},
 		[groups, animating, teamModifiers, teamFormations],
@@ -640,6 +643,7 @@ function App() {
 								teamFormations={teamFormations}
 								onChangeFormation={changeFormation}
 								wildcardCodes={wildcardCodes}
+								animatingMatchId={animatingMatchId}
 							/>
 						))}
 					</div>

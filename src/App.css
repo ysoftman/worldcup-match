@@ -1287,6 +1287,66 @@
 	border-color: #27ae60;
 	background: #eafaf1;
 	animation: match-result 0.6s ease-out;
+	overflow: visible;
+}
+
+.match-card.played::before {
+	content: "";
+	position: absolute;
+	inset: -2px;
+	border-radius: 12px;
+	padding: 2px;
+	background: conic-gradient(
+		from var(--laser-angle, 0deg),
+		transparent 0%,
+		#27ae60 10%,
+		#2ecc71 20%,
+		#82e0aa 30%,
+		transparent 40%
+	);
+	mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	animation: laser-once 1.2s linear 1 forwards;
+	z-index: 0;
+	pointer-events: none;
+}
+
+/* 골 애니메이션 중: 레이저 무한 회전 */
+.match-card.laser-active::before {
+	animation: laser-spin 1s linear infinite;
+}
+
+@property --laser-angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes laser-spin {
+	to {
+		--laser-angle: 360deg;
+	}
+}
+
+@keyframes laser-once {
+	0% {
+		--laser-angle: 0deg;
+		opacity: 1;
+	}
+	85% {
+		--laser-angle: 306deg;
+		opacity: 1;
+	}
+	100% {
+		--laser-angle: 360deg;
+		opacity: 0;
+	}
 }
 
 .match-card.pending {
@@ -1318,7 +1378,6 @@
 		transform: scale(0.95);
 		opacity: 0.5;
 		background: #fffde7;
-		border-color: #f1c40f;
 		box-shadow: 0 0 0 0 rgba(241, 196, 15, 0.7);
 	}
 	30% {
@@ -1329,7 +1388,6 @@
 	60% {
 		transform: scale(1);
 		background: #eafaf1;
-		border-color: #27ae60;
 		box-shadow: 0 0 12px 2px rgba(39, 174, 96, 0.3);
 	}
 	100% {
@@ -1694,9 +1752,52 @@
 }
 
 .final-card.final-played {
-	border-color: #27ae60;
+	border-color: #d4ac0d;
 	background: linear-gradient(135deg, #eafaf1, #d5f5e3);
 	animation: match-result 0.6s ease-out;
+	overflow: visible;
+}
+
+.final-card.final-played::before {
+	content: "";
+	position: absolute;
+	inset: -2px;
+	border-radius: 18px;
+	padding: 2px;
+	background: conic-gradient(
+		from var(--laser-angle, 0deg),
+		transparent 0%,
+		#d4ac0d 10%,
+		#f1c40f 20%,
+		#f9e154 30%,
+		transparent 40%
+	);
+	mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	animation: laser-once-gold 1.5s linear 1 forwards;
+	z-index: -1;
+	pointer-events: none;
+}
+
+@keyframes laser-once-gold {
+	0% {
+		--laser-angle: 0deg;
+		opacity: 1;
+	}
+	85% {
+		--laser-angle: 306deg;
+		opacity: 1;
+	}
+	100% {
+		--laser-angle: 360deg;
+		opacity: 0;
+	}
 }
 
 .final-card.final-pending {
@@ -1814,7 +1915,18 @@
 
 [data-theme="dark"] .final-card.final-played {
 	background: linear-gradient(135deg, #1a3a2a, #1d4030);
-	border-color: #27ae60;
+	border-color: #d4ac0d;
+}
+
+[data-theme="dark"] .final-card.final-played::before {
+	background: conic-gradient(
+		from var(--laser-angle, 0deg),
+		transparent 0%,
+		#d4ac0d 10%,
+		#f1c40f 20%,
+		#f9e154 30%,
+		transparent 40%
+	);
 }
 
 [data-theme="dark"] .final-circle {
@@ -1871,6 +1983,34 @@
 .bm-card.bm-played {
 	border-color: #27ae60;
 	animation: match-result 0.6s ease-out;
+	overflow: visible;
+}
+
+.bm-card.bm-played::before {
+	content: "";
+	position: absolute;
+	inset: -2px;
+	border-radius: 8px;
+	padding: 2px;
+	background: conic-gradient(
+		from var(--laser-angle, 0deg),
+		transparent 0%,
+		#27ae60 10%,
+		#2ecc71 20%,
+		#82e0aa 30%,
+		transparent 40%
+	);
+	mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	animation: laser-once 1.2s linear 1 forwards;
+	z-index: -1;
+	pointer-events: none;
 }
 
 .bm-card.bm-pending {
@@ -2538,6 +2678,17 @@
 	border-color: #27ae60;
 }
 
+[data-theme="dark"] .match-card.played::before {
+	background: conic-gradient(
+		from var(--laser-angle, 0deg),
+		transparent 0%,
+		#27ae60 10%,
+		#58d68d 20%,
+		#abebc6 30%,
+		transparent 40%
+	);
+}
+
 [data-theme="dark"] .match-card.clickable.pending:hover {
 	border-color: #3498db;
 	box-shadow: 0 4px 16px rgba(52, 152, 219, 0.4);
@@ -2551,12 +2702,22 @@
 	animation-name: match-result-dark;
 }
 
+[data-theme="dark"] .bm-card.bm-played::before {
+	background: conic-gradient(
+		from var(--laser-angle, 0deg),
+		transparent 0%,
+		#27ae60 10%,
+		#58d68d 20%,
+		#abebc6 30%,
+		transparent 40%
+	);
+}
+
 @keyframes match-result-dark {
 	0% {
 		transform: scale(0.95);
 		opacity: 0.5;
 		background: #3d3520;
-		border-color: #f1c40f;
 		box-shadow: 0 0 0 0 rgba(241, 196, 15, 0.7);
 	}
 	30% {
@@ -2567,7 +2728,6 @@
 	60% {
 		transform: scale(1);
 		background: #1a3a2a;
-		border-color: #27ae60;
 		box-shadow: 0 0 12px 2px rgba(39, 174, 96, 0.3);
 	}
 	100% {

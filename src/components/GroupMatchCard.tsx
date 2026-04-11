@@ -9,6 +9,7 @@ interface GroupMatchCardProps {
 	onClick: () => void;
 	teamModifiers: Map<string, number>;
 	teamFormations: Map<string, string>;
+	isAnimating: boolean;
 }
 
 export function GroupMatchCard({
@@ -16,6 +17,7 @@ export function GroupMatchCard({
 	onClick,
 	teamModifiers,
 	teamFormations,
+	isAnimating,
 }: GroupMatchCardProps) {
 	const { team1, team2, score1, score2, played } = match;
 	const isDraw = played && score1 === score2;
@@ -32,7 +34,7 @@ export function GroupMatchCard({
 	return (
 		<button
 			type="button"
-			className={`match-card clickable ${played ? "played" : "pending"}`}
+			className={`match-card clickable ${played ? "played" : "pending"} ${isAnimating ? "laser-active" : ""}`}
 			onClick={onClick}
 			disabled={played}
 		>

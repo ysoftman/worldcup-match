@@ -14,6 +14,7 @@ interface GroupViewProps {
 	teamFormations: Map<string, string>;
 	onChangeFormation: (teamCode: string, formationId: string) => void;
 	wildcardCodes: Set<string>;
+	animatingMatchId: string | null;
 }
 
 const MOD_LABELS = ["🛡️🛡️", "🛡️", "", "🗡️", "🗡️🗡️"];
@@ -29,6 +30,7 @@ export function GroupView({
 	teamFormations,
 	onChangeFormation,
 	wildcardCodes,
+	animatingMatchId,
 }: GroupViewProps) {
 	const hasPlayedMatches = group.matches.some((m) => m.played);
 	const canSwap = !hasPlayedMatches;
@@ -64,13 +66,13 @@ export function GroupView({
 									<button
 										type="button"
 										className="mod-btn"
-										disabled={mod <= -2}
+										disabled={mod >= 2}
 										onClick={(e) => {
 											e.stopPropagation();
-											onChangeModifier(t.code, -1);
+											onChangeModifier(t.code, 1);
 										}}
 									>
-										🛡️
+										🗡️
 									</button>
 									<button
 										type="button"
@@ -90,13 +92,13 @@ export function GroupView({
 									<button
 										type="button"
 										className="mod-btn"
-										disabled={mod >= 2}
+										disabled={mod <= -2}
 										onClick={(e) => {
 											e.stopPropagation();
-											onChangeModifier(t.code, 1);
+											onChangeModifier(t.code, -1);
 										}}
 									>
-										🗡️
+										🛡️
 									</button>
 								</div>
 								<select
@@ -237,6 +239,7 @@ export function GroupView({
 						onClick={() => onPlayMatch(group.name, m.id)}
 						teamModifiers={teamModifiers}
 						teamFormations={teamFormations}
+						isAnimating={animatingMatchId === m.id}
 					/>
 				))}
 			</div>

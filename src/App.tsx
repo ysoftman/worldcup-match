@@ -3,6 +3,7 @@ import { BracketView } from "./components/BracketView";
 import { Champion } from "./components/Champion";
 import { FifaRanking } from "./components/FifaRanking";
 import { GroupView } from "./components/GroupView";
+import { SquadModal } from "./components/SquadModal";
 import { TeamSelector } from "./components/TeamSelector";
 import { saveWinner, WinnerHistory } from "./components/WinnerHistory";
 import type { Country } from "./data/countries";
@@ -108,6 +109,10 @@ function App() {
 		groupName: string;
 		team: Country;
 	} | null>(null);
+	const [squadModalTeam, setSquadModalTeam] = useState<Country | null>(null);
+	const [selectedXI, setSelectedXI] = useState<Map<string, Set<number>>>(
+		() => new Map(),
+	);
 	const animTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
 	const roundOrder = tournamentSize === 48 ? ROUND_ORDER_48 : ROUND_ORDER_32;
@@ -275,6 +280,19 @@ function App() {
 		});
 	}, []);
 
+	// 선발 XI 변경
+	const changeXI = useCallback((teamCode: string, xi: Set<number>) => {
+		setSelectedXI((prev) => {
+			const next = new Map(prev);
+			if (xi.size === 0) {
+				next.delete(teamCode);
+			} else {
+				next.set(teamCode, xi);
+			}
+			return next;
+		});
+	}, []);
+
 	// 팀 포메이션 변경
 	const changeFormation = useCallback(
 		(teamCode: string, formationId: string) => {
@@ -302,7 +320,7 @@ function App() {
 				if (g.name !== groupName) return g;
 				const newMatches = g.matches.map((m) =>
 					m.id === matchId && !m.played
-						? simulateGroupMatch(m, teamModifiers, teamFormations)
+						? simulateGroupMatch(m, teamModifiers, teamFormations, selectedXI)
 						: m,
 				);
 				return { ...g, matches: newMatches };
@@ -325,17 +343,17 @@ function App() {
 				setAnimatingMatchId(null);
 			}, SCORE_ANIM_DELAY);
 		},
-		[groups, animating, teamModifiers, teamFormations],
+		[groups, animating, teamModifiers, teamFormations, selectedXI],
 	);
 
 	// 조별 리그 전체 진행
 	const playAllGroupMatches = useCallback(() => {
 		playClick();
 		const simulated = groups.map((g) =>
-			simulateGroup(g, teamModifiers, teamFormations),
+			simulateGroup(g, teamModifiers, teamFormations, selectedXI),
 		);
 		setGroups(simulated);
-	}, [groups, teamModifiers, teamFormations]);
+	}, [groups, teamModifiers, teamFormations, selectedXI]);
 
 	// 조별 리그 → 토너먼트 전환
 	const advanceToKnockout = useCallback(() => {
@@ -359,7 +377,7 @@ function App() {
 			const current = rounds[currentRoundIndex];
 			const newMatches = current.matches.map((m) =>
 				m.id === matchId && !m.played
-					? simulateMatch(m, teamModifiers, teamFormations)
+					? simulateMatch(m, teamModifiers, teamFormations, selectedXI)
 					: m,
 			);
 			const updatedRounds = [...rounds];
@@ -402,6 +420,7 @@ function App() {
 			recordWinner,
 			teamModifiers,
 			teamFormations,
+			selectedXI,
 		],
 	);
 
@@ -414,6 +433,7 @@ function App() {
 			current.matches,
 			teamModifiers,
 			teamFormations,
+			selectedXI,
 		);
 		const updatedRounds = [...rounds];
 		updatedRounds[currentRoundIndex] = {
@@ -449,6 +469,7 @@ function App() {
 		recordWinner,
 		teamModifiers,
 		teamFormations,
+		selectedXI,
 	]);
 
 	// 새 대회
@@ -457,6 +478,8 @@ function App() {
 		setAnimating(false);
 		setTeamModifiers(new Map());
 		setTeamFormations(new Map());
+		setSelectedXI(new Map());
+		setSquadModalTeam(null);
 		setSelectedTeams(selectTeams(tournamentSize));
 		setGroups([]);
 		setRounds([]);
@@ -644,10 +667,20 @@ function App() {
 								onChangeFormation={changeFormation}
 								wildcardCodes={wildcardCodes}
 								animatingMatchId={animatingMatchId}
+								onOpenSquad={setSquadModalTeam}
 							/>
 						))}
 					</div>
 				</div>
+			)}
+			{squadModalTeam && (
+				<SquadModal
+					team={squadModalTeam}
+					formationId={teamFormations.get(squadModalTeam.code) ?? "4-4-2"}
+					selectedXI={selectedXI.get(squadModalTeam.code) ?? new Set()}
+					onChangeXI={changeXI}
+					onClose={() => setSquadModalTeam(null)}
+				/>
 			)}
 		</div>
 	);

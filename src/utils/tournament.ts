@@ -9,6 +9,7 @@ import type {
 	TournamentSize,
 } from "../types";
 import { getFormation } from "../types";
+import { getSquad } from "./playerLoader";
 
 function shuffle<T>(array: T[]): T[] {
 	const arr = [...array];
@@ -126,6 +127,24 @@ function rankToStrength(rank: number, modifier = 0): number {
 	return Math.max(0.4, base + modifier * 0.4);
 }
 
+// 선발 XI 평균 능력치 기반 미세 보정 (-0.2 ~ +0.2)
+function getXIModifier(
+	country: Country,
+	selectedXI?: Map<string, Set<number>>,
+): number {
+	const xiIds = selectedXI?.get(country.code);
+	if (!xiIds || xiIds.size !== 11) return 0;
+
+	const squad = getSquad(country);
+	const xi = squad.filter((p) => xiIds.has(p.id));
+	if (xi.length === 0) return 0;
+
+	const xiAvg = xi.reduce((s, p) => s + p.overall, 0) / xi.length;
+	const squadAvg = squad.reduce((s, p) => s + p.overall, 0) / squad.length;
+
+	return (xiAvg - squadAvg) / 50;
+}
+
 function weightedGoals(strength: number): number {
 	// 포아송 분포 근사: 평균=strength 기반 랜덤 골
 	let goals = 0;
@@ -145,18 +164,21 @@ export function simulateGroupMatch(
 	match: GroupMatch,
 	modifiers?: Map<string, number>,
 	formations?: Map<string, string>,
+	selectedXI?: Map<string, Set<number>>,
 ): GroupMatch {
 	const m1 = modifiers?.get(match.team1.code) ?? 0;
 	const m2 = modifiers?.get(match.team2.code) ?? 0;
 	const f1 = getFormation(formations?.get(match.team1.code));
 	const f2 = getFormation(formations?.get(match.team2.code));
+	const xi1 = getXIModifier(match.team1, selectedXI);
+	const xi2 = getXIModifier(match.team2, selectedXI);
 	const s1 = Math.max(
 		0.4,
-		rankToStrength(match.team1.rank, m1) + f1.atkMod - f2.defMod,
+		rankToStrength(match.team1.rank, m1) + f1.atkMod - f2.defMod + xi1,
 	);
 	const s2 = Math.max(
 		0.4,
-		rankToStrength(match.team2.rank, m2) + f2.atkMod - f1.defMod,
+		rankToStrength(match.team2.rank, m2) + f2.atkMod - f1.defMod + xi2,
 	);
 	const score1 = weightedGoals(s1);
 	const score2 = weightedGoals(s2);
@@ -223,9 +245,10 @@ export function simulateGroup(
 	group: Group,
 	modifiers?: Map<string, number>,
 	formations?: Map<string, string>,
+	selectedXI?: Map<string, Set<number>>,
 ): Group {
 	const matches = group.matches.map((m) =>
-		m.played ? m : simulateGroupMatch(m, modifiers, formations),
+		m.played ? m : simulateGroupMatch(m, modifiers, formations, selectedXI),
 	);
 	const updated = { ...group, matches };
 	const standings = recalcStandings(updated);
@@ -337,18 +360,21 @@ export function simulateMatch(
 	match: Match,
 	modifiers?: Map<string, number>,
 	formations?: Map<string, string>,
+	selectedXI?: Map<string, Set<number>>,
 ): Match {
 	const m1 = modifiers?.get(match.team1.code) ?? 0;
 	const m2 = modifiers?.get(match.team2.code) ?? 0;
 	const f1 = getFormation(formations?.get(match.team1.code));
 	const f2 = getFormation(formations?.get(match.team2.code));
+	const xi1 = getXIModifier(match.team1, selectedXI);
+	const xi2 = getXIModifier(match.team2, selectedXI);
 	const s1 = Math.max(
 		0.4,
-		rankToStrength(match.team1.rank, m1) + f1.atkMod - f2.defMod,
+		rankToStrength(match.team1.rank, m1) + f1.atkMod - f2.defMod + xi1,
 	);
 	const s2 = Math.max(
 		0.4,
-		rankToStrength(match.team2.rank, m2) + f2.atkMod - f1.defMod,
+		rankToStrength(match.team2.rank, m2) + f2.atkMod - f1.defMod + xi2,
 	);
 	let score1 = weightedGoals(s1);
 	let score2 = weightedGoals(s2);
@@ -376,9 +402,10 @@ export function simulateRound(
 	matches: Match[],
 	modifiers?: Map<string, number>,
 	formations?: Map<string, string>,
+	selectedXI?: Map<string, Set<number>>,
 ): Match[] {
 	return matches.map((m) =>
-		m.played ? m : simulateMatch(m, modifiers, formations),
+		m.played ? m : simulateMatch(m, modifiers, formations, selectedXI),
 	);
 }
 

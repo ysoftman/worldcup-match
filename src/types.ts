@@ -1,5 +1,32 @@
 import type { Country } from "./data/countries";
 
+export type Position = "GK" | "DEF" | "MID" | "FWD";
+
+export const POSITION_LABELS: Record<Position, string> = {
+	GK: "GK",
+	DEF: "DF",
+	MID: "MF",
+	FWD: "FW",
+};
+
+export interface Player {
+	id: number;
+	name: string;
+	position: Position;
+	age: number;
+	number: number;
+	height: number;
+	weight: number;
+	photo?: string;
+	overall: number;
+	pace: number;
+	shooting: number;
+	passing: number;
+	dribbling: number;
+	defending: number;
+	physical: number;
+}
+
 export interface Match {
 	id: string;
 	team1: Country;

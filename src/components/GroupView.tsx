@@ -15,6 +15,7 @@ interface GroupViewProps {
 	onChangeFormation: (teamCode: string, formationId: string) => void;
 	wildcardCodes: Set<string>;
 	animatingMatchId: string | null;
+	onOpenSquad: (team: Country) => void;
 }
 
 const MOD_LABELS = ["🛡️🛡️", "🛡️", "", "🗡️", "🗡️🗡️"];
@@ -31,6 +32,7 @@ export function GroupView({
 	onChangeFormation,
 	wildcardCodes,
 	animatingMatchId,
+	onOpenSquad,
 }: GroupViewProps) {
 	const hasPlayedMatches = group.matches.some((m) => m.played);
 	const canSwap = !hasPlayedMatches;
@@ -62,6 +64,17 @@ export function GroupView({
 								className="circle-slot"
 								style={{ left: `${x}%`, top: `${y}%` }}
 							>
+								<button
+									type="button"
+									className="squad-btn"
+									onClick={(e) => {
+										e.stopPropagation();
+										onOpenSquad(t);
+									}}
+									title="스쿼드 보기"
+								>
+									👥
+								</button>
 								<div className="circle-row">
 									<button
 										type="button"

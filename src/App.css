@@ -3395,7 +3395,7 @@
 	background: #2ecc71;
 }
 
-/* Mobile responsive */
+/* Mobile responsive - squad modal */
 @media (max-width: 768px) {
 	.squad-modal {
 		width: 98%;
@@ -3403,13 +3403,12 @@
 		border-radius: 8px;
 	}
 
-	.squad-table .th-stat,
-	.stat-cell {
-		display: none;
+	.squad-table-wrap {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
-	.squad-table .th-stat:first-of-type,
-	.squad-row td.stat-cell:nth-of-type(6) {
-		display: table-cell;
+	.squad-table {
+		min-width: 700px;
 	}
 }

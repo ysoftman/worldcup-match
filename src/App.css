@@ -1,3 +1,18 @@
+:root {
+	--color-gold: #d4ac0d;
+	--color-gold-light: #f1c40f;
+	--color-primary: #3498db;
+	--color-primary-dark: #2980b9;
+	--color-success: #27ae60;
+	--color-success-light: #2ecc71;
+	--color-danger: #e74c3c;
+	--color-dark-blue: #2c3e50;
+	--color-gray: #95a5a6;
+	--color-gray-dark: #7f8c8d;
+	--color-bg-light: #f8f9fa;
+	--color-border: #dee2e6;
+}
+
 .app {
 	max-width: 1400px;
 	margin: 0 auto;
@@ -26,7 +41,7 @@
 	padding: 6px 14px;
 	font-size: 0.8rem;
 	font-weight: 600;
-	border: 2px solid #d4ac0d;
+	border: 2px solid var(--color-gold);
 	border-radius: 20px;
 	background: linear-gradient(135deg, #fef9e7, #fdebd0);
 	color: #8b6914;
@@ -50,7 +65,7 @@
 	max-height: 400px;
 	overflow-y: auto;
 	background: #fff;
-	border: 2px solid #d4ac0d;
+	border: 2px solid var(--color-gold);
 	border-radius: 12px;
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 	padding: 12px;
@@ -107,7 +122,7 @@
 
 .history-item:first-child {
 	background: linear-gradient(135deg, #fef9e7, #fdebd0);
-	border: 1px solid #d4ac0d;
+	border: 1px solid var(--color-gold);
 }
 
 .history-rank {
@@ -117,7 +132,7 @@
 }
 
 .history-item:first-child .history-rank {
-	color: #d4ac0d;
+	color: var(--color-gold);
 }
 
 .history-flag {
@@ -165,7 +180,7 @@
 
 .sound-toggle.off {
 	opacity: 0.5;
-	border-color: #e74c3c;
+	border-color: var(--color-danger);
 }
 
 /* 테마 토글 */
@@ -196,10 +211,10 @@
 	margin-top: 8px;
 	padding: 5px;
 	font-size: 0.7rem;
-	border: 1px solid #e74c3c;
+	border: 1px solid var(--color-danger);
 	border-radius: 6px;
 	background: none;
-	color: #e74c3c;
+	color: var(--color-danger);
 	cursor: pointer;
 	font-family: inherit;
 }
@@ -278,13 +293,13 @@
 }
 
 .ranking-filter:hover {
-	border-color: #3498db;
-	color: #3498db;
+	border-color: var(--color-primary);
+	color: var(--color-primary);
 }
 
 .ranking-filter.active {
-	background: #3498db;
-	border-color: #3498db;
+	background: var(--color-primary);
+	border-color: var(--color-primary);
 	color: white;
 }
 
@@ -319,7 +334,7 @@
 }
 
 .ranking-item:nth-child(-n + 3) .ranking-pos {
-	color: #d4ac0d;
+	color: var(--color-gold);
 }
 
 .ranking-flag {
@@ -373,7 +388,7 @@
 	font-size: 0.65rem;
 	font-weight: 700;
 	letter-spacing: 6px;
-	color: #d4ac0d;
+	color: var(--color-gold);
 	border: 1px solid rgba(212, 172, 13, 0.4);
 	padding: 2px 14px;
 	border-radius: 20px;
@@ -440,12 +455,12 @@
 
 .phase-step.active {
 	color: #fff;
-	background: #3498db;
+	background: var(--color-primary);
 	font-weight: 700;
 }
 
 .phase-step.done {
-	color: #27ae60;
+	color: var(--color-success);
 	background: #eafaf1;
 }
 
@@ -506,7 +521,7 @@
 }
 
 .btn-size:hover:not(.active) {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 }
 
 .controls {
@@ -630,12 +645,12 @@
 }
 
 .country-chip:hover:not(:disabled) {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 }
 
 .country-chip.selected {
 	background: #eafaf1;
-	border-color: #27ae60;
+	border-color: var(--color-success);
 	font-weight: 600;
 }
 
@@ -746,7 +761,7 @@
 	);
 	background-size: 300% 300%;
 	border-radius: 20px;
-	border: 3px solid #d4ac0d;
+	border: 3px solid var(--color-gold);
 	animation:
 		champion-glow 2s ease-in-out infinite alternate,
 		champion-entrance 1s ease-out,
@@ -902,7 +917,7 @@
 
 .champion-label {
 	font-size: 1.1rem;
-	color: #d4ac0d;
+	color: var(--color-gold);
 	font-weight: 700;
 	letter-spacing: 4px;
 	margin: 4px 0 0;
@@ -1040,13 +1055,13 @@
 
 .circle-team:hover {
 	transform: translate(-50%, -50%) scale(1.12);
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	box-shadow: 0 4px 16px rgba(52, 152, 219, 0.25);
 	z-index: 2;
 }
 
 .circle-team.swap-selected {
-	border-color: #e74c3c;
+	border-color: var(--color-danger);
 	background: rgba(231, 76, 60, 0.12);
 	transform: translate(-50%, -50%) scale(1.15);
 	box-shadow: 0 0 16px rgba(231, 76, 60, 0.35);
@@ -1059,7 +1074,7 @@
 }
 
 .circle-team.swap-target:hover {
-	border-color: #27ae60;
+	border-color: var(--color-success);
 	background: rgba(46, 204, 113, 0.18);
 	box-shadow: 0 4px 16px rgba(39, 174, 96, 0.3);
 }
@@ -1120,9 +1135,9 @@
 }
 
 .mod-btn:hover:not(:disabled) {
-	background: #3498db;
+	background: var(--color-primary);
 	color: #fff;
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	transform: scale(1.15);
 }
 
@@ -1139,11 +1154,11 @@
 }
 
 .mod-up {
-	color: #27ae60;
+	color: var(--color-success);
 }
 
 .mod-down {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 /* 포메이션 선택 */
@@ -1165,13 +1180,13 @@
 }
 
 .formation-select:hover {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	box-shadow: 0 1px 4px rgba(52, 152, 219, 0.25);
 }
 
 .formation-select:focus {
 	outline: none;
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
@@ -1187,11 +1202,11 @@
 }
 
 .formation-stats .stat-up {
-	color: #27ae60;
+	color: var(--color-success);
 }
 
 .formation-stats .stat-down {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 /* 순위표 포메이션 배지 */
@@ -1238,10 +1253,10 @@
 .btn-cancel-swap {
 	font-size: 0.75rem;
 	padding: 2px 10px;
-	border: 1px solid #e74c3c;
+	border: 1px solid var(--color-danger);
 	border-radius: 4px;
 	background: none;
-	color: #e74c3c;
+	color: var(--color-danger);
 	cursor: pointer;
 	font-family: inherit;
 }
@@ -1298,11 +1313,11 @@
 }
 
 .standings-table .positive {
-	color: #27ae60;
+	color: var(--color-success);
 }
 
 .standings-table .negative {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 .standings-table tr.qualified {
@@ -1316,7 +1331,7 @@
 .wildcard-badge {
 	font-size: 0.55rem;
 	font-weight: 700;
-	color: #d4ac0d;
+	color: var(--color-gold);
 	background: rgba(212, 172, 13, 0.15);
 	padding: 1px 4px;
 	border-radius: 6px;
@@ -1367,7 +1382,7 @@
 }
 
 .match-card.played {
-	border-color: #27ae60;
+	border-color: var(--color-success);
 	background: #eafaf1;
 	animation: match-result 0.6s ease-out;
 	overflow: visible;
@@ -1451,7 +1466,7 @@
 }
 
 .match-card.clickable.pending:hover {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	opacity: 1;
 	transform: translateY(-2px) scale(1.01);
 	box-shadow: 0 4px 16px rgba(52, 152, 219, 0.3);
@@ -1470,11 +1485,11 @@
 }
 
 .result-icon.win {
-	color: #27ae60;
+	color: var(--color-success);
 }
 
 .result-icon.lose {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 .result-icon.draw {
@@ -1579,7 +1594,7 @@
 }
 
 .team.winner .score {
-	color: #27ae60;
+	color: var(--color-success);
 	animation: score-pop 0.5s ease-out 0.2s both;
 }
 
@@ -1588,7 +1603,7 @@
 }
 
 .team.loser .score {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 .team.draw .score {
@@ -1622,7 +1637,7 @@
 	50% {
 		transform: scale(1.5);
 		opacity: 1;
-		color: #e74c3c;
+		color: var(--color-danger);
 	}
 	100% {
 		transform: scale(1) translateY(0);
@@ -1699,7 +1714,7 @@
 	text-align: center;
 	font-size: 0.7rem;
 	font-weight: 700;
-	color: #d4ac0d;
+	color: var(--color-gold);
 	letter-spacing: 1px;
 	padding: 0 0 6px;
 	white-space: nowrap;
@@ -1873,7 +1888,7 @@
 	align-items: center;
 	gap: 16px;
 	padding: 16px 20px;
-	border: 2px solid #d4ac0d;
+	border: 2px solid var(--color-gold);
 	border-radius: 16px;
 	background: linear-gradient(135deg, #fef9e7, #fdebd0);
 	font-family: inherit;
@@ -1885,7 +1900,7 @@
 }
 
 .final-card.final-played {
-	border-color: #d4ac0d;
+	border-color: var(--color-gold);
 	background: linear-gradient(135deg, #eafaf1, #d5f5e3);
 	animation: match-result 0.6s ease-out;
 	overflow: visible;
@@ -1960,7 +1975,7 @@
 	width: 56px;
 	height: 56px;
 	border-radius: 50%;
-	border: 3px solid #d4ac0d;
+	border: 3px solid var(--color-gold);
 	background: #fff;
 	display: flex;
 	align-items: center;
@@ -1982,7 +1997,7 @@
 
 .final-team.final-win .final-circle {
 	box-shadow: 0 0 16px rgba(39, 174, 96, 0.5);
-	border-color: #27ae60;
+	border-color: var(--color-success);
 }
 
 .final-score {
@@ -2000,12 +2015,12 @@
 }
 
 .final-team.final-lose .final-circle {
-	border-color: #e74c3c;
+	border-color: var(--color-danger);
 	box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
 }
 
 .final-team.final-lose .final-score {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 .final-team.final-lose .final-name {
@@ -2022,7 +2037,7 @@
 .final-vs {
 	font-size: 1rem;
 	font-weight: 800;
-	color: #d4ac0d;
+	color: var(--color-gold);
 	letter-spacing: 2px;
 	flex-shrink: 0;
 }
@@ -2043,12 +2058,12 @@
 /* 결승 다크모드 */
 [data-theme="dark"] .final-card {
 	background: linear-gradient(135deg, #2c2a1a, #3d3520);
-	border-color: #d4ac0d;
+	border-color: var(--color-gold);
 }
 
 [data-theme="dark"] .final-card.final-played {
 	background: linear-gradient(135deg, #1a3a2a, #1d4030);
-	border-color: #d4ac0d;
+	border-color: var(--color-gold);
 }
 
 [data-theme="dark"] .final-card.final-played::before {
@@ -2064,7 +2079,7 @@
 
 [data-theme="dark"] .final-circle {
 	background: #2c3e50;
-	border-color: #d4ac0d;
+	border-color: var(--color-gold);
 }
 
 [data-theme="dark"] .final-team.final-win .final-circle {
@@ -2072,12 +2087,12 @@
 }
 
 [data-theme="dark"] .final-team.final-lose .final-circle {
-	border-color: #e74c3c;
+	border-color: var(--color-danger);
 	box-shadow: 0 0 10px rgba(231, 76, 60, 0.4);
 }
 
 [data-theme="dark"] .final-team.final-lose .final-score {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 [data-theme="dark"] .final-name {
@@ -2085,7 +2100,7 @@
 }
 
 [data-theme="dark"] .final-score {
-	color: #3498db;
+	color: var(--color-primary);
 }
 
 [data-theme="dark"] .final-rate {
@@ -2114,7 +2129,7 @@
 }
 
 .bm-card.bm-played {
-	border-color: #27ae60;
+	border-color: var(--color-success);
 	animation: match-result 0.6s ease-out;
 	overflow: visible;
 }
@@ -2152,7 +2167,7 @@
 }
 
 .bm-card.bm-pending:hover:not(:disabled) {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	opacity: 1;
 	transform: scale(1.04);
 	box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
@@ -2206,7 +2221,7 @@
 }
 
 .bm-win .bm-score {
-	color: #27ae60;
+	color: var(--color-success);
 }
 
 .bm-lose {
@@ -2220,7 +2235,7 @@
 }
 
 .bm-lose .bm-score {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 .bm-rate {
@@ -2656,7 +2671,7 @@
 
 [data-theme="dark"] .history-toggle {
 	background: linear-gradient(135deg, #2c2a1a, #3d3520);
-	color: #d4ac0d;
+	color: var(--color-gold);
 }
 
 [data-theme="dark"] .sound-toggle,
@@ -2712,7 +2727,7 @@
 
 [data-theme="dark"] .country-chip.selected {
 	background: #1a3a2a;
-	border-color: #27ae60;
+	border-color: var(--color-success);
 }
 
 [data-theme="dark"] .group-card {
@@ -2758,8 +2773,8 @@
 }
 
 [data-theme="dark"] .mod-btn:hover:not(:disabled) {
-	background: #3498db;
-	border-color: #3498db;
+	background: var(--color-primary);
+	border-color: var(--color-primary);
 	color: #fff;
 }
 
@@ -2770,7 +2785,7 @@
 }
 
 [data-theme="dark"] .formation-select:hover {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 }
 
 [data-theme="dark"] .formation-badge {
@@ -2789,7 +2804,7 @@
 }
 
 [data-theme="dark"] .standings-table .points {
-	color: #3498db;
+	color: var(--color-primary);
 }
 
 [data-theme="dark"] .standings-table .winrate {
@@ -2820,7 +2835,7 @@
 
 [data-theme="dark"] .match-card.played {
 	background: #1a3a2a;
-	border-color: #27ae60;
+	border-color: var(--color-success);
 }
 
 [data-theme="dark"] .match-card.played::before {
@@ -2835,7 +2850,7 @@
 }
 
 [data-theme="dark"] .match-card.clickable.pending:hover {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	box-shadow: 0 4px 16px rgba(52, 152, 219, 0.4);
 }
 
@@ -2886,7 +2901,7 @@
 }
 
 [data-theme="dark"] .team .score {
-	color: #3498db;
+	color: var(--color-primary);
 }
 
 [data-theme="dark"] .team.winner .score {
@@ -2894,7 +2909,7 @@
 }
 
 [data-theme="dark"] .team.loser .score {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 [data-theme="dark"] .team.draw .score {
@@ -2925,7 +2940,7 @@
 		#2c2a1a
 	);
 	background-size: 300% 300%;
-	border-color: #d4ac0d;
+	border-color: var(--color-gold);
 }
 
 [data-theme="dark"] .champion-name {
@@ -2961,12 +2976,12 @@
 }
 
 [data-theme="dark"] .bm-card.bm-played {
-	border-color: #27ae60;
+	border-color: var(--color-success);
 	background: #1a3a2a;
 }
 
 [data-theme="dark"] .bm-card.bm-pending:hover:not(:disabled) {
-	border-color: #3498db;
+	border-color: var(--color-primary);
 	box-shadow: 0 2px 10px rgba(52, 152, 219, 0.4);
 }
 
@@ -2984,7 +2999,7 @@
 }
 
 [data-theme="dark"] .bm-score {
-	color: #3498db;
+	color: var(--color-primary);
 }
 
 [data-theme="dark"] .bm-win {
@@ -3000,7 +3015,7 @@
 }
 
 [data-theme="dark"] .bm-lose .bm-score {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 [data-theme="dark"] .b-conn-left .b-conn-pair::before,
@@ -3029,7 +3044,7 @@
 
 .squad-btn:hover {
 	background: rgba(52, 152, 219, 0.2);
-	border-color: #3498db;
+	border-color: var(--color-primary);
 }
 
 /* ===== Squad Modal Overlay ===== */
@@ -3139,7 +3154,7 @@
 
 .xi-count {
 	font-weight: 600;
-	color: #3498db;
+	color: var(--color-primary);
 }
 
 .xi-avg {
@@ -3169,18 +3184,18 @@
 
 .squad-filter {
 	background: rgba(255, 255, 255, 0.05);
-	border: 1px solid #444;
+	border: 1px solid #555;
 	border-radius: 6px;
 	padding: 4px 14px;
 	font-size: 0.8rem;
 	cursor: pointer;
-	color: #bbb;
+	color: #ddd;
 	transition: all 0.15s;
 }
 
 .squad-filter.active {
-	background: #3498db;
-	border-color: #3498db;
+	background: var(--color-primary);
+	border-color: var(--color-primary);
 	color: #fff;
 }
 
@@ -3191,8 +3206,8 @@
 }
 
 [data-theme="light"] .squad-filter.active {
-	background: #3498db;
-	border-color: #3498db;
+	background: var(--color-primary);
+	border-color: var(--color-primary);
 	color: #fff;
 }
 
@@ -3217,7 +3232,7 @@
 
 .squad-table th {
 	background: #15152a;
-	color: #888;
+	color: #aaa;
 	padding: 8px 6px;
 	text-align: center;
 	font-weight: 600;
@@ -3303,7 +3318,7 @@
 	width: 18px;
 	height: 18px;
 	cursor: pointer;
-	accent-color: #3498db;
+	accent-color: var(--color-primary);
 }
 
 .num-cell {
@@ -3349,7 +3364,7 @@ button.name-clickable {
 
 button.name-clickable:hover {
 	text-decoration: underline;
-	color: #3498db;
+	color: var(--color-primary);
 }
 
 /* Photo Zoom Overlay */
@@ -3447,13 +3462,13 @@ button.name-clickable:hover {
 	color: #f39c12;
 }
 .pos-def {
-	color: #3498db;
+	color: var(--color-primary);
 }
 .pos-mid {
 	color: #2ecc71;
 }
 .pos-fwd {
-	color: #e74c3c;
+	color: var(--color-danger);
 }
 
 .ovr-cell {
@@ -3523,7 +3538,7 @@ button.name-clickable:hover {
 }
 
 .btn-auto:hover {
-	background: #3498db;
+	background: var(--color-primary);
 }
 
 .btn-squad-reset {

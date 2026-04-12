@@ -3034,7 +3034,11 @@
 	display: flex;
 	gap: 6px;
 	padding: 10px 20px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
 	border-bottom: 1px solid #333;
+	margin: 0;
 }
 
 [data-theme="light"] .squad-filters {
@@ -3437,6 +3441,31 @@ button.name-clickable:hover {
 
 .btn-confirm:hover {
 	background: #2ecc71;
+}
+
+/* Focus styles for keyboard navigation */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+	outline: 2px solid #3498db;
+	outline-offset: 2px;
+}
+
+[data-theme="dark"] button:focus-visible,
+[data-theme="dark"] select:focus-visible,
+[data-theme="dark"] input:focus-visible {
+	outline-color: #4fc3f7;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }
 
 /* Mobile responsive - squad modal */

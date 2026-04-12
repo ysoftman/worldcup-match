@@ -501,6 +501,9 @@ function App() {
 					className="theme-toggle"
 					onClick={toggleTheme}
 					title={theme === "dark" ? "라이트 모드" : "다크 모드"}
+					aria-label={
+						theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"
+					}
 				>
 					{theme === "dark" ? "☀️" : "🌙"}
 				</button>
@@ -509,6 +512,7 @@ function App() {
 					className={`sound-toggle ${soundOn ? "on" : "off"}`}
 					onClick={toggleSound}
 					title={soundOn ? "사운드 끄기" : "사운드 켜기"}
+					aria-label={soundOn ? "사운드 끄기" : "사운드 켜기"}
 				>
 					{soundOn ? "🔊" : "🔇"}
 				</button>

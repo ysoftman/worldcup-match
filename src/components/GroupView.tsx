@@ -72,6 +72,7 @@ export function GroupView({
 										onOpenSquad(t, false);
 									}}
 									title="스쿼드 보기"
+									aria-label={`${t.nameKo} 스쿼드 보기`}
 								>
 									👥
 								</button>
@@ -84,6 +85,7 @@ export function GroupView({
 											e.stopPropagation();
 											onChangeModifier(t.code, 1);
 										}}
+										aria-label={`${t.nameKo} 공격력 증가`}
 									>
 										🗡️
 									</button>
@@ -110,6 +112,7 @@ export function GroupView({
 											e.stopPropagation();
 											onChangeModifier(t.code, -1);
 										}}
+										aria-label={`${t.nameKo} 수비력 증가`}
 									>
 										🛡️
 									</button>

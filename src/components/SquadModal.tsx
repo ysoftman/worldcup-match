@@ -95,6 +95,12 @@ export function SquadModal({
 		}
 	}, [selectedXI.size, squad, formationId, team.code, onChangeXI]);
 
+	// 모달 열릴 때 포커스 이동
+	useEffect(() => {
+		const firstBtn = modalRef.current?.querySelector<HTMLElement>("button");
+		firstBtn?.focus();
+	}, []);
+
 	// 외부 클릭으로 닫기 (사진 확대 중이면 사진만 닫기)
 	useEffect(() => {
 		const handleClick = (e: MouseEvent) => {
@@ -207,14 +213,24 @@ export function SquadModal({
 			: 0;
 
 	return (
-		<div className="squad-overlay">
+		<div
+			className="squad-overlay"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="squad-title"
+		>
 			<div className="squad-modal" ref={modalRef}>
 				<div className="squad-header">
-					<h3>
+					<h3 id="squad-title">
 						{team.flag} {team.nameKo} 스쿼드
 					</h3>
 					<span className="squad-avg">팀 평균 OVR: {avgOverall}</span>
-					<button type="button" className="squad-close" onClick={onClose}>
+					<button
+						type="button"
+						className="squad-close"
+						onClick={onClose}
+						aria-label="모달 닫기"
+					>
 						✕
 					</button>
 				</div>
@@ -235,18 +251,19 @@ export function SquadModal({
 					)}
 				</div>
 
-				<div className="squad-filters">
+				<fieldset className="squad-filters" aria-label="포지션 필터">
 					{POSITION_FILTERS.map((f) => (
 						<button
 							key={f.value}
 							type="button"
 							className={`squad-filter ${filter === f.value ? "active" : ""}`}
 							onClick={() => setFilter(f.value)}
+							aria-pressed={filter === f.value}
 						>
 							{f.label}
 						</button>
 					))}
-				</div>
+				</fieldset>
 
 				<div className="squad-table-wrap">
 					<table className="squad-table">

@@ -1663,6 +1663,7 @@
 /* ── 대진표 (Bracket) ── */
 .bracket-scroll {
 	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
 	margin-bottom: 24px;
 	padding: 10px 0;
 }
@@ -2517,14 +2518,26 @@
 	}
 
 	.ranking-body {
-		width: min(280px, calc(100vw - 24px));
-		max-height: 400px;
+		width: min(260px, 90vw);
+		max-height: 50vh;
 		right: 0;
 	}
 
 	.history-body {
-		width: min(280px, calc(100vw - 24px));
+		width: min(260px, 90vw);
+		max-height: 50vh;
 		right: 0;
+	}
+
+	.mod-btn {
+		width: 28px;
+		height: 28px;
+		font-size: 0.85rem;
+	}
+
+	.check-cell input[type="checkbox"] {
+		width: 20px;
+		height: 20px;
 	}
 
 	/* 모바일 대진표 */
@@ -3287,8 +3300,8 @@
 }
 
 .check-cell input[type="checkbox"] {
-	width: 15px;
-	height: 15px;
+	width: 18px;
+	height: 18px;
 	cursor: pointer;
 	accent-color: #3498db;
 }
@@ -3574,6 +3587,25 @@ input:focus-visible {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
+	}
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) {
+	.groups-grid {
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	}
+
+	.title-main {
+		font-size: 2.2rem;
+	}
+
+	.bracket {
+		gap: 4px;
+	}
+
+	.top-panels {
+		gap: 4px;
 	}
 }
 

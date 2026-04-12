@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .env
+scripts/.cache_wc.json
 
 # Editor directories and files
 .vscode/*

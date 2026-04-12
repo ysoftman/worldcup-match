@@ -32,8 +32,9 @@ export function MatchCard({
 				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="flag team-clickable"
+					className={`flag${played ? " team-clickable" : ""}`}
 					onClick={(e) => {
+						if (!played) return;
 						e.stopPropagation();
 						onOpenSquad(team1, played);
 					}}
@@ -43,8 +44,9 @@ export function MatchCard({
 				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="name team-clickable"
+					className={`name${played ? " team-clickable" : ""}`}
 					onClick={(e) => {
+						if (!played) return;
 						e.stopPropagation();
 						onOpenSquad(team1, played);
 					}}
@@ -64,8 +66,9 @@ export function MatchCard({
 				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="name team-clickable"
+					className={`name${played ? " team-clickable" : ""}`}
 					onClick={(e) => {
+						if (!played) return;
 						e.stopPropagation();
 						onOpenSquad(team2, played);
 					}}
@@ -76,8 +79,9 @@ export function MatchCard({
 				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="flag team-clickable"
+					className={`flag${played ? " team-clickable" : ""}`}
 					onClick={(e) => {
+						if (!played) return;
 						e.stopPropagation();
 						onOpenSquad(team2, played);
 					}}

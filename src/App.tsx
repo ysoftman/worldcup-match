@@ -700,8 +700,8 @@ function App() {
 					<h2 className="section-title">
 						{presetLabel ? `${presetLabel} ` : ""}조별 리그
 					</h2>
-					{swapSelection &&
-						!groups.some((g) => g.matches.some((m) => m.played)) && (
+					{!groupAllDone &&
+						(swapSelection ? (
 							<p className="swap-hint">
 								{swapSelection.team.flag} {swapSelection.team.nameKo} 선택됨
 								&mdash; 다른 조의 팀을 클릭하면 교환됩니다
@@ -713,7 +713,11 @@ function App() {
 									취소
 								</button>
 							</p>
-						)}
+						) : (
+							<p className="swap-hint-info">
+								팀을 클릭하면 다른 조의 팀과 교환할 수 있습니다
+							</p>
+						))}
 					<div className="groups-grid">
 						{groups.map((group) => (
 							<GroupView

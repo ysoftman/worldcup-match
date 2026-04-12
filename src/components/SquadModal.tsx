@@ -14,6 +14,21 @@ interface SquadModalProps {
 }
 
 const POSITION_ORDER: Position[] = ["GK", "DEF", "MID", "FWD"];
+
+type SortKey =
+	| "number"
+	| "name"
+	| "position"
+	| "overall"
+	| "pace"
+	| "shooting"
+	| "passing"
+	| "dribbling"
+	| "defending"
+	| "physical"
+	| "height"
+	| "age";
+type SortDir = "asc" | "desc";
 const POSITION_FILTERS: Array<{ label: string; value: Position | "ALL" }> = [
 	{ label: "전체", value: "ALL" },
 	{ label: "GK", value: "GK" },
@@ -65,6 +80,8 @@ export function SquadModal({
 		src: string;
 		name: string;
 	} | null>(null);
+	const [sortKey, setSortKey] = useState<SortKey | null>(null);
+	const [sortDir, setSortDir] = useState<SortDir>("desc");
 
 	const squad = useMemo(() => getSquad(team), [team]);
 	const isReal = hasRealPlayers(team.code);
@@ -133,12 +150,34 @@ export function SquadModal({
 		onClose();
 	};
 
+	const toggleSort = (key: SortKey) => {
+		if (sortKey === key) {
+			setSortDir((d) => (d === "desc" ? "asc" : "desc"));
+		} else {
+			setSortKey(key);
+			setSortDir("desc");
+		}
+	};
+
 	// 포지션별 필터링
 	const filtered =
 		filter === "ALL" ? squad : squad.filter((p) => p.position === filter);
 
-	// 포지션별 정렬 (GK → DEF → MID → FWD, 같은 포지션 내 overall 내림차순)
+	// 정렬: 사용자 선택 컬럼 우선, 기본은 포지션 → OVR 내림차순
 	const sorted = [...filtered].sort((a, b) => {
+		if (sortKey) {
+			const dir = sortDir === "desc" ? -1 : 1;
+			if (sortKey === "name") {
+				return dir * -a.name.localeCompare(b.name);
+			}
+			if (sortKey === "position") {
+				const diff =
+					POSITION_ORDER.indexOf(a.position) -
+					POSITION_ORDER.indexOf(b.position);
+				return diff !== 0 ? dir * -diff : b.overall - a.overall;
+			}
+			return dir * -(a[sortKey] - b[sortKey]);
+		}
 		const posA = POSITION_ORDER.indexOf(a.position);
 		const posB = POSITION_ORDER.indexOf(b.position);
 		if (posA !== posB) return posA - posB;
@@ -214,18 +253,126 @@ export function SquadModal({
 						<thead>
 							<tr>
 								{!readOnly && <th className="th-check">선발</th>}
-								<th className="th-num">#</th>
-								<th className="th-name">이름</th>
-								<th className="th-pos">포지션</th>
-								<th className="th-ovr">OVR</th>
-								<th className="th-stat">속도</th>
-								<th className="th-stat">슈팅</th>
-								<th className="th-stat">패스</th>
-								<th className="th-stat">드리블</th>
-								<th className="th-stat">수비</th>
-								<th className="th-stat">체력</th>
-								<th className="th-height">키</th>
-								<th className="th-age">나이</th>
+								<th
+									className="th-num th-sortable"
+									onClick={() => toggleSort("number")}
+								>
+									#
+									{sortKey === "number"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-name th-sortable"
+									onClick={() => toggleSort("name")}
+								>
+									이름
+									{sortKey === "name" ? (sortDir === "desc" ? " ▼" : " ▲") : ""}
+								</th>
+								<th
+									className="th-pos th-sortable"
+									onClick={() => toggleSort("position")}
+								>
+									포지션
+									{sortKey === "position"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-ovr th-sortable"
+									onClick={() => toggleSort("overall")}
+								>
+									OVR
+									{sortKey === "overall"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-stat th-sortable"
+									onClick={() => toggleSort("pace")}
+								>
+									속도
+									{sortKey === "pace" ? (sortDir === "desc" ? " ▼" : " ▲") : ""}
+								</th>
+								<th
+									className="th-stat th-sortable"
+									onClick={() => toggleSort("shooting")}
+								>
+									슈팅
+									{sortKey === "shooting"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-stat th-sortable"
+									onClick={() => toggleSort("passing")}
+								>
+									패스
+									{sortKey === "passing"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-stat th-sortable"
+									onClick={() => toggleSort("dribbling")}
+								>
+									드리블
+									{sortKey === "dribbling"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-stat th-sortable"
+									onClick={() => toggleSort("defending")}
+								>
+									수비
+									{sortKey === "defending"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-stat th-sortable"
+									onClick={() => toggleSort("physical")}
+								>
+									체력
+									{sortKey === "physical"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-height th-sortable"
+									onClick={() => toggleSort("height")}
+								>
+									키
+									{sortKey === "height"
+										? sortDir === "desc"
+											? " ▼"
+											: " ▲"
+										: ""}
+								</th>
+								<th
+									className="th-age th-sortable"
+									onClick={() => toggleSort("age")}
+								>
+									나이
+									{sortKey === "age" ? (sortDir === "desc" ? " ▼" : " ▲") : ""}
+								</th>
 							</tr>
 						</thead>
 						<tbody>

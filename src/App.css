@@ -3133,6 +3133,16 @@
 .squad-table .th-age {
 	width: 36px;
 }
+.squad-table .th-sortable {
+	cursor: pointer;
+	user-select: none;
+}
+.squad-table .th-sortable:hover {
+	color: #4fc3f7;
+}
+[data-theme="light"] .squad-table .th-sortable:hover {
+	color: #1976d2;
+}
 
 /* Squad Rows */
 .squad-row {

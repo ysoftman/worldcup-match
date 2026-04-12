@@ -146,20 +146,26 @@ export function autoSelectXI(
 		byPosition[p.position].push(p);
 	}
 
-	// 각 포지션에서 OVR 높은 순으로 선택
+	// 각 포지션에서 랜덤으로 선택 (Fisher-Yates shuffle)
 	for (const pos of ["GK", "DEF", "MID", "FWD"] as Position[]) {
-		const sorted = byPosition[pos].sort((a, b) => b.overall - a.overall);
+		const pool = [...byPosition[pos]];
+		for (let i = pool.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[pool[i], pool[j]] = [pool[j], pool[i]];
+		}
 		const count = needs[pos];
-		for (let i = 0; i < count && i < sorted.length; i++) {
-			selected.add(sorted[i].id);
+		for (let i = 0; i < count && i < pool.length; i++) {
+			selected.add(pool[i].id);
 		}
 	}
 
-	// 11명 미달 시 남은 선수 중 OVR 높은 순으로 보충
+	// 11명 미달 시 남은 선수 중 랜덤으로 보충
 	if (selected.size < 11) {
-		const remaining = squad
-			.filter((p) => !selected.has(p.id))
-			.sort((a, b) => b.overall - a.overall);
+		const remaining = squad.filter((p) => !selected.has(p.id));
+		for (let i = remaining.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+		}
 		for (const p of remaining) {
 			if (selected.size >= 11) break;
 			selected.add(p.id);

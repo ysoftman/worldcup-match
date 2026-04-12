@@ -19,7 +19,7 @@ interface GroupViewProps {
 	teamFormations: Map<string, string>;
 	onChangeFormation: (teamCode: string, formationId: string) => void;
 	wildcardCodes: Set<string>;
-	animatingMatchId: string | null;
+	animatingMatchIds: Set<string>;
 	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }
 
@@ -34,7 +34,7 @@ export function GroupView({
 	teamFormations,
 	onChangeFormation,
 	wildcardCodes,
-	animatingMatchId,
+	animatingMatchIds,
 	onOpenSquad,
 }: GroupViewProps) {
 	const hasPlayedMatches = group.matches.some((m) => m.played);
@@ -258,7 +258,7 @@ export function GroupView({
 						onClick={() => onPlayMatch(group.name, m.id)}
 						teamModifiers={teamModifiers}
 						teamFormations={teamFormations}
-						isAnimating={animatingMatchId === m.id}
+						isAnimating={animatingMatchIds.has(m.id)}
 						onOpenSquad={onOpenSquad}
 					/>
 				))}

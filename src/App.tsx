@@ -530,6 +530,36 @@ function App() {
 				<p className="update-date">FIFA 랭킹 데이터: 2026년 4월 기준</p>
 			</header>
 
+			{phase !== "select" && (
+				<div className="phase-indicator">
+					{(["select", "group", "knockout", "finished"] as Phase[]).map(
+						(p, i) => (
+							<div
+								key={p}
+								className={`phase-step ${p === phase ? "active" : ""} ${
+									(
+										["select", "group", "knockout", "finished"] as Phase[]
+									).indexOf(phase) > i
+										? "done"
+										: ""
+								}`}
+							>
+								<span className="phase-dot" />
+								<span className="phase-label">
+									{p === "select"
+										? "선택"
+										: p === "group"
+											? "조별리그"
+											: p === "knockout"
+												? "토너먼트"
+												: "완료"}
+								</span>
+							</div>
+						),
+					)}
+				</div>
+			)}
+
 			{/* 대회 규모 선택 + 프리셋 */}
 			{phase === "select" && (
 				<div className="size-selector">

@@ -84,11 +84,25 @@ export function GroupMatchCard({
 					)}
 				</span>
 				<AnimatedScore target={score1} active={played} className="score" />
+				{played && (
+					<span
+						className={`result-icon ${team1Win ? "win" : isDraw ? "draw" : "lose"}`}
+					>
+						{team1Win ? "✓" : isDraw ? "−" : "✗"}
+					</span>
+				)}
 			</div>
 			<div className="vs">{played ? (isDraw ? "무" : "-") : "vs"}</div>
 			<div
 				className={`team ${played ? (team2Win ? "winner" : isDraw ? "draw" : "loser") : ""}`}
 			>
+				{played && (
+					<span
+						className={`result-icon ${team2Win ? "win" : isDraw ? "draw" : "lose"}`}
+					>
+						{team2Win ? "✓" : isDraw ? "−" : "✗"}
+					</span>
+				)}
 				<AnimatedScore target={score2} active={played} className="score" />
 				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}

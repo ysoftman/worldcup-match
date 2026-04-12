@@ -70,6 +70,13 @@ function BracketMatchCard({
 				</span>
 				{s1 && <span className="bm-rate">{s1.winRate}%</span>}
 				<AnimatedScore target={score1} active={played} className="bm-score" />
+				{played && (
+					<span
+						className={`result-icon ${winner?.code === team1.code ? "win" : "lose"}`}
+					>
+						{winner?.code === team1.code ? "✓" : "✗"}
+					</span>
+				)}
 			</div>
 			<div
 				className={`bm-team ${played ? (winner?.code === team2.code ? "bm-win" : "bm-lose") : ""}`}
@@ -102,6 +109,13 @@ function BracketMatchCard({
 				</span>
 				{s2 && <span className="bm-rate">{s2.winRate}%</span>}
 				<AnimatedScore target={score2} active={played} className="bm-score" />
+				{played && (
+					<span
+						className={`result-icon ${winner?.code === team2.code ? "win" : "lose"}`}
+					>
+						{winner?.code === team2.code ? "✓" : "✗"}
+					</span>
+				)}
 			</div>
 		</div>
 	);

@@ -418,6 +418,67 @@
 	filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
 }
 
+/* 페이즈 진행 표시기 */
+.phase-indicator {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+	margin-bottom: 20px;
+}
+
+.phase-step {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 12px;
+	border-radius: 16px;
+	font-size: 0.75rem;
+	color: #95a5a6;
+	background: #f0f0f0;
+	transition: all 0.3s;
+}
+
+.phase-step.active {
+	color: #fff;
+	background: #3498db;
+	font-weight: 700;
+}
+
+.phase-step.done {
+	color: #27ae60;
+	background: #eafaf1;
+}
+
+.phase-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #bdc3c7;
+}
+
+.phase-step.active .phase-dot {
+	background: #fff;
+}
+
+.phase-step.done .phase-dot {
+	background: #27ae60;
+}
+
+[data-theme="dark"] .phase-step {
+	color: #7f8c8d;
+	background: #2c3e50;
+}
+
+[data-theme="dark"] .phase-step.active {
+	color: #fff;
+	background: #2980b9;
+}
+
+[data-theme="dark"] .phase-step.done {
+	color: #2ecc71;
+	background: #1a3a2a;
+}
+
 /* 대회 규모 선택 */
 .size-selector {
 	display: flex;
@@ -477,8 +538,16 @@
 }
 
 .btn:disabled {
-	opacity: 0.5;
+	opacity: 0.45;
 	cursor: not-allowed;
+	background: #d5d8dc;
+	color: #95a5a6;
+	filter: grayscale(0.5);
+}
+
+[data-theme="dark"] .btn:disabled {
+	background: #34495e;
+	color: #7f8c8d;
 }
 
 .btn-start {
@@ -1146,13 +1215,24 @@
 
 .swap-hint {
 	text-align: center;
-	font-size: 0.85rem;
-	color: #e74c3c;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: #856404;
+	background: #fff3cd;
+	border: 1px solid #ffc107;
+	border-radius: 8px;
+	padding: 8px 16px;
 	margin-bottom: 12px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 8px;
+}
+
+[data-theme="dark"] .swap-hint {
+	color: #ffc107;
+	background: #3a3000;
+	border-color: #665600;
 }
 
 .btn-cancel-swap {
@@ -1355,6 +1435,15 @@
 
 .match-card.pending {
 	opacity: 0.85;
+	border-left: 4px solid #bdc3c7;
+}
+
+.match-card.played {
+	border-left: 4px solid #27ae60;
+}
+
+[data-theme="dark"] .match-card.pending {
+	border-left-color: #555;
 }
 
 .match-card.clickable:not(:disabled) {
@@ -1370,6 +1459,26 @@
 
 .match-card.clickable.pending:active {
 	transform: scale(0.98);
+}
+
+/* 승패 결과 아이콘 */
+.result-icon {
+	font-size: 0.7rem;
+	font-weight: 700;
+	min-width: 16px;
+	text-align: center;
+}
+
+.result-icon.win {
+	color: #27ae60;
+}
+
+.result-icon.lose {
+	color: #e74c3c;
+}
+
+.result-icon.draw {
+	color: #95a5a6;
 }
 
 /* 국기/국가이름 클릭으로 스쿼드 팝업 열기 */

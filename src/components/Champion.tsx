@@ -1,5 +1,5 @@
 import confetti from "canvas-confetti";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import type { Country } from "../data/countries";
 import type { TeamStats } from "../types";
 
@@ -84,15 +84,6 @@ function fireConfetti() {
 
 export function Champion({ team, stats }: ChampionProps) {
 	const fired = useRef(false);
-	const [copied, setCopied] = useState(false);
-
-	const handleShare = () => {
-		const text = `🏆 FIFA World Cup 시뮬레이션 우승: ${team.flag} ${team.nameKo}(${team.name})\nFIFA 랭킹 #${team.rank}${stats ? `\n${stats.played}경기 ${stats.wins}승 ${stats.draws}무 ${stats.losses}패 (승률 ${stats.winRate}%)` : ""}`;
-		navigator.clipboard.writeText(text).then(() => {
-			setCopied(true);
-			setTimeout(() => setCopied(false), 2000);
-		});
-	};
 
 	useEffect(() => {
 		if (!fired.current) {
@@ -147,9 +138,6 @@ export function Champion({ team, stats }: ChampionProps) {
 						(승률 {stats.winRate}%)
 					</p>
 				)}
-				<button type="button" className="btn btn-share" onClick={handleShare}>
-					{copied ? "복사됨!" : "결과 복사"}
-				</button>
 			</div>
 		</div>
 	);

@@ -61,7 +61,7 @@
 	top: 100%;
 	right: 0;
 	margin-top: 8px;
-	width: 280px;
+	width: 340px;
 	max-height: 400px;
 	overflow-y: auto;
 	background: #fff;
@@ -154,6 +154,7 @@
 .history-date {
 	font-size: 0.6rem;
 	color: #bdc3c7;
+	white-space: nowrap;
 }
 
 /* 사운드 토글 */
@@ -980,21 +981,6 @@
 	animation: name-entrance 0.8s ease-out 0.8s both;
 }
 
-.btn-share {
-	margin-top: 12px;
-	padding: 8px 20px;
-	font-size: 0.85rem;
-	background: linear-gradient(
-		135deg,
-		var(--color-primary-dark),
-		var(--color-primary)
-	);
-	color: #fff;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	animation: name-entrance 0.8s ease-out 1s both;
-}
 
 .update-date {
 	text-align: center;
@@ -2611,7 +2597,7 @@
 	}
 
 	.history-body {
-		width: min(260px, 90vw);
+		width: min(320px, 90vw);
 		max-height: 50vh;
 		right: 0;
 	}

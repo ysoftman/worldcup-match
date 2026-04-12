@@ -42,25 +42,29 @@ function BracketMatchCard({
 			<div
 				className={`bm-team ${played ? (winner?.code === team1.code ? "bm-win" : "bm-lose") : ""}`}
 			>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 div가 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="bm-flag team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team1, played);
-					}}
+					className={`bm-flag${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team1, true);
+								},
+							}
+						: {})}
 				>
 					{team1.flag}
 				</span>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="bm-name team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team1, played);
-					}}
+					className={`bm-name${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team1, true);
+								},
+							}
+						: {})}
 				>
 					{team1.nameKo}
 				</span>
@@ -70,25 +74,29 @@ function BracketMatchCard({
 			<div
 				className={`bm-team ${played ? (winner?.code === team2.code ? "bm-win" : "bm-lose") : ""}`}
 			>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="bm-flag team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team2, played);
-					}}
+					className={`bm-flag${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team2, true);
+								},
+							}
+						: {})}
 				>
 					{team2.flag}
 				</span>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="bm-name team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team2, played);
-					}}
+					className={`bm-name${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team2, true);
+								},
+							}
+						: {})}
 				>
 					{team2.nameKo}
 				</span>
@@ -142,25 +150,29 @@ function FinalMatchCard({
 			<div
 				className={`final-team ${played ? (t1Win ? "final-win" : "final-lose") : ""}`}
 			>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<div
-					className="final-circle team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team1, played);
-					}}
+					className={`final-circle${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team1, true);
+								},
+							}
+						: {})}
 				>
 					<span className="final-flag">{team1.flag}</span>
 				</div>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="final-name team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team1, played);
-					}}
+					className={`final-name${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team1, true);
+								},
+							}
+						: {})}
 				>
 					{team1.nameKo}
 				</span>
@@ -175,25 +187,29 @@ function FinalMatchCard({
 			<div
 				className={`final-team ${played ? (t2Win ? "final-win" : "final-lose") : ""}`}
 			>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<div
-					className="final-circle team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team2, played);
-					}}
+					className={`final-circle${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team2, true);
+								},
+							}
+						: {})}
 				>
 					<span className="final-flag">{team2.flag}</span>
 				</div>
-				{/* biome-ignore lint/a11y/noStaticElementInteractions: 부모 button이 키보드 접근성 제공 */}
-				{/* biome-ignore lint/a11y/useKeyWithClickEvents: 부모 button이 키보드 접근성 제공 */}
 				<span
-					className="final-name team-clickable"
-					onClick={(e) => {
-						e.stopPropagation();
-						onOpenSquad(team2, played);
-					}}
+					className={`final-name${played ? " team-clickable" : ""}`}
+					{...(played
+						? {
+								onClick: (e: React.MouseEvent) => {
+									e.stopPropagation();
+									onOpenSquad(team2, true);
+								},
+							}
+						: {})}
 				>
 					{team2.nameKo}
 				</span>

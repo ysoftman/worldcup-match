@@ -1,234 +1,234 @@
 [
-  {
-    "id": 570034,
-    "name": "N. Guimaraes",
-    "position": "Goalkeeper",
-    "age": 19,
-    "number": 15,
-    "photo": "https://media.api-sports.io/football/players/570034.png"
-  },
-  {
-    "id": 316758,
-    "name": "Q. Kammeraad",
-    "position": "Goalkeeper",
-    "age": 22,
-    "number": 16,
-    "photo": "https://media.api-sports.io/football/players/316758.png"
-  },
-  {
-    "id": 15630,
-    "name": "K. Mendoza",
-    "position": "Goalkeeper",
-    "age": 31,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/15630.png"
-  },
-  {
-    "id": 35384,
-    "name": "A. Aguinaldo",
-    "position": "Defender",
-    "age": 30,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/35384.png"
-  },
-  {
-    "id": 39304,
-    "name": "J. Baccay",
-    "position": "Defender",
-    "age": 24,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/39304.png"
-  },
-  {
-    "id": 296789,
-    "name": "J. Gayoso",
-    "position": "Defender",
-    "age": 26,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/296789.png"
-  },
-  {
-    "id": 100631,
-    "name": "M. Kempter",
-    "position": "Defender",
-    "age": 30,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/100631.png"
-  },
-  {
-    "id": 186520,
-    "name": "K. Linares",
-    "position": "Defender",
-    "age": 26,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/186520.png"
-  },
-  {
-    "id": 587147,
-    "name": "Noah Leddel",
-    "position": "Defender",
-    "age": 22,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/587147.png"
-  },
-  {
-    "id": 48143,
-    "name": "J. Nyholm",
-    "position": "Defender",
-    "age": 32,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/48143.png"
-  },
-  {
-    "id": 446246,
-    "name": "S. Rublico",
-    "position": "Defender",
-    "age": 20,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/446246.png"
-  },
-  {
-    "id": 33963,
-    "name": "J. Tabinas",
-    "position": "Defender",
-    "age": 27,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/33963.png"
-  },
-  {
-    "id": 307952,
-    "name": "Paul Bismarck Tabinas",
-    "position": "Defender",
-    "age": 23,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/307952.png"
-  },
-  {
-    "id": 162801,
-    "name": "A. Ugelvik",
-    "position": "Defender",
-    "age": 24,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/162801.png"
-  },
-  {
-    "id": 357961,
-    "name": "S. Woods",
-    "position": "Defender",
-    "age": 25,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/357961.png"
-  },
-  {
-    "id": 103186,
-    "name": "Z. Bailey",
-    "position": "Midfielder",
-    "age": 25,
-    "number": 19,
-    "photo": "https://media.api-sports.io/football/players/103186.png"
-  },
-  {
-    "id": 83482,
-    "name": "O. Kekkonen",
-    "position": "Midfielder",
-    "age": 26,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/83482.png"
-  },
-  {
-    "id": 557603,
-    "name": "J. Lucero",
-    "position": "Midfielder",
-    "age": 21,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/557603.png"
-  },
-  {
-    "id": 568551,
-    "name": "G. Muens",
-    "position": "Midfielder",
-    "age": 20,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/568551.png"
-  },
-  {
-    "id": 542694,
-    "name": "M. Ott",
-    "position": "Midfielder",
-    "age": 33,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/542694.png"
-  },
-  {
-    "id": 349225,
-    "name": "S. Reyes",
-    "position": "Midfielder",
-    "age": 22,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/349225.png"
-  },
-  {
-    "id": 542695,
-    "name": "C. Rontini",
-    "position": "Midfielder",
-    "age": 26,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/542695.png"
-  },
-  {
-    "id": 215900,
-    "name": "R. Schneider",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/215900.png"
-  },
-  {
-    "id": 375312,
-    "name": "D. Demuynck",
-    "position": "Attacker",
-    "age": 21,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/375312.png"
-  },
-  {
-    "id": 25919,
-    "name": "G. Holtmann",
-    "position": "Attacker",
-    "age": 30,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/25919.png"
-  },
-  {
-    "id": 314290,
-    "name": "B. Kristensen",
-    "position": "Attacker",
-    "age": 23,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/314290.png"
-  },
-  {
-    "id": 319913,
-    "name": "A. Leipold",
-    "position": "Attacker",
-    "age": 24,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/319913.png"
-  },
-  {
-    "id": 212234,
-    "name": "A. Monis",
-    "position": "Attacker",
-    "age": 22,
-    "number": 13,
-    "photo": "https://media.api-sports.io/football/players/212234.png"
-  },
-  {
-    "id": 542744,
-    "name": "S. Rasmussen",
-    "position": "Attacker",
-    "age": 23,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/542744.png"
-  }
+	{
+		"id": 570034,
+		"name": "N. Guimaraes",
+		"position": "Goalkeeper",
+		"age": 19,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/570034.png"
+	},
+	{
+		"id": 316758,
+		"name": "Q. Kammeraad",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/316758.png"
+	},
+	{
+		"id": 15630,
+		"name": "K. Mendoza",
+		"position": "Goalkeeper",
+		"age": 31,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/15630.png"
+	},
+	{
+		"id": 35384,
+		"name": "A. Aguinaldo",
+		"position": "Defender",
+		"age": 30,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/35384.png"
+	},
+	{
+		"id": 39304,
+		"name": "J. Baccay",
+		"position": "Defender",
+		"age": 24,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/39304.png"
+	},
+	{
+		"id": 296789,
+		"name": "J. Gayoso",
+		"position": "Defender",
+		"age": 26,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/296789.png"
+	},
+	{
+		"id": 100631,
+		"name": "M. Kempter",
+		"position": "Defender",
+		"age": 30,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/100631.png"
+	},
+	{
+		"id": 186520,
+		"name": "K. Linares",
+		"position": "Defender",
+		"age": 26,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/186520.png"
+	},
+	{
+		"id": 587147,
+		"name": "Noah Leddel",
+		"position": "Defender",
+		"age": 22,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/587147.png"
+	},
+	{
+		"id": 48143,
+		"name": "J. Nyholm",
+		"position": "Defender",
+		"age": 32,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/48143.png"
+	},
+	{
+		"id": 446246,
+		"name": "S. Rublico",
+		"position": "Defender",
+		"age": 20,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/446246.png"
+	},
+	{
+		"id": 33963,
+		"name": "J. Tabinas",
+		"position": "Defender",
+		"age": 27,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/33963.png"
+	},
+	{
+		"id": 307952,
+		"name": "Paul Bismarck Tabinas",
+		"position": "Defender",
+		"age": 23,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/307952.png"
+	},
+	{
+		"id": 162801,
+		"name": "A. Ugelvik",
+		"position": "Defender",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/162801.png"
+	},
+	{
+		"id": 357961,
+		"name": "S. Woods",
+		"position": "Defender",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/357961.png"
+	},
+	{
+		"id": 103186,
+		"name": "Z. Bailey",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/103186.png"
+	},
+	{
+		"id": 83482,
+		"name": "O. Kekkonen",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/83482.png"
+	},
+	{
+		"id": 557603,
+		"name": "J. Lucero",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/557603.png"
+	},
+	{
+		"id": 568551,
+		"name": "G. Muens",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/568551.png"
+	},
+	{
+		"id": 542694,
+		"name": "M. Ott",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/542694.png"
+	},
+	{
+		"id": 349225,
+		"name": "S. Reyes",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/349225.png"
+	},
+	{
+		"id": 542695,
+		"name": "C. Rontini",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/542695.png"
+	},
+	{
+		"id": 215900,
+		"name": "R. Schneider",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/215900.png"
+	},
+	{
+		"id": 375312,
+		"name": "D. Demuynck",
+		"position": "Attacker",
+		"age": 21,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/375312.png"
+	},
+	{
+		"id": 25919,
+		"name": "G. Holtmann",
+		"position": "Attacker",
+		"age": 30,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/25919.png"
+	},
+	{
+		"id": 314290,
+		"name": "B. Kristensen",
+		"position": "Attacker",
+		"age": 23,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/314290.png"
+	},
+	{
+		"id": 319913,
+		"name": "A. Leipold",
+		"position": "Attacker",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/319913.png"
+	},
+	{
+		"id": 212234,
+		"name": "A. Monis",
+		"position": "Attacker",
+		"age": 22,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/212234.png"
+	},
+	{
+		"id": 542744,
+		"name": "S. Rasmussen",
+		"position": "Attacker",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/542744.png"
+	}
 ]

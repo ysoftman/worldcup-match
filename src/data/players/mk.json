@@ -1,226 +1,226 @@
 [
-  {
-    "id": 47527,
-    "name": "S. Dimitrievski",
-    "position": "Goalkeeper",
-    "age": 32,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/47527.png"
-  },
-  {
-    "id": 1437,
-    "name": "D. Iliev",
-    "position": "Goalkeeper",
-    "age": 30,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/1437.png"
-  },
-  {
-    "id": 55515,
-    "name": "D. Shishkovski",
-    "position": "Goalkeeper",
-    "age": 30,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/55515.png"
-  },
-  {
-    "id": 19133,
-    "name": "E. Alioski",
-    "position": "Defender",
-    "age": 33,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/19133.png"
-  },
-  {
-    "id": 105475,
-    "name": "E. Bejtulai",
-    "position": "Defender",
-    "age": 31,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/105475.png"
-  },
-  {
-    "id": 162317,
-    "name": "Imran Fetai",
-    "position": "Defender",
-    "age": 23,
-    "number": 13,
-    "photo": "https://media.api-sports.io/football/players/162317.png"
-  },
-  {
-    "id": 109542,
-    "name": "S. Herrera",
-    "position": "Midfielder",
-    "age": 30,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/109542.png"
-  },
-  {
-    "id": 105474,
-    "name": "V. Musliu",
-    "position": "Defender",
-    "age": 31,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/105474.png"
-  },
-  {
-    "id": 137072,
-    "name": "N. Serafimov",
-    "position": "Defender",
-    "age": 26,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/137072.png"
-  },
-  {
-    "id": 543959,
-    "name": "A. Stojcevski",
-    "position": "Defender",
-    "age": 22,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/543959.png"
-  },
-  {
-    "id": 14278,
-    "name": "D. Velkovski",
-    "position": "Defender",
-    "age": 30,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/14278.png"
-  },
-  {
-    "id": 8560,
-    "name": "G. Zajkov",
-    "position": "Defender",
-    "age": 30,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/8560.png"
-  },
-  {
-    "id": 56704,
-    "name": "I. Alimi",
-    "position": "Midfielder",
-    "age": 31,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/56704.png"
-  },
-  {
-    "id": 50231,
-    "name": "J. Atanasov",
-    "position": "Midfielder",
-    "age": 26,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/50231.png"
-  },
-  {
-    "id": 47461,
-    "name": "E. Bardhi",
-    "position": "Attacker",
-    "age": 30,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/47461.png"
-  },
-  {
-    "id": 1358,
-    "name": "E. Elmas",
-    "position": "Attacker",
-    "age": 26,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/1358.png"
-  },
-  {
-    "id": 61204,
-    "name": "T. Kostadinov",
-    "position": "Midfielder",
-    "age": 29,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/61204.png"
-  },
-  {
-    "id": 2346,
-    "name": "B. Nikolov",
-    "position": "Midfielder",
-    "age": 31,
-    "number": 16,
-    "photo": "https://media.api-sports.io/football/players/2346.png"
-  },
-  {
-    "id": 337688,
-    "name": "R. Ramadani",
-    "position": "Midfielder",
-    "age": 22,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/337688.png"
-  },
-  {
-    "id": 201039,
-    "name": "L. Stankovski",
-    "position": "Midfielder",
-    "age": 23,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/201039.png"
-  },
-  {
-    "id": 105789,
-    "name": "D. Churlinov",
-    "position": "Midfielder",
-    "age": 25,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/105789.png"
-  },
-  {
-    "id": 109544,
-    "name": "L. Doriev",
-    "position": "Attacker",
-    "age": 30,
-    "number": 24,
-    "photo": "https://media.api-sports.io/football/players/109544.png"
-  },
-  {
-    "id": 109564,
-    "name": "B. Miovski",
-    "position": "Attacker",
-    "age": 26,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/109564.png"
-  },
-  {
-    "id": 102373,
-    "name": "D. Musovski",
-    "position": "Attacker",
-    "age": 30,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/102373.png"
-  },
-  {
-    "id": 16143,
-    "name": "L. Qamili",
-    "position": "Attacker",
-    "age": 27,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/16143.png"
-  },
-  {
-    "id": 277896,
-    "name": "E. Rastoder",
-    "position": "Attacker",
-    "age": 24,
-    "number": 15,
-    "photo": "https://media.api-sports.io/football/players/277896.png"
-  },
-  {
-    "id": 14290,
-    "name": "M. Ristovski",
-    "position": "Attacker",
-    "age": 27,
-    "number": 19,
-    "photo": "https://media.api-sports.io/football/players/14290.png"
-  },
-  {
-    "id": 31563,
-    "name": "A. Trajkovski",
-    "position": "Attacker",
-    "age": 33,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/31563.png"
-  }
+	{
+		"id": 47527,
+		"name": "S. Dimitrievski",
+		"position": "Goalkeeper",
+		"age": 32,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/47527.png"
+	},
+	{
+		"id": 1437,
+		"name": "D. Iliev",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/1437.png"
+	},
+	{
+		"id": 55515,
+		"name": "D. Shishkovski",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/55515.png"
+	},
+	{
+		"id": 19133,
+		"name": "E. Alioski",
+		"position": "Defender",
+		"age": 33,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/19133.png"
+	},
+	{
+		"id": 105475,
+		"name": "E. Bejtulai",
+		"position": "Defender",
+		"age": 31,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/105475.png"
+	},
+	{
+		"id": 162317,
+		"name": "Imran Fetai",
+		"position": "Defender",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/162317.png"
+	},
+	{
+		"id": 109542,
+		"name": "S. Herrera",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/109542.png"
+	},
+	{
+		"id": 105474,
+		"name": "V. Musliu",
+		"position": "Defender",
+		"age": 31,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/105474.png"
+	},
+	{
+		"id": 137072,
+		"name": "N. Serafimov",
+		"position": "Defender",
+		"age": 26,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/137072.png"
+	},
+	{
+		"id": 543959,
+		"name": "A. Stojcevski",
+		"position": "Defender",
+		"age": 22,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/543959.png"
+	},
+	{
+		"id": 14278,
+		"name": "D. Velkovski",
+		"position": "Defender",
+		"age": 30,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/14278.png"
+	},
+	{
+		"id": 8560,
+		"name": "G. Zajkov",
+		"position": "Defender",
+		"age": 30,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/8560.png"
+	},
+	{
+		"id": 56704,
+		"name": "I. Alimi",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/56704.png"
+	},
+	{
+		"id": 50231,
+		"name": "J. Atanasov",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/50231.png"
+	},
+	{
+		"id": 47461,
+		"name": "E. Bardhi",
+		"position": "Attacker",
+		"age": 30,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/47461.png"
+	},
+	{
+		"id": 1358,
+		"name": "E. Elmas",
+		"position": "Attacker",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/1358.png"
+	},
+	{
+		"id": 61204,
+		"name": "T. Kostadinov",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/61204.png"
+	},
+	{
+		"id": 2346,
+		"name": "B. Nikolov",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/2346.png"
+	},
+	{
+		"id": 337688,
+		"name": "R. Ramadani",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/337688.png"
+	},
+	{
+		"id": 201039,
+		"name": "L. Stankovski",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/201039.png"
+	},
+	{
+		"id": 105789,
+		"name": "D. Churlinov",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/105789.png"
+	},
+	{
+		"id": 109544,
+		"name": "L. Doriev",
+		"position": "Attacker",
+		"age": 30,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/109544.png"
+	},
+	{
+		"id": 109564,
+		"name": "B. Miovski",
+		"position": "Attacker",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/109564.png"
+	},
+	{
+		"id": 102373,
+		"name": "D. Musovski",
+		"position": "Attacker",
+		"age": 30,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/102373.png"
+	},
+	{
+		"id": 16143,
+		"name": "L. Qamili",
+		"position": "Attacker",
+		"age": 27,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/16143.png"
+	},
+	{
+		"id": 277896,
+		"name": "E. Rastoder",
+		"position": "Attacker",
+		"age": 24,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/277896.png"
+	},
+	{
+		"id": 14290,
+		"name": "M. Ristovski",
+		"position": "Attacker",
+		"age": 27,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/14290.png"
+	},
+	{
+		"id": 31563,
+		"name": "A. Trajkovski",
+		"position": "Attacker",
+		"age": 33,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/31563.png"
+	}
 ]

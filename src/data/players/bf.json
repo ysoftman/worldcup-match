@@ -1,210 +1,210 @@
 [
-  {
-    "id": 22220,
-    "name": "H. Koffi",
-    "position": "Goalkeeper",
-    "age": 29,
-    "number": 16,
-    "photo": "https://media.api-sports.io/football/players/22220.png"
-  },
-  {
-    "id": 140946,
-    "name": "K. Nikiéma",
-    "position": "Goalkeeper",
-    "age": 22,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/140946.png"
-  },
-  {
-    "id": 175451,
-    "name": "F. Ouédraogo",
-    "position": "Goalkeeper",
-    "age": 29,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/175451.png"
-  },
-  {
-    "id": 436990,
-    "name": "A. Ayindé",
-    "position": "Defender",
-    "age": 20,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/436990.png"
-  },
-  {
-    "id": 36658,
-    "name": "I. Dayo",
-    "position": "Defender",
-    "age": 34,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/36658.png"
-  },
-  {
-    "id": 303322,
-    "name": "N. Djiga",
-    "position": "Defender",
-    "age": 23,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/303322.png"
-  },
-  {
-    "id": 140947,
-    "name": "I. Kaboré",
-    "position": "Defender",
-    "age": 24,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/140947.png"
-  },
-  {
-    "id": 402386,
-    "name": "K. Kouassi",
-    "position": "Defender",
-    "age": 21,
-    "number": 26,
-    "photo": "https://media.api-sports.io/football/players/402386.png"
-  },
-  {
-    "id": 307426,
-    "name": "A. Nagalo",
-    "position": "Defender",
-    "age": 23,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/307426.png"
-  },
-  {
-    "id": 16898,
-    "name": "S. Simporé",
-    "position": "Defender",
-    "age": 33,
-    "number": 24,
-    "photo": "https://media.api-sports.io/football/players/16898.png"
-  },
-  {
-    "id": 41150,
-    "name": "E. Tapsoba",
-    "position": "Defender",
-    "age": 26,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/41150.png"
-  },
-  {
-    "id": 20691,
-    "name": "S. Yago",
-    "position": "Defender",
-    "age": 33,
-    "number": 25,
-    "photo": "https://media.api-sports.io/football/players/20691.png"
-  },
-  {
-    "id": 81749,
-    "name": "S. Ki",
-    "position": "Midfielder",
-    "age": 29,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/81749.png"
-  },
-  {
-    "id": 125201,
-    "name": "C. Badolo",
-    "position": "Midfielder",
-    "age": 27,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/125201.png"
-  },
-  {
-    "id": 393092,
-    "name": "M. Kaboré",
-    "position": "Midfielder",
-    "age": 19,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/393092.png"
-  },
-  {
-    "id": 297614,
-    "name": "I. Ouédraogo",
-    "position": "Midfielder",
-    "age": 26,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/297614.png"
-  },
-  {
-    "id": 24121,
-    "name": "G. Sangaré",
-    "position": "Midfielder",
-    "age": 29,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/24121.png"
-  },
-  {
-    "id": 47204,
-    "name": "B. Touré",
-    "position": "Midfielder",
-    "age": 31,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/47204.png"
-  },
-  {
-    "id": 336160,
-    "name": "M. Zoungrana",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/336160.png"
-  },
-  {
-    "id": 243804,
-    "name": "O. Bouda",
-    "position": "Attacker",
-    "age": 25,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/243804.png"
-  },
-  {
-    "id": 431149,
-    "name": "Cyriaque Kalou Irié",
-    "position": "Attacker",
-    "age": 20,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/431149.png"
-  },
-  {
-    "id": 214282,
-    "name": "P. Kabore",
-    "position": "Attacker",
-    "age": 24,
-    "number": 27,
-    "photo": "https://media.api-sports.io/football/players/214282.png"
-  },
-  {
-    "id": 362441,
-    "name": "G. Minoungou",
-    "position": "Attacker",
-    "age": 23,
-    "number": 19,
-    "photo": "https://media.api-sports.io/football/players/362441.png"
-  },
-  {
-    "id": 284797,
-    "name": "D. Ouattara",
-    "position": "Attacker",
-    "age": 23,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/284797.png"
-  },
-  {
-    "id": 671,
-    "name": "B. Traoré",
-    "position": "Attacker",
-    "age": 30,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/671.png"
-  },
-  {
-    "id": 555,
-    "name": "L. Traoré",
-    "position": "Attacker",
-    "age": 24,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/555.png"
-  }
+	{
+		"id": 22220,
+		"name": "H. Koffi",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/22220.png"
+	},
+	{
+		"id": 140946,
+		"name": "K. Nikiéma",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/140946.png"
+	},
+	{
+		"id": 175451,
+		"name": "F. Ouédraogo",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/175451.png"
+	},
+	{
+		"id": 436990,
+		"name": "A. Ayindé",
+		"position": "Defender",
+		"age": 20,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/436990.png"
+	},
+	{
+		"id": 36658,
+		"name": "I. Dayo",
+		"position": "Defender",
+		"age": 34,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/36658.png"
+	},
+	{
+		"id": 303322,
+		"name": "N. Djiga",
+		"position": "Defender",
+		"age": 23,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/303322.png"
+	},
+	{
+		"id": 140947,
+		"name": "I. Kaboré",
+		"position": "Defender",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/140947.png"
+	},
+	{
+		"id": 402386,
+		"name": "K. Kouassi",
+		"position": "Defender",
+		"age": 21,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/402386.png"
+	},
+	{
+		"id": 307426,
+		"name": "A. Nagalo",
+		"position": "Defender",
+		"age": 23,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/307426.png"
+	},
+	{
+		"id": 16898,
+		"name": "S. Simporé",
+		"position": "Defender",
+		"age": 33,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/16898.png"
+	},
+	{
+		"id": 41150,
+		"name": "E. Tapsoba",
+		"position": "Defender",
+		"age": 26,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/41150.png"
+	},
+	{
+		"id": 20691,
+		"name": "S. Yago",
+		"position": "Defender",
+		"age": 33,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/20691.png"
+	},
+	{
+		"id": 81749,
+		"name": "S. Ki",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/81749.png"
+	},
+	{
+		"id": 125201,
+		"name": "C. Badolo",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/125201.png"
+	},
+	{
+		"id": 393092,
+		"name": "M. Kaboré",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/393092.png"
+	},
+	{
+		"id": 297614,
+		"name": "I. Ouédraogo",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/297614.png"
+	},
+	{
+		"id": 24121,
+		"name": "G. Sangaré",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/24121.png"
+	},
+	{
+		"id": 47204,
+		"name": "B. Touré",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/47204.png"
+	},
+	{
+		"id": 336160,
+		"name": "M. Zoungrana",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/336160.png"
+	},
+	{
+		"id": 243804,
+		"name": "O. Bouda",
+		"position": "Attacker",
+		"age": 25,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/243804.png"
+	},
+	{
+		"id": 431149,
+		"name": "Cyriaque Kalou Irié",
+		"position": "Attacker",
+		"age": 20,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/431149.png"
+	},
+	{
+		"id": 214282,
+		"name": "P. Kabore",
+		"position": "Attacker",
+		"age": 24,
+		"number": 27,
+		"photo": "https://media.api-sports.io/football/players/214282.png"
+	},
+	{
+		"id": 362441,
+		"name": "G. Minoungou",
+		"position": "Attacker",
+		"age": 23,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/362441.png"
+	},
+	{
+		"id": 284797,
+		"name": "D. Ouattara",
+		"position": "Attacker",
+		"age": 23,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/284797.png"
+	},
+	{
+		"id": 671,
+		"name": "B. Traoré",
+		"position": "Attacker",
+		"age": 30,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/671.png"
+	},
+	{
+		"id": 555,
+		"name": "L. Traoré",
+		"position": "Attacker",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/555.png"
+	}
 ]

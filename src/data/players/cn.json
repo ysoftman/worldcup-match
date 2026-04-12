@@ -1,186 +1,186 @@
 [
-  {
-    "id": 12706,
-    "name": "Liu Dianzuo",
-    "position": "Goalkeeper",
-    "age": 35,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/12706.png"
-  },
-  {
-    "id": 117155,
-    "name": "Ma Zhen",
-    "position": "Goalkeeper",
-    "age": 27,
-    "number": 16,
-    "photo": "https://media.api-sports.io/football/players/117155.png"
-  },
-  {
-    "id": 12678,
-    "name": "Yan Junling",
-    "position": "Goalkeeper",
-    "age": 34,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/12678.png"
-  },
-  {
-    "id": 368503,
-    "name": "Hu Hetao",
-    "position": "Defender",
-    "age": 22,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/368503.png"
-  },
-  {
-    "id": 12924,
-    "name": "Huang Zhengyu",
-    "position": "Defender",
-    "age": 28,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/12924.png"
-  },
-  {
-    "id": 368506,
-    "name": "Liu Haofan",
-    "position": "Defender",
-    "age": 22,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/368506.png"
-  },
-  {
-    "id": 12743,
-    "name": "Liu Yang",
-    "position": "Defender",
-    "age": 30,
-    "number": 13,
-    "photo": "https://media.api-sports.io/football/players/12743.png"
-  },
-  {
-    "id": 401982,
-    "name": "Xi Yang Alex",
-    "position": "Defender",
-    "age": 20,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/401982.png"
-  },
-  {
-    "id": 402937,
-    "name": "Yusup Umidjan",
-    "position": "Defender",
-    "age": 21,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/402937.png"
-  },
-  {
-    "id": 12962,
-    "name": "Zhu Chenjie",
-    "position": "Defender",
-    "age": 25,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/12962.png"
-  },
-  {
-    "id": 12658,
-    "name": "Ba Dun",
-    "position": "Midfielder",
-    "age": 30,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/12658.png"
-  },
-  {
-    "id": 12484,
-    "name": "Cheng Jin",
-    "position": "Midfielder",
-    "age": 30,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/12484.png"
-  },
-  {
-    "id": 12780,
-    "name": "Gao Tianyi",
-    "position": "Midfielder",
-    "age": 27,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/12780.png"
-  },
-  {
-    "id": 12984,
-    "name": "Huang Jiahui",
-    "position": "Midfielder",
-    "age": 25,
-    "number": 15,
-    "photo": "https://media.api-sports.io/football/players/12984.png"
-  },
-  {
-    "id": 423532,
-    "name": "Jiwen Kuai",
-    "position": "Midfielder",
-    "age": 19,
-    "number": 25,
-    "photo": "https://media.api-sports.io/football/players/423532.png"
-  },
-  {
-    "id": 12910,
-    "name": "Wang Shangyuan",
-    "position": "Midfielder",
-    "age": 32,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/12910.png"
-  },
-  {
-    "id": 311702,
-    "name": "Xie Wenneng",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/311702.png"
-  },
-  {
-    "id": 364016,
-    "name": "Behram Abduweli",
-    "position": "Attacker",
-    "age": 22,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/364016.png"
-  },
-  {
-    "id": 46932,
-    "name": "Lin Liangming",
-    "position": "Attacker",
-    "age": 28,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/46932.png"
-  },
-  {
-    "id": 423539,
-    "name": "Liu Chengyu",
-    "position": "Attacker",
-    "age": 19,
-    "number": 24,
-    "photo": "https://media.api-sports.io/football/players/423539.png"
-  },
-  {
-    "id": 423540,
-    "name": "Wang Yudong",
-    "position": "Attacker",
-    "age": 19,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/423540.png"
-  },
-  {
-    "id": 12734,
-    "name": "Wei Shihao",
-    "position": "Attacker",
-    "age": 30,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/12734.png"
-  },
-  {
-    "id": 12674,
-    "name": "Zhang Yuning",
-    "position": "Attacker",
-    "age": 28,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/12674.png"
-  }
+	{
+		"id": 12706,
+		"name": "Liu Dianzuo",
+		"position": "Goalkeeper",
+		"age": 35,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/12706.png"
+	},
+	{
+		"id": 117155,
+		"name": "Ma Zhen",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/117155.png"
+	},
+	{
+		"id": 12678,
+		"name": "Yan Junling",
+		"position": "Goalkeeper",
+		"age": 34,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/12678.png"
+	},
+	{
+		"id": 368503,
+		"name": "Hu Hetao",
+		"position": "Defender",
+		"age": 22,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/368503.png"
+	},
+	{
+		"id": 12924,
+		"name": "Huang Zhengyu",
+		"position": "Defender",
+		"age": 28,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/12924.png"
+	},
+	{
+		"id": 368506,
+		"name": "Liu Haofan",
+		"position": "Defender",
+		"age": 22,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/368506.png"
+	},
+	{
+		"id": 12743,
+		"name": "Liu Yang",
+		"position": "Defender",
+		"age": 30,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/12743.png"
+	},
+	{
+		"id": 401982,
+		"name": "Xi Yang Alex",
+		"position": "Defender",
+		"age": 20,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/401982.png"
+	},
+	{
+		"id": 402937,
+		"name": "Yusup Umidjan",
+		"position": "Defender",
+		"age": 21,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/402937.png"
+	},
+	{
+		"id": 12962,
+		"name": "Zhu Chenjie",
+		"position": "Defender",
+		"age": 25,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/12962.png"
+	},
+	{
+		"id": 12658,
+		"name": "Ba Dun",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/12658.png"
+	},
+	{
+		"id": 12484,
+		"name": "Cheng Jin",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/12484.png"
+	},
+	{
+		"id": 12780,
+		"name": "Gao Tianyi",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/12780.png"
+	},
+	{
+		"id": 12984,
+		"name": "Huang Jiahui",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/12984.png"
+	},
+	{
+		"id": 423532,
+		"name": "Jiwen Kuai",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/423532.png"
+	},
+	{
+		"id": 12910,
+		"name": "Wang Shangyuan",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/12910.png"
+	},
+	{
+		"id": 311702,
+		"name": "Xie Wenneng",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/311702.png"
+	},
+	{
+		"id": 364016,
+		"name": "Behram Abduweli",
+		"position": "Attacker",
+		"age": 22,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/364016.png"
+	},
+	{
+		"id": 46932,
+		"name": "Lin Liangming",
+		"position": "Attacker",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/46932.png"
+	},
+	{
+		"id": 423539,
+		"name": "Liu Chengyu",
+		"position": "Attacker",
+		"age": 19,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/423539.png"
+	},
+	{
+		"id": 423540,
+		"name": "Wang Yudong",
+		"position": "Attacker",
+		"age": 19,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/423540.png"
+	},
+	{
+		"id": 12734,
+		"name": "Wei Shihao",
+		"position": "Attacker",
+		"age": 30,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/12734.png"
+	},
+	{
+		"id": 12674,
+		"name": "Zhang Yuning",
+		"position": "Attacker",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/12674.png"
+	}
 ]

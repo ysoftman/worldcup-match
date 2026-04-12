@@ -1,226 +1,226 @@
 [
-  {
-    "id": 574217,
-    "name": "T. Algarin",
-    "position": "Goalkeeper",
-    "age": 18,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/574217.png"
-  },
-  {
-    "id": 123742,
-    "name": "J. Duverger",
-    "position": "Goalkeeper",
-    "age": 23,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/123742.png"
-  },
-  {
-    "id": 174768,
-    "name": "A. Pierre",
-    "position": "Goalkeeper",
-    "age": 24,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/174768.png"
-  },
-  {
-    "id": 87789,
-    "name": "J. Placide",
-    "position": "Goalkeeper",
-    "age": 37,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/87789.png"
-  },
-  {
-    "id": 12303,
-    "name": "Ricardo Ade",
-    "position": "Defender",
-    "age": 35,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/12303.png"
-  },
-  {
-    "id": 20850,
-    "name": "C. Arcus",
-    "position": "Defender",
-    "age": 29,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/20850.png"
-  },
-  {
-    "id": 1411,
-    "name": "H. Delcroix",
-    "position": "Defender",
-    "age": 26,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/1411.png"
-  },
-  {
-    "id": 20655,
-    "name": "J. Duverne",
-    "position": "Defender",
-    "age": 28,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/20655.png"
-  },
-  {
-    "id": 190747,
-    "name": "M. Expérience",
-    "position": "Defender",
-    "age": 26,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/190747.png"
-  },
-  {
-    "id": 102505,
-    "name": "D. Lacroix",
-    "position": "Defender",
-    "age": 32,
-    "number": 13,
-    "photo": "https://media.api-sports.io/football/players/102505.png"
-  },
-  {
-    "id": 318930,
-    "name": "G. Métusala",
-    "position": "Defender",
-    "age": 26,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/318930.png"
-  },
-  {
-    "id": 275367,
-    "name": "W. Paugain",
-    "position": "Defender",
-    "age": 24,
-    "number": 24,
-    "photo": "https://media.api-sports.io/football/players/275367.png"
-  },
-  {
-    "id": 573613,
-    "name": "K. Thermoncy",
-    "position": "Defender",
-    "age": 19,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/573613.png"
-  },
-  {
-    "id": 162129,
-    "name": "C. Attys",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/162129.png"
-  },
-  {
-    "id": 20665,
-    "name": "J. Bellegarde",
-    "position": "Midfielder",
-    "age": 27,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/20665.png"
-  },
-  {
-    "id": 338367,
-    "name": "D. Jean-Jacques",
-    "position": "Midfielder",
-    "age": 25,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/338367.png"
-  },
-  {
-    "id": 20538,
-    "name": "L. Pierre",
-    "position": "Midfielder",
-    "age": 27,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/20538.png"
-  },
-  {
-    "id": 371050,
-    "name": "W. Pierre",
-    "position": "Midfielder",
-    "age": 21,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/371050.png"
-  },
-  {
-    "id": 540857,
-    "name": "C. F. Sainte",
-    "position": "Midfielder",
-    "age": 23,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/540857.png"
-  },
-  {
-    "id": 174915,
-    "name": "J. Casimir",
-    "position": "Attacker",
-    "age": 24,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/174915.png"
-  },
-  {
-    "id": 128766,
-    "name": "L. Deedson",
-    "position": "Attacker",
-    "age": 24,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/128766.png"
-  },
-  {
-    "id": 50958,
-    "name": "D. Etienne",
-    "position": "Attacker",
-    "age": 29,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/50958.png"
-  },
-  {
-    "id": 48535,
-    "name": "Y. Fortuné",
-    "position": "Attacker",
-    "age": 26,
-    "number": 19,
-    "photo": "https://media.api-sports.io/football/players/48535.png"
-  },
-  {
-    "id": 24140,
-    "name": "S. Lambese",
-    "position": "Attacker",
-    "age": 30,
-    "number": 19,
-    "photo": "https://media.api-sports.io/football/players/24140.png"
-  },
-  {
-    "id": 45020,
-    "name": "D. Nazon",
-    "position": "Attacker",
-    "age": 31,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/45020.png"
-  },
-  {
-    "id": 326017,
-    "name": "W. Pacius",
-    "position": "Attacker",
-    "age": 24,
-    "number": 16,
-    "photo": "https://media.api-sports.io/football/players/326017.png"
-  },
-  {
-    "id": 8601,
-    "name": "F. Pierrot",
-    "position": "Attacker",
-    "age": 30,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/8601.png"
-  },
-  {
-    "id": 162733,
-    "name": "R. Providence",
-    "position": "Attacker",
-    "age": 24,
-    "number": 15,
-    "photo": "https://media.api-sports.io/football/players/162733.png"
-  }
+	{
+		"id": 574217,
+		"name": "T. Algarin",
+		"position": "Goalkeeper",
+		"age": 18,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/574217.png"
+	},
+	{
+		"id": 123742,
+		"name": "J. Duverger",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/123742.png"
+	},
+	{
+		"id": 174768,
+		"name": "A. Pierre",
+		"position": "Goalkeeper",
+		"age": 24,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/174768.png"
+	},
+	{
+		"id": 87789,
+		"name": "J. Placide",
+		"position": "Goalkeeper",
+		"age": 37,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/87789.png"
+	},
+	{
+		"id": 12303,
+		"name": "Ricardo Ade",
+		"position": "Defender",
+		"age": 35,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/12303.png"
+	},
+	{
+		"id": 20850,
+		"name": "C. Arcus",
+		"position": "Defender",
+		"age": 29,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/20850.png"
+	},
+	{
+		"id": 1411,
+		"name": "H. Delcroix",
+		"position": "Defender",
+		"age": 26,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/1411.png"
+	},
+	{
+		"id": 20655,
+		"name": "J. Duverne",
+		"position": "Defender",
+		"age": 28,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/20655.png"
+	},
+	{
+		"id": 190747,
+		"name": "M. Expérience",
+		"position": "Defender",
+		"age": 26,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/190747.png"
+	},
+	{
+		"id": 102505,
+		"name": "D. Lacroix",
+		"position": "Defender",
+		"age": 32,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/102505.png"
+	},
+	{
+		"id": 318930,
+		"name": "G. Métusala",
+		"position": "Defender",
+		"age": 26,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/318930.png"
+	},
+	{
+		"id": 275367,
+		"name": "W. Paugain",
+		"position": "Defender",
+		"age": 24,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/275367.png"
+	},
+	{
+		"id": 573613,
+		"name": "K. Thermoncy",
+		"position": "Defender",
+		"age": 19,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/573613.png"
+	},
+	{
+		"id": 162129,
+		"name": "C. Attys",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/162129.png"
+	},
+	{
+		"id": 20665,
+		"name": "J. Bellegarde",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/20665.png"
+	},
+	{
+		"id": 338367,
+		"name": "D. Jean-Jacques",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/338367.png"
+	},
+	{
+		"id": 20538,
+		"name": "L. Pierre",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/20538.png"
+	},
+	{
+		"id": 371050,
+		"name": "W. Pierre",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/371050.png"
+	},
+	{
+		"id": 540857,
+		"name": "C. F. Sainte",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/540857.png"
+	},
+	{
+		"id": 174915,
+		"name": "J. Casimir",
+		"position": "Attacker",
+		"age": 24,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/174915.png"
+	},
+	{
+		"id": 128766,
+		"name": "L. Deedson",
+		"position": "Attacker",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/128766.png"
+	},
+	{
+		"id": 50958,
+		"name": "D. Etienne",
+		"position": "Attacker",
+		"age": 29,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/50958.png"
+	},
+	{
+		"id": 48535,
+		"name": "Y. Fortuné",
+		"position": "Attacker",
+		"age": 26,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/48535.png"
+	},
+	{
+		"id": 24140,
+		"name": "S. Lambese",
+		"position": "Attacker",
+		"age": 30,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/24140.png"
+	},
+	{
+		"id": 45020,
+		"name": "D. Nazon",
+		"position": "Attacker",
+		"age": 31,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/45020.png"
+	},
+	{
+		"id": 326017,
+		"name": "W. Pacius",
+		"position": "Attacker",
+		"age": 24,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/326017.png"
+	},
+	{
+		"id": 8601,
+		"name": "F. Pierrot",
+		"position": "Attacker",
+		"age": 30,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/8601.png"
+	},
+	{
+		"id": 162733,
+		"name": "R. Providence",
+		"position": "Attacker",
+		"age": 24,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/162733.png"
+	}
 ]

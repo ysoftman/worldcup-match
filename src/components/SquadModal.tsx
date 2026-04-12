@@ -80,8 +80,8 @@ export function SquadModal({
 		src: string;
 		name: string;
 	} | null>(null);
-	const [sortKey, setSortKey] = useState<SortKey | null>(null);
-	const [sortDir, setSortDir] = useState<SortDir>("desc");
+	const [sortKey, setSortKey] = useState<SortKey | null>("overall");
+	const [sortDir, setSortDir] = useState<SortDir>("asc");
 
 	const squad = useMemo(() => getSquad(team), [team]);
 	const isReal = hasRealPlayers(team.code);
@@ -161,7 +161,7 @@ export function SquadModal({
 			setSortDir((d) => (d === "desc" ? "asc" : "desc"));
 		} else {
 			setSortKey(key);
-			setSortDir("desc");
+			setSortDir("asc");
 		}
 	};
 

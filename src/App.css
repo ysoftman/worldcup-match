@@ -460,8 +460,8 @@
 }
 
 .phase-step.done {
-	color: var(--color-success);
-	background: #eafaf1;
+	color: var(--color-gray-dark);
+	background: #e8e8e8;
 }
 
 .phase-dot {
@@ -476,7 +476,7 @@
 }
 
 .phase-step.done .phase-dot {
-	background: #27ae60;
+	background: var(--color-gray-dark);
 }
 
 [data-theme="dark"] .phase-step {
@@ -490,8 +490,8 @@
 }
 
 [data-theme="dark"] .phase-step.done {
-	color: #2ecc71;
-	background: #1a3a2a;
+	color: #95a5a6;
+	background: #34495e;
 }
 
 /* 대회 규모 선택 */
@@ -674,8 +674,8 @@
 }
 
 .country-chip.selected {
-	background: #eafaf1;
-	border-color: var(--color-success);
+	background: #ebf5fb;
+	border-color: var(--color-primary);
 	font-weight: 600;
 }
 
@@ -1375,7 +1375,7 @@
 }
 
 .standings-table tr.qualified {
-	background: #eafaf1;
+	background: #ebf5fb;
 }
 
 .standings-table tr.qualified-wildcard {
@@ -2242,7 +2242,7 @@
 }
 
 .bm-card.bm-played:hover {
-	background: rgba(39, 174, 96, 0.08);
+	background: rgba(52, 152, 219, 0.08);
 }
 
 .bm-card.bm-played {
@@ -2798,8 +2798,8 @@
 }
 
 [data-theme="dark"] .country-chip.selected {
-	background: #1a3a2a;
-	border-color: var(--color-success);
+	background: #1a2a3a;
+	border-color: var(--color-primary);
 }
 
 [data-theme="dark"] .group-card {
@@ -2884,7 +2884,7 @@
 }
 
 [data-theme="dark"] .standings-table tr.qualified {
-	background: #1a3a2a;
+	background: #1a2a3a;
 }
 
 [data-theme="dark"] .standings-table tr.qualified-wildcard {

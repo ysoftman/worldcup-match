@@ -1,0 +1,194 @@
+[
+  {
+    "id": 70480,
+    "name": "O. Hadžikić",
+    "position": "Goalkeeper",
+    "age": 29,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/70480.png"
+  },
+  {
+    "id": 9026,
+    "name": "N. Vasilj",
+    "position": "Goalkeeper",
+    "age": 30,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/9026.png"
+  },
+  {
+    "id": 108370,
+    "name": "M. Zlomislić",
+    "position": "Goalkeeper",
+    "age": 27,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/108370.png"
+  },
+  {
+    "id": 25129,
+    "name": "D. Burnić",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/25129.png"
+  },
+  {
+    "id": 395589,
+    "name": "N. Äelik",
+    "position": "Defender",
+    "age": 19,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/395589.png"
+  },
+  {
+    "id": 7318,
+    "name": "A. Dedić",
+    "position": "Defender",
+    "age": 23,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/7318.png"
+  },
+  {
+    "id": 53517,
+    "name": "D. Hadžikadunić",
+    "position": "Defender",
+    "age": 27,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/53517.png"
+  },
+  {
+    "id": 1741,
+    "name": "N. Katić",
+    "position": "Defender",
+    "age": 29,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/1741.png"
+  },
+  {
+    "id": 1442,
+    "name": "S. Kolašinac",
+    "position": "Defender",
+    "age": 32,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/1442.png"
+  },
+  {
+    "id": 271350,
+    "name": "T. Muharemović",
+    "position": "Defender",
+    "age": 22,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/271350.png"
+  },
+  {
+    "id": 76867,
+    "name": "N. Mujakić",
+    "position": "Defender",
+    "age": 27,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/76867.png"
+  },
+  {
+    "id": 14301,
+    "name": "S. Radeljić",
+    "position": "Defender",
+    "age": 28,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/14301.png"
+  },
+  {
+    "id": 162222,
+    "name": "I. Bašić",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/162222.png"
+  },
+  {
+    "id": 70514,
+    "name": "A. Gigović",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/70514.png"
+  },
+  {
+    "id": 50006,
+    "name": "A. Hadžiahmetović",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/50006.png"
+  },
+  {
+    "id": 1324,
+    "name": "I. Šunjić",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/1324.png"
+  },
+  {
+    "id": 264094,
+    "name": "B. Tahirović",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/264094.png"
+  },
+  {
+    "id": 395559,
+    "name": "Kerim-Sam Alajbegović",
+    "position": "Attacker",
+    "age": 18,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/395559.png"
+  },
+  {
+    "id": 329409,
+    "name": "E. Bajraktarevic",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/329409.png"
+  },
+  {
+    "id": 314377,
+    "name": "S. Baždar",
+    "position": "Attacker",
+    "age": 21,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/314377.png"
+  },
+  {
+    "id": 46930,
+    "name": "E. Demirović",
+    "position": "Attacker",
+    "age": 27,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/46930.png"
+  },
+  {
+    "id": 790,
+    "name": "E. Džeko",
+    "position": "Attacker",
+    "age": 39,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/790.png"
+  },
+  {
+    "id": 322101,
+    "name": "A. Memić",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/322101.png"
+  },
+  {
+    "id": 28382,
+    "name": "H. Tabaković",
+    "position": "Attacker",
+    "age": 31,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/28382.png"
+  }
+]

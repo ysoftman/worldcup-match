@@ -1,0 +1,306 @@
+[
+  {
+    "id": 427532,
+    "name": "Matej Náprstek",
+    "position": "Goalkeeper",
+    "age": 19,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/427532.png"
+  },
+  {
+    "id": 59968,
+    "name": "A. Singh",
+    "position": "Goalkeeper",
+    "age": 32,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/59968.png"
+  },
+  {
+    "id": 59991,
+    "name": "G. Singh",
+    "position": "Goalkeeper",
+    "age": 26,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/59991.png"
+  },
+  {
+    "id": 59916,
+    "name": "G. Singh Sandhu",
+    "position": "Goalkeeper",
+    "age": 33,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/59916.png"
+  },
+  {
+    "id": 342805,
+    "name": "H. Tiwari",
+    "position": "Goalkeeper",
+    "age": 23,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/342805.png"
+  },
+  {
+    "id": 29145,
+    "name": "A. Ali",
+    "position": "Defender",
+    "age": 25,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/29145.png"
+  },
+  {
+    "id": 59919,
+    "name": "R. Bheke",
+    "position": "Defender",
+    "age": 35,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/59919.png"
+  },
+  {
+    "id": 59971,
+    "name": "S. Bose",
+    "position": "Defender",
+    "age": 30,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/59971.png"
+  },
+  {
+    "id": 542783,
+    "name": "J. Gupta",
+    "position": "Defender",
+    "age": 24,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/542783.png"
+  },
+  {
+    "id": 60119,
+    "name": "S. Jhingan",
+    "position": "Defender",
+    "age": 32,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/60119.png"
+  },
+  {
+    "id": 29146,
+    "name": "A. Mishra",
+    "position": "Defender",
+    "age": 24,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/29146.png"
+  },
+  {
+    "id": 573286,
+    "name": "P. Ranbir",
+    "position": "Defender",
+    "age": 18,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/573286.png"
+  },
+  {
+    "id": 197153,
+    "name": "R. Singh",
+    "position": "Defender",
+    "age": 26,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/197153.png"
+  },
+  {
+    "id": 349847,
+    "name": "M. Uvais",
+    "position": "Defender",
+    "age": 27,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/349847.png"
+  },
+  {
+    "id": 571689,
+    "name": "Valpuia",
+    "position": "Defender",
+    "age": 25,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/571689.png"
+  },
+  {
+    "id": 181023,
+    "name": "B. Yumnam",
+    "position": "Defender",
+    "age": 22,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/181023.png"
+  },
+  {
+    "id": 29156,
+    "name": "L. Ralte",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/29156.png"
+  },
+  {
+    "id": 440257,
+    "name": "L. Fanai",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/440257.png"
+  },
+  {
+    "id": 29011,
+    "name": "D. Farooq",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/29011.png"
+  },
+  {
+    "id": 59957,
+    "name": "B. Fernandes",
+    "position": "Midfielder",
+    "age": 31,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/59957.png"
+  },
+  {
+    "id": 29162,
+    "name": "J. Singh",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/29162.png"
+  },
+  {
+    "id": 358175,
+    "name": "M. Nickson",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/358175.png"
+  },
+  {
+    "id": 291817,
+    "name": "N. Prabhu",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/291817.png"
+  },
+  {
+    "id": 60136,
+    "name": "S. Samad",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/60136.png"
+  },
+  {
+    "id": 29163,
+    "name": "S. Wangjam",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/29163.png"
+  },
+  {
+    "id": 29153,
+    "name": "D. Tangri",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/29153.png"
+  },
+  {
+    "id": 29164,
+    "name": "R. Ali",
+    "position": "Attacker",
+    "age": 25,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/29164.png"
+  },
+  {
+    "id": 60103,
+    "name": "L. Chhangte",
+    "position": "Attacker",
+    "age": 28,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/60103.png"
+  },
+  {
+    "id": 59936,
+    "name": "S. Chhetri",
+    "position": "Attacker",
+    "age": 41,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/59936.png"
+  },
+  {
+    "id": 60036,
+    "name": "F. Choudhary",
+    "position": "Attacker",
+    "age": 29,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/60036.png"
+  },
+  {
+    "id": 59962,
+    "name": "L. Colaço",
+    "position": "Attacker",
+    "age": 27,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/59962.png"
+  },
+  {
+    "id": 60087,
+    "name": "A. Kuruniyan",
+    "position": "Attacker",
+    "age": 28,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/60087.png"
+  },
+  {
+    "id": 59939,
+    "name": "E. Lalrindika",
+    "position": "Attacker",
+    "age": 26,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/59939.png"
+  },
+  {
+    "id": 29167,
+    "name": "V. Pratap Singh",
+    "position": "Attacker",
+    "age": 23,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/29167.png"
+  },
+  {
+    "id": 440264,
+    "name": "M. Sanan",
+    "position": "Attacker",
+    "age": 21,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/440264.png"
+  },
+  {
+    "id": 586620,
+    "name": "Manvir Singh",
+    "position": "Attacker",
+    "age": 24,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/586620.png"
+  },
+  {
+    "id": 29265,
+    "name": "M. Naorem",
+    "position": "Attacker",
+    "age": 26,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/29265.png"
+  },
+  {
+    "id": 59941,
+    "name": "U. Singh",
+    "position": "Attacker",
+    "age": 29,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/59941.png"
+  }
+]

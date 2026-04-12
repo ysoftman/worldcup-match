@@ -1,13 +1,17 @@
 /**
- * API-Football에서 월드컵 참가국 스쿼드를 가져오는 스크립트
- * 결과: src/data/playersWorldcup.json
+ * API-Football에서 FIFA 전체 국가 스쿼드를 가져오는 스크립트
+ * 1) /countries 로 API 제공 국가 목록 조회
+ * 2) countries.ts 의 211개국과 매칭
+ * 3) 매칭된 국가의 national team squad 다운로드
+ * 4) src/data/players/index.ts 자동 생성
  */
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { ALL_COUNTRIES } from "../src/data/countries";
 
 const API_KEY = process.env.API_FOOTBALL_KEY;
 if (!API_KEY) {
-	console.error("❌ API_FOOTBALL_KEY 환경변수 필요");
+	console.error("❌ API_FOOTBALL_KEY 환경변수 필요 (.env 파일 또는 환경변수)");
 	process.exit(1);
 }
 
@@ -15,27 +19,14 @@ const BASE_URL = "https://v3.football.api-sports.io";
 const HEADERS: Record<string, string> = { "x-apisports-key": API_KEY };
 const CACHE_PATH = resolve(import.meta.dir, ".cache_wc.json");
 const OUTPUT_DIR = resolve(import.meta.dir, "../src/data/players");
+const INDEX_PATH = resolve(OUTPUT_DIR, "index.ts");
 const RATE_DELAY = 7000;
 
-// 월드컵 참가국 (2026 + 역대 대회 주요국 포함)
-const WC_COUNTRIES: Record<string, string> = {
-	MX: "Mexico", ZA: "South Africa", KR: "Korea Republic", CZ: "Czech Republic",
-	CA: "Canada", BA: "Bosnia", QA: "Qatar", CH: "Switzerland",
-	BR: "Brazil", MA: "Morocco", HT: "Haiti", "GB-SCT": "Scotland",
-	US: "USA", PY: "Paraguay", AU: "Australia", TR: "Turkey",
-	DE: "Germany", CW: "Curacao", CI: "Ivory Coast", EC: "Ecuador",
-	NL: "Netherlands", JP: "Japan", SE: "Sweden", TN: "Tunisia",
-	BE: "Belgium", EG: "Egypt", IR: "Iran", NZ: "New Zealand",
-	ES: "Spain", CV: "Cape Verde", SA: "Saudi Arabia", UY: "Uruguay",
-	FR: "France", SN: "Senegal", IQ: "Iraq", NO: "Norway",
-	AR: "Argentina", DZ: "Algeria", AT: "Austria", JO: "Jordan",
-	PT: "Portugal", CD: "DR Congo", UZ: "Uzbekistan", CO: "Colombia",
-	"GB-ENG": "England", HR: "Croatia", GH: "Ghana", PA: "Panama",
-	// 역대 월드컵 주요 참가국
-	IT: "Italy", PL: "Poland", DK: "Denmark", RS: "Serbia",
-	RU: "Russia", PE: "Peru", CM: "Cameroon", NG: "Nigeria",
-	CL: "Chile", CR: "Costa Rica", RO: "Romania", GR: "Greece",
-	"GB-WLS": "Wales", IS: "Iceland", HN: "Honduras",
+// countries.ts name → API-Football name (자동 매칭 불가능한 경우만)
+const NAME_OVERRIDES: Record<string, string> = {
+	"UAE": "United-Arab-Emirates",
+	"DR Congo": "Congo-DR",
+	"North Macedonia": "Macedonia",
 };
 
 interface ApiPlayer {
@@ -66,6 +57,29 @@ async function apiFetch(endpoint: string): Promise<unknown> {
 	return json;
 }
 
+async function getApiCountries(): Promise<Set<string>> {
+	const data = (await apiFetch("/countries")) as {
+		response: Array<{ name: string }>;
+	};
+	return new Set(data.response.map((c) => c.name));
+}
+
+function findApiName(projectName: string, apiNames: Set<string>): string | null {
+	if (NAME_OVERRIDES[projectName]) {
+		const override = NAME_OVERRIDES[projectName];
+		return apiNames.has(override) ? override : null;
+	}
+	if (apiNames.has(projectName)) return projectName;
+	const hyphenated = projectName.replace(/ /g, "-");
+	if (apiNames.has(hyphenated)) return hyphenated;
+	// case-insensitive fallback
+	const lower = hyphenated.toLowerCase();
+	for (const name of apiNames) {
+		if (name.toLowerCase() === lower) return name;
+	}
+	return null;
+}
+
 async function getNationalTeamId(countryName: string): Promise<number | null> {
 	const data = (await apiFetch(`/teams?country=${encodeURIComponent(countryName)}`)) as {
 		response: Array<{ team: { id: number; national: boolean } }>;
@@ -80,17 +94,73 @@ async function getSquad(teamId: number): Promise<ApiPlayer[]> {
 	return data.response?.[0]?.players ?? [];
 }
 
+// JS/TS 예약어와 충돌하는 국가 코드 처리
+const RESERVED_WORDS = new Set(["do", "in", "is", "as", "if", "no"]);
+function safeVarName(code: string): string {
+	const base = code.toLowerCase().replace(/-/g, "_");
+	return RESERVED_WORDS.has(base) ? `${base}_` : base;
+}
+
+function generateIndex() {
+	const files = readdirSync(OUTPUT_DIR)
+		.filter((f) => f.endsWith(".json"))
+		.sort();
+
+	const imports: string[] = [];
+	const entries: string[] = [];
+
+	imports.push('import type { RawPlayer } from "../../utils/playerRating";');
+
+	for (const file of files) {
+		const basename = file.replace(".json", "");
+		const code = basename.toUpperCase().replace(/_/g, "-");
+		const varName = safeVarName(basename);
+		imports.push(`import ${varName} from "./${file}";`);
+		const mapKey = code.includes("-") ? `"${code}"` : code;
+		entries.push(`\t${mapKey}: ${varName},`);
+	}
+
+	const content = `${imports.join("\n")}\n\nconst playersMap: Record<string, RawPlayer[]> = {\n${entries.join("\n")}\n};\n\nexport default playersMap;\n`;
+	writeFileSync(INDEX_PATH, content);
+	console.log(`📝 index.ts 생성 (${files.length}개국)`);
+}
+
 async function main() {
 	const cache = loadCache();
-	const codes = Object.keys(WC_COUNTRIES);
+
+	// 1) API 제공 국가 목록 조회
+	console.log("🌍 API 국가 목록 조회...");
+	const apiNames = await getApiCountries();
+	console.log(`   API 제공: ${apiNames.size}개국`);
+
+	// 2) 프로젝트 211개국과 매칭
+	const targets: Array<{ code: string; name: string; apiName: string }> = [];
+	const noApi: string[] = [];
+
+	for (const country of ALL_COUNTRIES) {
+		const apiName = findApiName(country.name, apiNames);
+		if (apiName) {
+			targets.push({ code: country.code, name: country.name, apiName });
+		} else {
+			noApi.push(`${country.code}(${country.name})`);
+		}
+	}
+	console.log(`   매칭: ${targets.length}개국, API 없음: ${noApi.length}개국`);
+
 	// 캐시에 있거나 이미 파일이 존재하는 국가는 건너뜀
-	const remaining = codes.filter((c) => {
-		if (cache[c]) return false;
-		const filePath = resolve(OUTPUT_DIR, `${c.toLowerCase()}.json`);
+	const remaining = targets.filter((t) => {
+		if (cache[t.code]) return false;
+		const filePath = resolve(OUTPUT_DIR, `${t.code.toLowerCase()}.json`);
 		return !existsSync(filePath);
 	});
 
-	console.log(`📋 총 ${codes.length}개국, 캐시 ${Object.keys(cache).length}개, 남은 ${remaining.length}개`);
+	console.log(`📋 총 ${targets.length}개국, 캐시 ${Object.keys(cache).length}개, 남은 ${remaining.length}개`);
+
+	if (remaining.length === 0) {
+		console.log("✅ 모든 국가 다운로드 완료!");
+		generateIndex();
+		return;
+	}
 
 	// 남은 요청 수 확인
 	const status = (await apiFetch("/status")) as {
@@ -102,16 +172,15 @@ async function main() {
 
 	let reqCount = used;
 
-	for (const code of remaining) {
+	for (const { code, name, apiName } of remaining) {
 		if (reqCount + 2 > limit) {
 			console.log(`\n⏸️  일일 한도 근접 (${reqCount}/${limit}). 내일 다시 실행하세요.`);
 			break;
 		}
 
-		const name = WC_COUNTRIES[code];
 		try {
-			console.log(`🔍 ${name} (${code}): 팀 ID 조회...`);
-			const teamId = await getNationalTeamId(name);
+			console.log(`🔍 ${name} (${code}) → "${apiName}": 팀 ID 조회...`);
+			const teamId = await getNationalTeamId(apiName);
 			reqCount++;
 			await new Promise((r) => setTimeout(r, RATE_DELAY));
 
@@ -142,7 +211,6 @@ async function main() {
 
 	// 나라별 파일로 저장
 	if (!existsSync(OUTPUT_DIR)) {
-		const { mkdirSync } = await import("node:fs");
 		mkdirSync(OUTPUT_DIR, { recursive: true });
 	}
 	let saved = 0;
@@ -163,7 +231,8 @@ async function main() {
 	}
 	console.log(`\n✅ ${saved}개국 → ${OUTPUT_DIR}/`);
 	console.log(`📊 API 사용: ${reqCount}/${limit}`);
-	console.log("⚠️  새 국가 추가 시 src/data/players/index.ts 에 import 추가 필요");
+
+	generateIndex();
 }
 
 main().catch(console.error);

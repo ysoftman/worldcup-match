@@ -1,0 +1,186 @@
+[
+  {
+    "id": 963,
+    "name": "L. Hrádecký",
+    "position": "Goalkeeper",
+    "age": 36,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/963.png"
+  },
+  {
+    "id": 1282,
+    "name": "J. Joronen",
+    "position": "Goalkeeper",
+    "age": 32,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/1282.png"
+  },
+  {
+    "id": 169291,
+    "name": "V. Sinisalo",
+    "position": "Goalkeeper",
+    "age": 24,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/169291.png"
+  },
+  {
+    "id": 55392,
+    "name": "N. Alho",
+    "position": "Defender",
+    "age": 32,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/55392.png"
+  },
+  {
+    "id": 106759,
+    "name": "V. Koski",
+    "position": "Defender",
+    "age": 23,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/106759.png"
+  },
+  {
+    "id": 361421,
+    "name": "J. LÃ¤hteenmÃ¤ki",
+    "position": "Defender",
+    "age": 19,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/361421.png"
+  },
+  {
+    "id": 301734,
+    "name": "R. Mahuta",
+    "position": "Defender",
+    "age": 23,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/301734.png"
+  },
+  {
+    "id": 275188,
+    "name": "S. Miettinen",
+    "position": "Defender",
+    "age": 21,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/275188.png"
+  },
+  {
+    "id": 55362,
+    "name": "T. Miettinen",
+    "position": "Defender",
+    "age": 23,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/55362.png"
+  },
+  {
+    "id": 55447,
+    "name": "M. Tenho",
+    "position": "Defender",
+    "age": 30,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/55447.png"
+  },
+  {
+    "id": 55472,
+    "name": "D. Arifi",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/55472.png"
+  },
+  {
+    "id": 195870,
+    "name": "T. Keskinen",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/195870.png"
+  },
+  {
+    "id": 387361,
+    "name": "A. Marhiev",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/387361.png"
+  },
+  {
+    "id": 19349,
+    "name": "J. Oksanen",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/19349.png"
+  },
+  {
+    "id": 83527,
+    "name": "M. Peltola",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/83527.png"
+  },
+  {
+    "id": 55319,
+    "name": "N. Skyttä",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/55319.png"
+  },
+  {
+    "id": 177780,
+    "name": "A. Suhonen",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/177780.png"
+  },
+  {
+    "id": 39365,
+    "name": "O. Valakari",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/39365.png"
+  },
+  {
+    "id": 173539,
+    "name": "L. Walta",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/173539.png"
+  },
+  {
+    "id": 15906,
+    "name": "O. Antman",
+    "position": "Attacker",
+    "age": 24,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/15906.png"
+  },
+  {
+    "id": 264531,
+    "name": "O. Jukkola",
+    "position": "Attacker",
+    "age": 23,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/264531.png"
+  },
+  {
+    "id": 341977,
+    "name": "K. Paananen",
+    "position": "Attacker",
+    "age": 22,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/341977.png"
+  },
+  {
+    "id": 986,
+    "name": "J. Pohjanpalo",
+    "position": "Attacker",
+    "age": 31,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/986.png"
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "id": 26940,
+    "name": "D. Epassy",
+    "position": "Goalkeeper",
+    "age": 32,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/26940.png"
+  },
+  {
+    "id": 145060,
+    "name": "S. Ngapandouetnbu",
+    "position": "Goalkeeper",
+    "age": 22,
+    "number": 25,
+    "photo": "https://media.api-sports.io/football/players/145060.png"
+  },
+  {
+    "id": 265712,
+    "name": "Blondy Rudolph Nna Noukeu",
+    "position": "Goalkeeper",
+    "age": 24,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/265712.png"
+  },
+  {
+    "id": 650728,
+    "name": "H. Ousmanou",
+    "position": "Goalkeeper",
+    "age": 23,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/650728.png"
+  },
+  {
+    "id": 650726,
+    "name": "S. Eloundou",
+    "position": "Defender",
+    "age": 0,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/650726.png"
+  },
+  {
+    "id": 302622,
+    "name": "K. Keben",
+    "position": "Defender",
+    "age": 21,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/302622.png"
+  },
+  {
+    "id": 561386,
+    "name": "S. Keller",
+    "position": "Defender",
+    "age": 24,
+    "number": 24,
+    "photo": "https://media.api-sports.io/football/players/561386.png"
+  },
+  {
+    "id": 303118,
+    "name": "S. Kotto",
+    "position": "Defender",
+    "age": 22,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/303118.png"
+  },
+  {
+    "id": 341290,
+    "name": "C. Malone",
+    "position": "Defender",
+    "age": 26,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/341290.png"
+  },
+  {
+    "id": 489292,
+    "name": "E. Moungam",
+    "position": "Defender",
+    "age": 19,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/489292.png"
+  },
+  {
+    "id": 438281,
+    "name": "M. Nagida",
+    "position": "Defender",
+    "age": 20,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/438281.png"
+  },
+  {
+    "id": 152669,
+    "name": "D. Yongwa",
+    "position": "Defender",
+    "age": 25,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/152669.png"
+  },
+  {
+    "id": 303108,
+    "name": "F. Ambina",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/303108.png"
+  },
+  {
+    "id": 402265,
+    "name": "A. Avom",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/402265.png"
+  },
+  {
+    "id": 335069,
+    "name": "R. Fosso",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/335069.png"
+  },
+  {
+    "id": 396330,
+    "name": "Arnold Mael Kamdem",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/396330.png"
+  },
+  {
+    "id": 637629,
+    "name": "F. Monyebe",
+    "position": "Midfielder",
+    "age": 0,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/637629.png"
+  },
+  {
+    "id": 650727,
+    "name": "K. Nifanso",
+    "position": "Midfielder",
+    "age": 0,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/650727.png"
+  },
+  {
+    "id": 378284,
+    "name": "Etta Eyong",
+    "position": "Attacker",
+    "age": 22,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/378284.png"
+  },
+  {
+    "id": 505295,
+    "name": "Christian Kofane",
+    "position": "Attacker",
+    "age": 19,
+    "number": 28,
+    "photo": "https://media.api-sports.io/football/players/505295.png"
+  },
+  {
+    "id": 20589,
+    "name": "B. Mbeumo",
+    "position": "Attacker",
+    "age": 26,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/20589.png"
+  },
+  {
+    "id": 19625,
+    "name": "D. Namaso",
+    "position": "Attacker",
+    "age": 25,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/19625.png"
+  },
+  {
+    "id": 296560,
+    "name": "J. Tchatchoua",
+    "position": "Attacker",
+    "age": 24,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/296560.png"
+  },
+  {
+    "id": 630702,
+    "name": "Matah Yondjio",
+    "position": "Attacker",
+    "age": 18,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/630702.png"
+  }
+]

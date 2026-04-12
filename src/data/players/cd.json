@@ -1,0 +1,194 @@
+[
+  {
+    "id": 314509,
+    "name": "M. Epolo",
+    "position": "Goalkeeper",
+    "age": 20,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/314509.png"
+  },
+  {
+    "id": 48501,
+    "name": "T. Fayulu",
+    "position": "Goalkeeper",
+    "age": 26,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/48501.png"
+  },
+  {
+    "id": 24012,
+    "name": "L. Mpasi",
+    "position": "Goalkeeper",
+    "age": 31,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/24012.png"
+  },
+  {
+    "id": 8445,
+    "name": "D. Batubinsika",
+    "position": "Defender",
+    "age": 29,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/8445.png"
+  },
+  {
+    "id": 8634,
+    "name": "R. Bushiri",
+    "position": "Defender",
+    "age": 26,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/8634.png"
+  },
+  {
+    "id": 199767,
+    "name": "S. Kapuadi",
+    "position": "Defender",
+    "age": 27,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/199767.png"
+  },
+  {
+    "id": 21098,
+    "name": "J. Kayembe",
+    "position": "Defender",
+    "age": 31,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/21098.png"
+  },
+  {
+    "id": 18816,
+    "name": "A. Masuaku",
+    "position": "Defender",
+    "age": 32,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/18816.png"
+  },
+  {
+    "id": 375,
+    "name": "C. Mbemba",
+    "position": "Defender",
+    "age": 31,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/375.png"
+  },
+  {
+    "id": 19182,
+    "name": "A. Tuanzebe",
+    "position": "Defender",
+    "age": 28,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/19182.png"
+  },
+  {
+    "id": 18846,
+    "name": "A. Wan-Bissaka",
+    "position": "Defender",
+    "age": 28,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/18846.png"
+  },
+  {
+    "id": 1424,
+    "name": "E. Kayembe",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/1424.png"
+  },
+  {
+    "id": 279482,
+    "name": "B. Cipenga",
+    "position": "Attacker",
+    "age": 27,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/279482.png"
+  },
+  {
+    "id": 21101,
+    "name": "S. Moutoussamy",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/21101.png"
+  },
+  {
+    "id": 375598,
+    "name": "N. Mukau",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/375598.png"
+  },
+  {
+    "id": 48555,
+    "name": "C. Pickel",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/48555.png"
+  },
+  {
+    "id": 365331,
+    "name": "N. Sadiki",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/365331.png"
+  },
+  {
+    "id": 3033,
+    "name": "C. Bakambu",
+    "position": "Attacker",
+    "age": 34,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/3033.png"
+  },
+  {
+    "id": 20674,
+    "name": "S. Banza",
+    "position": "Attacker",
+    "age": 29,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/20674.png"
+  },
+  {
+    "id": 8627,
+    "name": "T. Bongonda",
+    "position": "Midfielder",
+    "age": 30,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/8627.png"
+  },
+  {
+    "id": 3034,
+    "name": "M. Elia",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/3034.png"
+  },
+  {
+    "id": 179699,
+    "name": "F. Mayele",
+    "position": "Attacker",
+    "age": 31,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/179699.png"
+  },
+  {
+    "id": 129670,
+    "name": "N. Mbuku",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/129670.png"
+  },
+  {
+    "id": 20649,
+    "name": "Y. Wissa",
+    "position": "Attacker",
+    "age": 29,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/20649.png"
+  }
+]

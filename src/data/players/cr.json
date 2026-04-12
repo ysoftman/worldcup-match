@@ -1,0 +1,242 @@
+[
+  {
+    "id": 14198,
+    "name": "K. Chamorro",
+    "position": "Goalkeeper",
+    "age": 25,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/14198.png"
+  },
+  {
+    "id": 178696,
+    "name": "A. Lezcano",
+    "position": "Goalkeeper",
+    "age": 24,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/178696.png"
+  },
+  {
+    "id": 731,
+    "name": "K. Navas",
+    "position": "Goalkeeper",
+    "age": 39,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/731.png"
+  },
+  {
+    "id": 135148,
+    "name": "P. Sequeira",
+    "position": "Goalkeeper",
+    "age": 26,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/135148.png"
+  },
+  {
+    "id": 2830,
+    "name": "F. Calvo",
+    "position": "Defender",
+    "age": 33,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/2830.png"
+  },
+  {
+    "id": 51224,
+    "name": "J. Cascante",
+    "position": "Defender",
+    "age": 32,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/51224.png"
+  },
+  {
+    "id": 297583,
+    "name": "J. Mitchell",
+    "position": "Defender",
+    "age": 21,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/297583.png"
+  },
+  {
+    "id": 50758,
+    "name": "J. Mora",
+    "position": "Defender",
+    "age": 32,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/50758.png"
+  },
+  {
+    "id": 2836,
+    "name": "J. Vargas",
+    "position": "Defender",
+    "age": 30,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/2836.png"
+  },
+  {
+    "id": 324115,
+    "name": "G. Villalobos",
+    "position": "Defender",
+    "age": 24,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/324115.png"
+  },
+  {
+    "id": 2837,
+    "name": "K. Waston",
+    "position": "Defender",
+    "age": 37,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/2837.png"
+  },
+  {
+    "id": 308198,
+    "name": "S. van der Putten",
+    "position": "Defender",
+    "age": 21,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/308198.png"
+  },
+  {
+    "id": 323942,
+    "name": "J. Alcócer",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/323942.png"
+  },
+  {
+    "id": 2840,
+    "name": "C. Borges",
+    "position": "Midfielder",
+    "age": 37,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/2840.png"
+  },
+  {
+    "id": 297397,
+    "name": "A. Bran",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/297397.png"
+  },
+  {
+    "id": 14146,
+    "name": "J. Brenes",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/14146.png"
+  },
+  {
+    "id": 13937,
+    "name": "O. Galo",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/13937.png"
+  },
+  {
+    "id": 8720,
+    "name": "A. Gamboa",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/8720.png"
+  },
+  {
+    "id": 79686,
+    "name": "A. Murillo",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/79686.png"
+  },
+  {
+    "id": 270487,
+    "name": "H. Quirós",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/270487.png"
+  },
+  {
+    "id": 196254,
+    "name": "Á. Zamora",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/196254.png"
+  },
+  {
+    "id": 2845,
+    "name": "J. Campbell",
+    "position": "Attacker",
+    "age": 33,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/2845.png"
+  },
+  {
+    "id": 541224,
+    "name": "A. Hernandez",
+    "position": "Attacker",
+    "age": 24,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/541224.png"
+  },
+  {
+    "id": 270498,
+    "name": "W. Madrigal",
+    "position": "Attacker",
+    "age": 21,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/270498.png"
+  },
+  {
+    "id": 79678,
+    "name": "A. Martínez",
+    "position": "Attacker",
+    "age": 27,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/79678.png"
+  },
+  {
+    "id": 196480,
+    "name": "C. Mora",
+    "position": "Attacker",
+    "age": 24,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/196480.png"
+  },
+  {
+    "id": 350872,
+    "name": "C. Pérez",
+    "position": "Attacker",
+    "age": 21,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/350872.png"
+  },
+  {
+    "id": 385727,
+    "name": "A. Rojas",
+    "position": "Attacker",
+    "age": 20,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/385727.png"
+  },
+  {
+    "id": 13898,
+    "name": "M. Ugalde",
+    "position": "Attacker",
+    "age": 23,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/13898.png"
+  },
+  {
+    "id": 306578,
+    "name": "K. Vargas",
+    "position": "Attacker",
+    "age": 23,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/306578.png"
+  }
+]

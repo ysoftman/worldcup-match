@@ -1,0 +1,242 @@
+[
+  {
+    "id": 301285,
+    "name": "P. Charles",
+    "position": "Goalkeeper",
+    "age": 20,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/301285.png"
+  },
+  {
+    "id": 348262,
+    "name": "J. Clarke",
+    "position": "Goalkeeper",
+    "age": 21,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/348262.png"
+  },
+  {
+    "id": 45203,
+    "name": "C. Hazard",
+    "position": "Goalkeeper",
+    "age": 27,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/45203.png"
+  },
+  {
+    "id": 19115,
+    "name": "B. Peacock-Farrell",
+    "position": "Goalkeeper",
+    "age": 29,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/19115.png"
+  },
+  {
+    "id": 403232,
+    "name": "Tom Atcheson",
+    "position": "Defender",
+    "age": 19,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/403232.png"
+  },
+  {
+    "id": 55904,
+    "name": "D. Ballard",
+    "position": "Defender",
+    "age": 26,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/55904.png"
+  },
+  {
+    "id": 180317,
+    "name": "C. Bradley",
+    "position": "Defender",
+    "age": 22,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/180317.png"
+  },
+  {
+    "id": 44939,
+    "name": "C. Brown",
+    "position": "Defender",
+    "age": 27,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/44939.png"
+  },
+  {
+    "id": 119121,
+    "name": "T. Hume",
+    "position": "Defender",
+    "age": 23,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/119121.png"
+  },
+  {
+    "id": 343209,
+    "name": "Ruairi McConville",
+    "position": "Defender",
+    "age": 20,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/343209.png"
+  },
+  {
+    "id": 19242,
+    "name": "P. McNair",
+    "position": "Defender",
+    "age": 30,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/19242.png"
+  },
+  {
+    "id": 200116,
+    "name": "B. Spencer",
+    "position": "Defender",
+    "age": 21,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/200116.png"
+  },
+  {
+    "id": 69319,
+    "name": "E. Toal",
+    "position": "Defender",
+    "age": 26,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/69319.png"
+  },
+  {
+    "id": 284356,
+    "name": "S. Charles",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/284356.png"
+  },
+  {
+    "id": 286458,
+    "name": "J. Devenny",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/286458.png"
+  },
+  {
+    "id": 131258,
+    "name": "T. Devlin",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/131258.png"
+  },
+  {
+    "id": 138814,
+    "name": "E. Galbraith",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/138814.png"
+  },
+  {
+    "id": 19076,
+    "name": "J. Lewis",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/19076.png"
+  },
+  {
+    "id": 45010,
+    "name": "B. Lyons",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/45010.png"
+  },
+  {
+    "id": 70519,
+    "name": "A. McCann",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/70519.png"
+  },
+  {
+    "id": 327609,
+    "name": "Jamie Carson McDonnell",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 24,
+    "photo": "https://media.api-sports.io/football/players/327609.png"
+  },
+  {
+    "id": 284267,
+    "name": "I. Price",
+    "position": "Attacker",
+    "age": 22,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/284267.png"
+  },
+  {
+    "id": 19244,
+    "name": "G. Saville",
+    "position": "Midfielder",
+    "age": 32,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/19244.png"
+  },
+  {
+    "id": 82483,
+    "name": "D. Charles",
+    "position": "Attacker",
+    "age": 30,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/82483.png"
+  },
+  {
+    "id": 293163,
+    "name": "J. Donley",
+    "position": "Attacker",
+    "age": 20,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/293163.png"
+  },
+  {
+    "id": 315767,
+    "name": "Patrick Kelly",
+    "position": "Attacker",
+    "age": 21,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/315767.png"
+  },
+  {
+    "id": 19715,
+    "name": "J. Magennis",
+    "position": "Attacker",
+    "age": 35,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/19715.png"
+  },
+  {
+    "id": 344707,
+    "name": "C. Marshall",
+    "position": "Attacker",
+    "age": 21,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/344707.png"
+  },
+  {
+    "id": 82468,
+    "name": "J. Reid",
+    "position": "Attacker",
+    "age": 31,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/82468.png"
+  },
+  {
+    "id": 20192,
+    "name": "P. Smyth",
+    "position": "Attacker",
+    "age": 28,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/20192.png"
+  }
+]

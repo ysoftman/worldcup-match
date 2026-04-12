@@ -1,0 +1,226 @@
+[
+  {
+    "id": 3329,
+    "name": "D. Diarra",
+    "position": "Goalkeeper",
+    "age": 30,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/3329.png"
+  },
+  {
+    "id": 47660,
+    "name": "I. Diawara",
+    "position": "Goalkeeper",
+    "age": 31,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/47660.png"
+  },
+  {
+    "id": 3331,
+    "name": "M. Samassa",
+    "position": "Goalkeeper",
+    "age": 35,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/3331.png"
+  },
+  {
+    "id": 271540,
+    "name": "O. Camara",
+    "position": "Defender",
+    "age": 22,
+    "number": 25,
+    "photo": "https://media.api-sports.io/football/players/271540.png"
+  },
+  {
+    "id": 128338,
+    "name": "W. Coulibaly",
+    "position": "Defender",
+    "age": 26,
+    "number": 26,
+    "photo": "https://media.api-sports.io/football/players/128338.png"
+  },
+  {
+    "id": 152846,
+    "name": "A. Danté",
+    "position": "Defender",
+    "age": 25,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/152846.png"
+  },
+  {
+    "id": 135723,
+    "name": "A. Diaby",
+    "position": "Defender",
+    "age": 25,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/135723.png"
+  },
+  {
+    "id": 174625,
+    "name": "F. Doucouré",
+    "position": "Defender",
+    "age": 24,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/174625.png"
+  },
+  {
+    "id": 3341,
+    "name": "M. Fofana",
+    "position": "Defender",
+    "age": 28,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/3341.png"
+  },
+  {
+    "id": 275138,
+    "name": "N. Gassama",
+    "position": "Defender",
+    "age": 24,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/275138.png"
+  },
+  {
+    "id": 20884,
+    "name": "S. Niakaté",
+    "position": "Defender",
+    "age": 26,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/20884.png"
+  },
+  {
+    "id": 2202,
+    "name": "H. Traoré",
+    "position": "Defender",
+    "age": 33,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/2202.png"
+  },
+  {
+    "id": 18968,
+    "name": "Y. Bissouma",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/18968.png"
+  },
+  {
+    "id": 7754,
+    "name": "M. Camara",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/7754.png"
+  },
+  {
+    "id": 1748,
+    "name": "L. Coulibaly",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/1748.png"
+  },
+  {
+    "id": 457023,
+    "name": "G. Diakité",
+    "position": "Attacker",
+    "age": 20,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/457023.png"
+  },
+  {
+    "id": 4458,
+    "name": "A. Dieng",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/4458.png"
+  },
+  {
+    "id": 326068,
+    "name": "K. Doumbia",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/326068.png"
+  },
+  {
+    "id": 384473,
+    "name": "M. Doumbia",
+    "position": "Attacker",
+    "age": 21,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/384473.png"
+  },
+  {
+    "id": 1153,
+    "name": "A. Haidara",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/1153.png"
+  },
+  {
+    "id": 302869,
+    "name": "N. Dorgeles",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/302869.png"
+  },
+  {
+    "id": 277306,
+    "name": "M. Sangaré",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/277306.png"
+  },
+  {
+    "id": 22260,
+    "name": "I. Sissoko",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 24,
+    "photo": "https://media.api-sports.io/football/players/22260.png"
+  },
+  {
+    "id": 191194,
+    "name": "M. Camara",
+    "position": "Attacker",
+    "age": 24,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/191194.png"
+  },
+  {
+    "id": 458540,
+    "name": "G. Diarra",
+    "position": "Attacker",
+    "age": 23,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/458540.png"
+  },
+  {
+    "id": 418204,
+    "name": "M. Doumbia",
+    "position": "Attacker",
+    "age": 19,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/418204.png"
+  },
+  {
+    "id": 90617,
+    "name": "L. Sinayoko",
+    "position": "Attacker",
+    "age": 26,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/90617.png"
+  },
+  {
+    "id": 194750,
+    "name": "E. Touré",
+    "position": "Attacker",
+    "age": 24,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/194750.png"
+  }
+]

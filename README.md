@@ -51,17 +51,24 @@ bun run build
 
 ## Player Data
 
-Real player data for 44 countries is stored in `src/data/players/` as per-country JSON files (sourced from API-Football).
+Real player data is stored in `src/data/players/` as per-country JSON files (sourced from API-Football).
+The fetch script dynamically queries the API country list and matches against the project's 211 FIFA nations (167 matchable, 44 small nations not in API).
 Remaining countries use algorithmically generated players based on FIFA ranking and 30 cultural-region name pools.
 Generated (fallback) players are marked with `*` in the squad modal.
 
-To fetch additional countries:
+To fetch all countries (`.env` file with `API_FOOTBALL_KEY` required):
 
 ```bash
-API_FOOTBALL_KEY=your_key bun run scripts/fetchWorldcup.ts
+bun run scripts/fetchWorldcup.ts
 ```
 
-Already downloaded countries are skipped automatically.
+bun auto-loads `.env`, so no need to pass the key inline.
+
+- Already downloaded countries (JSON file exists) are skipped automatically.
+- `scripts/.cache_wc.json` stores "queried but no data" results (e.g. teamId null) to avoid wasting API calls on repeated runs.
+- Deleting the cache does NOT re-download countries that already have JSON files — only re-queries countries with no data.
+- When the daily API limit is reached, re-run the next day to continue.
+- `src/data/players/index.ts` is auto-generated after each run.
 
 ## Project Structure
 

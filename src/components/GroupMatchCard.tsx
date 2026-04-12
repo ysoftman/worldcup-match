@@ -1,9 +1,7 @@
 import type { Country } from "../data/countries";
 import type { GroupMatch } from "../types";
-import { DEFAULT_FORMATION_ID } from "../types";
+import { DEFAULT_FORMATION_ID, MOD_LABELS } from "../types";
 import { AnimatedScore } from "./AnimatedScore";
-
-const MOD_LABELS = ["🛡️🛡️", "🛡️", "", "🗡️", "🗡️🗡️"];
 
 interface GroupMatchCardProps {
 	match: GroupMatch;

@@ -1,5 +1,7 @@
+import { useState } from "react";
 import type { Confederation, Country } from "../data/countries";
 import { ALL_COUNTRIES } from "../data/countries";
+import { shuffle } from "../utils/tournament";
 
 type RegionFilter = "all" | Confederation | "europe-africa" | "americas";
 
@@ -37,6 +39,7 @@ export function TeamSelector({
 	onUpdate,
 	maxTeams,
 }: TeamSelectorProps) {
+	const [search, setSearch] = useState("");
 	const selectedCodes = new Set(selectedTeams.map((t) => t.code));
 
 	const toggle = (country: Country) => {
@@ -49,9 +52,7 @@ export function TeamSelector({
 
 	const shuffleFromRegion = (region: RegionFilter) => {
 		const pool = filterByRegion(ALL_COUNTRIES, region);
-		const shuffled = [...pool]
-			.sort(() => Math.random() - 0.5)
-			.slice(0, maxTeams);
+		const shuffled = shuffle(pool).slice(0, maxTeams);
 		onUpdate(shuffled);
 	};
 
@@ -74,9 +75,25 @@ export function TeamSelector({
 					))}
 				</div>
 			</div>
+			<input
+				type="text"
+				className="country-search"
+				placeholder="국가 검색 (한글/영어)"
+				value={search}
+				onChange={(e) => setSearch(e.target.value)}
+			/>
 			<div className="country-grid">
 				{[...ALL_COUNTRIES]
 					.sort((a, b) => a.rank - b.rank)
+					.filter((c) => {
+						if (!search.trim()) return true;
+						const q = search.trim().toLowerCase();
+						return (
+							c.nameKo.includes(q) ||
+							c.name.toLowerCase().includes(q) ||
+							c.code.toLowerCase().includes(q)
+						);
+					})
 					.map((country) => (
 						<button
 							type="button"

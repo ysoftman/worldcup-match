@@ -11,7 +11,7 @@ import type {
 import { getFormation } from "../types";
 import { getSquad } from "./playerLoader";
 
-function shuffle<T>(array: T[]): T[] {
+export function shuffle<T>(array: T[]): T[] {
 	const arr = [...array];
 	for (let i = arr.length - 1; i > 0; i--) {
 		const j = Math.floor(Math.random() * (i + 1));
@@ -332,12 +332,6 @@ export function getGroupAdvancers(
 		: getGroupAdvancers32(groups);
 }
 
-export function getAdvanceCount(size: TournamentSize): number {
-	// 48팀: 각 조 2팀 + 3위 중 8팀 = 32팀
-	// 32팀: 각 조 2팀 = 16팀
-	return size === 48 ? 2 : 2; // 기본 진출 수 (3위 와일드카드는 별도 처리)
-}
-
 // 토너먼트 매치 생성
 export function createMatches(teams: Country[], roundPrefix: string): Match[] {
 	const matches: Match[] = [];
@@ -380,7 +374,9 @@ export function simulateMatch(
 	let score2 = weightedGoals(s2);
 
 	// 동점이면 랭킹 높은 쪽이 약간 유리한 승부차기
+	let penalties = false;
 	if (score1 === score2) {
+		penalties = true;
 		const advantage = s1 / (s1 + s2);
 		if (Math.random() < advantage) {
 			score1 += 1;
@@ -395,6 +391,7 @@ export function simulateMatch(
 		score2,
 		winner: score1 > score2 ? match.team1 : match.team2,
 		played: true,
+		penalties,
 	};
 }
 

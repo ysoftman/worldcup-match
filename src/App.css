@@ -558,6 +558,7 @@
 	background: #d5d8dc;
 	color: #95a5a6;
 	filter: grayscale(0.5);
+	transition: all 0.2s;
 }
 
 [data-theme="dark"] .btn:disabled {
@@ -625,6 +626,30 @@
 	font-size: 0.8rem;
 }
 
+.country-search {
+	width: 100%;
+	padding: 8px 14px;
+	margin-bottom: 10px;
+	border: 2px solid var(--color-border);
+	border-radius: 8px;
+	font-size: 0.9rem;
+	font-family: inherit;
+	background: var(--color-bg-light);
+	color: var(--color-dark-blue);
+	transition: border-color 0.2s;
+}
+
+.country-search:focus {
+	border-color: var(--color-primary);
+	outline: none;
+}
+
+[data-theme="dark"] .country-search {
+	background: #2c3e50;
+	border-color: #4a6274;
+	color: #ecf0f1;
+}
+
 .country-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -657,6 +682,7 @@
 .country-chip.disabled {
 	opacity: 0.4;
 	cursor: not-allowed;
+	pointer-events: none;
 }
 
 /* 우승팀 */
@@ -952,6 +978,22 @@
 	font-size: 0.9rem;
 	color: #7f8c8d;
 	animation: name-entrance 0.8s ease-out 0.8s both;
+}
+
+.btn-share {
+	margin-top: 12px;
+	padding: 8px 20px;
+	font-size: 0.85rem;
+	background: linear-gradient(
+		135deg,
+		var(--color-primary-dark),
+		var(--color-primary)
+	);
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	animation: name-entrance 0.8s ease-out 1s both;
 }
 
 .update-date {
@@ -1279,6 +1321,18 @@
 	text-align: center;
 }
 
+.standings-table tbody tr {
+	transition: background 0.15s;
+}
+
+.standings-table tbody tr:hover {
+	background: rgba(52, 152, 219, 0.06);
+}
+
+[data-theme="dark"] .standings-table tbody tr:hover {
+	background: rgba(52, 152, 219, 0.12);
+}
+
 .standings-table th {
 	font-size: 0.72rem;
 	color: #7f8c8d;
@@ -1494,6 +1548,20 @@
 
 .result-icon.draw {
 	color: #95a5a6;
+}
+
+/* 승부차기 배지 */
+.pk-badge {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	background: #e67e22;
+	color: #fff;
+	font-size: 0.55rem;
+	font-weight: 700;
+	padding: 1px 4px;
+	border-radius: 4px;
+	z-index: 2;
 }
 
 /* 국기/국가이름 클릭으로 스쿼드 팝업 열기 */
@@ -1955,7 +2023,7 @@
 
 .final-card.final-pending:hover:not(:disabled) {
 	opacity: 1;
-	transform: scale(1.03);
+	transform: scale(1.02);
 	box-shadow: 0 4px 20px rgba(212, 172, 13, 0.4);
 }
 
@@ -2169,8 +2237,12 @@
 .bm-card.bm-pending:hover:not(:disabled) {
 	border-color: var(--color-primary);
 	opacity: 1;
-	transform: scale(1.04);
+	transform: scale(1.02);
 	box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+.bm-card.bm-played:hover {
+	background: rgba(39, 174, 96, 0.08);
 }
 
 .bm-card.bm-played {
@@ -3059,7 +3131,16 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 1000;
-	backdrop-filter: blur(4px);
+	animation: overlay-fade 0.2s ease-out;
+}
+
+@keyframes overlay-fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .squad-modal {

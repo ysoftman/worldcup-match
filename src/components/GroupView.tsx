@@ -1,6 +1,11 @@
 import type { Country } from "../data/countries";
 import type { Group, TeamStats } from "../types";
-import { DEFAULT_FORMATION_ID, FORMATIONS, getFormation } from "../types";
+import {
+	DEFAULT_FORMATION_ID,
+	FORMATIONS,
+	getFormation,
+	MOD_LABELS,
+} from "../types";
 import { GroupMatchCard } from "./GroupMatchCard";
 
 interface GroupViewProps {
@@ -17,8 +22,6 @@ interface GroupViewProps {
 	animatingMatchId: string | null;
 	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }
-
-const MOD_LABELS = ["🛡️🛡️", "🛡️", "", "🗡️", "🗡️🗡️"];
 
 export function GroupView({
 	group,

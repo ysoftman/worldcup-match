@@ -2,6 +2,8 @@ import type { Country } from "./data/countries";
 
 export type Position = "GK" | "DEF" | "MID" | "FWD";
 
+export const MOD_LABELS = ["🛡️🛡️", "🛡️", "", "🗡️", "🗡️🗡️"];
+
 export const POSITION_LABELS: Record<Position, string> = {
 	GK: "GK",
 	DEF: "DF",
@@ -35,6 +37,7 @@ export interface Match {
 	score2: number;
 	winner: Country | null;
 	played: boolean;
+	penalties?: boolean;
 }
 
 export interface GroupMatch {

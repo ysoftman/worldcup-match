@@ -1,5 +1,5 @@
 let ctx: AudioContext | null = null;
-let muted = false;
+let muted = localStorage.getItem("soundMuted") === "true";
 
 const buffers: Record<string, AudioBuffer | null> = {
 	whistle: null,
@@ -54,6 +54,7 @@ export function isMuted(): boolean {
 
 export function setMuted(v: boolean) {
 	muted = v;
+	localStorage.setItem("soundMuted", String(v));
 }
 
 export function playWhistle() {

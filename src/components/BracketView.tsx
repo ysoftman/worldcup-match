@@ -29,7 +29,7 @@ function BracketMatchCard({
 	onClick: () => void;
 	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }) {
-	const { team1, team2, score1, score2, played, winner } = match;
+	const { team1, team2, score1, score2, played, winner, penalties } = match;
 	const s1 = teamStats.get(team1.code);
 	const s2 = teamStats.get(team2.code);
 	return (
@@ -39,6 +39,7 @@ function BracketMatchCard({
 			className={`bm-card ${played ? "bm-played" : "bm-pending"}`}
 			onClick={played ? undefined : onClick}
 		>
+			{played && penalties && <span className="pk-badge">PK</span>}
 			<div
 				className={`bm-team ${played ? (winner?.code === team1.code ? "bm-win" : "bm-lose") : ""}`}
 			>

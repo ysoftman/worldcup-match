@@ -8,6 +8,8 @@ export interface WinnerRecord {
 	size: 32 | 48;
 	winRate: number;
 	date: string;
+	opponentFlag?: string;
+	opponentNameKo?: string;
 }
 
 const STORAGE_KEY = "worldcup-winners";
@@ -89,6 +91,8 @@ export function WinnerHistory() {
 										<div className="history-row2">
 											<span className="history-meta">
 												{r.size}강 | 승률 {r.winRate}%
+												{r.opponentFlag &&
+													` | vs ${r.opponentFlag} ${r.opponentNameKo}`}
 											</span>
 											<span className="history-date">{r.date}</span>
 										</div>

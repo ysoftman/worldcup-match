@@ -472,31 +472,38 @@ export function SquadModal({
 					</table>
 				</div>
 
-				{!readOnly && (
-					<div className="squad-actions">
-						<button
-							type="button"
-							className="btn btn-auto"
-							onClick={handleAutoSelect}
-						>
-							자동 선택
+				<div className="squad-actions">
+					{!readOnly && (
+						<>
+							<button
+								type="button"
+								className="btn btn-auto"
+								onClick={handleAutoSelect}
+							>
+								자동 선택
+							</button>
+							<button
+								type="button"
+								className="btn btn-squad-reset"
+								onClick={handleReset}
+							>
+								초기화
+							</button>
+							<button
+								type="button"
+								className="btn btn-confirm"
+								onClick={handleConfirm}
+							>
+								확인
+							</button>
+						</>
+					)}
+					{readOnly && (
+						<button type="button" className="btn btn-confirm" onClick={onClose}>
+							닫기
 						</button>
-						<button
-							type="button"
-							className="btn btn-squad-reset"
-							onClick={handleReset}
-						>
-							초기화
-						</button>
-						<button
-							type="button"
-							className="btn btn-confirm"
-							onClick={handleConfirm}
-						>
-							확인
-						</button>
-					</div>
-				)}
+					)}
+				</div>
 			</div>
 			{zoomPhoto && (
 				<button

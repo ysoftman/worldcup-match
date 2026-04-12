@@ -33,6 +33,7 @@ import {
 	getWinners,
 	recalcStandings,
 	selectTeams,
+	shuffle,
 	simulateGroup,
 	simulateGroupMatch,
 	simulateMatch,
@@ -139,7 +140,7 @@ function App() {
 
 	// 우승 기록 저장
 	const recordWinner = useCallback(
-		(winner: Country) => {
+		(winner: Country, opponent?: Country) => {
 			const stats = teamStats.get(winner.code);
 			saveWinner({
 				flag: winner.flag,
@@ -149,6 +150,8 @@ function App() {
 				size: tournamentSize,
 				winRate: stats?.winRate ?? 0,
 				date: new Date().toLocaleDateString("ko-KR"),
+				opponentFlag: opponent?.flag,
+				opponentNameKo: opponent?.nameKo,
 			});
 		},
 		[teamStats, tournamentSize],
@@ -187,7 +190,7 @@ function App() {
 		if (selectedTeams.length !== tournamentSize) return;
 		setPresetLabel(null);
 		setSwapSelection(null);
-		const shuffled = [...selectedTeams].sort(() => Math.random() - 0.5);
+		const shuffled = shuffle(selectedTeams);
 		const newGroups = createGroups(shuffled, tournamentSize);
 		setGroups(newGroups);
 		setTeamFormations(randomFormations(shuffled));
@@ -321,16 +324,17 @@ function App() {
 			playWhistle();
 
 			// 즉시: 매치 결과만 반영 (순위는 아직 업데이트 안 함)
-			const newGroups = groups.map((g) => {
-				if (g.name !== groupName) return g;
-				const newMatches = g.matches.map((m) =>
-					m.id === matchId && !m.played
-						? simulateGroupMatch(m, teamModifiers, teamFormations, selectedXI)
-						: m,
-				);
-				return { ...g, matches: newMatches };
-			});
-			setGroups(newGroups);
+			setGroups((prev) =>
+				prev.map((g) => {
+					if (g.name !== groupName) return g;
+					const newMatches = g.matches.map((m) =>
+						m.id === matchId && !m.played
+							? simulateGroupMatch(m, teamModifiers, teamFormations, selectedXI)
+							: m,
+					);
+					return { ...g, matches: newMatches };
+				}),
+			);
 			setAnimating(true);
 			setAnimatingMatchId(matchId);
 
@@ -348,7 +352,7 @@ function App() {
 				setAnimatingMatchId(null);
 			}, SCORE_ANIM_DELAY);
 		},
-		[groups, animating, teamModifiers, teamFormations, selectedXI],
+		[animating, teamModifiers, teamFormations, selectedXI],
 	);
 
 	// 조별 리그 전체 진행
@@ -397,8 +401,13 @@ function App() {
 				// 결승 완료 → 우승
 				setRounds(updatedRounds);
 				const winners = getWinners(newMatches);
+				const finalMatch = newMatches[0];
+				const opponent =
+					finalMatch.winner?.code === finalMatch.team1.code
+						? finalMatch.team2
+						: finalMatch.team1;
 				setChampion(winners[0]);
-				recordWinner(winners[0]);
+				recordWinner(winners[0], opponent);
 				setPhase("finished");
 				setTimeout(playVictory, 1500);
 			} else if (allDone && current.name !== "final") {
@@ -449,8 +458,13 @@ function App() {
 		const winners = getWinners(simulatedMatches);
 		if (current.name === "final") {
 			setRounds(updatedRounds);
+			const finalMatch = simulatedMatches[0];
+			const opponent =
+				finalMatch.winner?.code === finalMatch.team1.code
+					? finalMatch.team2
+					: finalMatch.team1;
 			setChampion(winners[0]);
-			recordWinner(winners[0]);
+			recordWinner(winners[0], opponent);
 			setPhase("finished");
 			setTimeout(playVictory, 1500);
 		} else {

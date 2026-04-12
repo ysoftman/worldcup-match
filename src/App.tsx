@@ -170,6 +170,7 @@ function App() {
 	const applyPreset = useCallback((preset: Preset) => {
 		setTournamentSize(preset.size);
 		setPresetLabel(preset.label);
+		setSwapSelection(null);
 		const allTeams = preset.groups.flatMap((g) => g.teams);
 		setSelectedTeams(allTeams);
 		const newGroups = createGroupsFromPreset(preset.groups);
@@ -185,6 +186,7 @@ function App() {
 	const startTournament = useCallback(() => {
 		if (selectedTeams.length !== tournamentSize) return;
 		setPresetLabel(null);
+		setSwapSelection(null);
 		const shuffled = [...selectedTeams].sort(() => Math.random() - 0.5);
 		const newGroups = createGroups(shuffled, tournamentSize);
 		setGroups(newGroups);
@@ -677,19 +679,20 @@ function App() {
 					<h2 className="section-title">
 						{presetLabel ? `${presetLabel} ` : ""}조별 리그
 					</h2>
-					{swapSelection && (
-						<p className="swap-hint">
-							{swapSelection.team.flag} {swapSelection.team.nameKo} 선택됨
-							&mdash; 다른 조의 팀을 클릭하면 교환됩니다
-							<button
-								type="button"
-								className="btn-cancel-swap"
-								onClick={() => setSwapSelection(null)}
-							>
-								취소
-							</button>
-						</p>
-					)}
+					{swapSelection &&
+						!groups.some((g) => g.matches.some((m) => m.played)) && (
+							<p className="swap-hint">
+								{swapSelection.team.flag} {swapSelection.team.nameKo} 선택됨
+								&mdash; 다른 조의 팀을 클릭하면 교환됩니다
+								<button
+									type="button"
+									className="btn-cancel-swap"
+									onClick={() => setSwapSelection(null)}
+								>
+									취소
+								</button>
+							</p>
+						)}
 					<div className="groups-grid">
 						{groups.map((group) => (
 							<GroupView

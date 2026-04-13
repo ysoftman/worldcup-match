@@ -1,0 +1,242 @@
+[
+	{
+		"id": 153708,
+		"name": "M. Barcola",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/153708.png"
+	},
+	{
+		"id": 609102,
+		"name": "F. Kagbatawouli",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 30,
+		"photo": "https://media.api-sports.io/football/players/609102.png"
+	},
+	{
+		"id": 277990,
+		"name": "S. Mensah",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/277990.png"
+	},
+	{
+		"id": 575066,
+		"name": "C. Tondoro",
+		"position": "Goalkeeper",
+		"age": 0,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/575066.png"
+	},
+	{
+		"id": 609238,
+		"name": "A. Yaya",
+		"position": "Goalkeeper",
+		"age": 21,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/609238.png"
+	},
+	{
+		"id": 68330,
+		"name": "M. Amevor",
+		"position": "Defender",
+		"age": 34,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/68330.png"
+	},
+	{
+		"id": 7061,
+		"name": "K. Boateng",
+		"position": "Defender",
+		"age": 29,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/7061.png"
+	},
+	{
+		"id": 575064,
+		"name": "A. Bode",
+		"position": "Defender",
+		"age": 30,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/575064.png"
+	},
+	{
+		"id": 174774,
+		"name": "K. Boma",
+		"position": "Defender",
+		"age": 23,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/174774.png"
+	},
+	{
+		"id": 47250,
+		"name": "D. Dakonam",
+		"position": "Defender",
+		"age": 34,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/47250.png"
+	},
+	{
+		"id": 280431,
+		"name": "S. Fofana",
+		"position": "Defender",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/280431.png"
+	},
+	{
+		"id": 41353,
+		"name": "E. Hackman",
+		"position": "Defender",
+		"age": 30,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/41353.png"
+	},
+	{
+		"id": 577135,
+		"name": "K. Holete",
+		"position": "Defender",
+		"age": 22,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/577135.png"
+	},
+	{
+		"id": 21084,
+		"name": "J. Homawoo",
+		"position": "Defender",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/21084.png"
+	},
+	{
+		"id": 573730,
+		"name": "A. Ouro-Ayeva",
+		"position": "Defender",
+		"age": 28,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/573730.png"
+	},
+	{
+		"id": 180719,
+		"name": "R. Aholou",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/180719.png"
+	},
+	{
+		"id": 322865,
+		"name": "D. Karim",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/322865.png"
+	},
+	{
+		"id": 342045,
+		"name": "S. Nador",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/342045.png"
+	},
+	{
+		"id": 159379,
+		"name": "S. Ouro",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/159379.png"
+	},
+	{
+		"id": 22012,
+		"name": "A. Romao",
+		"position": "Midfielder",
+		"age": 41,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/22012.png"
+	},
+	{
+		"id": 533726,
+		"name": "Y. Agbagno",
+		"position": "Attacker",
+		"age": 25,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/533726.png"
+	},
+	{
+		"id": 546541,
+		"name": "Y. Annor",
+		"position": "Attacker",
+		"age": 27,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/546541.png"
+	},
+	{
+		"id": 21036,
+		"name": "K. Denkey",
+		"position": "Attacker",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/21036.png"
+	},
+	{
+		"id": 8566,
+		"name": "D. Henen",
+		"position": "Attacker",
+		"age": 29,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/8566.png"
+	},
+	{
+		"id": 123675,
+		"name": "T. Klidje",
+		"position": "Attacker",
+		"age": 24,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/123675.png"
+	},
+	{
+		"id": 577113,
+		"name": "K. Komlavi",
+		"position": "Attacker",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/577113.png"
+	},
+	{
+		"id": 36679,
+		"name": "K. Laba",
+		"position": "Attacker",
+		"age": 33,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/36679.png"
+	},
+	{
+		"id": 201964,
+		"name": "I. Ouro-Agoro",
+		"position": "Attacker",
+		"age": 29,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/201964.png"
+	},
+	{
+		"id": 380547,
+		"name": "M. Ouro-Tagba",
+		"position": "Attacker",
+		"age": 21,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/380547.png"
+	},
+	{
+		"id": 575035,
+		"name": "G. Yenoussi",
+		"position": "Attacker",
+		"age": 28,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/575035.png"
+	}
+]

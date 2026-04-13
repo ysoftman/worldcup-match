@@ -1,0 +1,210 @@
+[
+	{
+		"id": 48393,
+		"name": "N. Baumann",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/48393.png"
+	},
+	{
+		"id": 575276,
+		"name": "M. Lloyd",
+		"position": "Goalkeeper",
+		"age": 42,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/575276.png"
+	},
+	{
+		"id": 357334,
+		"name": "X. Valdez",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/357334.png"
+	},
+	{
+		"id": 575277,
+		"name": "J. Abreu",
+		"position": "Defender",
+		"age": 17,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/575277.png"
+	},
+	{
+		"id": 381224,
+		"name": "Miguel Beltre",
+		"position": "Defender",
+		"age": 22,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/381224.png"
+	},
+	{
+		"id": 413231,
+		"name": "N. Dollenmayer",
+		"position": "Defender",
+		"age": 26,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/413231.png"
+	},
+	{
+		"id": 138817,
+		"name": "Juan Carlos Familia-Castillo",
+		"position": "Defender",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/138817.png"
+	},
+	{
+		"id": 1564,
+		"name": "Junior Firpo",
+		"position": "Defender",
+		"age": 29,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/1564.png"
+	},
+	{
+		"id": 575272,
+		"name": "M. Mena",
+		"position": "Defender",
+		"age": 19,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/575272.png"
+	},
+	{
+		"id": 330438,
+		"name": "Edgar Pujol",
+		"position": "Defender",
+		"age": 21,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/330438.png"
+	},
+	{
+		"id": 313196,
+		"name": "J. Urbáez",
+		"position": "Defender",
+		"age": 23,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/313196.png"
+	},
+	{
+		"id": 408027,
+		"name": "Lucas Bretón Salcedo",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/408027.png"
+	},
+	{
+		"id": 285696,
+		"name": "Jose De La Cruz",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/285696.png"
+	},
+	{
+		"id": 162901,
+		"name": "J. Kaparos",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/162901.png"
+	},
+	{
+		"id": 123546,
+		"name": "Jean Carlos López Moscoso",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/123546.png"
+	},
+	{
+		"id": 202770,
+		"name": "F. Messina",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/202770.png"
+	},
+	{
+		"id": 24966,
+		"name": "H. Mörschel",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/24966.png"
+	},
+	{
+		"id": 575278,
+		"name": "J. Roces",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/575278.png"
+	},
+	{
+		"id": 240,
+		"name": "P. Rosario",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/240.png"
+	},
+	{
+		"id": 323815,
+		"name": "Oscar Ureña",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/323815.png"
+	},
+	{
+		"id": 535884,
+		"name": "E. Japa",
+		"position": "Attacker",
+		"age": 26,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/535884.png"
+	},
+	{
+		"id": 575279,
+		"name": "L. Meneses",
+		"position": "Attacker",
+		"age": 18,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/575279.png"
+	},
+	{
+		"id": 187534,
+		"name": "J. Pineda",
+		"position": "Attacker",
+		"age": 25,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/187534.png"
+	},
+	{
+		"id": 214031,
+		"name": "E. Reyes",
+		"position": "Attacker",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/214031.png"
+	},
+	{
+		"id": 214013,
+		"name": "D. Romero",
+		"position": "Attacker",
+		"age": 27,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/214013.png"
+	},
+	{
+		"id": 123554,
+		"name": "Ronaldo Junior Vásquez Herasme",
+		"position": "Attacker",
+		"age": 26,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/123554.png"
+	}
+]

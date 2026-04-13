@@ -1,0 +1,250 @@
+[
+	{
+		"id": 56117,
+		"name": "H. Avagyan",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/56117.png"
+	},
+	{
+		"id": 8004,
+		"name": "A. Beglaryan",
+		"position": "Goalkeeper",
+		"age": 32,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/8004.png"
+	},
+	{
+		"id": 65409,
+		"name": "O. Čančarević",
+		"position": "Goalkeeper",
+		"age": 36,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/65409.png"
+	},
+	{
+		"id": 130806,
+		"name": "E. Grigoryan",
+		"position": "Defender",
+		"age": 27,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/130806.png"
+	},
+	{
+		"id": 379133,
+		"name": "G. Harutyunyan",
+		"position": "Defender",
+		"age": 21,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/379133.png"
+	},
+	{
+		"id": 56129,
+		"name": "K. Hovhannisyan",
+		"position": "Defender",
+		"age": 33,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/56129.png"
+	},
+	{
+		"id": 204038,
+		"name": "S. Mkrtchyan",
+		"position": "Defender",
+		"age": 22,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/204038.png"
+	},
+	{
+		"id": 390607,
+		"name": "S. Muradyan",
+		"position": "Defender",
+		"age": 21,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/390607.png"
+	},
+	{
+		"id": 292353,
+		"name": "E. Piloyan",
+		"position": "Defender",
+		"age": 24,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/292353.png"
+	},
+	{
+		"id": 201921,
+		"name": "E. Simonyan",
+		"position": "Defender",
+		"age": 22,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/201921.png"
+	},
+	{
+		"id": 841,
+		"name": "N. Tiknizyan",
+		"position": "Defender",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/841.png"
+	},
+	{
+		"id": 215965,
+		"name": "N. Aghasaryan",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/215965.png"
+	},
+	{
+		"id": 162956,
+		"name": "T. Avanesyan",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/162956.png"
+	},
+	{
+		"id": 428082,
+		"name": "A. Bandikyan",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/428082.png"
+	},
+	{
+		"id": 56132,
+		"name": "T. Barseghyan",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/56132.png"
+	},
+	{
+		"id": 61232,
+		"name": "V. Bichakhchyan",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/61232.png"
+	},
+	{
+		"id": 65361,
+		"name": "D. Davidyan",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/65361.png"
+	},
+	{
+		"id": 65451,
+		"name": "U. Iwu",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/65451.png"
+	},
+	{
+		"id": 65477,
+		"name": "K. Muradyan",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/65477.png"
+	},
+	{
+		"id": 210014,
+		"name": "K. Nalbandyan",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/210014.png"
+	},
+	{
+		"id": 43565,
+		"name": "E. Spertsyan",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/43565.png"
+	},
+	{
+		"id": 35528,
+		"name": "L. Zelarayán",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/35528.png"
+	},
+	{
+		"id": 390563,
+		"name": "A. Eloyan",
+		"position": "Attacker",
+		"age": 21,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/390563.png"
+	},
+	{
+		"id": 65393,
+		"name": "N. Grigoryan",
+		"position": "Attacker",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/65393.png"
+	},
+	{
+		"id": 272457,
+		"name": "G. Manvelyan",
+		"position": "Attacker",
+		"age": 23,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/272457.png"
+	},
+	{
+		"id": 65344,
+		"name": "A. Miranyan",
+		"position": "Attacker",
+		"age": 30,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/65344.png"
+	},
+	{
+		"id": 280427,
+		"name": "G. Ranos",
+		"position": "Attacker",
+		"age": 22,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/280427.png"
+	},
+	{
+		"id": 269533,
+		"name": "A. Serobyan",
+		"position": "Attacker",
+		"age": 22,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/269533.png"
+	},
+	{
+		"id": 192015,
+		"name": "E. Sevikyan",
+		"position": "Attacker",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/192015.png"
+	},
+	{
+		"id": 65374,
+		"name": "Z. Shaghoyan",
+		"position": "Attacker",
+		"age": 24,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/65374.png"
+	},
+	{
+		"id": 201922,
+		"name": "G. Tarakhchyan",
+		"position": "Attacker",
+		"age": 23,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/201922.png"
+	}
+]

@@ -1,0 +1,298 @@
+[
+	{
+		"id": 123783,
+		"name": "B. Bwire",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/123783.png"
+	},
+	{
+		"id": 571922,
+		"name": "S. Faruk",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/571922.png"
+	},
+	{
+		"id": 571685,
+		"name": "B. Omondi",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/571685.png"
+	},
+	{
+		"id": 621977,
+		"name": "B. Opondo",
+		"position": "Goalkeeper",
+		"age": 24,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/621977.png"
+	},
+	{
+		"id": 167134,
+		"name": "V. Harper",
+		"position": "Defender",
+		"age": 25,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/167134.png"
+	},
+	{
+		"id": 571923,
+		"name": "M. Kibwage",
+		"position": "Defender",
+		"age": 28,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/571923.png"
+	},
+	{
+		"id": 472412,
+		"name": "Baron Ochieng",
+		"position": "Defender",
+		"age": 20,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/472412.png"
+	},
+	{
+		"id": 387139,
+		"name": "J. Ochieng",
+		"position": "Defender",
+		"age": 22,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/387139.png"
+	},
+	{
+		"id": 571687,
+		"name": "M. Okwaro",
+		"position": "Defender",
+		"age": 19,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/571687.png"
+	},
+	{
+		"id": 287905,
+		"name": "Aboud Omar Khamis",
+		"position": "Defender",
+		"age": 30,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/287905.png"
+	},
+	{
+		"id": 533491,
+		"name": "A. Omija",
+		"position": "Defender",
+		"age": 23,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/533491.png"
+	},
+	{
+		"id": 445173,
+		"name": "R. Onyango",
+		"position": "Defender",
+		"age": 24,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/445173.png"
+	},
+	{
+		"id": 621210,
+		"name": "B. Onyona",
+		"position": "Defender",
+		"age": 20,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/621210.png"
+	},
+	{
+		"id": 621209,
+		"name": "K. Otiende",
+		"position": "Defender",
+		"age": 24,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/621209.png"
+	},
+	{
+		"id": 474084,
+		"name": "S. Owino",
+		"position": "Defender",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/474084.png"
+	},
+	{
+		"id": 571924,
+		"name": "D. Sakari",
+		"position": "Defender",
+		"age": 26,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/571924.png"
+	},
+	{
+		"id": 283144,
+		"name": "C. Sichenje",
+		"position": "Defender",
+		"age": 22,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/283144.png"
+	},
+	{
+		"id": 143341,
+		"name": "Duke Ooga Abuya",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/143341.png"
+	},
+	{
+		"id": 3188,
+		"name": "T. Akumu",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/3188.png"
+	},
+	{
+		"id": 573786,
+		"name": "C. Erambo",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/573786.png"
+	},
+	{
+		"id": 621211,
+		"name": "A. Kibet",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/621211.png"
+	},
+	{
+		"id": 571694,
+		"name": "M. Nabwire",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/571694.png"
+	},
+	{
+		"id": 201690,
+		"name": "R. Odada",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/201690.png"
+	},
+	{
+		"id": 438530,
+		"name": "A. Odhiambo",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/438530.png"
+	},
+	{
+		"id": 571925,
+		"name": "B. S. Omondi",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/571925.png"
+	},
+	{
+		"id": 577705,
+		"name": "A. Onyango",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/577705.png"
+	},
+	{
+		"id": 571695,
+		"name": "T. Ouma",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/571695.png"
+	},
+	{
+		"id": 621973,
+		"name": "S. Sirengo",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/621973.png"
+	},
+	{
+		"id": 314236,
+		"name": "W. Wilson",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/314236.png"
+	},
+	{
+		"id": 18313,
+		"name": "J. Ayunga",
+		"position": "Attacker",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/18313.png"
+	},
+	{
+		"id": 124286,
+		"name": "B. Muchiri",
+		"position": "Attacker",
+		"age": 29,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/124286.png"
+	},
+	{
+		"id": 487874,
+		"name": "S. Majabe",
+		"position": "Attacker",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/487874.png"
+	},
+	{
+		"id": 580206,
+		"name": "O. Ochieng",
+		"position": "Attacker",
+		"age": 25,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/580206.png"
+	},
+	{
+		"id": 505024,
+		"name": "R. Ogam",
+		"position": "Attacker",
+		"age": 21,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/505024.png"
+	},
+	{
+		"id": 3199,
+		"name": "M. Olunga",
+		"position": "Attacker",
+		"age": 31,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/3199.png"
+	},
+	{
+		"id": 345322,
+		"name": "T. Ouma",
+		"position": "Attacker",
+		"age": 21,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/345322.png"
+	},
+	{
+		"id": 171052,
+		"name": "A. Wilson",
+		"position": "Attacker",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/171052.png"
+	}
+]

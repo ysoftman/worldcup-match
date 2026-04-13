@@ -1,0 +1,210 @@
+[
+	{
+		"id": 441103,
+		"name": "Zin Nyi Nyi Aung",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/441103.png"
+	},
+	{
+		"id": 433653,
+		"name": "Nay Lin Htet",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/433653.png"
+	},
+	{
+		"id": 123794,
+		"name": "Satt Naing Sann",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/123794.png"
+	},
+	{
+		"id": 574170,
+		"name": "Thu Pyae Phyo",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/574170.png"
+	},
+	{
+		"id": 401918,
+		"name": "Hein Zeyar Lin",
+		"position": "Defender",
+		"age": 25,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/401918.png"
+	},
+	{
+		"id": 612938,
+		"name": "Khant Myat Phone",
+		"position": "Defender",
+		"age": 0,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/612938.png"
+	},
+	{
+		"id": 542626,
+		"name": "N. Kyaw",
+		"position": "Defender",
+		"age": 29,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/542626.png"
+	},
+	{
+		"id": 123727,
+		"name": "Soe Moe Kyaw",
+		"position": "Defender",
+		"age": 26,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/123727.png"
+	},
+	{
+		"id": 195053,
+		"name": "Khant Min Zwe",
+		"position": "Defender",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/195053.png"
+	},
+	{
+		"id": 542802,
+		"name": "Phone Lat Wai",
+		"position": "Defender",
+		"age": 20,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/542802.png"
+	},
+	{
+		"id": 569986,
+		"name": "Soe Aung Wunna",
+		"position": "Defender",
+		"age": 25,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/569986.png"
+	},
+	{
+		"id": 350522,
+		"name": "Thet Hein Soe",
+		"position": "Defender",
+		"age": 24,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/350522.png"
+	},
+	{
+		"id": 650658,
+		"name": "T. R. Soe",
+		"position": "Defender",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/650658.png"
+	},
+	{
+		"id": 542990,
+		"name": "A. Thiha",
+		"position": "Defender",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/542990.png"
+	},
+	{
+		"id": 164111,
+		"name": "Phyo Win Hein",
+		"position": "Defender",
+		"age": 27,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/164111.png"
+	},
+	{
+		"id": 123799,
+		"name": "Lwin Moe Aung",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/123799.png"
+	},
+	{
+		"id": 441332,
+		"name": "Ye Yint Aung",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/441332.png"
+	},
+	{
+		"id": 542918,
+		"name": "Hein Khun Kyaw Zin",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/542918.png"
+	},
+	{
+		"id": 123798,
+		"name": "Myat Kaung Khant",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/123798.png"
+	},
+	{
+		"id": 164372,
+		"name": "Kyaw Min Oo",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/164372.png"
+	},
+	{
+		"id": 369934,
+		"name": "Zaw Win Thein",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/369934.png"
+	},
+	{
+		"id": 532351,
+		"name": "Hein Htet Aung",
+		"position": "Attacker",
+		"age": 24,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/532351.png"
+	},
+	{
+		"id": 122455,
+		"name": "Maung Maung Lwin",
+		"position": "Attacker",
+		"age": 30,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/122455.png"
+	},
+	{
+		"id": 569987,
+		"name": "Oo Min Maw",
+		"position": "Attacker",
+		"age": 20,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/569987.png"
+	},
+	{
+		"id": 124068,
+		"name": "Than Paing",
+		"position": "Attacker",
+		"age": 29,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/124068.png"
+	},
+	{
+		"id": 315985,
+		"name": "Win Naing Tun",
+		"position": "Attacker",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/315985.png"
+	}
+]

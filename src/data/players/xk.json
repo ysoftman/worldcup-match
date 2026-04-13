@@ -1,0 +1,210 @@
+[
+	{
+		"id": 55867,
+		"name": "V. Bekaj",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/55867.png"
+	},
+	{
+		"id": 616,
+		"name": "A. Murić",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/616.png"
+	},
+	{
+		"id": 70532,
+		"name": "A. Saipi",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/70532.png"
+	},
+	{
+		"id": 48211,
+		"name": "F. Aliti",
+		"position": "Defender",
+		"age": 32,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/48211.png"
+	},
+	{
+		"id": 14590,
+		"name": "L. Dellova",
+		"position": "Defender",
+		"age": 26,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/14590.png"
+	},
+	{
+		"id": 435876,
+		"name": "D. Gallapeni",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/435876.png"
+	},
+	{
+		"id": 19042,
+		"name": "F. Hadërgjonaj",
+		"position": "Defender",
+		"age": 31,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/19042.png"
+	},
+	{
+		"id": 278453,
+		"name": "A. Hajdari",
+		"position": "Defender",
+		"age": 22,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/278453.png"
+	},
+	{
+		"id": 123474,
+		"name": "K. Hajrizi",
+		"position": "Defender",
+		"age": 26,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/123474.png"
+	},
+	{
+		"id": 204137,
+		"name": "I. Krasniqi",
+		"position": "Defender",
+		"age": 25,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/204137.png"
+	},
+	{
+		"id": 1314,
+		"name": "Amir Rrahmani",
+		"position": "Defender",
+		"age": 31,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/1314.png"
+	},
+	{
+		"id": 8586,
+		"name": "M. Vojvoda",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/8586.png"
+	},
+	{
+		"id": 390586,
+		"name": "L. Avdullahu",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/390586.png"
+	},
+	{
+		"id": 1851,
+		"name": "V. Berisha",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/1851.png"
+	},
+	{
+		"id": 373418,
+		"name": "L. Emërllahu",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/373418.png"
+	},
+	{
+		"id": 135957,
+		"name": "V. Hodža",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/135957.png"
+	},
+	{
+		"id": 105666,
+		"name": "M. Jashari",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/105666.png"
+	},
+	{
+		"id": 25324,
+		"name": "M. Rashica",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/25324.png"
+	},
+	{
+		"id": 25413,
+		"name": "E. Rexhbeçaj",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/25413.png"
+	},
+	{
+		"id": 202501,
+		"name": "F. Asllani",
+		"position": "Attacker",
+		"age": 23,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/202501.png"
+	},
+	{
+		"id": 271921,
+		"name": "E. Krasniqi",
+		"position": "Attacker",
+		"age": 27,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/271921.png"
+	},
+	{
+		"id": 50048,
+		"name": "V. Muriqi",
+		"position": "Attacker",
+		"age": 31,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/50048.png"
+	},
+	{
+		"id": 25383,
+		"name": "F. Muslija",
+		"position": "Attacker",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/25383.png"
+	},
+	{
+		"id": 318546,
+		"name": "A. Rrahmani",
+		"position": "Attacker",
+		"age": 25,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/318546.png"
+	},
+	{
+		"id": 278744,
+		"name": "B. Zabërgja",
+		"position": "Attacker",
+		"age": 24,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/278744.png"
+	},
+	{
+		"id": 48392,
+		"name": "E. Zhegrova",
+		"position": "Attacker",
+		"age": 26,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/48392.png"
+	}
+]

@@ -1,0 +1,186 @@
+[
+	{
+		"id": 25002,
+		"name": "B. Gaye",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/25002.png"
+	},
+	{
+		"id": 352523,
+		"name": "E. Jarju",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/352523.png"
+	},
+	{
+		"id": 56726,
+		"name": "S. Sibi",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/56726.png"
+	},
+	{
+		"id": 136154,
+		"name": "A. Barry",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/136154.png"
+	},
+	{
+		"id": 438854,
+		"name": "Y. Bojang",
+		"position": "Defender",
+		"age": 21,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/438854.png"
+	},
+	{
+		"id": 201026,
+		"name": "J. Ceesay",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/201026.png"
+	},
+	{
+		"id": 198465,
+		"name": "J. Gomez",
+		"position": "Defender",
+		"age": 24,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/198465.png"
+	},
+	{
+		"id": 513019,
+		"name": "A. Kinteh",
+		"position": "Defender",
+		"age": 19,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/513019.png"
+	},
+	{
+		"id": 318800,
+		"name": "Momodou Njie",
+		"position": "Defender",
+		"age": 24,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/318800.png"
+	},
+	{
+		"id": 303508,
+		"name": "A. Saine",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/303508.png"
+	},
+	{
+		"id": 60639,
+		"name": "M. Sanneh",
+		"position": "Defender",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/60639.png"
+	},
+	{
+		"id": 369055,
+		"name": "S. Sanyang",
+		"position": "Defender",
+		"age": 22,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/369055.png"
+	},
+	{
+		"id": 18256,
+		"name": "E. Adams",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/18256.png"
+	},
+	{
+		"id": 408543,
+		"name": "M. Bajo",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/408543.png"
+	},
+	{
+		"id": 47841,
+		"name": "J. Ceesay",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/47841.png"
+	},
+	{
+		"id": 86819,
+		"name": "M. Drammeh",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/86819.png"
+	},
+	{
+		"id": 30437,
+		"name": "M. Barrow",
+		"position": "Attacker",
+		"age": 27,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/30437.png"
+	},
+	{
+		"id": 474789,
+		"name": "Abdoulie Ceesay",
+		"position": "Attacker",
+		"age": 21,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/474789.png"
+	},
+	{
+		"id": 263699,
+		"name": "A. Fadera",
+		"position": "Attacker",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/263699.png"
+	},
+	{
+		"id": 456863,
+		"name": "A. Manneh",
+		"position": "Attacker",
+		"age": 21,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/456863.png"
+	},
+	{
+		"id": 383685,
+		"name": "Y. Minteh",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/383685.png"
+	},
+	{
+		"id": 456025,
+		"name": "Adama Sidibeh",
+		"position": "Attacker",
+		"age": 27,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/456025.png"
+	},
+	{
+		"id": 11012,
+		"name": "A. Sowe",
+		"position": "Attacker",
+		"age": 31,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/11012.png"
+	}
+]

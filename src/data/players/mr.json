@@ -1,0 +1,298 @@
+[
+	{
+		"id": 106311,
+		"name": "B. Diop",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/106311.png"
+	},
+	{
+		"id": 134264,
+		"name": "M. Diop",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/134264.png"
+	},
+	{
+		"id": 8630,
+		"name": "B. Niasse",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/8630.png"
+	},
+	{
+		"id": 423347,
+		"name": "A. Sarr",
+		"position": "Goalkeeper",
+		"age": 20,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/423347.png"
+	},
+	{
+		"id": 46937,
+		"name": "A. Abeid",
+		"position": "Defender",
+		"age": 28,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/46937.png"
+	},
+	{
+		"id": 15483,
+		"name": "L. Ba",
+		"position": "Defender",
+		"age": 28,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/15483.png"
+	},
+	{
+		"id": 296183,
+		"name": "K. Diaw",
+		"position": "Defender",
+		"age": 27,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/296183.png"
+	},
+	{
+		"id": 293942,
+		"name": "N. El Abd",
+		"position": "Defender",
+		"age": 25,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/293942.png"
+	},
+	{
+		"id": 587294,
+		"name": "Abdellahi El Id",
+		"position": "Defender",
+		"age": 24,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/587294.png"
+	},
+	{
+		"id": 551367,
+		"name": "S. Imigene",
+		"position": "Defender",
+		"age": 0,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/551367.png"
+	},
+	{
+		"id": 369066,
+		"name": "I. Keita",
+		"position": "Defender",
+		"age": 24,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/369066.png"
+	},
+	{
+		"id": 21381,
+		"name": "J. Lefort",
+		"position": "Defender",
+		"age": 32,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/21381.png"
+	},
+	{
+		"id": 341468,
+		"name": "D. Saleck",
+		"position": "Defender",
+		"age": 31,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/341468.png"
+	},
+	{
+		"id": 620464,
+		"name": "M. Sarr",
+		"position": "Defender",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/620464.png"
+	},
+	{
+		"id": 587295,
+		"name": "Mohamed Zweide",
+		"position": "Defender",
+		"age": 24,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/587295.png"
+	},
+	{
+		"id": 341816,
+		"name": "S. Amar",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/341816.png"
+	},
+	{
+		"id": 23027,
+		"name": "B. Camara",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/23027.png"
+	},
+	{
+		"id": 3365,
+		"name": "M. El Hacen",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/3365.png"
+	},
+	{
+		"id": 21501,
+		"name": "G. Fofana",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/21501.png"
+	},
+	{
+		"id": 540081,
+		"name": "A. Haidara",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/540081.png"
+	},
+	{
+		"id": 140834,
+		"name": "A. Mahmoud",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/140834.png"
+	},
+	{
+		"id": 334925,
+		"name": "O. Ngom",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/334925.png"
+	},
+	{
+		"id": 388184,
+		"name": "M. Saïd",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/388184.png"
+	},
+	{
+		"id": 194538,
+		"name": "Y. Ethmane",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/194538.png"
+	},
+	{
+		"id": 525383,
+		"name": "A. Soumare",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/525383.png"
+	},
+	{
+		"id": 22076,
+		"name": "S. Anne",
+		"position": "Attacker",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/22076.png"
+	},
+	{
+		"id": 550553,
+		"name": "M. Diallo",
+		"position": "Attacker",
+		"age": 28,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/550553.png"
+	},
+	{
+		"id": 587304,
+		"name": "Ahmed El Moctar",
+		"position": "Attacker",
+		"age": 21,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/587304.png"
+	},
+	{
+		"id": 336563,
+		"name": "D. Gassama",
+		"position": "Attacker",
+		"age": 22,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/336563.png"
+	},
+	{
+		"id": 8543,
+		"name": "A. Koita",
+		"position": "Attacker",
+		"age": 27,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/8543.png"
+	},
+	{
+		"id": 350493,
+		"name": "B. Lekoueiry",
+		"position": "Attacker",
+		"age": 20,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/350493.png"
+	},
+	{
+		"id": 624867,
+		"name": "Ahmed M'Bracek",
+		"position": "Attacker",
+		"age": 23,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/624867.png"
+	},
+	{
+		"id": 440259,
+		"name": "M. Magassa",
+		"position": "Attacker",
+		"age": 22,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/440259.png"
+	},
+	{
+		"id": 575038,
+		"name": "M. Sy",
+		"position": "Attacker",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/575038.png"
+	},
+	{
+		"id": 300946,
+		"name": "E. Tetah",
+		"position": "Attacker",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/300946.png"
+	},
+	{
+		"id": 182789,
+		"name": "I. Thiam",
+		"position": "Attacker",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/182789.png"
+	},
+	{
+		"id": 129676,
+		"name": "P. Yade",
+		"position": "Attacker",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/129676.png"
+	}
+]

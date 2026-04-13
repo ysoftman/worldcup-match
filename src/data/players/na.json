@@ -1,0 +1,178 @@
+[
+	{
+		"id": 650071,
+		"name": "M. Kasetura",
+		"position": "Goalkeeper",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/650071.png"
+	},
+	{
+		"id": 424226,
+		"name": "J. Mateus",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/424226.png"
+	},
+	{
+		"id": 297856,
+		"name": "Kamaijanda Ndisiro",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/297856.png"
+	},
+	{
+		"id": 587441,
+		"name": "Sergio Damaseb",
+		"position": "Defender",
+		"age": 25,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/587441.png"
+	},
+	{
+		"id": 609211,
+		"name": "T. David",
+		"position": "Defender",
+		"age": 0,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/609211.png"
+	},
+	{
+		"id": 3251,
+		"name": "Vetunuavi Charles Hambira",
+		"position": "Defender",
+		"age": 35,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/3251.png"
+	},
+	{
+		"id": 3252,
+		"name": "R. Hanamub",
+		"position": "Defender",
+		"age": 30,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/3252.png"
+	},
+	{
+		"id": 650073,
+		"name": "D. Kakuenje",
+		"position": "Defender",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/650073.png"
+	},
+	{
+		"id": 650074,
+		"name": "O. Nguarambuka",
+		"position": "Defender",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/650074.png"
+	},
+	{
+		"id": 424264,
+		"name": "P. Amutenya",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/424264.png"
+	},
+	{
+		"id": 650072,
+		"name": "B. Horaseb",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/650072.png"
+	},
+	{
+		"id": 650058,
+		"name": "T. Ilyambo",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/650058.png"
+	},
+	{
+		"id": 396600,
+		"name": "U. Kambato",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/396600.png"
+	},
+	{
+		"id": 438746,
+		"name": "Romeo Kasume",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/438746.png"
+	},
+	{
+		"id": 571835,
+		"name": "N. Katua",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/571835.png"
+	},
+	{
+		"id": 650059,
+		"name": "D. Kinda",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/650059.png"
+	},
+	{
+		"id": 369107,
+		"name": "B. Muzeu",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/369107.png"
+	},
+	{
+		"id": 472386,
+		"name": "B. Namib",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/472386.png"
+	},
+	{
+		"id": 574016,
+		"name": "A. Petrus",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/574016.png"
+	},
+	{
+		"id": 166864,
+		"name": "W. Rudath",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/166864.png"
+	},
+	{
+		"id": 650057,
+		"name": "H. Muyeka",
+		"position": "Attacker",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/650057.png"
+	},
+	{
+		"id": 587447,
+		"name": "Mbakondja Tjahikika",
+		"position": "Attacker",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/587447.png"
+	}
+]

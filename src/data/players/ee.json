@@ -1,0 +1,242 @@
+[
+	{
+		"id": 169295,
+		"name": "K. Hein",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/169295.png"
+	},
+	{
+		"id": 39302,
+		"name": "M. Igonen",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/39302.png"
+	},
+	{
+		"id": 60655,
+		"name": "H. Perk",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/60655.png"
+	},
+	{
+		"id": 60795,
+		"name": "K. Vallner",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/60795.png"
+	},
+	{
+		"id": 55909,
+		"name": "M. Kuusk",
+		"position": "Defender",
+		"age": 29,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/55909.png"
+	},
+	{
+		"id": 48142,
+		"name": "K. Mets",
+		"position": "Defender",
+		"age": 32,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/48142.png"
+	},
+	{
+		"id": 60353,
+		"name": "M. Paskotši",
+		"position": "Defender",
+		"age": 22,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/60353.png"
+	},
+	{
+		"id": 60627,
+		"name": "R. Peetson",
+		"position": "Defender",
+		"age": 30,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/60627.png"
+	},
+	{
+		"id": 60685,
+		"name": "J. Saliste",
+		"position": "Defender",
+		"age": 30,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/60685.png"
+	},
+	{
+		"id": 126756,
+		"name": "M. Soomets",
+		"position": "Defender",
+		"age": 25,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/126756.png"
+	},
+	{
+		"id": 40204,
+		"name": "J. Tamm",
+		"position": "Defender",
+		"age": 33,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/40204.png"
+	},
+	{
+		"id": 60486,
+		"name": "T. Tammik",
+		"position": "Defender",
+		"age": 23,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/60486.png"
+	},
+	{
+		"id": 208770,
+		"name": "E. Tõugjas",
+		"position": "Defender",
+		"age": 22,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/208770.png"
+	},
+	{
+		"id": 329290,
+		"name": "Kristofer Käit",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/329290.png"
+	},
+	{
+		"id": 55911,
+		"name": "M. Käit",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/55911.png"
+	},
+	{
+		"id": 357667,
+		"name": "P. Kristal",
+		"position": "Midfielder",
+		"age": 18,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/357667.png"
+	},
+	{
+		"id": 60613,
+		"name": "M. Miller",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/60613.png"
+	},
+	{
+		"id": 196901,
+		"name": "K. Palumets",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/196901.png"
+	},
+	{
+		"id": 208780,
+		"name": "R. Saarma",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/208780.png"
+	},
+	{
+		"id": 60371,
+		"name": "R. Shein",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/60371.png"
+	},
+	{
+		"id": 60616,
+		"name": "V. Sinyavskiy",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/60616.png"
+	},
+	{
+		"id": 60802,
+		"name": "M. Vetkal",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/60802.png"
+	},
+	{
+		"id": 34248,
+		"name": "H. Anier",
+		"position": "Attacker",
+		"age": 35,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/34248.png"
+	},
+	{
+		"id": 574821,
+		"name": "Karel Mustmaa",
+		"position": "Attacker",
+		"age": 20,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/574821.png"
+	},
+	{
+		"id": 564761,
+		"name": "M. Paalberg",
+		"position": "Attacker",
+		"age": 17,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/564761.png"
+	},
+	{
+		"id": 60370,
+		"name": "M. Poom",
+		"position": "Attacker",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/60370.png"
+	},
+	{
+		"id": 37470,
+		"name": "R. Sappinen",
+		"position": "Attacker",
+		"age": 29,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/37470.png"
+	},
+	{
+		"id": 60378,
+		"name": "M. Schjønning-Larsen",
+		"position": "Attacker",
+		"age": 24,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/60378.png"
+	},
+	{
+		"id": 60676,
+		"name": "A. Tamm",
+		"position": "Attacker",
+		"age": 24,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/60676.png"
+	},
+	{
+		"id": 612588,
+		"name": "I. Yakovlev",
+		"position": "Attacker",
+		"age": 27,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/612588.png"
+	}
+]

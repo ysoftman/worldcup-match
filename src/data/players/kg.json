@@ -1,0 +1,170 @@
+[
+	{
+		"id": 543054,
+		"name": "K. Nurlanbekov",
+		"position": "Goalkeeper",
+		"age": 21,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/543054.png"
+	},
+	{
+		"id": 543017,
+		"name": "A. Pryadkin",
+		"position": "Goalkeeper",
+		"age": 24,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/543017.png"
+	},
+	{
+		"id": 409629,
+		"name": "A. Bekberdinov",
+		"position": "Defender",
+		"age": 22,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/409629.png"
+	},
+	{
+		"id": 574095,
+		"name": "A. Beksulov",
+		"position": "Defender",
+		"age": 23,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/574095.png"
+	},
+	{
+		"id": 409618,
+		"name": "S. Datsiev",
+		"position": "Defender",
+		"age": 20,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/409618.png"
+	},
+	{
+		"id": 53755,
+		"name": "V. Kichin",
+		"position": "Defender",
+		"age": 33,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/53755.png"
+	},
+	{
+		"id": 433119,
+		"name": "A. Shamurzaev",
+		"position": "Defender",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/433119.png"
+	},
+	{
+		"id": 438537,
+		"name": "U. Sulaymanov",
+		"position": "Defender",
+		"age": 23,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/438537.png"
+	},
+	{
+		"id": 123830,
+		"name": "K. Zhyrgalbek",
+		"position": "Defender",
+		"age": 32,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/123830.png"
+	},
+	{
+		"id": 542725,
+		"name": "A. Kadyrzhanov",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/542725.png"
+	},
+	{
+		"id": 409620,
+		"name": "E. Kenzhebaev",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/409620.png"
+	},
+	{
+		"id": 573886,
+		"name": "B. Kochkonbaev",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/573886.png"
+	},
+	{
+		"id": 574028,
+		"name": "A. Polev",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/574028.png"
+	},
+	{
+		"id": 396592,
+		"name": "Arlen Sharshenbekov",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/396592.png"
+	},
+	{
+		"id": 357825,
+		"name": "E. Zarypbekov",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/357825.png"
+	},
+	{
+		"id": 364380,
+		"name": "B. Almazbekov",
+		"position": "Attacker",
+		"age": 20,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/364380.png"
+	},
+	{
+		"id": 542724,
+		"name": "A. Dzhumashev",
+		"position": "Attacker",
+		"age": 27,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/542724.png"
+	},
+	{
+		"id": 542629,
+		"name": "K. Merk",
+		"position": "Attacker",
+		"age": 27,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/542629.png"
+	},
+	{
+		"id": 568937,
+		"name": "M. Murzakhmatov",
+		"position": "Attacker",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/568937.png"
+	},
+	{
+		"id": 314243,
+		"name": "Nurdoolot Stalbekov",
+		"position": "Attacker",
+		"age": 24,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/314243.png"
+	},
+	{
+		"id": 568936,
+		"name": "B. Zhenishbekov",
+		"position": "Attacker",
+		"age": 22,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/568936.png"
+	}
+]

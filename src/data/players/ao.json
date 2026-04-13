@@ -1,0 +1,218 @@
+[
+	{
+		"id": 48370,
+		"name": "Nymi António Signori Dominique",
+		"position": "Goalkeeper",
+		"age": 31,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/48370.png"
+	},
+	{
+		"id": 41876,
+		"name": "Hugo Marques",
+		"position": "Goalkeeper",
+		"age": 39,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/41876.png"
+	},
+	{
+		"id": 123647,
+		"name": "Neblú",
+		"position": "Goalkeeper",
+		"age": 32,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/123647.png"
+	},
+	{
+		"id": 41174,
+		"name": "Jonathan Buatu",
+		"position": "Defender",
+		"age": 32,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/41174.png"
+	},
+	{
+		"id": 41970,
+		"name": "David Carmo",
+		"position": "Defender",
+		"age": 26,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/41970.png"
+	},
+	{
+		"id": 8557,
+		"name": "Núrio Fortuna",
+		"position": "Defender",
+		"age": 30,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/8557.png"
+	},
+	{
+		"id": 291589,
+		"name": "Kialonda Gaspar",
+		"position": "Defender",
+		"age": 28,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/291589.png"
+	},
+	{
+		"id": 68,
+		"name": "Clinton Mata",
+		"position": "Defender",
+		"age": 33,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/68.png"
+	},
+	{
+		"id": 293717,
+		"name": "Pedro Francisco",
+		"position": "Defender",
+		"age": 21,
+		"number": 28,
+		"photo": "https://media.api-sports.io/football/players/293717.png"
+	},
+	{
+		"id": 123641,
+		"name": "Tó Carneiro",
+		"position": "Defender",
+		"age": 30,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/123641.png"
+	},
+	{
+		"id": 130979,
+		"name": "Mário Balbúrdia",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/130979.png"
+	},
+	{
+		"id": 237192,
+		"name": "Beni",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/237192.png"
+	},
+	{
+		"id": 49986,
+		"name": "Fredy",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/49986.png"
+	},
+	{
+		"id": 387185,
+		"name": "Manuel Keliano",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/387185.png"
+	},
+	{
+		"id": 237120,
+		"name": "Maestro",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/237120.png"
+	},
+	{
+		"id": 263410,
+		"name": "Milson",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/263410.png"
+	},
+	{
+		"id": 142442,
+		"name": "Rui Modesto",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/142442.png"
+	},
+	{
+		"id": 122657,
+		"name": "R. Nteka",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/122657.png"
+	},
+	{
+		"id": 96354,
+		"name": "Ary Papel",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/96354.png"
+	},
+	{
+		"id": 3314,
+		"name": "Show",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/3314.png"
+	},
+	{
+		"id": 3299,
+		"name": "Eddie",
+		"position": "Attacker",
+		"age": 31,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/3299.png"
+	},
+	{
+		"id": 550373,
+		"name": "C. Banza",
+		"position": "Attacker",
+		"age": 26,
+		"number": 27,
+		"photo": "https://media.api-sports.io/football/players/550373.png"
+	},
+	{
+		"id": 8589,
+		"name": "B. Manuel",
+		"position": "Attacker",
+		"age": 28,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/8589.png"
+	},
+	{
+		"id": 3325,
+		"name": "Gelson Dala",
+		"position": "Attacker",
+		"age": 29,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/3325.png"
+	},
+	{
+		"id": 140831,
+		"name": "Zito Luvumbo",
+		"position": "Attacker",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/140831.png"
+	},
+	{
+		"id": 73818,
+		"name": "Mabululu",
+		"position": "Attacker",
+		"age": 33,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/73818.png"
+	},
+	{
+		"id": 31318,
+		"name": "M&apos;Bala Nzola",
+		"position": "Attacker",
+		"age": 29,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/31318.png"
+	}
+]

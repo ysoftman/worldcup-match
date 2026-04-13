@@ -1,0 +1,250 @@
+[
+	{
+		"id": 122480,
+		"name": "Tommy  Gbayeh Songo",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/122480.png"
+	},
+	{
+		"id": 122475,
+		"name": "Ashley Williams",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/122475.png"
+	},
+	{
+		"id": 574014,
+		"name": "J. Yeanaye",
+		"position": "Goalkeeper",
+		"age": 20,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/574014.png"
+	},
+	{
+		"id": 108004,
+		"name": "Prince Balde",
+		"position": "Defender",
+		"age": 27,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/108004.png"
+	},
+	{
+		"id": 483566,
+		"name": "J. Dukuly",
+		"position": "Defender",
+		"age": 18,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/483566.png"
+	},
+	{
+		"id": 317825,
+		"name": "S. Dweh",
+		"position": "Defender",
+		"age": 24,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/317825.png"
+	},
+	{
+		"id": 434727,
+		"name": "E. Fully",
+		"position": "Defender",
+		"age": 19,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/434727.png"
+	},
+	{
+		"id": 574017,
+		"name": "M. Greene",
+		"position": "Defender",
+		"age": 0,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/574017.png"
+	},
+	{
+		"id": 122478,
+		"name": "K. Kamara",
+		"position": "Defender",
+		"age": 30,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/122478.png"
+	},
+	{
+		"id": 92973,
+		"name": "M. Pabai",
+		"position": "Defender",
+		"age": 25,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/92973.png"
+	},
+	{
+		"id": 434757,
+		"name": "N. Swen",
+		"position": "Defender",
+		"age": 21,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/434757.png"
+	},
+	{
+		"id": 574015,
+		"name": "P. Tarnue",
+		"position": "Defender",
+		"age": 19,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/574015.png"
+	},
+	{
+		"id": 609087,
+		"name": "S. Teclar",
+		"position": "Defender",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/609087.png"
+	},
+	{
+		"id": 574019,
+		"name": "A. Bility",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/574019.png"
+	},
+	{
+		"id": 621237,
+		"name": "K. Cole",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/621237.png"
+	},
+	{
+		"id": 66042,
+		"name": "O. Dorley",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/66042.png"
+	},
+	{
+		"id": 412386,
+		"name": "J. Konneh",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/412386.png"
+	},
+	{
+		"id": 140589,
+		"name": "Edward Ledlum",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/140589.png"
+	},
+	{
+		"id": 122407,
+		"name": "M. Sangare",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/122407.png"
+	},
+	{
+		"id": 609055,
+		"name": "S. Sesay",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/609055.png"
+	},
+	{
+		"id": 339346,
+		"name": "D. Teah",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/339346.png"
+	},
+	{
+		"id": 573996,
+		"name": "S. Tweh",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/573996.png"
+	},
+	{
+		"id": 574020,
+		"name": "A. Vaikainah",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/574020.png"
+	},
+	{
+		"id": 430502,
+		"name": "T. Yormie",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/430502.png"
+	},
+	{
+		"id": 505305,
+		"name": "S. Bah",
+		"position": "Attacker",
+		"age": 24,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/505305.png"
+	},
+	{
+		"id": 460815,
+		"name": "Bryant Farkarlun",
+		"position": "Attacker",
+		"age": 24,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/460815.png"
+	},
+	{
+		"id": 369092,
+		"name": "Chauncy Freeman",
+		"position": "Attacker",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/369092.png"
+	},
+	{
+		"id": 459743,
+		"name": "E. Gono",
+		"position": "Attacker",
+		"age": 20,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/459743.png"
+	},
+	{
+		"id": 325848,
+		"name": "A. Kosiah",
+		"position": "Attacker",
+		"age": 24,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/325848.png"
+	},
+	{
+		"id": 573993,
+		"name": "D. Toe",
+		"position": "Attacker",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/573993.png"
+	},
+	{
+		"id": 48178,
+		"name": "P. Wilson",
+		"position": "Attacker",
+		"age": 29,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/48178.png"
+	}
+]

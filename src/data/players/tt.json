@@ -1,0 +1,194 @@
+[
+	{
+		"id": 575304,
+		"name": "J. Brice",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/575304.png"
+	},
+	{
+		"id": 647438,
+		"name": "T. Ragoo",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/647438.png"
+	},
+	{
+		"id": 199390,
+		"name": "D. Smith",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/199390.png"
+	},
+	{
+		"id": 380703,
+		"name": "Rio Cardines",
+		"position": "Defender",
+		"age": 19,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/380703.png"
+	},
+	{
+		"id": 237486,
+		"name": "J. García",
+		"position": "Defender",
+		"age": 30,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/237486.png"
+	},
+	{
+		"id": 612540,
+		"name": "S. Hamilton",
+		"position": "Defender",
+		"age": 22,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/612540.png"
+	},
+	{
+		"id": 436125,
+		"name": "J. Jackie",
+		"position": "Defender",
+		"age": 24,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/436125.png"
+	},
+	{
+		"id": 272835,
+		"name": "D. Payne",
+		"position": "Defender",
+		"age": 23,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/272835.png"
+	},
+	{
+		"id": 71349,
+		"name": "N. Powder",
+		"position": "Defender",
+		"age": 27,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/71349.png"
+	},
+	{
+		"id": 644631,
+		"name": "J. Yearwood",
+		"position": "Defender",
+		"age": 21,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/644631.png"
+	},
+	{
+		"id": 621967,
+		"name": "Daniel David",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/621967.png"
+	},
+	{
+		"id": 413079,
+		"name": "D. Gilbert",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/413079.png"
+	},
+	{
+		"id": 542015,
+		"name": "R. Gill",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/542015.png"
+	},
+	{
+		"id": 199396,
+		"name": "N. James",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/199396.png"
+	},
+	{
+		"id": 106310,
+		"name": "D. Muckette",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/106310.png"
+	},
+	{
+		"id": 599523,
+		"name": "A. Pierre",
+		"position": "Midfielder",
+		"age": 18,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/599523.png"
+	},
+	{
+		"id": 78421,
+		"name": "A. Rampersad",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/78421.png"
+	},
+	{
+		"id": 612441,
+		"name": "J. Rochford",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/612441.png"
+	},
+	{
+		"id": 647435,
+		"name": "J. Faustin",
+		"position": "Attacker",
+		"age": 21,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/647435.png"
+	},
+	{
+		"id": 93059,
+		"name": "L. García",
+		"position": "Attacker",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/93059.png"
+	},
+	{
+		"id": 265873,
+		"name": "Roald Mitchell",
+		"position": "Attacker",
+		"age": 22,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/265873.png"
+	},
+	{
+		"id": 123497,
+		"name": "R. Moore",
+		"position": "Attacker",
+		"age": 29,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/123497.png"
+	},
+	{
+		"id": 593461,
+		"name": "Lindell Sween",
+		"position": "Attacker",
+		"age": 19,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/593461.png"
+	},
+	{
+		"id": 71342,
+		"name": "R. Telfer",
+		"position": "Attacker",
+		"age": 31,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/71342.png"
+	}
+]

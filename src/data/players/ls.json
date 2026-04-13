@@ -1,0 +1,186 @@
+[
+	{
+		"id": 621541,
+		"name": "Katleho Mochesane",
+		"position": "Goalkeeper",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/621541.png"
+	},
+	{
+		"id": 175470,
+		"name": "S. Moerane",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/175470.png"
+	},
+	{
+		"id": 412294,
+		"name": "M. Seahlolo",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/412294.png"
+	},
+	{
+		"id": 291497,
+		"name": "Thabang Malane",
+		"position": "Defender",
+		"age": 26,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/291497.png"
+	},
+	{
+		"id": 154968,
+		"name": "Motlomelo Mkhwanazi",
+		"position": "Defender",
+		"age": 31,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/154968.png"
+	},
+	{
+		"id": 575089,
+		"name": "R. Mokokoane",
+		"position": "Defender",
+		"age": 27,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/575089.png"
+	},
+	{
+		"id": 621542,
+		"name": "Ntoa Mphale",
+		"position": "Defender",
+		"age": 0,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/621542.png"
+	},
+	{
+		"id": 46595,
+		"name": "Tshwarelo Mattwes Bereng",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/46595.png"
+	},
+	{
+		"id": 154975,
+		"name": "Lisema Richard Lebokollane",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/154975.png"
+	},
+	{
+		"id": 286853,
+		"name": "L. Lesako",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/286853.png"
+	},
+	{
+		"id": 544061,
+		"name": "T. Makhele",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/544061.png"
+	},
+	{
+		"id": 373356,
+		"name": "L. Matsau",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/373356.png"
+	},
+	{
+		"id": 154976,
+		"name": "Neo Mokhachane",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/154976.png"
+	},
+	{
+		"id": 575092,
+		"name": "M. Ntaitsane",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/575092.png"
+	},
+	{
+		"id": 293703,
+		"name": "Tsepang Sefali",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/293703.png"
+	},
+	{
+		"id": 154978,
+		"name": "Jane Thabantso",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/154978.png"
+	},
+	{
+		"id": 575052,
+		"name": "J. Tsotleho",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/575052.png"
+	},
+	{
+		"id": 154973,
+		"name": "Hlompho Kalake",
+		"position": "Attacker",
+		"age": 31,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/154973.png"
+	},
+	{
+		"id": 587313,
+		"name": "Teboho Letsema",
+		"position": "Attacker",
+		"age": 23,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/587313.png"
+	},
+	{
+		"id": 134414,
+		"name": "M. Sera",
+		"position": "Attacker",
+		"age": 30,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/134414.png"
+	},
+	{
+		"id": 575093,
+		"name": "K. Snyders",
+		"position": "Attacker",
+		"age": 0,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/575093.png"
+	},
+	{
+		"id": 621230,
+		"name": "M. Teele",
+		"position": "Attacker",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/621230.png"
+	},
+	{
+		"id": 154982,
+		"name": "T. Toloane",
+		"position": "Attacker",
+		"age": 28,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/154982.png"
+	}
+]

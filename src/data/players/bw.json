@@ -1,0 +1,314 @@
+[
+	{
+		"id": 46418,
+		"name": "K. Dambe",
+		"position": "Goalkeeper",
+		"age": 35,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/46418.png"
+	},
+	{
+		"id": 137335,
+		"name": "K. Kgosipula",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/137335.png"
+	},
+	{
+		"id": 153036,
+		"name": "E. Morake",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/153036.png"
+	},
+	{
+		"id": 124094,
+		"name": "G. Phoko",
+		"position": "Goalkeeper",
+		"age": 31,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/124094.png"
+	},
+	{
+		"id": 651600,
+		"name": "C. K. Ramojela",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/651600.png"
+	},
+	{
+		"id": 137338,
+		"name": "T. Ditlhokwe",
+		"position": "Defender",
+		"age": 27,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/137338.png"
+	},
+	{
+		"id": 124084,
+		"name": "Moshe Gaolaolwe",
+		"position": "Defender",
+		"age": 32,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/124084.png"
+	},
+	{
+		"id": 153037,
+		"name": "M. Johnson",
+		"position": "Defender",
+		"age": 28,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/153037.png"
+	},
+	{
+		"id": 137365,
+		"name": "T. Leinanyane",
+		"position": "Defender",
+		"age": 32,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/137365.png"
+	},
+	{
+		"id": 652054,
+		"name": "M. Mogapi",
+		"position": "Defender",
+		"age": 0,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/652054.png"
+	},
+	{
+		"id": 574008,
+		"name": "S. Nganda",
+		"position": "Defender",
+		"age": 33,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/574008.png"
+	},
+	{
+		"id": 294436,
+		"name": "R. Ratlhogo",
+		"position": "Defender",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/294436.png"
+	},
+	{
+		"id": 373334,
+		"name": "B. Sakana",
+		"position": "Defender",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/373334.png"
+	},
+	{
+		"id": 153039,
+		"name": "A. Velaphi",
+		"position": "Defender",
+		"age": 26,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/153039.png"
+	},
+	{
+		"id": 153040,
+		"name": "G. Baruti",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/153040.png"
+	},
+	{
+		"id": 137344,
+		"name": "S. Boy",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/137344.png"
+	},
+	{
+		"id": 153041,
+		"name": "M. Cooper",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/153041.png"
+	},
+	{
+		"id": 99147,
+		"name": "L. Ditsele",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/99147.png"
+	},
+	{
+		"id": 46545,
+		"name": "T. Kgamanyane",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/46545.png"
+	},
+	{
+		"id": 341289,
+		"name": "T. Kolagano",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/341289.png"
+	},
+	{
+		"id": 369117,
+		"name": "T. Kopelang",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/369117.png"
+	},
+	{
+		"id": 587435,
+		"name": "Godiraone Modingwane",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/587435.png"
+	},
+	{
+		"id": 137349,
+		"name": "G. Mohutsiwa",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/137349.png"
+	},
+	{
+		"id": 472406,
+		"name": "C. Molefe",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/472406.png"
+	},
+	{
+		"id": 587436,
+		"name": "Omphile Ramoagi",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/587436.png"
+	},
+	{
+		"id": 596663,
+		"name": "Olebogeng Ramotse",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/596663.png"
+	},
+	{
+		"id": 630119,
+		"name": "Losika Ratshukudu",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/630119.png"
+	},
+	{
+		"id": 46556,
+		"name": "K. Seakanyeng",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/46556.png"
+	},
+	{
+		"id": 425696,
+		"name": "O. Sekwai",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/425696.png"
+	},
+	{
+		"id": 98964,
+		"name": "T. Sesinyi",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/98964.png"
+	},
+	{
+		"id": 574010,
+		"name": "T. Shadikong",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/574010.png"
+	},
+	{
+		"id": 630120,
+		"name": "Monty Enosa",
+		"position": "Attacker",
+		"age": 21,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/630120.png"
+	},
+	{
+		"id": 123949,
+		"name": "O. Kebatho",
+		"position": "Attacker",
+		"age": 32,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/123949.png"
+	},
+	{
+		"id": 453337,
+		"name": "T. Maponda",
+		"position": "Attacker",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/453337.png"
+	},
+	{
+		"id": 651594,
+		"name": "B. Matakula",
+		"position": "Attacker",
+		"age": 0,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/651594.png"
+	},
+	{
+		"id": 596910,
+		"name": "Kamogelo Moloi",
+		"position": "Attacker",
+		"age": 19,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/596910.png"
+	},
+	{
+		"id": 596911,
+		"name": "Eric Ookame",
+		"position": "Attacker",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/596911.png"
+	},
+	{
+		"id": 124093,
+		"name": "T. Orebonye",
+		"position": "Attacker",
+		"age": 29,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/124093.png"
+	},
+	{
+		"id": 651660,
+		"name": "K. Radithongwa",
+		"position": "Attacker",
+		"age": 22,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651660.png"
+	}
+]

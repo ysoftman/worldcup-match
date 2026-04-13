@@ -1,0 +1,218 @@
+[
+	{
+		"id": 532416,
+		"name": "S. Hazmi",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/532416.png"
+	},
+	{
+		"id": 35137,
+		"name": "Haziq Nadzli",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/35137.png"
+	},
+	{
+		"id": 532441,
+		"name": "S. Nazrel",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/532441.png"
+	},
+	{
+		"id": 532279,
+		"name": "A. Azmi",
+		"position": "Defender",
+		"age": 24,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/532279.png"
+	},
+	{
+		"id": 306521,
+		"name": "Quentin Cheng",
+		"position": "Defender",
+		"age": 26,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/306521.png"
+	},
+	{
+		"id": 65,
+		"name": "Dion-Johan Cools",
+		"position": "Defender",
+		"age": 29,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/65.png"
+	},
+	{
+		"id": 35141,
+		"name": "La&apos;Vere Corbin-Ong",
+		"position": "Defender",
+		"age": 34,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/35141.png"
+	},
+	{
+		"id": 35173,
+		"name": "Matthew Davies",
+		"position": "Defender",
+		"age": 30,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/35173.png"
+	},
+	{
+		"id": 542946,
+		"name": "Eldstal Junior",
+		"position": "Defender",
+		"age": 34,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/542946.png"
+	},
+	{
+		"id": 325621,
+		"name": "Harith Haiqal Adam Afkar",
+		"position": "Defender",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/325621.png"
+	},
+	{
+		"id": 128312,
+		"name": "Declan Stephen Lambert Lee Kit Meng",
+		"position": "Defender",
+		"age": 27,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/128312.png"
+	},
+	{
+		"id": 532377,
+		"name": "S. Saad",
+		"position": "Defender",
+		"age": 32,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/532377.png"
+	},
+	{
+		"id": 532409,
+		"name": "U. Shamsul",
+		"position": "Defender",
+		"age": 21,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/532409.png"
+	},
+	{
+		"id": 35144,
+		"name": "Dominic Jun Jin Tan",
+		"position": "Defender",
+		"age": 28,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/35144.png"
+	},
+	{
+		"id": 532426,
+		"name": "D. Ting",
+		"position": "Defender",
+		"age": 33,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/532426.png"
+	},
+	{
+		"id": 35148,
+		"name": "Nazmi Faiz Mansor",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/35148.png"
+	},
+	{
+		"id": 35147,
+		"name": "Afiq Fazail",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/35147.png"
+	},
+	{
+		"id": 83445,
+		"name": "Nooa Laine",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/83445.png"
+	},
+	{
+		"id": 531300,
+		"name": "R. Morales",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/531300.png"
+	},
+	{
+		"id": 35466,
+		"name": "Paulo Josué",
+		"position": "Midfielder",
+		"age": 36,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/35466.png"
+	},
+	{
+		"id": 358151,
+		"name": "S. Wilkin",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/358151.png"
+	},
+	{
+		"id": 35240,
+		"name": "Endrick",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/35240.png"
+	},
+	{
+		"id": 34904,
+		"name": "E. Agüero",
+		"position": "Attacker",
+		"age": 31,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/34904.png"
+	},
+	{
+		"id": 197977,
+		"name": "Arif Aiman Hanapi",
+		"position": "Attacker",
+		"age": 23,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/197977.png"
+	},
+	{
+		"id": 35176,
+		"name": "Faisal Abdul Halim",
+		"position": "Attacker",
+		"age": 27,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/35176.png"
+	},
+	{
+		"id": 35160,
+		"name": "Safawi Rasid",
+		"position": "Attacker",
+		"age": 28,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/35160.png"
+	},
+	{
+		"id": 197979,
+		"name": "Ramadhan Saifullah Usman",
+		"position": "Attacker",
+		"age": 25,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/197979.png"
+	}
+]

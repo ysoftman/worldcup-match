@@ -1,0 +1,218 @@
+[
+	{
+		"id": 18380,
+		"name": "R. Matrevics",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/18380.png"
+	},
+	{
+		"id": 72446,
+		"name": "F. Orols",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/72446.png"
+	},
+	{
+		"id": 70000,
+		"name": "K. Zviedris",
+		"position": "Goalkeeper",
+		"age": 28,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/70000.png"
+	},
+	{
+		"id": 72479,
+		"name": "D. Balodis",
+		"position": "Defender",
+		"age": 27,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/72479.png"
+	},
+	{
+		"id": 72542,
+		"name": "E. Birka",
+		"position": "Defender",
+		"age": 25,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/72542.png"
+	},
+	{
+		"id": 56030,
+		"name": "A. Černomordijs",
+		"position": "Defender",
+		"age": 29,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/56030.png"
+	},
+	{
+		"id": 37044,
+		"name": "A. Cigaņiks",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/37044.png"
+	},
+	{
+		"id": 162076,
+		"name": "D. Cirkin",
+		"position": "Defender",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/162076.png"
+	},
+	{
+		"id": 564616,
+		"name": "V. Jagodinskis",
+		"position": "Defender",
+		"age": 33,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/564616.png"
+	},
+	{
+		"id": 70397,
+		"name": "R. Jurkovskis",
+		"position": "Defender",
+		"age": 29,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/70397.png"
+	},
+	{
+		"id": 56041,
+		"name": "R. Savaļnieks",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/56041.png"
+	},
+	{
+		"id": 162330,
+		"name": "N. Sliede",
+		"position": "Defender",
+		"age": 21,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/162330.png"
+	},
+	{
+		"id": 169221,
+		"name": "R. Veips",
+		"position": "Defender",
+		"age": 25,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/169221.png"
+	},
+	{
+		"id": 72582,
+		"name": "E. Emsis",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/72582.png"
+	},
+	{
+		"id": 68531,
+		"name": "J. Ikaunieks",
+		"position": "Attacker",
+		"age": 30,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/68531.png"
+	},
+	{
+		"id": 215803,
+		"name": "D. Meļņiks",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/215803.png"
+	},
+	{
+		"id": 210195,
+		"name": "K. Penkevics",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/210195.png"
+	},
+	{
+		"id": 30936,
+		"name": "A. Saveļjevs",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/30936.png"
+	},
+	{
+		"id": 210185,
+		"name": "L. Vapne",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/210185.png"
+	},
+	{
+		"id": 72564,
+		"name": "R. Varslavāns",
+		"position": "Attacker",
+		"age": 24,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/72564.png"
+	},
+	{
+		"id": 343161,
+		"name": "K. Grabovskis",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/343161.png"
+	},
+	{
+		"id": 40813,
+		"name": "V. Gutkovskis",
+		"position": "Attacker",
+		"age": 30,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/40813.png"
+	},
+	{
+		"id": 282454,
+		"name": "B. Melnis",
+		"position": "Attacker",
+		"age": 21,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/282454.png"
+	},
+	{
+		"id": 546328,
+		"name": "D. Patijcuks",
+		"position": "Attacker",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/546328.png"
+	},
+	{
+		"id": 72376,
+		"name": "M. Regža",
+		"position": "Attacker",
+		"age": 26,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/72376.png"
+	},
+	{
+		"id": 357985,
+		"name": "D. Šits",
+		"position": "Attacker",
+		"age": 21,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/357985.png"
+	},
+	{
+		"id": 128496,
+		"name": "D. Zelenkovs",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/128496.png"
+	}
+]

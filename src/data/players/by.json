@@ -1,0 +1,282 @@
+[
+	{
+		"id": 8005,
+		"name": "M. Belov",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/8005.png"
+	},
+	{
+		"id": 549124,
+		"name": "F. Lapoukhov",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/549124.png"
+	},
+	{
+		"id": 7797,
+		"name": "P. Pavlyuchenko",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/7797.png"
+	},
+	{
+		"id": 7907,
+		"name": "M. Plotnikov",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/7907.png"
+	},
+	{
+		"id": 7857,
+		"name": "R. Begunov",
+		"position": "Defender",
+		"age": 32,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/7857.png"
+	},
+	{
+		"id": 307417,
+		"name": "V. Kalinin",
+		"position": "Defender",
+		"age": 23,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/307417.png"
+	},
+	{
+		"id": 7831,
+		"name": "S. Karpovich",
+		"position": "Defender",
+		"age": 31,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/7831.png"
+	},
+	{
+		"id": 8009,
+		"name": "E. Khvalko",
+		"position": "Defender",
+		"age": 28,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/8009.png"
+	},
+	{
+		"id": 2308,
+		"name": "V. Malkevich",
+		"position": "Defender",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/2308.png"
+	},
+	{
+		"id": 2074,
+		"name": "A. Martynovich",
+		"position": "Defender",
+		"age": 38,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/2074.png"
+	},
+	{
+		"id": 579869,
+		"name": "L. Mascaro",
+		"position": "Defender",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/579869.png"
+	},
+	{
+		"id": 291983,
+		"name": "E. Parkhomenko",
+		"position": "Defender",
+		"age": 22,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/291983.png"
+	},
+	{
+		"id": 7975,
+		"name": "K. Pechenin",
+		"position": "Defender",
+		"age": 28,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/7975.png"
+	},
+	{
+		"id": 306652,
+		"name": "V. Pigas",
+		"position": "Defender",
+		"age": 24,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/306652.png"
+	},
+	{
+		"id": 338771,
+		"name": "I. Tikhomirov",
+		"position": "Defender",
+		"age": 22,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/338771.png"
+	},
+	{
+		"id": 2319,
+		"name": "Z. Volkov",
+		"position": "Defender",
+		"age": 28,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/2319.png"
+	},
+	{
+		"id": 7897,
+		"name": "P. Zabelin",
+		"position": "Defender",
+		"age": 30,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/7897.png"
+	},
+	{
+		"id": 119028,
+		"name": "N. Demchenko",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/119028.png"
+	},
+	{
+		"id": 7782,
+		"name": "M. Ebong",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/7782.png"
+	},
+	{
+		"id": 7780,
+		"name": "V. Gromyko",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/7780.png"
+	},
+	{
+		"id": 7918,
+		"name": "N. Ivanov",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/7918.png"
+	},
+	{
+		"id": 44518,
+		"name": "N. Korzun",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/44518.png"
+	},
+	{
+		"id": 7781,
+		"name": "Y. Kovalev",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/7781.png"
+	},
+	{
+		"id": 8120,
+		"name": "D. Lisakovich",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/8120.png"
+	},
+	{
+		"id": 76473,
+		"name": "M. Myakish",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/76473.png"
+	},
+	{
+		"id": 7785,
+		"name": "A. Selyava",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/7785.png"
+	},
+	{
+		"id": 2321,
+		"name": "E. Yablonskiy",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/2321.png"
+	},
+	{
+		"id": 216410,
+		"name": "G. Barkovskiy",
+		"position": "Attacker",
+		"age": 23,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/216410.png"
+	},
+	{
+		"id": 8015,
+		"name": "A. Kontsevoy",
+		"position": "Attacker",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/8015.png"
+	},
+	{
+		"id": 216545,
+		"name": "E. Malashevich",
+		"position": "Attacker",
+		"age": 23,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/216545.png"
+	},
+	{
+		"id": 394925,
+		"name": "T. Melnichenko",
+		"position": "Attacker",
+		"age": 19,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/394925.png"
+	},
+	{
+		"id": 76315,
+		"name": "V. Morozov",
+		"position": "Attacker",
+		"age": 25,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/76315.png"
+	},
+	{
+		"id": 262106,
+		"name": "A. Shestyuk",
+		"position": "Attacker",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/262106.png"
+	},
+	{
+		"id": 318945,
+		"name": "A. Shumanskiy",
+		"position": "Attacker",
+		"age": 21,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/318945.png"
+	},
+	{
+		"id": 358615,
+		"name": "K. Vardanyan",
+		"position": "Attacker",
+		"age": 22,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/358615.png"
+	}
+]

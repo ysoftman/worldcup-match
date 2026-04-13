@@ -1,0 +1,210 @@
+[
+	{
+		"id": 112131,
+		"name": "Mehdi Khalil",
+		"position": "Goalkeeper",
+		"age": 34,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/112131.png"
+	},
+	{
+		"id": 112066,
+		"name": "Mostafa Matar",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/112066.png"
+	},
+	{
+		"id": 112118,
+		"name": "Ali Al Sabaa",
+		"position": "Goalkeeper",
+		"age": 31,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/112118.png"
+	},
+	{
+		"id": 112133,
+		"name": "Hussein Al Zein",
+		"position": "Defender",
+		"age": 30,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/112133.png"
+	},
+	{
+		"id": 147867,
+		"name": "Mohammad Al Hayek",
+		"position": "Defender",
+		"age": 25,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/147867.png"
+	},
+	{
+		"id": 111985,
+		"name": "Kassem Al Zein",
+		"position": "Defender",
+		"age": 35,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/111985.png"
+	},
+	{
+		"id": 578887,
+		"name": "H. Ezzeddine",
+		"position": "Defender",
+		"age": 0,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/578887.png"
+	},
+	{
+		"id": 112007,
+		"name": "Khalil Khamis",
+		"position": "Defender",
+		"age": 30,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/112007.png"
+	},
+	{
+		"id": 570085,
+		"name": "N. Nassar",
+		"position": "Defender",
+		"age": 33,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/570085.png"
+	},
+	{
+		"id": 112110,
+		"name": "Hussein Sharafeddine",
+		"position": "Defender",
+		"age": 28,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/112110.png"
+	},
+	{
+		"id": 574160,
+		"name": "K. Kaddour",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/574160.png"
+	},
+	{
+		"id": 390060,
+		"name": "Ahmad Khairdien",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/390060.png"
+	},
+	{
+		"id": 147869,
+		"name": "Majed Osman",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/147869.png"
+	},
+	{
+		"id": 570078,
+		"name": "M. Safwan",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/570078.png"
+	},
+	{
+		"id": 112064,
+		"name": "Waleed Shour",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/112064.png"
+	},
+	{
+		"id": 542696,
+		"name": "Sisi",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/542696.png"
+	},
+	{
+		"id": 112041,
+		"name": "Jihad Ayoub",
+		"position": "Attacker",
+		"age": 30,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/112041.png"
+	},
+	{
+		"id": 78492,
+		"name": "Gabriel Bitar",
+		"position": "Attacker",
+		"age": 27,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/78492.png"
+	},
+	{
+		"id": 18369,
+		"name": "Omar Bugiel",
+		"position": "Attacker",
+		"age": 31,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/18369.png"
+	},
+	{
+		"id": 428450,
+		"name": "H. Chakroun",
+		"position": "Attacker",
+		"age": 21,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/428450.png"
+	},
+	{
+		"id": 542634,
+		"name": "K. Darwiche",
+		"position": "Attacker",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/542634.png"
+	},
+	{
+		"id": 273140,
+		"name": "M. Fakhro",
+		"position": "Attacker",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/273140.png"
+	},
+	{
+		"id": 286752,
+		"name": "Zain Faran",
+		"position": "Attacker",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/286752.png"
+	},
+	{
+		"id": 542633,
+		"name": "M. Haidar",
+		"position": "Attacker",
+		"age": 35,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/542633.png"
+	},
+	{
+		"id": 546023,
+		"name": "A. Kassas",
+		"position": "Attacker",
+		"age": 22,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/546023.png"
+	},
+	{
+		"id": 457754,
+		"name": "S. Merheg",
+		"position": "Attacker",
+		"age": 19,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/457754.png"
+	}
+]

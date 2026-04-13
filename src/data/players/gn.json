@@ -1,0 +1,282 @@
+[
+	{
+		"id": 154775,
+		"name": "Moussa Camara",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/154775.png"
+	},
+	{
+		"id": 577706,
+		"name": "O. Camara",
+		"position": "Goalkeeper",
+		"age": 0,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/577706.png"
+	},
+	{
+		"id": 424347,
+		"name": "Mory Keita",
+		"position": "Goalkeeper",
+		"age": 20,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/424347.png"
+	},
+	{
+		"id": 326157,
+		"name": "S. Sylla",
+		"position": "Goalkeeper",
+		"age": 21,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/326157.png"
+	},
+	{
+		"id": 294334,
+		"name": "Mohamed 'Yôrôbô' Bangoura",
+		"position": "Defender",
+		"age": 29,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/294334.png"
+	},
+	{
+		"id": 338205,
+		"name": "S. Camara",
+		"position": "Defender",
+		"age": 22,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/338205.png"
+	},
+	{
+		"id": 87355,
+		"name": "A. Conté",
+		"position": "Defender",
+		"age": 31,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/87355.png"
+	},
+	{
+		"id": 19347,
+		"name": "J. Jeanvier",
+		"position": "Defender",
+		"age": 33,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/19347.png"
+	},
+	{
+		"id": 382252,
+		"name": "Madiou Keita",
+		"position": "Defender",
+		"age": 21,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/382252.png"
+	},
+	{
+		"id": 380207,
+		"name": "N. Oularé",
+		"position": "Defender",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/380207.png"
+	},
+	{
+		"id": 294390,
+		"name": "Mohamed Soumah",
+		"position": "Defender",
+		"age": 22,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/294390.png"
+	},
+	{
+		"id": 193507,
+		"name": "D. Sylla",
+		"position": "Defender",
+		"age": 23,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/193507.png"
+	},
+	{
+		"id": 22141,
+		"name": "I. Sylla",
+		"position": "Defender",
+		"age": 31,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/22141.png"
+	},
+	{
+		"id": 37960,
+		"name": "S. Sylla",
+		"position": "Defender",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/37960.png"
+	},
+	{
+		"id": 357284,
+		"name": "S. Bangoura",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/357284.png"
+	},
+	{
+		"id": 524738,
+		"name": "Abdoulaye Camara",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/524738.png"
+	},
+	{
+		"id": 41126,
+		"name": "I. Camará",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/41126.png"
+	},
+	{
+		"id": 615196,
+		"name": "Mamady Cisse",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/615196.png"
+	},
+	{
+		"id": 302051,
+		"name": "S. Cissé",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/302051.png"
+	},
+	{
+		"id": 174783,
+		"name": "Y. Diaby",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/174783.png"
+	},
+	{
+		"id": 368126,
+		"name": "J. Janneh",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/368126.png"
+	},
+	{
+		"id": 90956,
+		"name": "M. Konaté",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/90956.png"
+	},
+	{
+		"id": 551459,
+		"name": "L. Kourouma",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/551459.png"
+	},
+	{
+		"id": 21103,
+		"name": "A. Touré",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/21103.png"
+	},
+	{
+		"id": 322856,
+		"name": "A. Bah",
+		"position": "Attacker",
+		"age": 23,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/322856.png"
+	},
+	{
+		"id": 237068,
+		"name": "A. Balde",
+		"position": "Attacker",
+		"age": 23,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/237068.png"
+	},
+	{
+		"id": 577707,
+		"name": "A. Bangoura",
+		"position": "Attacker",
+		"age": 19,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/577707.png"
+	},
+	{
+		"id": 51294,
+		"name": "A. Bangoura",
+		"position": "Attacker",
+		"age": 33,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/51294.png"
+	},
+	{
+		"id": 296185,
+		"name": "Yakhouba Gnagna Barry",
+		"position": "Attacker",
+		"age": 27,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/296185.png"
+	},
+	{
+		"id": 48337,
+		"name": "O. Camara",
+		"position": "Attacker",
+		"age": 27,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/48337.png"
+	},
+	{
+		"id": 21393,
+		"name": "S. Guirassy",
+		"position": "Attacker",
+		"age": 29,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/21393.png"
+	},
+	{
+		"id": 292932,
+		"name": "S. Soumah",
+		"position": "Attacker",
+		"age": 22,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/292932.png"
+	},
+	{
+		"id": 175413,
+		"name": "M. Sylla",
+		"position": "Attacker",
+		"age": 27,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/175413.png"
+	},
+	{
+		"id": 489935,
+		"name": "M. Toure",
+		"position": "Attacker",
+		"age": 20,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/489935.png"
+	},
+	{
+		"id": 483115,
+		"name": "A. Traoré",
+		"position": "Attacker",
+		"age": 18,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/483115.png"
+	}
+]

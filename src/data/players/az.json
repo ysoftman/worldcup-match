@@ -1,0 +1,274 @@
+[
+	{
+		"id": 55955,
+		"name": "S. Ağayev",
+		"position": "Goalkeeper",
+		"age": 34,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/55955.png"
+	},
+	{
+		"id": 123394,
+		"name": "A. Bayramov",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/123394.png"
+	},
+	{
+		"id": 334256,
+		"name": "R. Cəfərov",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 33,
+		"photo": "https://media.api-sports.io/football/players/334256.png"
+	},
+	{
+		"id": 1532,
+		"name": "Ş. Məhəmmədəliyev",
+		"position": "Goalkeeper",
+		"age": 31,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/1532.png"
+	},
+	{
+		"id": 356388,
+		"name": "R. Abbasov",
+		"position": "Defender",
+		"age": 20,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/356388.png"
+	},
+	{
+		"id": 105969,
+		"name": "Q. Alıyev",
+		"position": "Defender",
+		"age": 29,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/105969.png"
+	},
+	{
+		"id": 123382,
+		"name": "E. Bədəlov",
+		"position": "Defender",
+		"age": 30,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/123382.png"
+	},
+	{
+		"id": 1542,
+		"name": "T. Bayramov",
+		"position": "Defender",
+		"age": 24,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/1542.png"
+	},
+	{
+		"id": 124613,
+		"name": "E. Cəfərquliyev",
+		"position": "Defender",
+		"age": 25,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/124613.png"
+	},
+	{
+		"id": 123366,
+		"name": "R. Daşdəmirov",
+		"position": "Defender",
+		"age": 26,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/123366.png"
+	},
+	{
+		"id": 123369,
+		"name": "F. Hacıyev",
+		"position": "Defender",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/123369.png"
+	},
+	{
+		"id": 1534,
+		"name": "A. Hüseynov",
+		"position": "Defender",
+		"age": 30,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/1534.png"
+	},
+	{
+		"id": 1535,
+		"name": "B. Hüseynov",
+		"position": "Defender",
+		"age": 34,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/1535.png"
+	},
+	{
+		"id": 134060,
+		"name": "C. Hüseynov",
+		"position": "Defender",
+		"age": 22,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/134060.png"
+	},
+	{
+		"id": 546362,
+		"name": "M. Khachayev",
+		"position": "Defender",
+		"age": 27,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/546362.png"
+	},
+	{
+		"id": 55958,
+		"name": "A. Krivotsyuk",
+		"position": "Defender",
+		"age": 27,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/55958.png"
+	},
+	{
+		"id": 1537,
+		"name": "R. Məmmədov",
+		"position": "Defender",
+		"age": 30,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/1537.png"
+	},
+	{
+		"id": 70389,
+		"name": "B. Mustafazadə",
+		"position": "Defender",
+		"age": 28,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/70389.png"
+	},
+	{
+		"id": 123410,
+		"name": "R. Abdullazadə",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/123410.png"
+	},
+	{
+		"id": 123418,
+		"name": "S. Abdullazadə",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/123418.png"
+	},
+	{
+		"id": 546013,
+		"name": "M. Ahmadzada",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/546013.png"
+	},
+	{
+		"id": 55960,
+		"name": "A. Isaev",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/55960.png"
+	},
+	{
+		"id": 271724,
+		"name": "A. Xaybulayev",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/271724.png"
+	},
+	{
+		"id": 546373,
+		"name": "E. Mahmudov",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/546373.png"
+	},
+	{
+		"id": 130912,
+		"name": "A. Nuriyev",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/130912.png"
+	},
+	{
+		"id": 271722,
+		"name": "C. Nurıyev",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/271722.png"
+	},
+	{
+		"id": 546361,
+		"name": "E. Safarov",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/546361.png"
+	},
+	{
+		"id": 202123,
+		"name": "R. Əhmədzadə",
+		"position": "Attacker",
+		"age": 25,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/202123.png"
+	},
+	{
+		"id": 375811,
+		"name": "N. Axundzadə",
+		"position": "Attacker",
+		"age": 21,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/375811.png"
+	},
+	{
+		"id": 348230,
+		"name": "K. Aliyev",
+		"position": "Attacker",
+		"age": 21,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/348230.png"
+	},
+	{
+		"id": 41625,
+		"name": "R. Dadashov",
+		"position": "Attacker",
+		"age": 26,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/41625.png"
+	},
+	{
+		"id": 1556,
+		"name": "M. Emreli",
+		"position": "Attacker",
+		"age": 28,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/1556.png"
+	},
+	{
+		"id": 544760,
+		"name": "V. Isgandarli",
+		"position": "Attacker",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/544760.png"
+	},
+	{
+		"id": 134058,
+		"name": "M. Qurbanlı",
+		"position": "Attacker",
+		"age": 23,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/134058.png"
+	}
+]

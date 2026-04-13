@@ -1,0 +1,226 @@
+[
+	{
+		"id": 73225,
+		"name": "S. Buhari",
+		"position": "Goalkeeper",
+		"age": 33,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/73225.png"
+	},
+	{
+		"id": 73252,
+		"name": "R. Khairullah",
+		"position": "Goalkeeper",
+		"age": 31,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/73252.png"
+	},
+	{
+		"id": 98709,
+		"name": "I. Mahbud",
+		"position": "Goalkeeper",
+		"age": 35,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/98709.png"
+	},
+	{
+		"id": 541795,
+		"name": "A. Azman",
+		"position": "Defender",
+		"age": 24,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/541795.png"
+	},
+	{
+		"id": 541735,
+		"name": "A. A. Bin Azmi",
+		"position": "Defender",
+		"age": 29,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/541735.png"
+	},
+	{
+		"id": 73370,
+		"name": "I. Najeeb",
+		"position": "Defender",
+		"age": 26,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/73370.png"
+	},
+	{
+		"id": 98562,
+		"name": "R. Stewart",
+		"position": "Defender",
+		"age": 25,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/98562.png"
+	},
+	{
+		"id": 307627,
+		"name": "R. Suhaimi",
+		"position": "Defender",
+		"age": 20,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/307627.png"
+	},
+	{
+		"id": 73373,
+		"name": "L. Tan",
+		"position": "Defender",
+		"age": 28,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/73373.png"
+	},
+	{
+		"id": 35169,
+		"name": "S. Baharudin",
+		"position": "Midfielder",
+		"age": 34,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/35169.png"
+	},
+	{
+		"id": 73377,
+		"name": "J. Pereira",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/73377.png"
+	},
+	{
+		"id": 73244,
+		"name": "J. Chew",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/73244.png"
+	},
+	{
+		"id": 290701,
+		"name": "J. Emaviwe",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/290701.png"
+	},
+	{
+		"id": 356624,
+		"name": "J. Gallagher",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/356624.png"
+	},
+	{
+		"id": 35152,
+		"name": "H. Harun",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/35152.png"
+	},
+	{
+		"id": 311175,
+		"name": "G. Kweh",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/311175.png"
+	},
+	{
+		"id": 73369,
+		"name": "J. Mahler",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/73369.png"
+	},
+	{
+		"id": 73183,
+		"name": "K. Nakamura",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/73183.png"
+	},
+	{
+		"id": 73208,
+		"name": "F. Ramli",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/73208.png"
+	},
+	{
+		"id": 73239,
+		"name": "S. Shahiran",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/73239.png"
+	},
+	{
+		"id": 73269,
+		"name": "Song Ui-Young",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/73269.png"
+	},
+	{
+		"id": 201552,
+		"name": "H. Stewart",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/201552.png"
+	},
+	{
+		"id": 73275,
+		"name": "H. Syahin",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/73275.png"
+	},
+	{
+		"id": 605093,
+		"name": "E. Y. Tan J.",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/605093.png"
+	},
+	{
+		"id": 73301,
+		"name": "S. Anuar",
+		"position": "Attacker",
+		"age": 34,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/73301.png"
+	},
+	{
+		"id": 127240,
+		"name": "Ilhan Fandi",
+		"position": "Attacker",
+		"age": 23,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/127240.png"
+	},
+	{
+		"id": 108513,
+		"name": "F. Zulkifli",
+		"position": "Attacker",
+		"age": 23,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/108513.png"
+	},
+	{
+		"id": 57280,
+		"name": "Ikhsan Fandi",
+		"position": "Attacker",
+		"age": 26,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/57280.png"
+	}
+]

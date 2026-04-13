@@ -1,0 +1,186 @@
+[
+	{
+		"id": 334481,
+		"name": "F. Bekale",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/334481.png"
+	},
+	{
+		"id": 575050,
+		"name": "L. Mbaba",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/575050.png"
+	},
+	{
+		"id": 651082,
+		"name": "O. Bagnama",
+		"position": "Defender",
+		"age": 24,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651082.png"
+	},
+	{
+		"id": 196583,
+		"name": "Y. M&apos;Bemba",
+		"position": "Defender",
+		"age": 24,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/196583.png"
+	},
+	{
+		"id": 378353,
+		"name": "U. Mboula",
+		"position": "Defender",
+		"age": 22,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/378353.png"
+	},
+	{
+		"id": 296362,
+		"name": "A. Moucketou-Moussounda",
+		"position": "Defender",
+		"age": 25,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/296362.png"
+	},
+	{
+		"id": 20574,
+		"name": "J. Obiang",
+		"position": "Defender",
+		"age": 32,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/20574.png"
+	},
+	{
+		"id": 347985,
+		"name": "M. Onfia",
+		"position": "Defender",
+		"age": 25,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/347985.png"
+	},
+	{
+		"id": 651083,
+		"name": "F. Owanga",
+		"position": "Defender",
+		"age": 20,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651083.png"
+	},
+	{
+		"id": 325899,
+		"name": "J. Oyono",
+		"position": "Defender",
+		"age": 24,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/325899.png"
+	},
+	{
+		"id": 21794,
+		"name": "T. Averlant",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 27,
+		"photo": "https://media.api-sports.io/football/players/21794.png"
+	},
+	{
+		"id": 194220,
+		"name": "M. Babanzila",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/194220.png"
+	},
+	{
+		"id": 165414,
+		"name": "E. Bocoum",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/165414.png"
+	},
+	{
+		"id": 651077,
+		"name": "B. Kabinambele",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651077.png"
+	},
+	{
+		"id": 66021,
+		"name": "G. Kanga",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/66021.png"
+	},
+	{
+		"id": 338856,
+		"name": "N. Lemina",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/338856.png"
+	},
+	{
+		"id": 156188,
+		"name": "C. Loufilou",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/156188.png"
+	},
+	{
+		"id": 21504,
+		"name": "D. Ndong",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/21504.png"
+	},
+	{
+		"id": 424504,
+		"name": "S. Nze",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/424504.png"
+	},
+	{
+		"id": 50177,
+		"name": "A. Biyogo Poko",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/50177.png"
+	},
+	{
+		"id": 328648,
+		"name": "S. Babicka",
+		"position": "Attacker",
+		"age": 25,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/328648.png"
+	},
+	{
+		"id": 424506,
+		"name": "E. Matouti",
+		"position": "Attacker",
+		"age": 22,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/424506.png"
+	},
+	{
+		"id": 37035,
+		"name": "D. Sambissa",
+		"position": "Attacker",
+		"age": 30,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/37035.png"
+	}
+]

@@ -1,0 +1,210 @@
+[
+	{
+		"id": 334412,
+		"name": "A. Hakizimana",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/334412.png"
+	},
+	{
+		"id": 296067,
+		"name": "Pierre Ishimwe",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/296067.png"
+	},
+	{
+		"id": 333908,
+		"name": "F. Ntwari",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/333908.png"
+	},
+	{
+		"id": 263847,
+		"name": "C. Twizere",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/263847.png"
+	},
+	{
+		"id": 391236,
+		"name": "Gilbert Byiringiro",
+		"position": "Defender",
+		"age": 25,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/391236.png"
+	},
+	{
+		"id": 338200,
+		"name": "A. Hamon",
+		"position": "Defender",
+		"age": 22,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/338200.png"
+	},
+	{
+		"id": 153346,
+		"name": "E. Imanishimwe",
+		"position": "Defender",
+		"age": 30,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/153346.png"
+	},
+	{
+		"id": 102367,
+		"name": "P. Kavita",
+		"position": "Defender",
+		"age": 32,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/102367.png"
+	},
+	{
+		"id": 153348,
+		"name": "Thierry Manzi",
+		"position": "Defender",
+		"age": 29,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/153348.png"
+	},
+	{
+		"id": 154744,
+		"name": "A. Mutsinzi",
+		"position": "Defender",
+		"age": 28,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/154744.png"
+	},
+	{
+		"id": 571772,
+		"name": "C. Niyomugabo",
+		"position": "Defender",
+		"age": 27,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/571772.png"
+	},
+	{
+		"id": 575094,
+		"name": "D. Nkulikiyimana",
+		"position": "Defender",
+		"age": 20,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/575094.png"
+	},
+	{
+		"id": 296068,
+		"name": "Yunusu Nshimiyimana",
+		"position": "Defender",
+		"age": 24,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/296068.png"
+	},
+	{
+		"id": 8728,
+		"name": "D. Bizimana",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/8728.png"
+	},
+	{
+		"id": 180470,
+		"name": "S. Gueulette",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/180470.png"
+	},
+	{
+		"id": 293776,
+		"name": "Anicet Ishimwe",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/293776.png"
+	},
+	{
+		"id": 335131,
+		"name": "Bonheur Mugisha",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/335131.png"
+	},
+	{
+		"id": 17311,
+		"name": "Kevin Muhire",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/17311.png"
+	},
+	{
+		"id": 298004,
+		"name": "Jean Bosco Ruboneka",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/298004.png"
+	},
+	{
+		"id": 351886,
+		"name": "H. Sahabo",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/351886.png"
+	},
+	{
+		"id": 651090,
+		"name": "R. Uwineza",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651090.png"
+	},
+	{
+		"id": 262038,
+		"name": "Abeddy Biramahire",
+		"position": "Attacker",
+		"age": 27,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/262038.png"
+	},
+	{
+		"id": 535235,
+		"name": "A. Gitego",
+		"position": "Attacker",
+		"age": 23,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/535235.png"
+	},
+	{
+		"id": 351495,
+		"name": "J. Kwizera",
+		"position": "Attacker",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/351495.png"
+	},
+	{
+		"id": 165228,
+		"name": "Gilbert Mugisha",
+		"position": "Attacker",
+		"age": 29,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/165228.png"
+	},
+	{
+		"id": 49715,
+		"name": "Innocent Nshuti",
+		"position": "Attacker",
+		"age": 27,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/49715.png"
+	}
+]

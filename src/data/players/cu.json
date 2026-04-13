@@ -1,0 +1,162 @@
+[
+	{
+		"id": 446552,
+		"name": "L. Martínez",
+		"position": "Goalkeeper",
+		"age": 34,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446552.png"
+	},
+	{
+		"id": 446560,
+		"name": "M. Pérez",
+		"position": "Goalkeeper",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446560.png"
+	},
+	{
+		"id": 446553,
+		"name": "M. Morales",
+		"position": "Defender",
+		"age": 34,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446553.png"
+	},
+	{
+		"id": 446561,
+		"name": "Y. Suarez",
+		"position": "Defender",
+		"age": 24,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446561.png"
+	},
+	{
+		"id": 372842,
+		"name": "Y. Palma",
+		"position": "Defender",
+		"age": 21,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/372842.png"
+	},
+	{
+		"id": 446554,
+		"name": "S. Wanton Romero",
+		"position": "Defender",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446554.png"
+	},
+	{
+		"id": 373187,
+		"name": "Y. Mena",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/373187.png"
+	},
+	{
+		"id": 446556,
+		"name": "E. Valdés",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446556.png"
+	},
+	{
+		"id": 372838,
+		"name": "M. Ãlvarez",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/372838.png"
+	},
+	{
+		"id": 372849,
+		"name": "L. Moreno",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/372849.png"
+	},
+	{
+		"id": 446555,
+		"name": "Y. Nuñez",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446555.png"
+	},
+	{
+		"id": 446373,
+		"name": "J. Pupo",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446373.png"
+	},
+	{
+		"id": 372848,
+		"name": "Y. Lee",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/372848.png"
+	},
+	{
+		"id": 373275,
+		"name": "E. Zara",
+		"position": "Midfielder",
+		"age": 21,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/373275.png"
+	},
+	{
+		"id": 446557,
+		"name": "N. Aguilar",
+		"position": "Attacker",
+		"age": 26,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446557.png"
+	},
+	{
+		"id": 446859,
+		"name": "I. Hechavarria",
+		"position": "Attacker",
+		"age": 22,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/446859.png"
+	},
+	{
+		"id": 446559,
+		"name": "D. Ribalta",
+		"position": "Attacker",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/446559.png"
+	},
+	{
+		"id": 373274,
+		"name": "M. Mengana",
+		"position": "Attacker",
+		"age": 23,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/373274.png"
+	},
+	{
+		"id": 372843,
+		"name": "E. Nuñez",
+		"position": "Attacker",
+		"age": 23,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/372843.png"
+	},
+	{
+		"id": 373075,
+		"name": "K. RodrÃ­guez",
+		"position": "Attacker",
+		"age": 20,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/373075.png"
+	}
+]

@@ -1,0 +1,242 @@
+[
+	{
+		"id": 46322,
+		"name": "W. Arubi",
+		"position": "Goalkeeper",
+		"age": 40,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/46322.png"
+	},
+	{
+		"id": 46508,
+		"name": "E. Chipezeze",
+		"position": "Goalkeeper",
+		"age": 35,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/46508.png"
+	},
+	{
+		"id": 185323,
+		"name": "M. Mapisa",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/185323.png"
+	},
+	{
+		"id": 651661,
+		"name": "F. Sibanda",
+		"position": "Goalkeeper",
+		"age": 29,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651661.png"
+	},
+	{
+		"id": 82140,
+		"name": "B. Galloway",
+		"position": "Defender",
+		"age": 29,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/82140.png"
+	},
+	{
+		"id": 354267,
+		"name": "M. Garananga",
+		"position": "Defender",
+		"age": 24,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/354267.png"
+	},
+	{
+		"id": 3063,
+		"name": "T. Hadebe",
+		"position": "Defender",
+		"age": 30,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/3063.png"
+	},
+	{
+		"id": 462449,
+		"name": "Emmanuel Jalai",
+		"position": "Defender",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/462449.png"
+	},
+	{
+		"id": 3064,
+		"name": "D. Lunga",
+		"position": "Defender",
+		"age": 30,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/3064.png"
+	},
+	{
+		"id": 582924,
+		"name": "I. Mauchi",
+		"position": "Defender",
+		"age": 23,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/582924.png"
+	},
+	{
+		"id": 171035,
+		"name": "T. Chirewa",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/171035.png"
+	},
+	{
+		"id": 202532,
+		"name": "J. Fabisch",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/202532.png"
+	},
+	{
+		"id": 394595,
+		"name": "S. Fusire",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/394595.png"
+	},
+	{
+		"id": 559850,
+		"name": "P. Makwiramiti",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/559850.png"
+	},
+	{
+		"id": 3078,
+		"name": "A. Mudimu",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/3078.png"
+	},
+	{
+		"id": 130723,
+		"name": "Godknows Murwira",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/130723.png"
+	},
+	{
+		"id": 76,
+		"name": "M. Nakamba",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/76.png"
+	},
+	{
+		"id": 506634,
+		"name": "P. Padera",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/506634.png"
+	},
+	{
+		"id": 651591,
+		"name": "M. Tshuma",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651591.png"
+	},
+	{
+		"id": 345357,
+		"name": "B. Antonio",
+		"position": "Attacker",
+		"age": 23,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/345357.png"
+	},
+	{
+		"id": 18085,
+		"name": "M. Bonne",
+		"position": "Attacker",
+		"age": 30,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/18085.png"
+	},
+	{
+		"id": 608438,
+		"name": "T. Chakuchichi",
+		"position": "Attacker",
+		"age": 16,
+		"number": 28,
+		"photo": "https://media.api-sports.io/football/players/608438.png"
+	},
+	{
+		"id": 98989,
+		"name": "P. Dube",
+		"position": "Attacker",
+		"age": 28,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/98989.png"
+	},
+	{
+		"id": 278116,
+		"name": "Tawanda Jethro Maswanhise",
+		"position": "Attacker",
+		"age": 23,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/278116.png"
+	},
+	{
+		"id": 544053,
+		"name": "D. Msendami",
+		"position": "Attacker",
+		"age": 24,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/544053.png"
+	},
+	{
+		"id": 3081,
+		"name": "K. Musona",
+		"position": "Attacker",
+		"age": 35,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/3081.png"
+	},
+	{
+		"id": 554409,
+		"name": "W. Navaya",
+		"position": "Attacker",
+		"age": 27,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/554409.png"
+	},
+	{
+		"id": 98929,
+		"name": "John Gerald Tungamirai Takwara",
+		"position": "Attacker",
+		"age": 31,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/98929.png"
+	},
+	{
+		"id": 330185,
+		"name": "I. Wadi",
+		"position": "Attacker",
+		"age": 33,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/330185.png"
+	},
+	{
+		"id": 46637,
+		"name": "Junior Zindoga",
+		"position": "Attacker",
+		"age": 27,
+		"number": 27,
+		"photo": "https://media.api-sports.io/football/players/46637.png"
+	}
+]

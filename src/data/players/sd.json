@@ -1,0 +1,266 @@
+[
+	{
+		"id": 575060,
+		"name": "M. Magut",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/575060.png"
+	},
+	{
+		"id": 6897,
+		"name": "M. Mawith",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/6897.png"
+	},
+	{
+		"id": 422815,
+		"name": "R. Mayek",
+		"position": "Goalkeeper",
+		"age": 25,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/422815.png"
+	},
+	{
+		"id": 575063,
+		"name": "G. Yogusuk",
+		"position": "Goalkeeper",
+		"age": 0,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/575063.png"
+	},
+	{
+		"id": 651003,
+		"name": "J. Bangasi",
+		"position": "Defender",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651003.png"
+	},
+	{
+		"id": 408427,
+		"name": "D. John",
+		"position": "Defender",
+		"age": 15,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/408427.png"
+	},
+	{
+		"id": 295587,
+		"name": "Stephen Joseph Dhata",
+		"position": "Defender",
+		"age": 23,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/295587.png"
+	},
+	{
+		"id": 575057,
+		"name": "A. Geriga",
+		"position": "Defender",
+		"age": 30,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/575057.png"
+	},
+	{
+		"id": 645697,
+		"name": "T. Kuol",
+		"position": "Defender",
+		"age": 23,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/645697.png"
+	},
+	{
+		"id": 575058,
+		"name": "B. Laku",
+		"position": "Defender",
+		"age": 19,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/575058.png"
+	},
+	{
+		"id": 609141,
+		"name": "P. Maker",
+		"position": "Defender",
+		"age": 32,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/609141.png"
+	},
+	{
+		"id": 487384,
+		"name": "R. Okocha",
+		"position": "Defender",
+		"age": 32,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/487384.png"
+	},
+	{
+		"id": 575061,
+		"name": "P. K. Pal P.",
+		"position": "Defender",
+		"age": 25,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/575061.png"
+	},
+	{
+		"id": 276402,
+		"name": "O. Sebit",
+		"position": "Defender",
+		"age": 27,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/276402.png"
+	},
+	{
+		"id": 577133,
+		"name": "S. Taban",
+		"position": "Defender",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/577133.png"
+	},
+	{
+		"id": 44094,
+		"name": "Athir Thomas Magor Abdo Gaber",
+		"position": "Defender",
+		"age": 38,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/44094.png"
+	},
+	{
+		"id": 293809,
+		"name": "Rashid Toha Freedon",
+		"position": "Defender",
+		"age": 27,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/293809.png"
+	},
+	{
+		"id": 577134,
+		"name": "W. Adebo",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/577134.png"
+	},
+	{
+		"id": 575062,
+		"name": "M. Albano",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/575062.png"
+	},
+	{
+		"id": 167721,
+		"name": "P. Chol",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/167721.png"
+	},
+	{
+		"id": 609075,
+		"name": "W. Gama",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/609075.png"
+	},
+	{
+		"id": 651863,
+		"name": "Dor Jok",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/651863.png"
+	},
+	{
+		"id": 565246,
+		"name": "K. Kur",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/565246.png"
+	},
+	{
+		"id": 361631,
+		"name": "J. Malish Manase",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/361631.png"
+	},
+	{
+		"id": 308412,
+		"name": "M. Malish",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/308412.png"
+	},
+	{
+		"id": 276403,
+		"name": "I. Wani",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/276403.png"
+	},
+	{
+		"id": 575059,
+		"name": "C. Yak",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/575059.png"
+	},
+	{
+		"id": 575033,
+		"name": "P. Akech",
+		"position": "Attacker",
+		"age": 0,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/575033.png"
+	},
+	{
+		"id": 67654,
+		"name": "Valentino Kuach Yuel",
+		"position": "Attacker",
+		"age": 31,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/67654.png"
+	},
+	{
+		"id": 349272,
+		"name": "Alfred Leku",
+		"position": "Attacker",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/349272.png"
+	},
+	{
+		"id": 575032,
+		"name": "K. Majak",
+		"position": "Attacker",
+		"age": 0,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/575032.png"
+	},
+	{
+		"id": 291437,
+		"name": "T. Okello",
+		"position": "Attacker",
+		"age": 29,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/291437.png"
+	},
+	{
+		"id": 355499,
+		"name": "A. Riak",
+		"position": "Attacker",
+		"age": 25,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/355499.png"
+	}
+]

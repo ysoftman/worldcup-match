@@ -1,0 +1,242 @@
+[
+	{
+		"id": 543015,
+		"name": "W. H. Ng",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/543015.png"
+	},
+	{
+		"id": 573303,
+		"name": "A. Shliakotin",
+		"position": "Goalkeeper",
+		"age": 0,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/573303.png"
+	},
+	{
+		"id": 542931,
+		"name": "Tse Ka-Wing",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/542931.png"
+	},
+	{
+		"id": 110307,
+		"name": "Wang Zhenpeng",
+		"position": "Goalkeeper",
+		"age": 41,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/110307.png"
+	},
+	{
+		"id": 110324,
+		"name": "Yapp Hung Fai",
+		"position": "Goalkeeper",
+		"age": 35,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/110324.png"
+	},
+	{
+		"id": 110359,
+		"name": "Chan Shinichi",
+		"position": "Defender",
+		"age": 23,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/110359.png"
+	},
+	{
+		"id": 378282,
+		"name": "O. Gerbig",
+		"position": "Defender",
+		"age": 27,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/378282.png"
+	},
+	{
+		"id": 144694,
+		"name": "A. Jojo",
+		"position": "Defender",
+		"age": 26,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/144694.png"
+	},
+	{
+		"id": 327674,
+		"name": "L. Jones",
+		"position": "Defender",
+		"age": 27,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/327674.png"
+	},
+	{
+		"id": 110296,
+		"name": "Vas Núñez",
+		"position": "Defender",
+		"age": 30,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/110296.png"
+	},
+	{
+		"id": 110257,
+		"name": "Sun Ming Him",
+		"position": "Defender",
+		"age": 25,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/110257.png"
+	},
+	{
+		"id": 70513,
+		"name": "Yue Tze Nam",
+		"position": "Defender",
+		"age": 27,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/70513.png"
+	},
+	{
+		"id": 110302,
+		"name": "Barak Braunshtain",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/110302.png"
+	},
+	{
+		"id": 531301,
+		"name": "P. Chan Siu-Kwan",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/531301.png"
+	},
+	{
+		"id": 570039,
+		"name": "Dudu",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/570039.png"
+	},
+	{
+		"id": 110493,
+		"name": "Ngan Cheuk Pan",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/110493.png"
+	},
+	{
+		"id": 110209,
+		"name": "Tan Chun Lok Mark",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/110209.png"
+	},
+	{
+		"id": 110219,
+		"name": "Wong Wai",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/110219.png"
+	},
+	{
+		"id": 291936,
+		"name": "Yu Jesse Joy Yin",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/291936.png"
+	},
+	{
+		"id": 568647,
+		"name": "N. Benavides",
+		"position": "Attacker",
+		"age": 23,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/568647.png"
+	},
+	{
+		"id": 110185,
+		"name": "Manuel Bleda",
+		"position": "Attacker",
+		"age": 35,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/110185.png"
+	},
+	{
+		"id": 110184,
+		"name": "Everton Camargo",
+		"position": "Attacker",
+		"age": 34,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/110184.png"
+	},
+	{
+		"id": 110158,
+		"name": "Fernando",
+		"position": "Attacker",
+		"age": 39,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/110158.png"
+	},
+	{
+		"id": 110165,
+		"name": "Walter",
+		"position": "Attacker",
+		"age": 35,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/110165.png"
+	},
+	{
+		"id": 569989,
+		"name": "K. Lau",
+		"position": "Attacker",
+		"age": 23,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/569989.png"
+	},
+	{
+		"id": 552614,
+		"name": "A. Mahama",
+		"position": "Attacker",
+		"age": 34,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/552614.png"
+	},
+	{
+		"id": 385815,
+		"name": "R. Merkies",
+		"position": "Attacker",
+		"age": 23,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/385815.png"
+	},
+	{
+		"id": 300034,
+		"name": "Matt Orr",
+		"position": "Attacker",
+		"age": 28,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/300034.png"
+	},
+	{
+		"id": 542729,
+		"name": "Stefan",
+		"position": "Attacker",
+		"age": 37,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/542729.png"
+	},
+	{
+		"id": 542730,
+		"name": "M. Udebuluzor",
+		"position": "Attacker",
+		"age": 21,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/542730.png"
+	}
+]

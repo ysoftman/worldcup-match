@@ -1,0 +1,210 @@
+[
+	{
+		"id": 265533,
+		"name": "T. Anarbekov",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/265533.png"
+	},
+	{
+		"id": 111561,
+		"name": "M. Seysen",
+		"position": "Goalkeeper",
+		"age": 26,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/111561.png"
+	},
+	{
+		"id": 111520,
+		"name": "B. Shaizada",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/111520.png"
+	},
+	{
+		"id": 105843,
+		"name": "Aybol Abiken",
+		"position": "Defender",
+		"age": 29,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/105843.png"
+	},
+	{
+		"id": 56080,
+		"name": "N. Alip",
+		"position": "Defender",
+		"age": 26,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/56080.png"
+	},
+	{
+		"id": 111789,
+		"name": "A. Kassym",
+		"position": "Defender",
+		"age": 27,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/111789.png"
+	},
+	{
+		"id": 111767,
+		"name": "A. Kenesbek",
+		"position": "Defender",
+		"age": 29,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/111767.png"
+	},
+	{
+		"id": 56078,
+		"name": "S. Maliy",
+		"position": "Defender",
+		"age": 35,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/56078.png"
+	},
+	{
+		"id": 323820,
+		"name": "A. Mrynskiy",
+		"position": "Defender",
+		"age": 21,
+		"number": 24,
+		"photo": "https://media.api-sports.io/football/players/323820.png"
+	},
+	{
+		"id": 265528,
+		"name": "A. Shirobokov",
+		"position": "Defender",
+		"age": 22,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/265528.png"
+	},
+	{
+		"id": 111862,
+		"name": "S. Sovet",
+		"position": "Defender",
+		"age": 25,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/111862.png"
+	},
+	{
+		"id": 111532,
+		"name": "E. Tapalov",
+		"position": "Defender",
+		"age": 32,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/111532.png"
+	},
+	{
+		"id": 56084,
+		"name": "Y. Vorogovskiy",
+		"position": "Defender",
+		"age": 29,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/56084.png"
+	},
+	{
+		"id": 466618,
+		"name": "A. Ashirbek",
+		"position": "Midfielder",
+		"age": 22,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/466618.png"
+	},
+	{
+		"id": 311508,
+		"name": "I. Chesnokov",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/311508.png"
+	},
+	{
+		"id": 308537,
+		"name": "M. Kalmyrza",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/308537.png"
+	},
+	{
+		"id": 56083,
+		"name": "I. Kuat",
+		"position": "Midfielder",
+		"age": 32,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/56083.png"
+	},
+	{
+		"id": 111495,
+		"name": "R. Orazov",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/111495.png"
+	},
+	{
+		"id": 163319,
+		"name": "Nurdaulet Agzambayev",
+		"position": "Attacker",
+		"age": 26,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/163319.png"
+	},
+	{
+		"id": 111503,
+		"name": "D. Karaman",
+		"position": "Attacker",
+		"age": 25,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/111503.png"
+	},
+	{
+		"id": 293264,
+		"name": "G. Kenzhebek",
+		"position": "Attacker",
+		"age": 22,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/293264.png"
+	},
+	{
+		"id": 191889,
+		"name": "M. Samorodov",
+		"position": "Attacker",
+		"age": 23,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/191889.png"
+	},
+	{
+		"id": 445472,
+		"name": "D. Satpaev",
+		"position": "Attacker",
+		"age": 17,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/445472.png"
+	},
+	{
+		"id": 111724,
+		"name": "A. Shushenachev",
+		"position": "Attacker",
+		"age": 27,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/111724.png"
+	},
+	{
+		"id": 292349,
+		"name": "I. Sviridov",
+		"position": "Attacker",
+		"age": 23,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/292349.png"
+	},
+	{
+		"id": 204376,
+		"name": "Z. Zhumashev",
+		"position": "Attacker",
+		"age": 24,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/204376.png"
+	}
+]

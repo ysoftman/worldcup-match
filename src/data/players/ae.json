@@ -1,0 +1,202 @@
+[
+	{
+		"id": 50248,
+		"name": "Adel Al Hosani",
+		"position": "Goalkeeper",
+		"age": 36,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/50248.png"
+	},
+	{
+		"id": 543044,
+		"name": "H. Al Meqebaali",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/543044.png"
+	},
+	{
+		"id": 44040,
+		"name": "Khalid Eisa",
+		"position": "Goalkeeper",
+		"age": 36,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/44040.png"
+	},
+	{
+		"id": 50329,
+		"name": "Ali Khaseif",
+		"position": "Goalkeeper",
+		"age": 38,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/50329.png"
+	},
+	{
+		"id": 163218,
+		"name": "Rúben Canedo",
+		"position": "Defender",
+		"age": 24,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/163218.png"
+	},
+	{
+		"id": 146683,
+		"name": "Marcus Meloni",
+		"position": "Defender",
+		"age": 25,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/146683.png"
+	},
+	{
+		"id": 576367,
+		"name": "K. Ibrahim",
+		"position": "Defender",
+		"age": 28,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/576367.png"
+	},
+	{
+		"id": 98479,
+		"name": "S. Ivković",
+		"position": "Defender",
+		"age": 32,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/98479.png"
+	},
+	{
+		"id": 50372,
+		"name": "Khaled Ebraheim",
+		"position": "Defender",
+		"age": 28,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/50372.png"
+	},
+	{
+		"id": 542834,
+		"name": "K. Kouadio",
+		"position": "Defender",
+		"age": 25,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/542834.png"
+	},
+	{
+		"id": 196226,
+		"name": "Lucas Pimenta",
+		"position": "Defender",
+		"age": 25,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/196226.png"
+	},
+	{
+		"id": 49622,
+		"name": "A. Zouhir",
+		"position": "Defender",
+		"age": 25,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/49622.png"
+	},
+	{
+		"id": 50391,
+		"name": "Yahya Al Ghassani",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/50391.png"
+	},
+	{
+		"id": 542773,
+		"name": "I. Faiz",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/542773.png"
+	},
+	{
+		"id": 6685,
+		"name": "N. Giménez",
+		"position": "Midfielder",
+		"age": 29,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/6685.png"
+	},
+	{
+		"id": 10532,
+		"name": "Luanzinho",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/10532.png"
+	},
+	{
+		"id": 44069,
+		"name": "Yahia Nader",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/44069.png"
+	},
+	{
+		"id": 50605,
+		"name": "Majid Rashid",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/50605.png"
+	},
+	{
+		"id": 283324,
+		"name": "Sultan Adil",
+		"position": "Attacker",
+		"age": 21,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/283324.png"
+	},
+	{
+		"id": 579542,
+		"name": "R. Akonnor",
+		"position": "Attacker",
+		"age": 21,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/579542.png"
+	},
+	{
+		"id": 156769,
+		"name": "Bruno",
+		"position": "Attacker",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/156769.png"
+	},
+	{
+		"id": 44067,
+		"name": "Caio Lucas",
+		"position": "Attacker",
+		"age": 31,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/44067.png"
+	},
+	{
+		"id": 626555,
+		"name": "M. Jumah",
+		"position": "Attacker",
+		"age": 19,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/626555.png"
+	},
+	{
+		"id": 50543,
+		"name": "Ali Saleh",
+		"position": "Attacker",
+		"age": 25,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/50543.png"
+	},
+	{
+		"id": 181135,
+		"name": "Harib Abdalla Suhail",
+		"position": "Attacker",
+		"age": 23,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/181135.png"
+	}
+]

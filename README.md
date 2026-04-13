@@ -104,6 +104,5 @@ src/
 └── index.css                 # Global styles
 scripts/
 ├── fetchWorldcup.ts          # API-Football squad fetch script
-├── teamIds.json              # Cached national team IDs (no bulk API available)
-└── generatePlayers.ts        # Hardcoded player data generator
+└── teamIds.json              # Cached national team IDs (no bulk API available)
 ```

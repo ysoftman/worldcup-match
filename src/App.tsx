@@ -751,6 +751,9 @@ function App() {
 					readOnly={squadModal.readOnly}
 				/>
 			)}
+			<footer className="app-version">
+				{__APP_VERSION__} · {__APP_COMMIT__} · {__APP_BUILD_TIME__}
+			</footer>
 		</div>
 	);
 }

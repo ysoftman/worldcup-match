@@ -981,7 +981,6 @@
 	animation: name-entrance 0.8s ease-out 0.8s both;
 }
 
-
 .update-date {
 	text-align: center;
 	font-size: 0.65rem;
@@ -3724,4 +3723,12 @@ input:focus-visible {
 	.squad-table {
 		min-width: 700px;
 	}
+}
+
+.app-version {
+	text-align: center;
+	padding: 16px 0 8px;
+	font-size: 11px;
+	color: var(--color-gray);
+	opacity: 0.6;
 }

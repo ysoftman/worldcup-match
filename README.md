@@ -92,7 +92,6 @@ src/
 │   ├── BracketView.tsx      # Knockout bracket with connectors
 │   ├── GroupView.tsx         # Group stage standings and matches
 │   ├── GroupMatchCard.tsx    # Group match card
-│   ├── MatchCard.tsx         # Knockout match card
 │   ├── SquadModal.tsx        # Squad viewer with starting XI selection
 │   ├── Champion.tsx          # Winner celebration display
 │   ├── TeamSelector.tsx      # Team selection with region filters

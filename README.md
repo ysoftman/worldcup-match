@@ -1,10 +1,10 @@
 # FIFA World Cup Simulator
 
-FIFA 211 member nations, group stage and knockout tournament simulation web app.
+FIFA 212 member nations, group stage and knockout tournament simulation web app.
 
 ## Features
 
-- 211 FIFA member nations with real rankings (April 2026)
+- 212 FIFA member nations with real rankings (April 2026)
 - 32-team (8 groups) and 48-team (12 groups) tournament formats
 - Presets: 2002, 2006, 2010, 2014, 2018, 2022, 2026 World Cup
 - Region-based random selection (Asia, Europe, Africa, Americas, Oceania, etc.)
@@ -15,7 +15,7 @@ FIFA 211 member nations, group stage and knockout tournament simulation web app.
 - Starting XI selection with auto-select by formation
 - Player ability ratings (OVR, pace, shooting, passing, dribbling, defending, physical)
 - Player photo zoom on click
-- Real player data for 44 countries via API-Football (fallback: generated players marked with `*`)
+- Real player data for 140 countries via API-Football (fallback: generated players marked with `*`)
 - Formation selector for group stage teams (8 formations with attack/defense modifiers)
 - Team strength modifier (-2 to +2) and team swap between groups
 - Win/lose/draw color indicators (green/red/orange)
@@ -52,7 +52,7 @@ bun run build
 ## Player Data
 
 Real player data is stored in `src/data/players/` as per-country JSON files (sourced from API-Football).
-The fetch script dynamically queries the API country list and matches against the project's 211 FIFA nations (167 matchable, 44 small nations not in API).
+The fetch script dynamically queries the API country list and matches against the project's 212 FIFA nations.
 Remaining countries use algorithmically generated players based on FIFA ranking and 30 cultural-region name pools.
 Generated (fallback) players are marked with `*` in the squad modal.
 
@@ -64,9 +64,8 @@ bun run scripts/fetchWorldcup.ts
 
 bun auto-loads `.env`, so no need to pass the key inline.
 
+- API-Football has no bulk endpoint for national team IDs, so `scripts/teamIds.json` caches country → team ID mappings. Missing countries are queried once via `/teams?country=X` and saved for reuse.
 - Already downloaded countries (JSON file exists) are skipped automatically.
-- `scripts/.cache_wc.json` stores "queried but no data" results (e.g. teamId null) to avoid wasting API calls on repeated runs.
-- Deleting the cache does NOT re-download countries that already have JSON files — only re-queries countries with no data.
 - When the daily API limit is reached, re-run the next day to continue.
 - `src/data/players/index.ts` is auto-generated after each run.
 
@@ -75,10 +74,10 @@ bun auto-loads `.env`, so no need to pass the key inline.
 ```text
 src/
 ├── data/
-│   ├── countries.ts         # 211 FIFA nations (name, code, flag, rank, confederation)
+│   ├── countries.ts         # 212 FIFA nations (name, code, flag, rank, confederation)
 │   ├── presets.ts           # Tournament presets (2002-2026 World Cup)
 │   ├── playerNames.ts       # Region-specific name pools (30 cultural groups)
-│   └── players/             # Per-country player data (44 countries)
+│   └── players/             # Per-country player data (140 countries)
 │       ├── index.ts         # Aggregated import/export
 │       ├── ar.json          # Argentina
 │       ├── fr.json          # France
@@ -105,5 +104,6 @@ src/
 └── index.css                 # Global styles
 scripts/
 ├── fetchWorldcup.ts          # API-Football squad fetch script
+├── teamIds.json              # Cached national team IDs (no bulk API available)
 └── generatePlayers.ts        # Hardcoded player data generator
 ```

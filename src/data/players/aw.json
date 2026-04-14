@@ -1,0 +1,170 @@
+[
+  {
+    "id": 612493,
+    "name": "J. Eisden",
+    "position": "Goalkeeper",
+    "age": 20,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/612493.png"
+  },
+  {
+    "id": 612487,
+    "name": "M. Lentink",
+    "position": "Goalkeeper",
+    "age": 32,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/612487.png"
+  },
+  {
+    "id": 37733,
+    "name": "D. Bäly",
+    "position": "Defender",
+    "age": 27,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/37733.png"
+  },
+  {
+    "id": 650061,
+    "name": "R. Breinburg",
+    "position": "Defender",
+    "age": 20,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/650061.png"
+  },
+  {
+    "id": 359843,
+    "name": "G. Curiel",
+    "position": "Defender",
+    "age": 23,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/359843.png"
+  },
+  {
+    "id": 620308,
+    "name": "J. Jimenez",
+    "position": "Defender",
+    "age": 25,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/620308.png"
+  },
+  {
+    "id": 612489,
+    "name": "D. Luydens",
+    "position": "Defender",
+    "age": 26,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/612489.png"
+  },
+  {
+    "id": 37425,
+    "name": "B. Martis",
+    "position": "Defender",
+    "age": 27,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/37425.png"
+  },
+  {
+    "id": 612490,
+    "name": "K. Nedd",
+    "position": "Defender",
+    "age": 21,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/612490.png"
+  },
+  {
+    "id": 612488,
+    "name": "P. Nickelson",
+    "position": "Defender",
+    "age": 28,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/612488.png"
+  },
+  {
+    "id": 406566,
+    "name": "Q. Poulina",
+    "position": "Defender",
+    "age": 22,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/406566.png"
+  },
+  {
+    "id": 612424,
+    "name": "W. Bennett",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/612424.png"
+  },
+  {
+    "id": 584129,
+    "name": "M. Molina",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/584129.png"
+  },
+  {
+    "id": 612420,
+    "name": "R. Ostiana",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/612420.png"
+  },
+  {
+    "id": 612423,
+    "name": "J. Romano",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/612423.png"
+  },
+  {
+    "id": 494551,
+    "name": "Dimaggio Senchi",
+    "position": "Midfielder",
+    "age": 30,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/494551.png"
+  },
+  {
+    "id": 538579,
+    "name": "C. Fermina",
+    "position": "Attacker",
+    "age": 25,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/538579.png"
+  },
+  {
+    "id": 620278,
+    "name": "J. Kruydenhof",
+    "position": "Attacker",
+    "age": 19,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/620278.png"
+  },
+  {
+    "id": 538628,
+    "name": "A. Leito",
+    "position": "Attacker",
+    "age": 22,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/538628.png"
+  },
+  {
+    "id": 627394,
+    "name": "G. Robertha",
+    "position": "Attacker",
+    "age": 21,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/627394.png"
+  },
+  {
+    "id": 650111,
+    "name": "G. Vandepitte",
+    "position": "Attacker",
+    "age": 25,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/650111.png"
+  }
+]

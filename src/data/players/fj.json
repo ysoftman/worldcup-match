@@ -1,0 +1,359 @@
+[
+  {
+    "id": 360170,
+    "name": "M. Alam",
+    "position": "Goalkeeper",
+    "age": 25,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/360170.png"
+  },
+  {
+    "id": 408689,
+    "name": "A. Mateisuva",
+    "position": "Goalkeeper",
+    "age": 33,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/408689.png"
+  },
+  {
+    "id": 360179,
+    "name": "I. Sevanaia",
+    "position": "Goalkeeper",
+    "age": 22,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/360179.png"
+  },
+  {
+    "id": 124258,
+    "name": "Simione Moci Tamanisau",
+    "position": "Goalkeeper",
+    "age": 43,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/124258.png"
+  },
+  {
+    "id": 0,
+    "name": "A. Naucukidi",
+    "position": "Goalkeeper",
+    "age": 28,
+    "number": 0
+  },
+  {
+    "id": 397200,
+    "name": "A. Mustahib",
+    "position": "Goalkeeper",
+    "age": 21,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/397200.png"
+  },
+  {
+    "id": 0,
+    "name": "J. Vuakaca",
+    "position": "Goalkeeper",
+    "age": 22,
+    "number": 13
+  },
+  {
+    "id": 360178,
+    "name": "A. Mateisuva",
+    "position": "Goalkeeper",
+    "age": 28,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/360178.png"
+  },
+  {
+    "id": 124260,
+    "name": "R. Tekiate",
+    "position": "Defender",
+    "age": 35,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/124260.png"
+  },
+  {
+    "id": 0,
+    "name": "A. Tuivuna",
+    "position": "Defender",
+    "age": 30,
+    "number": 0
+  },
+  {
+    "id": 0,
+    "name": "A. Ali",
+    "position": "Defender",
+    "age": 27,
+    "number": 0
+  },
+  {
+    "id": 360180,
+    "name": "I. Turagalailai",
+    "position": "Defender",
+    "age": 23,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/360180.png"
+  },
+  {
+    "id": 360183,
+    "name": "P. Ravai",
+    "position": "Defender",
+    "age": 20,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/360183.png"
+  },
+  {
+    "id": 0,
+    "name": "F. Baravilala",
+    "position": "Defender",
+    "age": 31,
+    "number": 0
+  },
+  {
+    "id": 140732,
+    "name": "Kishan Ravinesh Sami",
+    "position": "Defender",
+    "age": 25,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/140732.png"
+  },
+  {
+    "id": 371217,
+    "name": "S. Vasconcellos",
+    "position": "Defender",
+    "age": 20,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/371217.png"
+  },
+  {
+    "id": 166177,
+    "name": "S. Kautoga",
+    "position": "Defender",
+    "age": 38,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/166177.png"
+  },
+  {
+    "id": 396871,
+    "name": "B. McMullen",
+    "position": "Defender",
+    "age": 23,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/396871.png"
+  },
+  {
+    "id": 198528,
+    "name": "R. Naresh",
+    "position": "Defender",
+    "age": 23,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/198528.png"
+  },
+  {
+    "id": 0,
+    "name": "E. Leiroti",
+    "position": "Defender",
+    "age": 30,
+    "number": 0
+  },
+  {
+    "id": 370886,
+    "name": "Gabrieli Matanisiga",
+    "position": "Defender",
+    "age": 30,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/370886.png"
+  },
+  {
+    "id": 124261,
+    "name": "K. Rawaqa",
+    "position": "Defender",
+    "age": 35,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/124261.png"
+  },
+  {
+    "id": 0,
+    "name": "A. Khem",
+    "position": "Defender",
+    "age": 32,
+    "number": 0
+  },
+  {
+    "id": 231048,
+    "name": "S. Wara",
+    "position": "Defender",
+    "age": 26,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/231048.png"
+  },
+  {
+    "id": 0,
+    "name": "D. Radrigai",
+    "position": "Midfielder",
+    "age": 35,
+    "number": 0
+  },
+  {
+    "id": 124271,
+    "name": "T. Waranaivalu",
+    "position": "Midfielder",
+    "age": 30,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/124271.png"
+  },
+  {
+    "id": 370885,
+    "name": "I. Kumar",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/370885.png"
+  },
+  {
+    "id": 472916,
+    "name": "M. Nabose",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/472916.png"
+  },
+  {
+    "id": 197679,
+    "name": "L. Gonerau",
+    "position": "Midfielder",
+    "age": 36,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/197679.png"
+  },
+  {
+    "id": 198529,
+    "name": "E. Dogalau",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/198529.png"
+  },
+  {
+    "id": 419690,
+    "name": "T. Dunn",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/419690.png"
+  },
+  {
+    "id": 198518,
+    "name": "E. Aaron",
+    "position": "Midfielder",
+    "age": 31,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/198518.png"
+  },
+  {
+    "id": 124011,
+    "name": "C. Wasasala",
+    "position": "Midfielder",
+    "age": 31,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/124011.png"
+  },
+  {
+    "id": 168448,
+    "name": "Ilisoni Logaivou Tuinawaivuvu",
+    "position": "Midfielder",
+    "age": 34,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/168448.png"
+  },
+  {
+    "id": 360182,
+    "name": "P. Joseph",
+    "position": "Midfielder",
+    "age": 27,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/360182.png"
+  },
+  {
+    "id": 419699,
+    "name": "M. Raheem",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/419699.png"
+  },
+  {
+    "id": 165789,
+    "name": "S. Naidu",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/165789.png"
+  },
+  {
+    "id": 0,
+    "name": "S. Cavuilagi",
+    "position": "Midfielder",
+    "age": 31,
+    "number": 0
+  },
+  {
+    "id": 197682,
+    "name": "W. Valentine",
+    "position": "Midfielder",
+    "age": 34,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/197682.png"
+  },
+  {
+    "id": 360181,
+    "name": "N. Begg",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/360181.png"
+  },
+  {
+    "id": 0,
+    "name": "R. Matarerega",
+    "position": "Attacker",
+    "age": 32,
+    "number": 0
+  },
+  {
+    "id": 124264,
+    "name": "S. Hughes",
+    "position": "Attacker",
+    "age": 30,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/124264.png"
+  },
+  {
+    "id": 198519,
+    "name": "M. Nand",
+    "position": "Attacker",
+    "age": 25,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/198519.png"
+  },
+  {
+    "id": 0,
+    "name": "A. Raju",
+    "position": "Attacker",
+    "age": 30,
+    "number": 0
+  },
+  {
+    "id": 6940,
+    "name": "R. Krishna",
+    "position": "Attacker",
+    "age": 38,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/6940.png"
+  },
+  {
+    "id": 192411,
+    "name": "S. Nalaubu",
+    "position": "Attacker",
+    "age": 29,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/192411.png"
+  }
+]

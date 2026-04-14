@@ -1,0 +1,234 @@
+[
+  {
+    "id": 401913,
+    "name": "M. Srabon",
+    "position": "Goalkeeper",
+    "age": 20,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/401913.png"
+  },
+  {
+    "id": 121731,
+    "name": "S. Hossain",
+    "position": "Goalkeeper",
+    "age": 29,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/121731.png"
+  },
+  {
+    "id": 297363,
+    "name": "M. Marma",
+    "position": "Goalkeeper",
+    "age": 22,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/297363.png"
+  },
+  {
+    "id": 571700,
+    "name": "Z. Ahmed",
+    "position": "Defender",
+    "age": 21,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/571700.png"
+  },
+  {
+    "id": 570003,
+    "name": "A. Amin",
+    "position": "Defender",
+    "age": 0,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/570003.png"
+  },
+  {
+    "id": 121609,
+    "name": "T. Barman",
+    "position": "Defender",
+    "age": 31,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/121609.png"
+  },
+  {
+    "id": 121676,
+    "name": "B. Ghosh",
+    "position": "Defender",
+    "age": 26,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/121676.png"
+  },
+  {
+    "id": 542624,
+    "name": "S. Hossain",
+    "position": "Defender",
+    "age": 23,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/542624.png"
+  },
+  {
+    "id": 55308,
+    "name": "T. Kazi",
+    "position": "Defender",
+    "age": 25,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/55308.png"
+  },
+  {
+    "id": 121697,
+    "name": "R. Mia",
+    "position": "Defender",
+    "age": 26,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/121697.png"
+  },
+  {
+    "id": 580004,
+    "name": "A. Omar",
+    "position": "Defender",
+    "age": 31,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/580004.png"
+  },
+  {
+    "id": 570065,
+    "name": "M. T. Uddin",
+    "position": "Defender",
+    "age": 23,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/570065.png"
+  },
+  {
+    "id": 121863,
+    "name": "S. Uddin",
+    "position": "Defender",
+    "age": 27,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/121863.png"
+  },
+  {
+    "id": 121602,
+    "name": "J. Bhuyan",
+    "position": "Midfielder",
+    "age": 35,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/121602.png"
+  },
+  {
+    "id": 18779,
+    "name": "H. Choudhury",
+    "position": "Midfielder",
+    "age": 28,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/18779.png"
+  },
+  {
+    "id": 580062,
+    "name": "C. Mitchell",
+    "position": "Midfielder",
+    "age": 19,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/580062.png"
+  },
+  {
+    "id": 542625,
+    "name": "S. Morsalin",
+    "position": "Midfielder",
+    "age": 19,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/542625.png"
+  },
+  {
+    "id": 542610,
+    "name": "M. S. Rana",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/542610.png"
+  },
+  {
+    "id": 542740,
+    "name": "S. Rana",
+    "position": "Midfielder",
+    "age": 30,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/542740.png"
+  },
+  {
+    "id": 121875,
+    "name": "M. Ridoy",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/121875.png"
+  },
+  {
+    "id": 542810,
+    "name": "S. Shah Quazem Kirmine",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/542810.png"
+  },
+  {
+    "id": 570002,
+    "name": "S. A. Topu",
+    "position": "Midfielder",
+    "age": 19,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/570002.png"
+  },
+  {
+    "id": 579955,
+    "name": "M. Ali",
+    "position": "Attacker",
+    "age": 16,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/579955.png"
+  },
+  {
+    "id": 542811,
+    "name": "S. Emon",
+    "position": "Attacker",
+    "age": 24,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/542811.png"
+  },
+  {
+    "id": 542608,
+    "name": "M. Fahim",
+    "position": "Attacker",
+    "age": 23,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/542608.png"
+  },
+  {
+    "id": 542995,
+    "name": "A. Foysal Akash",
+    "position": "Attacker",
+    "age": 21,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/542995.png"
+  },
+  {
+    "id": 175446,
+    "name": "Rakib Hossain",
+    "position": "Attacker",
+    "age": 27,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/175446.png"
+  },
+  {
+    "id": 579899,
+    "name": "M. Islam",
+    "position": "Attacker",
+    "age": 19,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/579899.png"
+  },
+  {
+    "id": 199105,
+    "name": "S. Reza",
+    "position": "Attacker",
+    "age": 30,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/199105.png"
+  }
+]

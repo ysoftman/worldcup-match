@@ -1,0 +1,186 @@
+[
+  {
+    "id": 124231,
+    "name": "Hul Kimhuy",
+    "position": "Goalkeeper",
+    "age": 25,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/124231.png"
+  },
+  {
+    "id": 564711,
+    "name": "L. Reth",
+    "position": "Goalkeeper",
+    "age": 21,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/564711.png"
+  },
+  {
+    "id": 340356,
+    "name": "Vireak Dara",
+    "position": "Goalkeeper",
+    "age": 22,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/340356.png"
+  },
+  {
+    "id": 564666,
+    "name": "F. Khan",
+    "position": "Defender",
+    "age": 33,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/564666.png"
+  },
+  {
+    "id": 130205,
+    "name": "Ouk Sovann",
+    "position": "Defender",
+    "age": 27,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/130205.png"
+  },
+  {
+    "id": 130173,
+    "name": "Saret Krya",
+    "position": "Defender",
+    "age": 29,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/130173.png"
+  },
+  {
+    "id": 564705,
+    "name": "V. Vann",
+    "position": "Defender",
+    "age": 22,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/564705.png"
+  },
+  {
+    "id": 564674,
+    "name": "S. Bong",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/564674.png"
+  },
+  {
+    "id": 196476,
+    "name": "Kim Sokyuth",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/196476.png"
+  },
+  {
+    "id": 561712,
+    "name": "N. Leng",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/561712.png"
+  },
+  {
+    "id": 564629,
+    "name": "R. Min",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 26,
+    "photo": "https://media.api-sports.io/football/players/564629.png"
+  },
+  {
+    "id": 564092,
+    "name": "A. Nieto",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/564092.png"
+  },
+  {
+    "id": 542893,
+    "name": "Y. Ogawa",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/542893.png"
+  },
+  {
+    "id": 130214,
+    "name": "Sin Kakada",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 25,
+    "photo": "https://media.api-sports.io/football/players/130214.png"
+  },
+  {
+    "id": 340363,
+    "name": "Sin Sovannmakara",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/340363.png"
+  },
+  {
+    "id": 564677,
+    "name": "D. Sophal",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 0,
+    "photo": "https://media.api-sports.io/football/players/564677.png"
+  },
+  {
+    "id": 13024,
+    "name": "Sos Suhana",
+    "position": "Midfielder",
+    "age": 33,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/13024.png"
+  },
+  {
+    "id": 487418,
+    "name": "Soknet Hav",
+    "position": "Attacker",
+    "age": 22,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/487418.png"
+  },
+  {
+    "id": 433636,
+    "name": "Khoan Soben",
+    "position": "Attacker",
+    "age": 20,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/433636.png"
+  },
+  {
+    "id": 340365,
+    "name": "Nhean Sosidan",
+    "position": "Attacker",
+    "age": 23,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/340365.png"
+  },
+  {
+    "id": 542570,
+    "name": "T. Sa",
+    "position": "Attacker",
+    "age": 24,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/542570.png"
+  },
+  {
+    "id": 140705,
+    "name": "Sieng Chanthea",
+    "position": "Attacker",
+    "age": 23,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/140705.png"
+  },
+  {
+    "id": 353378,
+    "name": "Nicolas Doeung Taylor",
+    "position": "Attacker",
+    "age": 27,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/353378.png"
+  }
+]

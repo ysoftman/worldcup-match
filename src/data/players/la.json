@@ -1,0 +1,250 @@
+[
+  {
+    "id": 433894,
+    "name": "K. Lokphathip",
+    "position": "Goalkeeper",
+    "age": 19,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/433894.png"
+  },
+  {
+    "id": 140786,
+    "name": "X. Souvanhnasok",
+    "position": "Goalkeeper",
+    "age": 26,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/140786.png"
+  },
+  {
+    "id": 438541,
+    "name": "A. Vilaphonh",
+    "position": "Goalkeeper",
+    "age": 24,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/438541.png"
+  },
+  {
+    "id": 573288,
+    "name": "T. Xaiyasone",
+    "position": "Goalkeeper",
+    "age": 24,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/573288.png"
+  },
+  {
+    "id": 624852,
+    "name": "Vongsadka Chanthaleuxay",
+    "position": "Defender",
+    "age": 20,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/624852.png"
+  },
+  {
+    "id": 624853,
+    "name": "Okham Latsachack",
+    "position": "Defender",
+    "age": 18,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/624853.png"
+  },
+  {
+    "id": 573289,
+    "name": "S. Phetviengsy",
+    "position": "Defender",
+    "age": 21,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/573289.png"
+  },
+  {
+    "id": 570044,
+    "name": "O. Phetvongsa",
+    "position": "Defender",
+    "age": 22,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/570044.png"
+  },
+  {
+    "id": 616119,
+    "name": "Saleumsay Phommavong",
+    "position": "Defender",
+    "age": 21,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/616119.png"
+  },
+  {
+    "id": 569990,
+    "name": "X. Phomsavanh",
+    "position": "Defender",
+    "age": 23,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/569990.png"
+  },
+  {
+    "id": 345895,
+    "name": "P. Sangvilay",
+    "position": "Defender",
+    "age": 21,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/345895.png"
+  },
+  {
+    "id": 198215,
+    "name": "Xayasith Singsavang",
+    "position": "Defender",
+    "age": 25,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/198215.png"
+  },
+  {
+    "id": 345896,
+    "name": "A. Siphongphan",
+    "position": "Defender",
+    "age": 21,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/345896.png"
+  },
+  {
+    "id": 570041,
+    "name": "P. Somsanith",
+    "position": "Defender",
+    "age": 21,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/570041.png"
+  },
+  {
+    "id": 570040,
+    "name": "K. Thapaseut",
+    "position": "Defender",
+    "age": 17,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/570040.png"
+  },
+  {
+    "id": 616120,
+    "name": "Binly Donsanouphit",
+    "position": "Midfielder",
+    "age": 17,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/616120.png"
+  },
+  {
+    "id": 570043,
+    "name": "S. Keohanam",
+    "position": "Midfielder",
+    "age": 19,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/570043.png"
+  },
+  {
+    "id": 570042,
+    "name": "K. Keonuchanh",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/570042.png"
+  },
+  {
+    "id": 349349,
+    "name": "C. Khounthoumphone",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/349349.png"
+  },
+  {
+    "id": 357903,
+    "name": "D. Thongkhamsavath",
+    "position": "Midfielder",
+    "age": 21,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/357903.png"
+  },
+  {
+    "id": 571686,
+    "name": "P. Thongsanith",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/571686.png"
+  },
+  {
+    "id": 605088,
+    "name": "P. Vinnavong",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/605088.png"
+  },
+  {
+    "id": 573290,
+    "name": "B. Xaysombath",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/573290.png"
+  },
+  {
+    "id": 140791,
+    "name": "Bounphachan Bounkong",
+    "position": "Attacker",
+    "age": 25,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/140791.png"
+  },
+  {
+    "id": 573292,
+    "name": "S. Choummaly",
+    "position": "Attacker",
+    "age": 19,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/573292.png"
+  },
+  {
+    "id": 624854,
+    "name": "Khampane Douangvilay",
+    "position": "Attacker",
+    "age": 21,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/624854.png"
+  },
+  {
+    "id": 402462,
+    "name": "S. Lueanthala",
+    "position": "Attacker",
+    "age": 22,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/402462.png"
+  },
+  {
+    "id": 569993,
+    "name": "P. Phanthavong",
+    "position": "Attacker",
+    "age": 19,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/569993.png"
+  },
+  {
+    "id": 300035,
+    "name": "K. Souvanny",
+    "position": "Attacker",
+    "age": 26,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/300035.png"
+  },
+  {
+    "id": 573291,
+    "name": "C. Vanpaserth",
+    "position": "Attacker",
+    "age": 27,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/573291.png"
+  },
+  {
+    "id": 345904,
+    "name": "C. Waenpaseuth",
+    "position": "Attacker",
+    "age": 23,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/345904.png"
+  }
+]

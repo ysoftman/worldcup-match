@@ -1,0 +1,242 @@
+[
+  {
+    "id": 140752,
+    "name": "K. Chemjong",
+    "position": "Goalkeeper",
+    "age": 35,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/140752.png"
+  },
+  {
+    "id": 652837,
+    "name": "Y. Dhimal",
+    "position": "Goalkeeper",
+    "age": 0,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/652837.png"
+  },
+  {
+    "id": 164134,
+    "name": "D. Karki",
+    "position": "Goalkeeper",
+    "age": 27,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/164134.png"
+  },
+  {
+    "id": 543003,
+    "name": "B. Sunar",
+    "position": "Goalkeeper",
+    "age": 23,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/543003.png"
+  },
+  {
+    "id": 542700,
+    "name": "Y. Gurung",
+    "position": "Defender",
+    "age": 23,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/542700.png"
+  },
+  {
+    "id": 543002,
+    "name": "A. Limbu",
+    "position": "Defender",
+    "age": 26,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/543002.png"
+  },
+  {
+    "id": 543023,
+    "name": "B. Pandey",
+    "position": "Defender",
+    "age": 35,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/543023.png"
+  },
+  {
+    "id": 424209,
+    "name": "S. Shrestha",
+    "position": "Defender",
+    "age": 25,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/424209.png"
+  },
+  {
+    "id": 514992,
+    "name": "Suman Shrestha",
+    "position": "Defender",
+    "age": 26,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/514992.png"
+  },
+  {
+    "id": 461982,
+    "name": "Sumit Shrestha",
+    "position": "Defender",
+    "age": 21,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/461982.png"
+  },
+  {
+    "id": 124026,
+    "name": "A. Tamang",
+    "position": "Defender",
+    "age": 27,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/124026.png"
+  },
+  {
+    "id": 652838,
+    "name": "R. Bhujel",
+    "position": "Midfielder",
+    "age": 0,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/652838.png"
+  },
+  {
+    "id": 542660,
+    "name": "A. Bista",
+    "position": "Midfielder",
+    "age": 25,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/542660.png"
+  },
+  {
+    "id": 29641,
+    "name": "R. Chand",
+    "position": "Midfielder",
+    "age": 33,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/29641.png"
+  },
+  {
+    "id": 542929,
+    "name": "K. R. Chhunju",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/542929.png"
+  },
+  {
+    "id": 570045,
+    "name": "K. Deuba",
+    "position": "Midfielder",
+    "age": 18,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/570045.png"
+  },
+  {
+    "id": 621206,
+    "name": "D. Gurung",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/621206.png"
+  },
+  {
+    "id": 543005,
+    "name": "R. Karki",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/543005.png"
+  },
+  {
+    "id": 424213,
+    "name": "M. Lama",
+    "position": "Midfielder",
+    "age": 29,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/424213.png"
+  },
+  {
+    "id": 652824,
+    "name": "P. Lama",
+    "position": "Midfielder",
+    "age": 0,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/652824.png"
+  },
+  {
+    "id": 424210,
+    "name": "L. Limbu",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/424210.png"
+  },
+  {
+    "id": 501142,
+    "name": "S. Bam",
+    "position": "Attacker",
+    "age": 17,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/501142.png"
+  },
+  {
+    "id": 124025,
+    "name": "Anjan Bista",
+    "position": "Attacker",
+    "age": 27,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/124025.png"
+  },
+  {
+    "id": 316734,
+    "name": "M. Dangi",
+    "position": "Attacker",
+    "age": 24,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/316734.png"
+  },
+  {
+    "id": 316735,
+    "name": "A. Ghalan",
+    "position": "Attacker",
+    "age": 21,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/316735.png"
+  },
+  {
+    "id": 444742,
+    "name": "G. Jung Karki",
+    "position": "Attacker",
+    "age": 27,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/444742.png"
+  },
+  {
+    "id": 542611,
+    "name": "D. Henjan",
+    "position": "Attacker",
+    "age": 0,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/542611.png"
+  },
+  {
+    "id": 652825,
+    "name": "Y. Khadka",
+    "position": "Attacker",
+    "age": 0,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/652825.png"
+  },
+  {
+    "id": 652839,
+    "name": "M. Rai",
+    "position": "Attacker",
+    "age": 0,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/652839.png"
+  },
+  {
+    "id": 612585,
+    "name": "A. Shakya",
+    "position": "Attacker",
+    "age": 25,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/612585.png"
+  }
+]

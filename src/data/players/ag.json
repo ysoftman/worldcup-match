@@ -1,0 +1,178 @@
+[
+  {
+    "id": 620443,
+    "name": "S. Dorsette",
+    "position": "Goalkeeper",
+    "age": 21,
+    "number": 18,
+    "photo": "https://media.api-sports.io/football/players/620443.png"
+  },
+  {
+    "id": 178681,
+    "name": "Jayden Martin",
+    "position": "Goalkeeper",
+    "age": 23,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/178681.png"
+  },
+  {
+    "id": 370967,
+    "name": "T. Moore",
+    "position": "Goalkeeper",
+    "age": 20,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/370967.png"
+  },
+  {
+    "id": 412799,
+    "name": "Roneba Cordice",
+    "position": "Defender",
+    "age": 20,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/412799.png"
+  },
+  {
+    "id": 541041,
+    "name": "A. Daley",
+    "position": "Defender",
+    "age": 23,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/541041.png"
+  },
+  {
+    "id": 620323,
+    "name": "K. Isaac",
+    "position": "Defender",
+    "age": 20,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/620323.png"
+  },
+  {
+    "id": 620346,
+    "name": "A. Morgan",
+    "position": "Defender",
+    "age": 19,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/620346.png"
+  },
+  {
+    "id": 423873,
+    "name": "S. Simon",
+    "position": "Defender",
+    "age": 25,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/423873.png"
+  },
+  {
+    "id": 574181,
+    "name": "S. Tomlinson",
+    "position": "Defender",
+    "age": 21,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/574181.png"
+  },
+  {
+    "id": 143360,
+    "name": "D. Bishop",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/143360.png"
+  },
+  {
+    "id": 123843,
+    "name": "T. Bramble",
+    "position": "Midfielder",
+    "age": 24,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/123843.png"
+  },
+  {
+    "id": 123578,
+    "name": "Raheem Deterville",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/123578.png"
+  },
+  {
+    "id": 412802,
+    "name": "Zafique Drew",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/412802.png"
+  },
+  {
+    "id": 123883,
+    "name": "Leroy Graham",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/123883.png"
+  },
+  {
+    "id": 102780,
+    "name": "Q. Griffith",
+    "position": "Midfielder",
+    "age": 33,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/102780.png"
+  },
+  {
+    "id": 371004,
+    "name": "Drake Hadeed",
+    "position": "Midfielder",
+    "age": 18,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/371004.png"
+  },
+  {
+    "id": 370963,
+    "name": "T. Hughes",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/370963.png"
+  },
+  {
+    "id": 620322,
+    "name": "V. Jackson",
+    "position": "Midfielder",
+    "age": 17,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/620322.png"
+  },
+  {
+    "id": 620347,
+    "name": "K. Knight",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/620347.png"
+  },
+  {
+    "id": 316819,
+    "name": "K. Greene",
+    "position": "Attacker",
+    "age": 25,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/316819.png"
+  },
+  {
+    "id": 123886,
+    "name": "Shalon Knight",
+    "position": "Attacker",
+    "age": 25,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/123886.png"
+  },
+  {
+    "id": 620444,
+    "name": "S. Simon",
+    "position": "Attacker",
+    "age": 23,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/620444.png"
+  }
+]

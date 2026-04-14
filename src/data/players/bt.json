@@ -1,0 +1,226 @@
+[
+  {
+    "id": 164531,
+    "name": "Tobgay",
+    "position": "Goalkeeper",
+    "age": 27,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/164531.png"
+  },
+  {
+    "id": 652523,
+    "name": "T. Dendup",
+    "position": "Goalkeeper",
+    "age": 31,
+    "number": 1,
+    "photo": "https://media.api-sports.io/football/players/652523.png"
+  },
+  {
+    "id": 587187,
+    "name": "Jampel Dorji",
+    "position": "Goalkeeper",
+    "age": 0,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/587187.png"
+  },
+  {
+    "id": 624866,
+    "name": "Lhocho Nima",
+    "position": "Goalkeeper",
+    "age": 21,
+    "number": 21,
+    "photo": "https://media.api-sports.io/football/players/624866.png"
+  },
+  {
+    "id": 168004,
+    "name": "Gyeltshen Zangpo",
+    "position": "Goalkeeper",
+    "age": 27,
+    "number": 20,
+    "photo": "https://media.api-sports.io/football/players/168004.png"
+  },
+  {
+    "id": 621804,
+    "name": "N. Gyeltshen",
+    "position": "Defender",
+    "age": 0,
+    "number": 13,
+    "photo": "https://media.api-sports.io/football/players/621804.png"
+  },
+  {
+    "id": 570050,
+    "name": "Y. Gyeltshen",
+    "position": "Defender",
+    "age": 22,
+    "number": 2,
+    "photo": "https://media.api-sports.io/football/players/570050.png"
+  },
+  {
+    "id": 542932,
+    "name": "T. Norbu",
+    "position": "Defender",
+    "age": 24,
+    "number": 4,
+    "photo": "https://media.api-sports.io/football/players/542932.png"
+  },
+  {
+    "id": 645837,
+    "name": "S. Yoezer",
+    "position": "Defender",
+    "age": 19,
+    "number": 22,
+    "photo": "https://media.api-sports.io/football/players/645837.png"
+  },
+  {
+    "id": 430453,
+    "name": "K. Chetrim",
+    "position": "Midfielder",
+    "age": 22,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/430453.png"
+  },
+  {
+    "id": 569997,
+    "name": "J. Dorji",
+    "position": "Midfielder",
+    "age": 19,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/569997.png"
+  },
+  {
+    "id": 569999,
+    "name": "J. S. Dorji",
+    "position": "Midfielder",
+    "age": 19,
+    "number": 6,
+    "photo": "https://media.api-sports.io/football/players/569999.png"
+  },
+  {
+    "id": 598584,
+    "name": "K. Dorji",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 17,
+    "photo": "https://media.api-sports.io/football/players/598584.png"
+  },
+  {
+    "id": 195662,
+    "name": "Tshelthrim Namgyel",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 16,
+    "photo": "https://media.api-sports.io/football/players/195662.png"
+  },
+  {
+    "id": 574165,
+    "name": "K. Penjor",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/574165.png"
+  },
+  {
+    "id": 652028,
+    "name": "S. Phuntsho",
+    "position": "Midfielder",
+    "age": 30,
+    "number": 5,
+    "photo": "https://media.api-sports.io/football/players/652028.png"
+  },
+  {
+    "id": 542615,
+    "name": "D. Tshering",
+    "position": "Midfielder",
+    "age": 30,
+    "number": 14,
+    "photo": "https://media.api-sports.io/football/players/542615.png"
+  },
+  {
+    "id": 585848,
+    "name": "S. Tshering Dorji",
+    "position": "Midfielder",
+    "age": 23,
+    "number": 12,
+    "photo": "https://media.api-sports.io/football/players/585848.png"
+  },
+  {
+    "id": 542935,
+    "name": "O. Tshering",
+    "position": "Midfielder",
+    "age": 26,
+    "number": 10,
+    "photo": "https://media.api-sports.io/football/players/542935.png"
+  },
+  {
+    "id": 569998,
+    "name": "P. Zangpo",
+    "position": "Midfielder",
+    "age": 20,
+    "number": 8,
+    "photo": "https://media.api-sports.io/football/players/569998.png"
+  },
+  {
+    "id": 310276,
+    "name": "Sherub Dorji",
+    "position": "Attacker",
+    "age": 23,
+    "number": 3,
+    "photo": "https://media.api-sports.io/football/players/310276.png"
+  },
+  {
+    "id": 72038,
+    "name": "C. Gyeltshen",
+    "position": "Attacker",
+    "age": 29,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/72038.png"
+  },
+  {
+    "id": 570062,
+    "name": "K. Jigme",
+    "position": "Attacker",
+    "age": 0,
+    "number": 7,
+    "photo": "https://media.api-sports.io/football/players/570062.png"
+  },
+  {
+    "id": 570063,
+    "name": "J. Namgyel",
+    "position": "Attacker",
+    "age": 19,
+    "number": 19,
+    "photo": "https://media.api-sports.io/football/players/570063.png"
+  },
+  {
+    "id": 444748,
+    "name": "B. Pradhan",
+    "position": "Attacker",
+    "age": 21,
+    "number": 23,
+    "photo": "https://media.api-sports.io/football/players/444748.png"
+  },
+  {
+    "id": 570000,
+    "name": "K. Tenzin",
+    "position": "Attacker",
+    "age": 20,
+    "number": 9,
+    "photo": "https://media.api-sports.io/football/players/570000.png"
+  },
+  {
+    "id": 164174,
+    "name": "Kinga Wangchuk",
+    "position": "Attacker",
+    "age": 23,
+    "number": 11,
+    "photo": "https://media.api-sports.io/football/players/164174.png"
+  },
+  {
+    "id": 164724,
+    "name": "Nima Wangdi",
+    "position": "Attacker",
+    "age": 27,
+    "number": 15,
+    "photo": "https://media.api-sports.io/football/players/164724.png"
+  }
+]

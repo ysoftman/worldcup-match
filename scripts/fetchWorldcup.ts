@@ -189,8 +189,14 @@ async function main() {
 			targets.push({ code: country.code, name: country.name, apiName });
 		} else {
 			noApi.push(`${country.code}(${country.name})`);
+			// API에 없는 국가도 null로 저장하여 다음 실행 시 재매칭 시도 방지
+			if (!(country.code in teamIds)) {
+				teamIds[country.code] = null;
+			}
 		}
 	}
+	// noApi 국가가 새로 추가되었으면 저장
+	if (noApi.length > 0) saveTeamIds(teamIds);
 	console.log(`   매칭: ${targets.length}개국, API 없음: ${noApi.length}개국`);
 
 	// 남은 요청 수 확인

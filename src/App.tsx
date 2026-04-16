@@ -545,7 +545,7 @@ function App() {
 					title="아재개그"
 					aria-label="아재개그"
 				>
-					😂
+					😄
 				</a>
 				<FifaRanking />
 				<WinnerHistory />

@@ -184,6 +184,29 @@
 	border-color: var(--color-danger);
 }
 
+/* 아재개그 링크 */
+.dadjoke-link {
+	width: 36px;
+	height: 36px;
+	border: 2px solid #dee2e6;
+	border-radius: 50%;
+	background: #fff;
+	font-size: 1.1rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	transition: all 0.2s;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	text-decoration: none;
+}
+
+.dadjoke-link:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* 테마 토글 */
 .theme-toggle {
 	width: 36px;
@@ -2586,6 +2609,12 @@
 		font-size: 0.8rem;
 	}
 
+	.dadjoke-link {
+		width: 28px;
+		height: 28px;
+		font-size: 0.8rem;
+	}
+
 	.ranking-toggle {
 		padding: 3px 8px;
 		font-size: 0.65rem;
@@ -2739,7 +2768,8 @@
 }
 
 [data-theme="dark"] .sound-toggle,
-[data-theme="dark"] .theme-toggle {
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .dadjoke-link {
 	background: #2c3e50;
 	border-color: #34495e;
 }

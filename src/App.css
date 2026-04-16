@@ -1448,58 +1448,53 @@
 .match-card.played::before {
 	content: "";
 	position: absolute;
-	inset: -2px;
-	border-radius: 12px;
-	padding: 2px;
-	background: conic-gradient(
-		from var(--laser-angle, 0deg),
+	inset: 0;
+	border-radius: 10px;
+	background: linear-gradient(
+		105deg,
 		transparent 0%,
-		#27ae60 10%,
-		#2ecc71 20%,
-		#82e0aa 30%,
-		transparent 40%
+		transparent 35%,
+		rgba(46, 204, 113, 0.25) 42%,
+		rgba(255, 255, 255, 0.6) 50%,
+		rgba(46, 204, 113, 0.25) 58%,
+		transparent 65%,
+		transparent 100%
 	);
-	mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	mask-composite: exclude;
-	-webkit-mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	-webkit-mask-composite: xor;
-	animation: laser-once 1.2s linear 1 forwards;
-	z-index: 0;
+	background-size: 250% 100%;
+	animation: shimmer-once 1.2s ease-in-out 1 forwards;
+	z-index: 1;
 	pointer-events: none;
 }
 
-/* 골 애니메이션 중: 레이저 무한 회전 */
+/* 골 애니메이션 중: 좌우 shimmer */
 .match-card.laser-active::before {
-	animation: laser-spin 1s linear infinite;
+	animation: shimmer-sweep 1.2s ease-in-out infinite alternate;
 }
 
-@property --laser-angle {
-	syntax: "<angle>";
-	initial-value: 0deg;
-	inherits: false;
-}
-
-@keyframes laser-spin {
-	to {
-		--laser-angle: 360deg;
+@keyframes shimmer-sweep {
+	0% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: 0 0;
 	}
 }
 
-@keyframes laser-once {
+@keyframes shimmer-once {
 	0% {
-		--laser-angle: 0deg;
+		background-position: 100% 0;
 		opacity: 1;
 	}
-	85% {
-		--laser-angle: 306deg;
+	45% {
+		background-position: 0 0;
+		opacity: 1;
+	}
+	90% {
+		background-position: 100% 0;
 		opacity: 1;
 	}
 	100% {
-		--laser-angle: 360deg;
+		background-position: 100% 0;
 		opacity: 0;
 	}
 }
@@ -1979,41 +1974,39 @@
 .final-card.final-played::before {
 	content: "";
 	position: absolute;
-	inset: -2px;
-	border-radius: 18px;
-	padding: 2px;
-	background: conic-gradient(
-		from var(--laser-angle, 0deg),
+	inset: 0;
+	border-radius: 16px;
+	background: linear-gradient(
+		105deg,
 		transparent 0%,
-		#d4ac0d 10%,
-		#f1c40f 20%,
-		#f9e154 30%,
-		transparent 40%
+		transparent 35%,
+		rgba(241, 196, 15, 0.25) 42%,
+		rgba(255, 255, 255, 0.6) 50%,
+		rgba(241, 196, 15, 0.25) 58%,
+		transparent 65%,
+		transparent 100%
 	);
-	mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	mask-composite: exclude;
-	-webkit-mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	-webkit-mask-composite: xor;
-	animation: laser-once-gold 1.5s linear 1 forwards;
-	z-index: -1;
+	background-size: 250% 100%;
+	animation: shimmer-once-gold 1.5s ease-in-out 1 forwards;
+	z-index: 1;
 	pointer-events: none;
 }
 
-@keyframes laser-once-gold {
+@keyframes shimmer-once-gold {
 	0% {
-		--laser-angle: 0deg;
+		background-position: 100% 0;
 		opacity: 1;
 	}
-	85% {
-		--laser-angle: 306deg;
+	45% {
+		background-position: 0 0;
+		opacity: 1;
+	}
+	90% {
+		background-position: 100% 0;
 		opacity: 1;
 	}
 	100% {
-		--laser-angle: 360deg;
+		background-position: 100% 0;
 		opacity: 0;
 	}
 }
@@ -2137,14 +2130,17 @@
 }
 
 [data-theme="dark"] .final-card.final-played::before {
-	background: conic-gradient(
-		from var(--laser-angle, 0deg),
+	background: linear-gradient(
+		105deg,
 		transparent 0%,
-		#d4ac0d 10%,
-		#f1c40f 20%,
-		#f9e154 30%,
-		transparent 40%
+		transparent 35%,
+		rgba(241, 196, 15, 0.3) 42%,
+		rgba(255, 245, 220, 0.7) 50%,
+		rgba(241, 196, 15, 0.3) 58%,
+		transparent 65%,
+		transparent 100%
 	);
+	background-size: 250% 100%;
 }
 
 [data-theme="dark"] .final-circle {
@@ -2207,27 +2203,21 @@
 .bm-card.bm-played::before {
 	content: "";
 	position: absolute;
-	inset: -2px;
-	border-radius: 8px;
-	padding: 2px;
-	background: conic-gradient(
-		from var(--laser-angle, 0deg),
+	inset: 0;
+	border-radius: 6px;
+	background: linear-gradient(
+		105deg,
 		transparent 0%,
-		#27ae60 10%,
-		#2ecc71 20%,
-		#82e0aa 30%,
-		transparent 40%
+		transparent 35%,
+		rgba(46, 204, 113, 0.25) 42%,
+		rgba(255, 255, 255, 0.6) 50%,
+		rgba(46, 204, 113, 0.25) 58%,
+		transparent 65%,
+		transparent 100%
 	);
-	mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	mask-composite: exclude;
-	-webkit-mask:
-		linear-gradient(#fff 0 0) content-box,
-		linear-gradient(#fff 0 0);
-	-webkit-mask-composite: xor;
-	animation: laser-once 1.2s linear 1 forwards;
-	z-index: -1;
+	background-size: 250% 100%;
+	animation: shimmer-once 1.2s ease-in-out 1 forwards;
+	z-index: 1;
 	pointer-events: none;
 }
 
@@ -2913,14 +2903,17 @@
 }
 
 [data-theme="dark"] .match-card.played::before {
-	background: conic-gradient(
-		from var(--laser-angle, 0deg),
+	background: linear-gradient(
+		105deg,
 		transparent 0%,
-		#27ae60 10%,
-		#58d68d 20%,
-		#abebc6 30%,
-		transparent 40%
+		transparent 35%,
+		rgba(46, 204, 113, 0.3) 42%,
+		rgba(220, 255, 235, 0.7) 50%,
+		rgba(46, 204, 113, 0.3) 58%,
+		transparent 65%,
+		transparent 100%
 	);
+	background-size: 250% 100%;
 }
 
 [data-theme="dark"] .match-card.clickable.pending:hover {
@@ -2937,14 +2930,17 @@
 }
 
 [data-theme="dark"] .bm-card.bm-played::before {
-	background: conic-gradient(
-		from var(--laser-angle, 0deg),
+	background: linear-gradient(
+		105deg,
 		transparent 0%,
-		#27ae60 10%,
-		#58d68d 20%,
-		#abebc6 30%,
-		transparent 40%
+		transparent 35%,
+		rgba(46, 204, 113, 0.3) 42%,
+		rgba(220, 255, 235, 0.7) 50%,
+		rgba(46, 204, 113, 0.3) 58%,
+		transparent 65%,
+		transparent 100%
 	);
+	background-size: 250% 100%;
 }
 
 @keyframes match-result-dark {

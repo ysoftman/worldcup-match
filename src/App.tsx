@@ -541,8 +541,6 @@ function App() {
 				</button>
 				<a
 					href="https://ysoftman.github.io/dadjoke/"
-					target="_blank"
-					rel="noopener noreferrer"
 					className="dadjoke-link"
 					title="아재개그"
 					aria-label="아재개그"

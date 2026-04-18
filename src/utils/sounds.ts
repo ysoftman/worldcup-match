@@ -98,6 +98,7 @@ export function playClick() {
 const BGM_URL = `${base}sounds/${encodeURIComponent("Raise That Flag.mp3")}`;
 let bgmEl: HTMLAudioElement | null = null;
 let bgmOn = localStorage.getItem("bgmOn") === "true";
+let gestureListenerAttached = false;
 
 function getBgmEl(): HTMLAudioElement {
 	if (!bgmEl) {
@@ -109,6 +110,34 @@ function getBgmEl(): HTMLAudioElement {
 	return bgmEl;
 }
 
+// play()가 autoplay 정책으로 reject되면 첫 user gesture에서 재시도한다.
+// bgmOn 상태는 건드리지 않아야 사용자의 의도를 잃지 않는다.
+function armGestureResume() {
+	if (gestureListenerAttached) return;
+	gestureListenerAttached = true;
+	const resume = () => {
+		gestureListenerAttached = false;
+		document.removeEventListener("pointerdown", resume);
+		document.removeEventListener("keydown", resume);
+		document.removeEventListener("touchstart", resume);
+		if (bgmOn) getBgmEl().play().catch(armGestureResume);
+	};
+	document.addEventListener("pointerdown", resume, { once: true });
+	document.addEventListener("keydown", resume, { once: true });
+	document.addEventListener("touchstart", resume, { once: true });
+}
+
+function tryPlayBgm() {
+	getBgmEl()
+		.play()
+		.catch(() => {
+			armGestureResume();
+		});
+}
+
+// 페이지 로드 시 이전 세션에서 켜진 상태였다면 자동 재생을 시도한다.
+if (bgmOn) tryPlayBgm();
+
 export function isBgmOn(): boolean {
 	return bgmOn;
 }
@@ -116,14 +145,9 @@ export function isBgmOn(): boolean {
 export function setBgmOn(v: boolean) {
 	bgmOn = v;
 	localStorage.setItem("bgmOn", String(v));
-	const el = getBgmEl();
 	if (v) {
-		// play()는 user-gesture 없이 호출되면 reject될 수 있음 → 실패해도 조용히 무시
-		el.play().catch(() => {
-			bgmOn = false;
-			localStorage.setItem("bgmOn", "false");
-		});
+		tryPlayBgm();
 	} else {
-		el.pause();
+		getBgmEl().pause();
 	}
 }

@@ -92,3 +92,38 @@ export function playClick() {
 	osc.start(c.currentTime);
 	osc.stop(c.currentTime + 0.06);
 }
+
+// --- 배경음악 (BGM) ---
+// SFX mute와는 독립적. HTMLAudioElement 싱글턴으로 loop 재생.
+const BGM_URL = `${base}sounds/${encodeURIComponent("Raise That Flag.mp3")}`;
+let bgmEl: HTMLAudioElement | null = null;
+let bgmOn = localStorage.getItem("bgmOn") === "true";
+
+function getBgmEl(): HTMLAudioElement {
+	if (!bgmEl) {
+		bgmEl = new Audio(BGM_URL);
+		bgmEl.loop = true;
+		bgmEl.volume = 0.3;
+		bgmEl.preload = "auto";
+	}
+	return bgmEl;
+}
+
+export function isBgmOn(): boolean {
+	return bgmOn;
+}
+
+export function setBgmOn(v: boolean) {
+	bgmOn = v;
+	localStorage.setItem("bgmOn", String(v));
+	const el = getBgmEl();
+	if (v) {
+		// play()는 user-gesture 없이 호출되면 reject될 수 있음 → 실패해도 조용히 무시
+		el.play().catch(() => {
+			bgmOn = false;
+			localStorage.setItem("bgmOn", "false");
+		});
+	} else {
+		el.pause();
+	}
+}

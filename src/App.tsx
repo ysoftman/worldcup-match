@@ -18,10 +18,12 @@ import {
 	ROUND_ORDER_48,
 } from "./types";
 import {
+	isBgmOn,
 	isMuted,
 	playClick,
 	playVictory,
 	playWhistle,
+	setBgmOn,
 	setMuted,
 } from "./utils/sounds";
 import {
@@ -88,6 +90,13 @@ function App() {
 		setSoundOn(next);
 		setMuted(!next);
 	}, [soundOn]);
+
+	const [bgmOn, setBgmOnState] = useState(isBgmOn());
+	const toggleBgm = useCallback(() => {
+		const next = !bgmOn;
+		setBgmOnState(next);
+		setBgmOn(next);
+	}, [bgmOn]);
 
 	const [phase, setPhase] = useState<Phase>("select");
 	const [tournamentSize, setTournamentSize] = useState<TournamentSize>(32);
@@ -562,6 +571,15 @@ function App() {
 					aria-label={soundOn ? "사운드 끄기" : "사운드 켜기"}
 				>
 					{soundOn ? "🔊" : "🔇"}
+				</button>
+				<button
+					type="button"
+					className={`bgm-toggle ${bgmOn ? "on" : "off"}`}
+					onClick={toggleBgm}
+					title={bgmOn ? "배경음악 끄기" : "배경음악 켜기"}
+					aria-label={bgmOn ? "배경음악 끄기" : "배경음악 켜기"}
+				>
+					{bgmOn ? "🎶" : "🎵"}
 				</button>
 				<a
 					href="https://ysoftman.github.io/dadjoke/"

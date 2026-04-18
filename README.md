@@ -6,6 +6,9 @@ FIFA 212 member nations, group stage and knockout tournament simulation web app.
 
 - 212 FIFA member nations with real rankings (April 2026)
 - 32-team (8 groups) and 48-team (12 groups) tournament formats
+- **Two tournament modes:**
+  - **Card tournament** (카드 대회) — group stage + knockout bracket with FIFA-ranking-based match simulation
+  - **Bounce ball tournament** (바운스볼 대회) — physics-based knockout where balls drop through a funnel and exit order decides who advances each round (drag to stir)
 - Presets: 2002, 2006, 2010, 2014, 2018, 2022, 2026 World Cup
 - Region-based random selection (Asia, Europe, Africa, Americas, Oceania, etc.)
 - Group stage with standings table and wildcard 3rd-place advancement (48-team)
@@ -22,10 +25,11 @@ FIFA 212 member nations, group stage and knockout tournament simulation web app.
 - Winner history stored in localStorage
 - Dark/light mode toggle
 - Sound effects (whistle, goal, victory, crowd ambience)
+- Background music with on/off toggle
 - Responsive design with horizontal scroll for squad table on mobile
 - FIFA ranking popup with confederation filter
 
-## Match Simulation
+## Match Simulation (Card Tournament)
 
 Match results are determined by a Poisson distribution based on FIFA ranking:
 
@@ -35,9 +39,20 @@ Match results are determined by a Poisson distribution based on FIFA ranking:
 4. Goals: random draw from Poisson distribution with strength as mean
 5. Knockout ties: penalty shootout with slight advantage to higher-ranked team
 
+## Bounce Ball Tournament
+
+Rounds eliminate teams by ball-drop order rather than simulated matches:
+
+- 32-team path: 32 → 16 → 8 → 4 → 2 → 1 (first half to exit advances each round)
+- 48-team path: 48 → 32 → 16 → 8 → 4 → 2 → 1 (first round advances 32, then halves)
+- Final round: first of 2 balls to exit = champion; the other = runner-up
+- Physics: `matter-js` with custom RAF-driven `Engine.update`, funnel chute, auto-shake to break arching piles, drag-to-stir via `MouseConstraint` (mouse + touch)
+- Balls render as flag-emoji + country-code textures on a canvas
+
 ## Tech Stack
 
 - Vite + React + TypeScript
+- matter-js (bounce ball physics)
 - Biome (linter/formatter)
 - bun (package manager)
 
@@ -97,6 +112,7 @@ src/
 │   ├── TeamSelector.tsx      # Team selection with region filters
 │   ├── WinnerHistory.tsx     # Winner history panel
 │   ├── AnimatedScore.tsx     # Goal count-up animation
+│   ├── BallTournament.tsx    # Bounce ball physics tournament
 │   └── FifaRanking.tsx       # FIFA ranking popup
 ├── App.tsx                   # Main app (tournament state management)
 ├── App.css                   # App styles (dark mode, bracket, etc.)

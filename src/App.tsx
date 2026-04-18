@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { BallTournament } from "./components/BallTournament";
 import { BracketView } from "./components/BracketView";
 import { Champion } from "./components/Champion";
 import { FifaRanking } from "./components/FifaRanking";
@@ -41,7 +42,7 @@ import {
 } from "./utils/tournament";
 import "./App.css";
 
-type Phase = "select" | "group" | "knockout" | "finished";
+type Phase = "select" | "ball" | "group" | "knockout" | "finished";
 
 // 골 카운트업 애니메이션 대기 시간 (ms)
 const SCORE_ANIM_DELAY = 2200;
@@ -202,6 +203,29 @@ function App() {
 		setChampion(null);
 		setPhase("group");
 	}, [selectedTeams, tournamentSize]);
+
+	// 바운스볼 대회 시작
+	const startBallTournament = useCallback(() => {
+		if (selectedTeams.length !== tournamentSize) return;
+		setPresetLabel(null);
+		setSwapSelection(null);
+		setGroups([]);
+		setRounds([]);
+		setCurrentRoundIndex(-1);
+		setChampion(null);
+		setPhase("ball");
+	}, [selectedTeams, tournamentSize]);
+
+	// 바운스볼 대회 완료
+	const finishBallTournament = useCallback(
+		(winner: Country, runnerUp: Country) => {
+			setChampion(winner);
+			recordWinner(winner, runnerUp);
+			setPhase("finished");
+			setTimeout(playVictory, 1500);
+		},
+		[recordWinner],
+	);
 
 	// 조별 리그 팀 교환 (경기 시작 전만 가능)
 	const handleSwapSelect = useCallback(
@@ -563,31 +587,34 @@ function App() {
 
 			{phase !== "select" && (
 				<div className="phase-indicator">
-					{(["select", "group", "knockout", "finished"] as Phase[]).map(
-						(p, i) => (
+					{(() => {
+						const steps: Phase[] =
+							phase === "ball"
+								? ["select", "ball", "finished"]
+								: ["select", "group", "knockout", "finished"];
+						const currentIdx = steps.indexOf(phase);
+						return steps.map((p, i) => (
 							<div
 								key={p}
 								className={`phase-step ${p === phase ? "active" : ""} ${
-									(
-										["select", "group", "knockout", "finished"] as Phase[]
-									).indexOf(phase) > i
-										? "done"
-										: ""
+									currentIdx > i ? "done" : ""
 								}`}
 							>
 								<span className="phase-dot" />
 								<span className="phase-label">
 									{p === "select"
 										? "선택"
-										: p === "group"
-											? "조별리그"
-											: p === "knockout"
-												? "토너먼트"
-												: "완료"}
+										: p === "ball"
+											? "바운스볼"
+											: p === "group"
+												? "조별리그"
+												: p === "knockout"
+													? "토너먼트"
+													: "완료"}
 								</span>
 							</div>
-						),
-					)}
+						));
+					})()}
 				</div>
 			)}
 
@@ -623,14 +650,24 @@ function App() {
 
 			<div className="controls">
 				{phase === "select" && (
-					<button
-						type="button"
-						className="btn btn-start"
-						onClick={startTournament}
-						disabled={selectedTeams.length !== tournamentSize}
-					>
-						대회 시작 ({selectedTeams.length}/{tournamentSize})
-					</button>
+					<>
+						<button
+							type="button"
+							className="btn btn-start"
+							onClick={startTournament}
+							disabled={selectedTeams.length !== tournamentSize}
+						>
+							🏆 카드 대회 시작 ({selectedTeams.length}/{tournamentSize})
+						</button>
+						<button
+							type="button"
+							className="btn btn-ball-tour"
+							onClick={startBallTournament}
+							disabled={selectedTeams.length !== tournamentSize}
+						>
+							🎱 바운스볼 대회 시작 ({selectedTeams.length}/{tournamentSize})
+						</button>
+					</>
 				)}
 
 				{phase === "group" && hasUnplayedGroupMatches && (
@@ -682,6 +719,14 @@ function App() {
 					selectedTeams={selectedTeams}
 					onUpdate={setSelectedTeams}
 					maxTeams={tournamentSize}
+				/>
+			)}
+
+			{phase === "ball" && (
+				<BallTournament
+					teams={selectedTeams}
+					size={tournamentSize}
+					onChampion={finishBallTournament}
 				/>
 			)}
 

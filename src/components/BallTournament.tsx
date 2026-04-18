@@ -117,9 +117,9 @@ export function BallTournament({
 
 		const common: Matter.IChamferableBodyDefinition = {
 			isStatic: true,
-			restitution: 0.35,
-			friction: 0.002,
-			frictionStatic: 0.002,
+			restitution: 0.2,
+			friction: 0.005,
+			frictionStatic: 0.005,
 			render: { visible: false },
 		};
 
@@ -420,18 +420,22 @@ export function BallTournament({
 					-radius - 20 - Math.random() * 200,
 					radius,
 					{
-						restitution: 0.72,
-						friction: 0.02,
-						frictionAir: 0.002,
-						density: 0.0012,
+						// tuned for a heavier, more realistic feel:
+						// lower bounce, more friction so balls roll instead of
+						// skidding, slight air drag so motion settles rather
+						// than oscillates, denser mass so shoves feel solid.
+						restitution: 0.42,
+						friction: 0.08,
+						frictionAir: 0.006,
+						density: 0.003,
 						slop: 0.02,
 					},
 				);
 				Matter.Body.setVelocity(ball, {
-					x: (Math.random() - 0.5) * 4,
-					y: 1 + Math.random() * 2,
+					x: (Math.random() - 0.5) * 2,
+					y: 0.5 + Math.random() * 1.2,
 				});
-				Matter.Body.setAngularVelocity(ball, (Math.random() - 0.5) * 0.2);
+				Matter.Body.setAngularVelocity(ball, (Math.random() - 0.5) * 0.15);
 				Matter.World.add(engineRef.current.world, ball);
 				ballsRef.current.set(ball.id, {
 					team,

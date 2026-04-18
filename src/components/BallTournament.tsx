@@ -557,10 +557,25 @@ export function BallTournament({
 				<div className="ball-tour-stage" ref={hostRef}>
 					<canvas ref={canvasRef} className="ball-tour-canvas" />
 					{showStartOverlay && (
-						<div className="ball-tour-overlay">
-							<p className="ball-tour-hint">
-								드래그해서 공을 휘저을 수 있습니다
-							</p>
+						<div className="ball-tour-overlay ball-tour-overlay-next">
+							<button
+								type="button"
+								className="btn btn-round"
+								onClick={startRound}
+							>
+								{roundLabel(currentCount)} 시작
+							</button>
+						</div>
+					)}
+					{showNextButton && (
+						<div className="ball-tour-overlay ball-tour-overlay-next">
+							<button
+								type="button"
+								className="btn btn-round"
+								onClick={goNextRound}
+							>
+								{roundLabel(nextCount)} 시작
+							</button>
 						</div>
 					)}
 				</div>
@@ -590,27 +605,6 @@ export function BallTournament({
 						</ol>
 					</section>
 				</aside>
-			</div>
-
-			<div className="ball-tour-actions">
-				{showStartOverlay && (
-					<button
-						type="button"
-						className="btn btn-round-start"
-						onClick={startRound}
-					>
-						{roundLabel(currentCount)} 시작
-					</button>
-				)}
-				{showNextButton && (
-					<button
-						type="button"
-						className="btn btn-round-next"
-						onClick={goNextRound}
-					>
-						{roundLabel(nextCount)} 진행
-					</button>
-				)}
 			</div>
 		</div>
 	);

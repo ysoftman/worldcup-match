@@ -179,12 +179,17 @@
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.sound-toggle {
+	position: relative;
+}
+
 .sound-toggle.off {
 	opacity: 0.5;
 	border-color: var(--color-danger);
 }
 
 .bgm-toggle {
+	position: relative;
 	width: 36px;
 	height: 36px;
 	border: 2px solid #dee2e6;
@@ -212,6 +217,23 @@
 .bgm-toggle.off {
 	opacity: 0.5;
 	border-color: var(--color-danger);
+}
+
+/* 🚫 style red diagonal slash across the icon when off */
+.sound-toggle.off::after,
+.bgm-toggle.off::after {
+	content: "";
+	position: absolute;
+	left: 4px;
+	right: 4px;
+	top: 50%;
+	height: 3px;
+	margin-top: -1.5px;
+	background: var(--color-danger);
+	transform: rotate(45deg);
+	border-radius: 2px;
+	pointer-events: none;
+	box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 /* 아재개그 링크 */
@@ -2633,6 +2655,12 @@
 		font-size: 0.8rem;
 	}
 
+	.bgm-toggle {
+		width: 28px;
+		height: 28px;
+		font-size: 0.8rem;
+	}
+
 	.theme-toggle {
 		width: 28px;
 		height: 28px;
@@ -2798,13 +2826,15 @@
 }
 
 [data-theme="dark"] .sound-toggle,
+[data-theme="dark"] .bgm-toggle,
 [data-theme="dark"] .theme-toggle,
 [data-theme="dark"] .dadjoke-link {
 	background: #2c3e50;
 	border-color: #34495e;
 }
 
-[data-theme="dark"] .sound-toggle.off {
+[data-theme="dark"] .sound-toggle.off,
+[data-theme="dark"] .bgm-toggle.off {
 	border-color: #c0392b;
 }
 
@@ -3795,7 +3825,14 @@ input:focus-visible {
 	background: linear-gradient(135deg, #e67e22, #f39c12);
 	color: white;
 	font-size: 1.2rem;
-	padding: 14px 28px;
+	padding: 14px 36px;
+}
+
+@media (max-width: 768px) {
+	.btn-ball-tour {
+		font-size: 1rem;
+		padding: 12px 28px;
+	}
 }
 
 .ball-tour {
@@ -3887,6 +3924,22 @@ input:focus-visible {
 
 [data-theme="dark"] .ball-tour-overlay {
 	background: rgba(22, 33, 45, 0.55);
+}
+
+/* next-round overlay: bottom-center pill, non-blocking so the stage stays visible */
+.ball-tour-overlay-next {
+	inset: 0;
+	padding: 0;
+	background: transparent;
+	backdrop-filter: none;
+	pointer-events: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.ball-tour-overlay-next > .btn {
+	pointer-events: auto;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .ball-tour-sidebar {
@@ -3994,18 +4047,11 @@ input:focus-visible {
 	flex-wrap: wrap;
 }
 
-.btn-round-start {
-	background: linear-gradient(135deg, #2980b9, #3498db);
+.btn-round {
+	background: linear-gradient(135deg, #27ae60, #2ecc71);
 	color: white;
 	font-size: 1.15rem;
 	padding: 12px 30px;
-}
-
-.btn-round-next {
-	background: linear-gradient(135deg, #27ae60, #2ecc71);
-	color: white;
-	font-size: 1.1rem;
-	padding: 12px 28px;
 }
 
 @media (max-width: 720px) {

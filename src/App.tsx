@@ -570,7 +570,7 @@ function App() {
 					title={soundOn ? "사운드 끄기" : "사운드 켜기"}
 					aria-label={soundOn ? "사운드 끄기" : "사운드 켜기"}
 				>
-					{soundOn ? "🔊" : "🔇"}
+					🔊
 				</button>
 				<button
 					type="button"
@@ -579,7 +579,7 @@ function App() {
 					title={bgmOn ? "배경음악 끄기" : "배경음악 켜기"}
 					aria-label={bgmOn ? "배경음악 끄기" : "배경음악 켜기"}
 				>
-					{bgmOn ? "🎶" : "🎵"}
+					🎧
 				</button>
 				<a
 					href="https://ysoftman.github.io/dadjoke/"

@@ -18,8 +18,13 @@ interface BallMeta {
 }
 
 const DRAIN_COOLDOWN_MS = 80;
-const BASE_BALL_RADIUS = 24;
-const MIN_BALL_RADIUS = 16;
+const BASE_BALL_RADIUS = 22;
+const MIN_BALL_RADIUS = 14;
+// funnel geometry — kept in sync across physics walls, shake region, drain
+// detection, and render. gap is wide enough that the largest ball passes
+// through with comfortable margin (~1.6× diameter) even on mobile.
+const computeFunnelGap = (w: number) => Math.max(72, Math.min(104, w * 0.14));
+const FUNNEL_TOP_RATIO = 0.42;
 
 function buildRoundSequence(size: 32 | 48): number[] {
 	if (size === 48) return [48, 32, 16, 8, 4, 2, 1];
@@ -104,9 +109,9 @@ export function BallTournament({
 		wallsRef.current = [];
 
 		const thick = 60;
-		const gapWidth = Math.max(50, Math.min(78, w * 0.09));
+		const gapWidth = computeFunnelGap(w);
 		const floorY = h - 1;
-		const funnelTopY = h * 0.42;
+		const funnelTopY = h * FUNNEL_TOP_RATIO;
 		const funnelBottomY = h - 8;
 		const cx = w / 2;
 
@@ -221,23 +226,45 @@ export function BallTournament({
 		const onAfterUpdate = () => {
 			const now = performance.now();
 			const cx = widthCss / 2;
-			const gap = Math.max(50, Math.min(78, widthCss * 0.09));
+			const gap = computeFunnelGap(widthCss);
 			const leftEdge = cx - gap / 2;
 			const rightEdge = cx + gap / 2;
 			const threshold = heightCss + 40;
+			const funnelTopY = heightCss * FUNNEL_TOP_RATIO;
 
-			if (
-				ballsRef.current.size > 0 &&
-				!roundEndedRef.current &&
-				now - lastDrainAtRef.current > 800 &&
-				now - lastShakeAt > 500
-			) {
+			const stallMs =
+				ballsRef.current.size > 0 && !roundEndedRef.current
+					? now - lastDrainAtRef.current
+					: 0;
+
+			// stage 1 (~500ms stall): gentle random shake to break contacts
+			if (stallMs > 500 && now - lastShakeAt > 350) {
 				lastShakeAt = now;
 				for (const meta of ballsRef.current.values()) {
 					if (meta.eliminated) continue;
 					Matter.Body.applyForce(meta.body, meta.body.position, {
-						x: (Math.random() - 0.5) * 0.04 * meta.body.mass,
-						y: -0.025 * meta.body.mass,
+						x: (Math.random() - 0.5) * 0.05 * meta.body.mass,
+						y: -0.022 * meta.body.mass,
+					});
+					Matter.Body.setAngularVelocity(
+						meta.body,
+						(Math.random() - 0.5) * 0.3,
+					);
+				}
+			}
+
+			// stage 2 (~1500ms stall): actively pull funnel-region balls toward
+			// the gap so wedged piles get un-stuck even on narrow mobile screens
+			if (stallMs > 1500) {
+				for (const meta of ballsRef.current.values()) {
+					if (meta.eliminated) continue;
+					const body = meta.body;
+					if (body.position.y < funnelTopY) continue;
+					const dx = cx - body.position.x;
+					const absDx = Math.abs(dx);
+					Matter.Body.applyForce(body, body.position, {
+						x: absDx > 2 ? Math.sign(dx) * 0.003 * body.mass : 0,
+						y: 0.008 * body.mass,
 					});
 				}
 			}
@@ -246,8 +273,10 @@ export function BallTournament({
 				if (drainedIdsRef.current.has(id)) continue;
 				if (meta.eliminated) continue;
 				const body = meta.body;
+				// drain zone is the bottom gap; widened y-tolerance so balls don't
+				// skim past on a fast frame
 				if (
-					body.position.y > heightCss - 4 &&
+					body.position.y > heightCss - 12 &&
 					body.position.x > leftEdge &&
 					body.position.x < rightEdge
 				) {
@@ -290,8 +319,8 @@ export function BallTournament({
 			ctx.fillRect(0, 0, widthCss, heightCss);
 
 			const cxp = widthCss / 2;
-			const gap = Math.max(50, Math.min(78, widthCss * 0.09));
-			const topY = heightCss * 0.42;
+			const gap = computeFunnelGap(widthCss);
+			const topY = heightCss * FUNNEL_TOP_RATIO;
 			const botY = heightCss - 8;
 
 			// filled triangles below funnel arms — shows the slope as a solid chute

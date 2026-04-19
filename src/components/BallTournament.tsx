@@ -172,15 +172,19 @@ export function BallTournament({
 				angle: number;
 		  };
 	const pegsRef = useRef<PegMeta[]>([]);
-	type CrowdDot = {
+	type CrowdPerson = {
 		x: number;
 		y: number;
-		color: string;
+		headR: number;
+		bodyW: number;
+		bodyH: number;
+		skin: string;
+		jersey: string;
 		phase: number;
-		size: number;
-		bob: number;
+		hasFlag: boolean;
+		flagColor?: string;
 	};
-	const crowdRef = useRef<CrowdDot[]>([]);
+	const crowdRef = useRef<CrowdPerson[]>([]);
 	const groundBodyRef = useRef<planck.Body | null>(null);
 	const mouseJointRef = useRef<planck.MouseJoint | null>(null);
 	const rafRef = useRef<number | null>(null);
@@ -291,9 +295,10 @@ export function BallTournament({
 		wallsRef.current = [left, right, funnelL, funnelR, floorL, floorR];
 	}, []);
 
-	// scatter "crowd" dots behind the slope triangles — small colored heads
-	// with a per-dot phase so they bob slightly over time. gives a stadium-
-	// audience feel without adding any physics bodies.
+	// place "crowd" silhouettes in stacked rows behind each slope triangle.
+	// each person is a head + trapezoid torso (no more lonely floating dots)
+	// and bob-phase depends on x so a coordinated wave rolls across the row.
+	// a few people hold tiny flags for variety.
 	const rebuildCrowd = useCallback((w: number, h: number) => {
 		crowdRef.current = [];
 		const funnelTopY = h * FUNNEL_TOP_RATIO;
@@ -301,52 +306,57 @@ export function BallTournament({
 		const cx = w / 2;
 		const gapWidth = computeFunnelGap(w);
 
-		// fan colors with a little variety — mostly warm for contrast with
-		// the cool stage background.
-		const palette = [
-			"#e74c3c",
-			"#f39c12",
-			"#f1c40f",
-			"#27ae60",
-			"#2980b9",
-			"#8e44ad",
+		const skinTones = ["#d4a37b", "#c08863", "#f5cda2", "#8a6345", "#a87454"];
+		const jerseys = [
+			"#c0392b",
+			"#2471a3",
+			"#1e8449",
+			"#d68910",
+			"#7d3c98",
 			"#ecf0f1",
+			"#17202a",
 			"#e67e22",
 		];
+		const flagColors = ["#e74c3c", "#f1c40f", "#3498db", "#ffffff"];
 
-		// dot density: 1 per ~500 px² of slope area — gives a packed stadium
-		// look without excessive draw calls.
-		const slopeArea = ((cx - gapWidth / 2) * (funnelBottomY - funnelTopY)) / 2;
-		const perSide = Math.max(40, Math.floor(slopeArea / 500));
+		const rowSpacing = 13;
+		const personGap = 9;
 
-		const addDot = (x: number, y: number) => {
+		const addPerson = (x: number, y: number) => {
+			const headR = 1.9 + Math.random() * 0.8;
 			crowdRef.current.push({
 				x,
 				y,
-				color: palette[Math.floor(Math.random() * palette.length)],
+				headR,
+				bodyW: headR * 2.4,
+				bodyH: headR * 2.6,
+				skin: skinTones[Math.floor(Math.random() * skinTones.length)],
+				jersey: jerseys[Math.floor(Math.random() * jerseys.length)],
 				phase: Math.random() * Math.PI * 2,
-				size: 1.8 + Math.random() * 1.8,
-				bob: 1.2 + Math.random() * 1.8,
+				hasFlag: Math.random() < 0.08,
+				flagColor: flagColors[Math.floor(Math.random() * flagColors.length)],
 			});
 		};
 
-		for (let i = 0; i < perSide; i += 1) {
-			// left triangle: x in [0, slope_x_at_y], y in [funnelTopY, funnelBottomY]
-			const y = funnelTopY + Math.random() * (funnelBottomY - funnelTopY);
+		for (
+			let y = funnelTopY + rowSpacing * 0.6;
+			y < funnelBottomY - 4;
+			y += rowSpacing
+		) {
 			const t = (y - funnelTopY) / (funnelBottomY - funnelTopY);
 			const slopeX = t * (cx - gapWidth / 2);
-			if (slopeX < 6) continue;
-			const x = Math.random() * slopeX;
-			addDot(x, y);
-		}
-		for (let i = 0; i < perSide; i += 1) {
-			// right triangle mirror of the left.
-			const y = funnelTopY + Math.random() * (funnelBottomY - funnelTopY);
-			const t = (y - funnelTopY) / (funnelBottomY - funnelTopY);
-			const slopeX = t * (cx - gapWidth / 2);
-			if (slopeX < 6) continue;
-			const x = w - Math.random() * slopeX;
-			addDot(x, y);
+			if (slopeX < 14) continue;
+
+			// left bleacher: edge of canvas → just before slope line.
+			for (let x = 6; x < slopeX - 6; x += personGap) {
+				if (Math.random() < 0.18) continue; // sparse gaps = non-uniform
+				addPerson(x + (Math.random() - 0.5) * 2, y + (Math.random() - 0.5) * 1);
+			}
+			// right bleacher mirror.
+			for (let x = w - 6; x > w - slopeX + 6; x -= personGap) {
+				if (Math.random() < 0.18) continue;
+				addPerson(x + (Math.random() - 0.5) * 2, y + (Math.random() - 0.5) * 1);
+			}
 		}
 	}, []);
 
@@ -850,32 +860,64 @@ export function BallTournament({
 			ctx.closePath();
 			ctx.fill();
 
-			// crowd dots: scattered colored "heads" bobbing to simulate cheering.
-			// dots are generated only inside the slope triangles so they never
-			// leak into the playfield.
+			// crowd silhouettes: each person is head + trapezoid torso.
+			// y-offset is phase-aligned with x so a Mexican-wave rolls through
+			// each row. rendered only inside the slope triangles.
 			const tSec = now / 1000;
-			for (const dot of crowdRef.current) {
-				const yOffset = Math.sin(tSec * dot.bob + dot.phase) * 1.5;
-				ctx.fillStyle = dot.color;
+			for (const p of crowdRef.current) {
+				// wave: phase depends on x → adjacent people bob in sequence.
+				const yOffset = Math.sin(tSec * 1.8 + p.x * 0.06 + p.phase) * 1.2;
+				const hy = p.y + yOffset;
+				// torso (trapezoid — wider at shoulders, narrower at neck)
+				const topY = hy + p.headR - 0.5;
+				const botY = topY + p.bodyH;
+				const topHalf = p.bodyW * 0.38;
+				const botHalf = p.bodyW * 0.55;
+				ctx.fillStyle = p.jersey;
 				ctx.beginPath();
-				ctx.arc(dot.x, dot.y + yOffset, dot.size, 0, Math.PI * 2);
+				ctx.moveTo(p.x - topHalf, topY);
+				ctx.lineTo(p.x + topHalf, topY);
+				ctx.lineTo(p.x + botHalf, botY);
+				ctx.lineTo(p.x - botHalf, botY);
+				ctx.closePath();
 				ctx.fill();
+				// head
+				ctx.fillStyle = p.skin;
+				ctx.beginPath();
+				ctx.arc(p.x, hy, p.headR, 0, Math.PI * 2);
+				ctx.fill();
+				// small waving flag on a minority of fans
+				if (p.hasFlag && p.flagColor) {
+					const poleTop = hy - p.headR - 5;
+					ctx.strokeStyle = "rgba(80, 80, 80, 0.85)";
+					ctx.lineWidth = 0.6;
+					ctx.beginPath();
+					ctx.moveTo(p.x, poleTop);
+					ctx.lineTo(p.x, hy - p.headR);
+					ctx.stroke();
+					ctx.fillStyle = p.flagColor;
+					ctx.beginPath();
+					ctx.moveTo(p.x, poleTop);
+					ctx.lineTo(p.x + 3.2, poleTop + 1.5);
+					ctx.lineTo(p.x, poleTop + 3);
+					ctx.closePath();
+					ctx.fill();
+				}
 			}
-			// sporadic "phone-flash" highlight: a few dots per half-second get
-			// a bright halo so the crowd looks alive without animating every
-			// dot individually.
+			// sporadic camera-flash highlight — bright dot on a few random
+			// people per half-second so the stands feel alive.
 			if (crowdRef.current.length > 0) {
 				const flashSeed = Math.floor(tSec * 2);
-				const flashAlpha = 0.35 * (1 - ((tSec * 2) % 1));
+				const flashAlpha = 0.4 * (1 - ((tSec * 2) % 1));
 				ctx.globalAlpha = flashAlpha;
 				ctx.fillStyle = "#ffffff";
-				for (let i = 0; i < 6; i += 1) {
+				for (let i = 0; i < 4; i += 1) {
 					const idx =
 						Math.abs(flashSeed * 1103515245 + i * 7919) %
 						crowdRef.current.length;
-					const dot = crowdRef.current[idx];
+					const p = crowdRef.current[idx];
 					ctx.beginPath();
-					ctx.arc(dot.x, dot.y, dot.size * 2.2, 0, Math.PI * 2);
+					ctx.arc(p.x, p.y - p.headR, p.headR * 2.4, 0, Math.PI * 2);
 					ctx.fill();
 				}
 				ctx.globalAlpha = 1;

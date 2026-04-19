@@ -3891,6 +3891,33 @@ input:focus-visible {
 	color: var(--color-primary);
 }
 
+.ball-tour-hint {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 5px 12px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: var(--color-dark-blue);
+	background: linear-gradient(135deg, #fff7d6, #ffe8a3);
+	border: 1px dashed var(--color-gold);
+	border-radius: 999px;
+	white-space: nowrap;
+}
+
+[data-theme="dark"] .ball-tour-hint {
+	color: #f8d775;
+	background: linear-gradient(135deg, #3b2f18, #2a2410);
+	border-color: #8b6914;
+}
+
+@media (max-width: 640px) {
+	.ball-tour-hint {
+		font-size: 0.7rem;
+		padding: 4px 8px;
+	}
+}
+
 .ball-tour-main {
 	display: grid;
 	grid-template-columns: 1fr;

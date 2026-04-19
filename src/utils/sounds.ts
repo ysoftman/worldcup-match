@@ -79,6 +79,59 @@ export function playVictory() {
 	playSoundFile("victory", 0.4);
 }
 
+// short two-tone chime played when a ball drains through the funnel —
+// more upbeat than a whistle and quick enough that rapid drains don't
+// stack into noise.
+export function playDrain() {
+	if (muted) return;
+	const c = getCtx();
+	const t0 = c.currentTime;
+	const play = (freq: number, start: number, dur: number, peak: number) => {
+		const osc = c.createOscillator();
+		const gain = c.createGain();
+		osc.type = "sine";
+		osc.frequency.setValueAtTime(freq, t0 + start);
+		gain.gain.setValueAtTime(0.0001, t0 + start);
+		gain.gain.exponentialRampToValueAtTime(peak, t0 + start + 0.012);
+		gain.gain.exponentialRampToValueAtTime(0.0005, t0 + start + dur);
+		osc.connect(gain).connect(c.destination);
+		osc.start(t0 + start);
+		osc.stop(t0 + start + dur + 0.02);
+	};
+	// A5 → E6 — a short, bright ascending "bling".
+	play(880, 0, 0.12, 0.09);
+	play(1318.5, 0.055, 0.14, 0.07);
+}
+
+// short, quiet "tock" for ball bounces. strength (0..1) shapes pitch and
+// loudness. globally rate-limited so pile-up collisions don't buzz.
+let lastBounceTime = 0;
+const BOUNCE_COOLDOWN_MS = 28;
+
+export function playBounce(strength: number) {
+	if (muted) return;
+	const now = performance.now();
+	if (now - lastBounceTime < BOUNCE_COOLDOWN_MS) return;
+	lastBounceTime = now;
+
+	const s = Math.max(0, Math.min(1, strength));
+	const c = getCtx();
+	const osc = c.createOscillator();
+	const gain = c.createGain();
+	osc.type = "triangle";
+	const base = 220 + s * 260; // 220-480 Hz
+	const t0 = c.currentTime;
+	osc.frequency.setValueAtTime(base, t0);
+	osc.frequency.exponentialRampToValueAtTime(base * 0.55, t0 + 0.045);
+	// very low overall — tops out around 0.045 even on the hardest hits.
+	const peak = 0.012 + s * 0.033;
+	gain.gain.setValueAtTime(peak, t0);
+	gain.gain.exponentialRampToValueAtTime(0.0005, t0 + 0.05);
+	osc.connect(gain).connect(c.destination);
+	osc.start(t0);
+	osc.stop(t0 + 0.06);
+}
+
 export function playClick() {
 	if (muted) return;
 	const c = getCtx();

@@ -1,7 +1,7 @@
 import * as planck from "planck";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Country } from "../data/countries";
-import { playClick, playWhistle } from "../utils/sounds";
+import { playBounce, playClick, playDrain } from "../utils/sounds";
 
 interface BallTournamentProps {
 	teams: Country[];
@@ -606,6 +606,31 @@ export function BallTournament({
 		const ground = world.createBody();
 		groundBodyRef.current = ground;
 
+		// play a soft "tock" on ball-vs-obstacle contact. uses pre-solve so we
+		// can read the relative normal velocity before the collision resolves
+		// — this maps directly to perceived impact strength. balls hitting
+		// each other are skipped (quieter overall). the cooldown inside
+		// playBounce rate-limits the global buzz from pile-ups.
+		const onPreSolve = (contact: planck.Contact) => {
+			const bodyA = contact.getFixtureA().getBody();
+			const bodyB = contact.getFixtureB().getBody();
+			const isBallA = ballsRef.current.has(bodyA);
+			const isBallB = ballsRef.current.has(bodyB);
+			if (!isBallA && !isBallB) return;
+			// skip ball-ball thuds so the stream is less cluttered.
+			if (isBallA && isBallB) return;
+			const ballBody = isBallA ? bodyA : bodyB;
+			const otherBody = isBallA ? bodyB : bodyA;
+			const vA = ballBody.getLinearVelocity();
+			const vB = otherBody.getLinearVelocity();
+			const rel = Math.hypot(vA.x - vB.x, vA.y - vB.y);
+			if (rel < 2.2) return; // ignore tiny taps
+			// map 2.5 m/s → quiet, 12 m/s → peak.
+			const strength = Math.max(0, Math.min(1, (rel - 2.5) / 9.5));
+			playBounce(strength);
+		};
+		world.on("pre-solve", onPreSolve);
+
 		const ctx = canvas.getContext("2d");
 		const dpr = Math.min(2, window.devicePixelRatio || 1);
 
@@ -752,7 +777,7 @@ export function BallTournament({
 						drainedBodiesRef.current.add(body);
 						const team = meta.team;
 						setExitedThisRound((prev) => [...prev, team]);
-						playWhistle();
+						playDrain();
 						setTimeout(() => {
 							if (worldRef.current) worldRef.current.destroyBody(body);
 							ballsRef.current.delete(body);
@@ -964,6 +989,7 @@ export function BallTournament({
 			canvas.removeEventListener("pointermove", onPointerMove);
 			canvas.removeEventListener("pointerup", onPointerUp);
 			canvas.removeEventListener("pointercancel", onPointerUp);
+			world.off("pre-solve", onPreSolve);
 			ballsRef.current.clear();
 			wallsRef.current = [];
 			pegsRef.current = [];
@@ -1184,6 +1210,10 @@ export function BallTournament({
 		<div className="ball-tour">
 			<div className="ball-tour-header">
 				<div className="ball-tour-round-title">{roundLabel(currentCount)}</div>
+				<div className="ball-tour-hint">
+					<span aria-hidden="true">✋</span> 공을 잡아 원하는 곳으로 이동시킬 수
+					있어요
+				</div>
 				<div className="ball-tour-round-progress">
 					진출 {advancedCount} / {targetExits}
 				</div>

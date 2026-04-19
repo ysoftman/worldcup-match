@@ -21,15 +21,14 @@ const DRAIN_COOLDOWN_MS = 80;
 const BASE_BALL_RADIUS = 22;
 const MIN_BALL_RADIUS = 14;
 // funnel geometry — kept in sync across physics walls, shake region, drain
-// detection, and render. gap is wide enough that the largest ball passes
-// through with comfortable margin (~1.6× diameter) even on mobile.
-// funnel drain gap — scales with width but never so big on narrow
-// mobile that there's no slope to speak of, and never so small that
-// a full-size ball can't fit through with margin.
+// detection, and render. minimum gap must comfortably fit the full-size
+// ball (2 × BASE_BALL_RADIUS = 44 px) even when balls grow between rounds
+// on a narrow mobile screen; ~1.7× diameter leaves ~16px margin per side
+// so a bouncing ball off the slope can still thread the drain.
 const computeFunnelGap = (w: number) => {
-	const min = Math.max(56, BASE_BALL_RADIUS * 2 + 12);
-	const max = Math.max(min, Math.min(104, w * 0.3));
-	return Math.max(min, Math.min(max, w * 0.14));
+	const min = BASE_BALL_RADIUS * 2 + 32;
+	const max = Math.max(min, Math.min(112, w * 0.3));
+	return Math.max(min, Math.min(max, w * 0.16));
 };
 const FUNNEL_TOP_RATIO = 0.42;
 

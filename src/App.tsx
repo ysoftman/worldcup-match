@@ -683,7 +683,7 @@ function App() {
 							onClick={startBallTournament}
 							disabled={selectedTeams.length !== tournamentSize}
 						>
-							🎱 바운스볼 대회 시작 ({selectedTeams.length}/{tournamentSize})
+							⚽ 바운스볼 대회 시작 ({selectedTeams.length}/{tournamentSize})
 						</button>
 					</>
 				)}

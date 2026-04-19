@@ -997,62 +997,80 @@ export function BallTournament({
 			ctx.stroke();
 			ctx.restore();
 
-			// draw pegs and bars — shiny steel with a soft glow so the
-			// ball/obstacle collisions read clearly.
+			// draw pegs, bars, triangles with pitch-themed colors:
+			//   peg   → white penalty spot
+			//   bar   → red training stick with white cap ends
+			//   tri   → orange traffic cone with white base stripe
 			for (const peg of pegsRef.current) {
 				if (peg.kind === "peg") {
+					// white "ball" peg — bright center fading to a soft grey edge.
 					const pegGrad = ctx.createRadialGradient(
-						peg.x - peg.r * 0.35,
-						peg.y - peg.r * 0.35,
-						peg.r * 0.2,
+						peg.x - peg.r * 0.4,
+						peg.y - peg.r * 0.4,
+						peg.r * 0.15,
 						peg.x,
 						peg.y,
 						peg.r,
 					);
 					pegGrad.addColorStop(0, "#ffffff");
-					pegGrad.addColorStop(0.5, "#bfc6cf");
-					pegGrad.addColorStop(1, "#6b7684");
+					pegGrad.addColorStop(0.6, "#f3f5f7");
+					pegGrad.addColorStop(1, "#c2c8d0");
 					ctx.fillStyle = pegGrad;
 					ctx.beginPath();
 					ctx.arc(peg.x, peg.y, peg.r, 0, Math.PI * 2);
 					ctx.fill();
 					ctx.lineWidth = 1;
-					ctx.strokeStyle = "rgba(0,0,0,0.25)";
+					ctx.strokeStyle = "rgba(30, 40, 55, 0.55)";
 					ctx.stroke();
 				} else if (peg.kind === "bar") {
+					// red training stick with white caps at both ends.
 					ctx.save();
 					ctx.translate(peg.x, peg.y);
-					// read live angle — bars are kinematic and spin over time.
 					ctx.rotate(peg.body.getAngle());
 					const barThick = 8;
-					const barGrad = ctx.createLinearGradient(0, -barThick, 0, barThick);
-					barGrad.addColorStop(0, "#d7dde3");
-					barGrad.addColorStop(0.5, "#8f99a5");
-					barGrad.addColorStop(1, "#5a6472");
-					ctx.fillStyle = barGrad;
-					ctx.beginPath();
-					// rounded ends for a pill shape
 					const halfLen = peg.length / 2;
 					const halfThick = barThick / 2;
+					const barGrad = ctx.createLinearGradient(0, -barThick, 0, barThick);
+					barGrad.addColorStop(0, "#ef6a5a");
+					barGrad.addColorStop(0.5, "#d63b25");
+					barGrad.addColorStop(1, "#8e2214");
+					ctx.fillStyle = barGrad;
+					ctx.beginPath();
 					ctx.roundRect(-halfLen, -halfThick, peg.length, barThick, halfThick);
 					ctx.fill();
+					// white end caps (~14% of the length on each side).
+					const capLen = Math.min(peg.length * 0.14, 10);
+					ctx.fillStyle = "#ffffff";
+					ctx.beginPath();
+					ctx.roundRect(-halfLen, -halfThick, capLen, barThick, halfThick);
+					ctx.fill();
+					ctx.beginPath();
+					ctx.roundRect(
+						halfLen - capLen,
+						-halfThick,
+						capLen,
+						barThick,
+						halfThick,
+					);
+					ctx.fill();
 					ctx.lineWidth = 1;
-					ctx.strokeStyle = "rgba(0,0,0,0.3)";
+					ctx.strokeStyle = "rgba(30, 15, 10, 0.55)";
+					ctx.beginPath();
+					ctx.roundRect(-halfLen, -halfThick, peg.length, barThick, halfThick);
 					ctx.stroke();
 					ctx.restore();
 				} else {
-					// triangle peg — scatter triangles are kinematic (spinning),
-					// pyramid triangles are static (angle 0 stays 0), so reading
-					// body angle gives the right value for both.
+					// orange traffic cone triangle with a white base stripe —
+					// reads as a training cone at a glance.
 					ctx.save();
 					ctx.translate(peg.x, peg.y);
 					ctx.rotate(peg.body.getAngle());
 					const s = Math.sqrt(3) / 2;
 					const size = peg.size;
 					const triGrad = ctx.createLinearGradient(0, -size, 0, size / 2);
-					triGrad.addColorStop(0, "#eef1f5");
-					triGrad.addColorStop(0.6, "#9aa4b0");
-					triGrad.addColorStop(1, "#4f586a");
+					triGrad.addColorStop(0, "#ffb366");
+					triGrad.addColorStop(0.55, "#f27a1a");
+					triGrad.addColorStop(1, "#9f3f06");
 					ctx.fillStyle = triGrad;
 					ctx.beginPath();
 					ctx.moveTo(0, -size);
@@ -1060,8 +1078,28 @@ export function BallTournament({
 					ctx.lineTo(-size * s, size / 2);
 					ctx.closePath();
 					ctx.fill();
+					// white reflective stripe near the cone's base.
+					ctx.fillStyle = "rgba(255, 255, 255, 0.92)";
+					const stripeTop = size * 0.15;
+					const stripeBot = size * 0.32;
+					const topT = (stripeTop + size) / (size * 1.5);
+					const botT = (stripeBot + size) / (size * 1.5);
+					const halfTop = size * s * topT;
+					const halfBot = size * s * botT;
+					ctx.beginPath();
+					ctx.moveTo(-halfTop, stripeTop);
+					ctx.lineTo(halfTop, stripeTop);
+					ctx.lineTo(halfBot, stripeBot);
+					ctx.lineTo(-halfBot, stripeBot);
+					ctx.closePath();
+					ctx.fill();
 					ctx.lineWidth = 1;
-					ctx.strokeStyle = "rgba(0,0,0,0.3)";
+					ctx.strokeStyle = "rgba(40, 20, 5, 0.55)";
+					ctx.beginPath();
+					ctx.moveTo(0, -size);
+					ctx.lineTo(size * s, size / 2);
+					ctx.lineTo(-size * s, size / 2);
+					ctx.closePath();
 					ctx.stroke();
 					ctx.restore();
 				}

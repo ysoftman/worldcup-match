@@ -97,6 +97,12 @@ export function playDrain() {
 		osc.connect(gain).connect(c.destination);
 		osc.start(t0 + start);
 		osc.stop(t0 + start + dur + 0.02);
+		// free the graph once the scheduled stop fires — long sessions
+		// would otherwise leak dozens of idle AudioNodes per round.
+		osc.onended = () => {
+			osc.disconnect();
+			gain.disconnect();
+		};
 	};
 	// A5 → E6 — a short, bright ascending "bling".
 	play(880, 0, 0.12, 0.09);
@@ -130,6 +136,10 @@ export function playBounce(strength: number) {
 	osc.connect(gain).connect(c.destination);
 	osc.start(t0);
 	osc.stop(t0 + 0.06);
+	osc.onended = () => {
+		osc.disconnect();
+		gain.disconnect();
+	};
 }
 
 export function playClick() {
@@ -144,6 +154,10 @@ export function playClick() {
 	osc.connect(gain).connect(c.destination);
 	osc.start(c.currentTime);
 	osc.stop(c.currentTime + 0.06);
+	osc.onended = () => {
+		osc.disconnect();
+		gain.disconnect();
+	};
 }
 
 // --- 배경음악 (BGM) ---

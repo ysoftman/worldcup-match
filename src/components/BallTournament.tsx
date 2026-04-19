@@ -23,7 +23,14 @@ const MIN_BALL_RADIUS = 14;
 // funnel geometry — kept in sync across physics walls, shake region, drain
 // detection, and render. gap is wide enough that the largest ball passes
 // through with comfortable margin (~1.6× diameter) even on mobile.
-const computeFunnelGap = (w: number) => Math.max(72, Math.min(104, w * 0.14));
+// funnel drain gap — scales with width but never so big on narrow
+// mobile that there's no slope to speak of, and never so small that
+// a full-size ball can't fit through with margin.
+const computeFunnelGap = (w: number) => {
+	const min = Math.max(56, BASE_BALL_RADIUS * 2 + 12);
+	const max = Math.max(min, Math.min(104, w * 0.3));
+	return Math.max(min, Math.min(max, w * 0.14));
+};
 const FUNNEL_TOP_RATIO = 0.42;
 
 // Planck uses meters, the canvas uses pixels. 30 px per meter keeps body
@@ -196,6 +203,15 @@ export function BallTournament({
 	// synchronous work (texture gen + body creation) so the first rendered
 	// frame after spawn doesn't roll physics forward by the spawn duration.
 	const resetClockRef = useRef<boolean>(false);
+	// all in-flight round timers (drain-delay, fadeout, final onChampion)
+	// are registered here so clearStageBalls / unmount can cancel them
+	// before they touch a stale worldRef.
+	const pendingTimeoutsRef = useRef<Set<ReturnType<typeof setTimeout>>>(
+		new Set(),
+	);
+	// guards spawnRound against re-entry while a prior spawn is still
+	// running (async flag flipped true until the round actually ends).
+	const spawnBusyRef = useRef<boolean>(false);
 
 	const rounds = useMemo(() => buildRoundSequence(size), [size]);
 	const [roundIdx, setRoundIdx] = useState(0);
@@ -809,10 +825,12 @@ export function BallTournament({
 						const team = meta.team;
 						setExitedThisRound((prev) => [...prev, team]);
 						playDrain();
-						setTimeout(() => {
+						const handle = setTimeout(() => {
+							pendingTimeoutsRef.current.delete(handle);
 							if (worldRef.current) worldRef.current.destroyBody(body);
 							ballsRef.current.delete(body);
 						}, 180);
+						pendingTimeoutsRef.current.add(handle);
 					}
 				} else if (py > threshold) {
 					drainedBodiesRef.current.add(body);
@@ -1138,6 +1156,9 @@ export function BallTournament({
 			canvas.removeEventListener("pointerup", onPointerUp);
 			canvas.removeEventListener("pointercancel", onPointerUp);
 			world.off("pre-solve", onPreSolve);
+			for (const h of pendingTimeoutsRef.current) clearTimeout(h);
+			pendingTimeoutsRef.current.clear();
+			spawnBusyRef.current = false;
 			ballsRef.current.clear();
 			wallsRef.current = [];
 			pegsRef.current = [];
@@ -1149,6 +1170,10 @@ export function BallTournament({
 
 	const clearStageBalls = useCallback(() => {
 		const world = worldRef.current;
+		// cancel any pending drain/fadeout/final timers so they can't touch
+		// a world that is about to be replaced.
+		for (const h of pendingTimeoutsRef.current) clearTimeout(h);
+		pendingTimeoutsRef.current.clear();
 		if (!world) return;
 		for (const [body] of ballsRef.current) {
 			world.destroyBody(body);
@@ -1159,9 +1184,16 @@ export function BallTournament({
 	}, []);
 
 	const spawnRound = useCallback(async () => {
+		// guard against double-spawn: a rapid second click during texture
+		// baking would leak half-initialized bodies into ballsRef.
+		if (spawnBusyRef.current) return;
+		spawnBusyRef.current = true;
 		const world = worldRef.current;
 		const host = hostRef.current;
-		if (!world || !host) return;
+		if (!world || !host) {
+			spawnBusyRef.current = false;
+			return;
+		}
 
 		clearStageBalls();
 		roundEndedRef.current = false;
@@ -1251,6 +1283,9 @@ export function BallTournament({
 		// otherwise, which jerks every ball sideways mid-fall).
 		lastDrainAtRef.current = performance.now();
 		resetClockRef.current = true;
+		// bodies are in the world and physics will run next frame — safe for
+		// another spawn to queue (only guards the synchronous baking window).
+		spawnBusyRef.current = false;
 	}, [clearStageBalls, computeRadius, rebuildPegs, survivorsByRound]);
 
 	// detect round end (targetExits reached)
@@ -1276,14 +1311,15 @@ export function BallTournament({
 				runnerUp = survivorsByRound.find((t) => t.code !== champion.code);
 			}
 			const fallback = runnerUp ?? survivorsByRound[1] ?? survivorsByRound[0];
-			setTimeout(() => {
+			const handle = setTimeout(() => {
+				pendingTimeoutsRef.current.delete(handle);
 				onChampion(champion, fallback);
 			}, 800);
+			pendingTimeoutsRef.current.add(handle);
 			return;
 		}
 
 		// non-final: remaining balls become eliminated (fade out)
-		const world = worldRef.current;
 		const eliminated: Country[] = [];
 		for (const [body, meta] of ballsRef.current) {
 			if (drainedBodiesRef.current.has(body)) continue;
@@ -1293,17 +1329,23 @@ export function BallTournament({
 		setEliminatedThisRound(eliminated);
 		setRoundEnded(true);
 		setRoundActive(false);
+		spawnBusyRef.current = false;
 
-		// fade bodies out then remove
-		setTimeout(() => {
-			if (!world) return;
+		// fade bodies out then remove. re-read worldRef inside the timeout so
+		// a remount/cleanup that happened while we were waiting doesn't trip
+		// us into destroying bodies on a torn-down world.
+		const fadeHandle = setTimeout(() => {
+			pendingTimeoutsRef.current.delete(fadeHandle);
+			const w2 = worldRef.current;
+			if (!w2) return;
 			for (const [body, meta] of ballsRef.current) {
 				if (meta.eliminated) {
-					world.destroyBody(body);
+					w2.destroyBody(body);
 					ballsRef.current.delete(body);
 				}
 			}
 		}, 600);
+		pendingTimeoutsRef.current.add(fadeHandle);
 	}, [
 		exitedThisRound,
 		isFinalRound,
@@ -1314,6 +1356,16 @@ export function BallTournament({
 	]);
 
 	const startRound = useCallback(() => {
+		void spawnRound();
+	}, [spawnRound]);
+
+	// re-drop the same roster — lets users recover from an unlucky jam
+	// without losing the round. we clear first so the stall/shake logic
+	// doesn't kick in on the fresh balls.
+	const restartRound = useCallback(() => {
+		if (spawnBusyRef.current) return;
+		roundEndedRef.current = false;
+		setRoundEnded(false);
 		void spawnRound();
 	}, [spawnRound]);
 
@@ -1344,6 +1396,7 @@ export function BallTournament({
 	const advancedCount = Math.min(exitedThisRound.length, targetExits);
 	const showStartOverlay = !roundActive && !roundEnded && roundIdx === 0;
 	const showNextButton = roundEnded && !isFinalRound;
+	const showRestartButton = roundActive && !roundEnded;
 
 	// label helper: "결승" for 2-ball round, "{n}강" otherwise
 	const roundLabel = (count: number) => (count === 2 ? "결승" : `${count}강`);
@@ -1391,6 +1444,16 @@ export function BallTournament({
 								{roundLabel(nextCount)} 시작
 							</button>
 						</div>
+					)}
+					{showRestartButton && (
+						<button
+							type="button"
+							className="ball-tour-restart"
+							onClick={restartRound}
+							title="이번 라운드를 처음부터 다시"
+						>
+							↺ 다시
+						</button>
 					)}
 				</div>
 

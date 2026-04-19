@@ -3893,7 +3893,7 @@ input:focus-visible {
 
 .ball-tour-main {
 	display: grid;
-	grid-template-columns: 1fr 280px;
+	grid-template-columns: 1fr;
 	gap: 16px;
 }
 
@@ -3953,11 +3953,9 @@ input:focus-visible {
 }
 
 .ball-tour-sidebar {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 12px;
-	max-height: 560px;
-	overflow-y: auto;
 }
 
 .ball-tour-survivors,
@@ -4065,15 +4063,12 @@ input:focus-visible {
 }
 
 @media (max-width: 720px) {
-	.ball-tour-main {
-		grid-template-columns: 1fr;
-	}
 	.ball-tour-stage {
 		height: 58vh;
 		min-height: 380px;
 	}
 	.ball-tour-sidebar {
-		max-height: none;
+		grid-template-columns: 1fr;
 	}
 	.ball-tour-survivors,
 	.ball-tour-eliminated {

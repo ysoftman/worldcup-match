@@ -172,6 +172,15 @@ export function BallTournament({
 				angle: number;
 		  };
 	const pegsRef = useRef<PegMeta[]>([]);
+	type CrowdDot = {
+		x: number;
+		y: number;
+		color: string;
+		phase: number;
+		size: number;
+		bob: number;
+	};
+	const crowdRef = useRef<CrowdDot[]>([]);
 	const groundBodyRef = useRef<planck.Body | null>(null);
 	const mouseJointRef = useRef<planck.MouseJoint | null>(null);
 	const rafRef = useRef<number | null>(null);
@@ -219,7 +228,7 @@ export function BallTournament({
 		const gapWidth = computeFunnelGap(w);
 		const floorY = h - 1;
 		const funnelTopY = h * FUNNEL_TOP_RATIO;
-		const funnelBottomY = h - 8;
+		const funnelBottomY = h;
 		const cx = w / 2;
 
 		// helper: create a static box body (takes pixel coords, converts to m).
@@ -280,6 +289,65 @@ export function BallTournament({
 		);
 
 		wallsRef.current = [left, right, funnelL, funnelR, floorL, floorR];
+	}, []);
+
+	// scatter "crowd" dots behind the slope triangles — small colored heads
+	// with a per-dot phase so they bob slightly over time. gives a stadium-
+	// audience feel without adding any physics bodies.
+	const rebuildCrowd = useCallback((w: number, h: number) => {
+		crowdRef.current = [];
+		const funnelTopY = h * FUNNEL_TOP_RATIO;
+		const funnelBottomY = h;
+		const cx = w / 2;
+		const gapWidth = computeFunnelGap(w);
+
+		// fan colors with a little variety — mostly warm for contrast with
+		// the cool stage background.
+		const palette = [
+			"#e74c3c",
+			"#f39c12",
+			"#f1c40f",
+			"#27ae60",
+			"#2980b9",
+			"#8e44ad",
+			"#ecf0f1",
+			"#e67e22",
+		];
+
+		// dot density: 1 per ~500 px² of slope area — gives a packed stadium
+		// look without excessive draw calls.
+		const slopeArea = ((cx - gapWidth / 2) * (funnelBottomY - funnelTopY)) / 2;
+		const perSide = Math.max(40, Math.floor(slopeArea / 500));
+
+		const addDot = (x: number, y: number) => {
+			crowdRef.current.push({
+				x,
+				y,
+				color: palette[Math.floor(Math.random() * palette.length)],
+				phase: Math.random() * Math.PI * 2,
+				size: 1.8 + Math.random() * 1.8,
+				bob: 1.2 + Math.random() * 1.8,
+			});
+		};
+
+		for (let i = 0; i < perSide; i += 1) {
+			// left triangle: x in [0, slope_x_at_y], y in [funnelTopY, funnelBottomY]
+			const y = funnelTopY + Math.random() * (funnelBottomY - funnelTopY);
+			const t = (y - funnelTopY) / (funnelBottomY - funnelTopY);
+			const slopeX = t * (cx - gapWidth / 2);
+			if (slopeX < 6) continue;
+			const x = Math.random() * slopeX;
+			addDot(x, y);
+		}
+		for (let i = 0; i < perSide; i += 1) {
+			// right triangle mirror of the left.
+			const y = funnelTopY + Math.random() * (funnelBottomY - funnelTopY);
+			const t = (y - funnelTopY) / (funnelBottomY - funnelTopY);
+			const slopeX = t * (cx - gapWidth / 2);
+			if (slopeX < 6) continue;
+			const x = w - Math.random() * slopeX;
+			addDot(x, y);
+		}
 	}, []);
 
 	// randomize the peg layout. called on every resize (via rebuildWalls's
@@ -355,7 +423,7 @@ export function BallTournament({
 		const pyramidSize = 26;
 		const pyramidColGap = 140;
 		const pyramidRowGap = 110;
-		const funnelBottomY = h - 8;
+		const funnelBottomY = h;
 		// bottom bar sits ~90px above the drain so it doesn't jam the exit.
 		const pyramidBottomY = funnelBottomY - 90;
 		const pyramidTopY = pyramidBottomY - pyramidRowGap;
@@ -381,8 +449,13 @@ export function BallTournament({
 				type: "kinematic",
 				position: planck.Vec2(pxToM(cx), pxToM(pyramidBottomY)),
 				angle: 0,
+				// fast, sustained spin. allowSleep:false prevents Planck from
+				// zeroing the angular velocity when the bar happens to be
+				// between contacts, which was causing the perceived direction
+				// reset.
 				angularVelocity:
-					(Math.random() < 0.5 ? -1 : 1) * (0.8 + Math.random() * 1.0),
+					(Math.random() < 0.5 ? -1 : 1) * (2.5 + Math.random() * 1.5),
+				allowSleep: false,
 			});
 			bottomBar.createFixture({
 				shape: planck.Box(pxToM(barLen / 2), pxToM(barThick / 2)),
@@ -438,8 +511,9 @@ export function BallTournament({
 			if (pyramidKey.has(`${p.x.toFixed(2)},${p.y.toFixed(2)}`)) continue;
 			const roll = Math.random();
 			if (roll < BAR_CHANCE) {
-				// chunky bouncy bar, spinning slowly — random tilt + angular
-				// velocity so balls get a time-varying deflection.
+				// chunky bouncy bar, fast sustained spin — direction is fixed
+				// at creation. allowSleep:false keeps the angular velocity
+				// from being zeroed when the bar lulls between contacts.
 				const angle = (Math.random() - 0.5) * (Math.PI / 2);
 				const barLen = 46 + Math.random() * 28;
 				const barThick = 8;
@@ -448,7 +522,8 @@ export function BallTournament({
 					position: planck.Vec2(pxToM(p.x), pxToM(p.y)),
 					angle,
 					angularVelocity:
-						(Math.random() < 0.5 ? -1 : 1) * (0.8 + Math.random() * 1.2),
+						(Math.random() < 0.5 ? -1 : 1) * (2.5 + Math.random() * 2.0),
+					allowSleep: false,
 				});
 				body.createFixture({
 					shape: planck.Box(pxToM(barLen / 2), pxToM(barThick / 2)),
@@ -546,6 +621,7 @@ export function BallTournament({
 			canvas.style.height = `${heightCss}px`;
 			rebuildWalls(widthCss, heightCss);
 			rebuildPegs(widthCss, heightCss);
+			rebuildCrowd(widthCss, heightCss);
 		};
 		applySize();
 
@@ -728,12 +804,13 @@ export function BallTournament({
 			const cxp = widthCss / 2;
 			const gap = computeFunnelGap(widthCss);
 			const topY = heightCss * FUNNEL_TOP_RATIO;
-			const botY = heightCss - 8;
+			const botY = heightCss;
 
-			// filled triangles below funnel arms — shows the slope as a solid chute
+			// filled triangles below funnel arms — stadium crowd backdrop
+			// fades into a darker base so the slopes still read as solid.
 			const slopeFill = ctx.createLinearGradient(0, topY, 0, botY);
-			slopeFill.addColorStop(0, "rgba(44, 62, 80, 0.18)");
-			slopeFill.addColorStop(1, "rgba(44, 62, 80, 0.42)");
+			slopeFill.addColorStop(0, "rgba(30, 50, 80, 0.55)");
+			slopeFill.addColorStop(1, "rgba(15, 28, 45, 0.85)");
 			ctx.fillStyle = slopeFill;
 			ctx.beginPath();
 			ctx.moveTo(0, topY);
@@ -747,6 +824,37 @@ export function BallTournament({
 			ctx.lineTo(widthCss, botY);
 			ctx.closePath();
 			ctx.fill();
+
+			// crowd dots: scattered colored "heads" bobbing to simulate cheering.
+			// dots are generated only inside the slope triangles so they never
+			// leak into the playfield.
+			const tSec = now / 1000;
+			for (const dot of crowdRef.current) {
+				const yOffset = Math.sin(tSec * dot.bob + dot.phase) * 1.5;
+				ctx.fillStyle = dot.color;
+				ctx.beginPath();
+				ctx.arc(dot.x, dot.y + yOffset, dot.size, 0, Math.PI * 2);
+				ctx.fill();
+			}
+			// sporadic "phone-flash" highlight: a few dots per half-second get
+			// a bright halo so the crowd looks alive without animating every
+			// dot individually.
+			if (crowdRef.current.length > 0) {
+				const flashSeed = Math.floor(tSec * 2);
+				const flashAlpha = 0.35 * (1 - ((tSec * 2) % 1));
+				ctx.globalAlpha = flashAlpha;
+				ctx.fillStyle = "#ffffff";
+				for (let i = 0; i < 6; i += 1) {
+					const idx =
+						Math.abs(flashSeed * 1103515245 + i * 7919) %
+						crowdRef.current.length;
+					const dot = crowdRef.current[idx];
+					ctx.beginPath();
+					ctx.arc(dot.x, dot.y, dot.size * 2.2, 0, Math.PI * 2);
+					ctx.fill();
+				}
+				ctx.globalAlpha = 1;
+			}
 
 			// stroke the slope edges (the physics walls) as visible bars
 			ctx.strokeStyle = "rgba(44, 62, 80, 0.85)";
@@ -863,7 +971,7 @@ export function BallTournament({
 			groundBodyRef.current = null;
 			mouseJointRef.current = null;
 		};
-	}, [rebuildWalls, rebuildPegs]);
+	}, [rebuildWalls, rebuildPegs, rebuildCrowd]);
 
 	const clearStageBalls = useCallback(() => {
 		const world = worldRef.current;

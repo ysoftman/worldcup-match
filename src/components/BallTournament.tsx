@@ -671,10 +671,15 @@ export function BallTournament({
 			canvas.style.width = `${widthCss}px`;
 			canvas.style.height = `${heightCss}px`;
 			rebuildWalls(widthCss, heightCss);
-			rebuildPegs(widthCss, heightCss);
-			rebuildCrowd(widthCss, heightCss);
+			// peg/crowd regen is deliberately NOT here — ResizeObserver fires
+			// on any tiny layout shift (scrollbar, sidebar growth, etc.) and
+			// a rebuild mid-round would erase obstacles the ball is currently
+			// bouncing off of. initial build is done right after this call
+			// and every new round regenerates via spawnRound().
 		};
 		applySize();
+		rebuildPegs(widthCss, heightCss);
+		rebuildCrowd(widthCss, heightCss);
 
 		canvas.style.touchAction = "none";
 

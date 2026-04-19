@@ -37,6 +37,55 @@ function buildRoundSequence(size: 32 | 48): number[] {
 	return [32, 16, 8, 4, 2, 1];
 }
 
+// --- Twemoji flag loader ------------------------------------------------
+// iPad Safari's canvas sometimes fails to render regional-indicator flag
+// emojis (falls back to the plain country-code letters). Preload each
+// team's flag as a Twemoji PNG from the CDN; if it loads we draw the image
+// into the ball texture, otherwise fall back to canvas text.
+const flagImageCache = new Map<string, HTMLImageElement>();
+const flagPending = new Map<string, Promise<void>>();
+
+function flagCodepoints(emoji: string): string {
+	const codes: number[] = [];
+	for (let i = 0; i < emoji.length; ) {
+		const cp = emoji.codePointAt(i);
+		if (cp == null) break;
+		// skip variation selector-16; it isn't part of Twemoji filenames.
+		if (cp !== 0xfe0f) codes.push(cp);
+		i += cp > 0xffff ? 2 : 1;
+	}
+	return codes.map((c) => c.toString(16)).join("-");
+}
+
+function preloadFlag(emoji: string): Promise<void> {
+	const key = flagCodepoints(emoji);
+	if (!key) return Promise.resolve();
+	if (flagImageCache.has(key)) return Promise.resolve();
+	const existing = flagPending.get(key);
+	if (existing) return existing;
+	const p = new Promise<void>((resolve) => {
+		const img = new Image();
+		img.crossOrigin = "anonymous";
+		img.onload = () => {
+			flagImageCache.set(key, img);
+			flagPending.delete(key);
+			resolve();
+		};
+		img.onerror = () => {
+			// leave cache empty so callers fall back to emoji text rendering.
+			flagPending.delete(key);
+			resolve();
+		};
+		img.src = `https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/72x72/${key}.png`;
+	});
+	flagPending.set(key, p);
+	return p;
+}
+
+function getFlagImage(emoji: string): HTMLImageElement | null {
+	return flagImageCache.get(flagCodepoints(emoji)) ?? null;
+}
+
 function buildBallTexture(team: Country, radius: number, dpr: number) {
 	const px = Math.ceil(radius * 2 * dpr);
 	const canvas = document.createElement("canvas");
@@ -57,10 +106,28 @@ function buildBallTexture(team: Country, radius: number, dpr: number) {
 	ctx.lineWidth = 1.5;
 	ctx.strokeStyle = "rgba(0,0,0,0.15)";
 	ctx.stroke();
+
+	const flagImg = getFlagImage(team.flag);
+	if (flagImg) {
+		const flagSize = r * 1.15;
+		ctx.drawImage(
+			flagImg,
+			r - flagSize / 2,
+			r - r * 0.2 - flagSize / 2,
+			flagSize,
+			flagSize,
+		);
+	} else {
+		// fallback: native emoji text (some iOS canvas contexts may still
+		// render flags as the two-letter country-code glyphs here).
+		ctx.textAlign = "center";
+		ctx.textBaseline = "middle";
+		ctx.font = `${Math.round(r * 1.1)}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",system-ui,sans-serif`;
+		ctx.fillText(team.flag, r, r - r * 0.15);
+	}
+
 	ctx.textAlign = "center";
 	ctx.textBaseline = "middle";
-	ctx.font = `${Math.round(r * 1.1)}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",system-ui,sans-serif`;
-	ctx.fillText(team.flag, r, r - r * 0.15);
 	ctx.font = `700 ${Math.round(r * 0.52)}px system-ui,-apple-system,sans-serif`;
 	ctx.fillStyle = "#2c3e50";
 	ctx.fillText(team.code, r, r + r * 0.52);
@@ -72,6 +139,15 @@ export function BallTournament({
 	size,
 	onChampion,
 }: BallTournamentProps) {
+	// preload every team's flag into the Twemoji cache on mount so the first
+	// round can render images instead of emoji text (especially important on
+	// iPad where canvas emoji-flag support is spotty).
+	useEffect(() => {
+		for (const t of teams) {
+			void preloadFlag(t.flag);
+		}
+	}, [teams]);
+
 	const hostRef = useRef<HTMLDivElement | null>(null);
 	const canvasRef = useRef<HTMLCanvasElement | null>(null);
 	const worldRef = useRef<planck.World | null>(null);
@@ -800,7 +876,7 @@ export function BallTournament({
 		lastDrainAtRef.current = 0;
 	}, []);
 
-	const spawnRound = useCallback(() => {
+	const spawnRound = useCallback(async () => {
 		const world = worldRef.current;
 		const host = hostRef.current;
 		if (!world || !host) return;
@@ -818,6 +894,11 @@ export function BallTournament({
 		const dpr = Math.min(2, window.devicePixelRatio || 1);
 		const radius = computeRadius(w, h);
 		const roster = survivorsByRound;
+
+		// make sure every flag is in the Twemoji cache before we bake textures
+		// — otherwise the iPad fallback (canvas fillText) would paint country
+		// letters instead of the flag.
+		await Promise.all(roster.map((t) => preloadFlag(t.flag)));
 
 		// re-scatter pegs so every round feels fresh.
 		rebuildPegs(w, h);
@@ -951,7 +1032,7 @@ export function BallTournament({
 	]);
 
 	const startRound = useCallback(() => {
-		spawnRound();
+		void spawnRound();
 	}, [spawnRound]);
 
 	const goNextRound = useCallback(() => {
@@ -972,7 +1053,7 @@ export function BallTournament({
 		prevRoundIdxRef.current = roundIdx;
 		// spawn after a tick so state settles
 		const t = setTimeout(() => {
-			spawnRound();
+			void spawnRound();
 		}, 250);
 		return () => clearTimeout(t);
 	}, [roundIdx, spawnRound]);

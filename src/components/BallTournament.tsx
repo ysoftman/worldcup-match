@@ -374,11 +374,14 @@ export function BallTournament({
 		pegsRef.current = [];
 
 		const funnelTopY = h * FUNNEL_TOP_RATIO;
+		const funnelBottomY = h;
 		const cx = w / 2;
+		const gapWidth = computeFunnelGap(w);
 
 		const zoneTop = 80;
-		// keep pegs clear of the funnel slopes — only above the chute entrance.
-		const zoneBottom = funnelTopY - 16;
+		// drop zone covers the area above the funnel *and* inside the chute.
+		// leave ~90px of clear drain so obstacles don't jam the exit.
+		const zoneBottom = funnelBottomY - 90;
 		const zoneH = Math.max(0, zoneBottom - zoneTop);
 		if (zoneH <= 0) return;
 
@@ -433,7 +436,6 @@ export function BallTournament({
 		const pyramidSize = 26;
 		const pyramidColGap = 140;
 		const pyramidRowGap = 110;
-		const funnelBottomY = h;
 		// bottom bar sits ~90px above the drain so it doesn't jam the exit.
 		const pyramidBottomY = funnelBottomY - 90;
 		const pyramidTopY = pyramidBottomY - pyramidRowGap;
@@ -495,7 +497,21 @@ export function BallTournament({
 		while (placed.length < targetCount && attempts < targetCount * 40) {
 			attempts += 1;
 			const py = zoneTop + Math.random() * zoneH;
-			const px = 40 + Math.random() * (w - 80);
+			// compute allowed x range. above the funnel the full stage is open;
+			// inside the funnel we clamp to the chute interior so obstacles
+			// never intrude on the slope surfaces.
+			let minX = 40;
+			let maxX = w - 40;
+			if (py > funnelTopY) {
+				const t = (py - funnelTopY) / (funnelBottomY - funnelTopY);
+				const armOffset = t * (cx - gapWidth / 2);
+				const slopeMargin = 30;
+				minX = Math.max(40, armOffset + slopeMargin);
+				maxX = Math.min(w - 40, w - armOffset - slopeMargin);
+				// chute too narrow for a ball + obstacle pair → skip.
+				if (maxX - minX < ballDiameter + 20) continue;
+			}
+			const px = minX + Math.random() * (maxX - minX);
 			const r = randRadius();
 			let tooClose = false;
 			for (const p of placed) {
@@ -830,10 +846,30 @@ export function BallTournament({
 			ctx.scale(dpr, dpr);
 			ctx.clearRect(0, 0, widthCss, heightCss);
 
+			// football-pitch backdrop: green base with alternating mowed-grass
+			// stripes (slightly darker/lighter bands) plus a vignette.
 			const bg = ctx.createLinearGradient(0, 0, 0, heightCss);
-			bg.addColorStop(0, "rgba(41, 128, 185, 0.08)");
-			bg.addColorStop(1, "rgba(41, 128, 185, 0.02)");
+			bg.addColorStop(0, "#3d8b3d");
+			bg.addColorStop(1, "#2d6e2d");
 			ctx.fillStyle = bg;
+			ctx.fillRect(0, 0, widthCss, heightCss);
+			const stripeH = 40;
+			for (let sy = 0; sy < heightCss; sy += stripeH * 2) {
+				ctx.fillStyle = "rgba(255, 255, 255, 0.045)";
+				ctx.fillRect(0, sy, widthCss, stripeH);
+			}
+			// soft vignette so edges feel stadium-lit rather than flat.
+			const vignette = ctx.createRadialGradient(
+				widthCss / 2,
+				heightCss / 2,
+				Math.max(widthCss, heightCss) * 0.2,
+				widthCss / 2,
+				heightCss / 2,
+				Math.max(widthCss, heightCss) * 0.75,
+			);
+			vignette.addColorStop(0, "rgba(0,0,0,0)");
+			vignette.addColorStop(1, "rgba(0,0,0,0.28)");
+			ctx.fillStyle = vignette;
 			ctx.fillRect(0, 0, widthCss, heightCss);
 
 			const cxp = widthCss / 2;
@@ -923,16 +959,43 @@ export function BallTournament({
 				ctx.globalAlpha = 1;
 			}
 
-			// stroke the slope edges (the physics walls) as visible bars
-			ctx.strokeStyle = "rgba(44, 62, 80, 0.85)";
-			ctx.lineWidth = 4;
+			// white "chalk/crayon"-style slope edges — soft outer glow plus
+			// two slightly jittered strokes stacked for a hand-drawn look.
+			ctx.save();
 			ctx.lineCap = "round";
+			ctx.lineJoin = "round";
+			ctx.shadowColor = "rgba(255, 255, 255, 0.35)";
+			ctx.shadowBlur = 6;
+			// under-layer: thicker, softer.
+			ctx.strokeStyle = "rgba(255, 255, 255, 0.55)";
+			ctx.lineWidth = 7;
 			ctx.beginPath();
 			ctx.moveTo(0, topY);
 			ctx.lineTo(cxp - gap / 2, botY);
 			ctx.moveTo(widthCss, topY);
 			ctx.lineTo(cxp + gap / 2, botY);
 			ctx.stroke();
+			// top layer: crisp white.
+			ctx.strokeStyle = "rgba(255, 255, 255, 0.95)";
+			ctx.lineWidth = 4;
+			ctx.shadowBlur = 0;
+			ctx.beginPath();
+			ctx.moveTo(0, topY);
+			ctx.lineTo(cxp - gap / 2, botY);
+			ctx.moveTo(widthCss, topY);
+			ctx.lineTo(cxp + gap / 2, botY);
+			ctx.stroke();
+			// a third, slightly offset hairline breaks the perfect straightness
+			// so the edge reads as a chalk line rather than a vector stroke.
+			ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+			ctx.lineWidth = 1.2;
+			ctx.beginPath();
+			ctx.moveTo(1, topY + 1);
+			ctx.lineTo(cxp - gap / 2 + 1, botY - 1);
+			ctx.moveTo(widthCss - 1, topY + 1);
+			ctx.lineTo(cxp + gap / 2 - 1, botY - 1);
+			ctx.stroke();
+			ctx.restore();
 
 			// draw pegs and bars — shiny steel with a soft glow so the
 			// ball/obstacle collisions read clearly.

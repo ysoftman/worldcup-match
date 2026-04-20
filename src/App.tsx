@@ -101,6 +101,7 @@ function App() {
 	const [phase, setPhase] = useState<Phase>("select");
 	const [tournamentSize, setTournamentSize] = useState<TournamentSize>(32);
 	const [presetLabel, setPresetLabel] = useState<string | null>(null);
+	const [appliedPreset, setAppliedPreset] = useState<Preset | null>(null);
 	const [selectedTeams, setSelectedTeams] = useState<Country[]>(() =>
 		selectTeams(32),
 	);
@@ -180,43 +181,50 @@ function App() {
 	const changeTournamentSize = useCallback((size: TournamentSize) => {
 		setTournamentSize(size);
 		setSelectedTeams(selectTeams(size));
+		setAppliedPreset(null);
+		setPresetLabel(null);
 	}, []);
 
-	// 프리셋 적용
+	// 프리셋 적용 — 팀만 로드하고 select 단계에 머무른다. 사용자가
+	// 카드/바운스볼 중 어느 대회로 시작할지 선택할 수 있다.
 	const applyPreset = useCallback((preset: Preset) => {
 		setTournamentSize(preset.size);
 		setPresetLabel(preset.label);
+		setAppliedPreset(preset);
 		setSwapSelection(null);
 		const allTeams = preset.groups.flatMap((g) => g.teams);
 		setSelectedTeams(allTeams);
-		const newGroups = createGroupsFromPreset(preset.groups);
-		setGroups(newGroups);
-		setTeamFormations(randomFormations(allTeams));
-		setRounds([]);
-		setCurrentRoundIndex(-1);
-		setChampion(null);
-		setPhase("group");
+	}, []);
+
+	// TeamSelector에서 팀을 바꾸면 프리셋과 명단이 더 이상 일치하지
+	// 않으므로 프리셋을 해제한다.
+	const handleUpdateSelectedTeams = useCallback((teams: Country[]) => {
+		setSelectedTeams(teams);
+		setAppliedPreset(null);
+		setPresetLabel(null);
 	}, []);
 
 	// 대회 시작
 	const startTournament = useCallback(() => {
 		if (selectedTeams.length !== tournamentSize) return;
-		setPresetLabel(null);
 		setSwapSelection(null);
-		const shuffled = shuffle(selectedTeams);
-		const newGroups = createGroups(shuffled, tournamentSize);
+		const usePreset =
+			appliedPreset !== null && appliedPreset.size === tournamentSize;
+		const newGroups = usePreset
+			? createGroupsFromPreset(appliedPreset.groups)
+			: createGroups(shuffle(selectedTeams), tournamentSize);
+		if (!usePreset) setPresetLabel(null);
 		setGroups(newGroups);
-		setTeamFormations(randomFormations(shuffled));
+		setTeamFormations(randomFormations(selectedTeams));
 		setRounds([]);
 		setCurrentRoundIndex(-1);
 		setChampion(null);
 		setPhase("group");
-	}, [selectedTeams, tournamentSize]);
+	}, [selectedTeams, tournamentSize, appliedPreset]);
 
 	// 바운스볼 대회 시작
 	const startBallTournament = useCallback(() => {
 		if (selectedTeams.length !== tournamentSize) return;
-		setPresetLabel(null);
 		setSwapSelection(null);
 		setGroups([]);
 		setRounds([]);
@@ -540,6 +548,8 @@ function App() {
 		setSelectedXI(new Map());
 		setSquadModal(null);
 		setSelectedTeams(selectTeams(tournamentSize));
+		setAppliedPreset(null);
+		setPresetLabel(null);
 		setGroups([]);
 		setRounds([]);
 		setCurrentRoundIndex(-1);
@@ -657,7 +667,9 @@ function App() {
 						<button
 							type="button"
 							key={p.id}
-							className="btn btn-preset"
+							className={`btn btn-preset ${
+								appliedPreset?.id === p.id ? "active" : ""
+							}`}
 							onClick={() => applyPreset(p)}
 						>
 							{p.label}
@@ -735,7 +747,7 @@ function App() {
 			{phase === "select" && (
 				<TeamSelector
 					selectedTeams={selectedTeams}
-					onUpdate={setSelectedTeams}
+					onUpdate={handleUpdateSelectedTeams}
 					maxTeams={tournamentSize}
 				/>
 			)}

@@ -675,6 +675,11 @@
 	font-size: 0.95rem;
 }
 
+.btn-preset.active {
+	background: linear-gradient(135deg, #1e8449, #27ae60);
+	box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.35);
+}
+
 .btn-shuffle {
 	background: linear-gradient(135deg, #8e44ad, #9b59b6);
 	color: white;

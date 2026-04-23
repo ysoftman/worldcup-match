@@ -1,186 +1,186 @@
 [
-  {
-    "id": 571852,
-    "name": "D. Chiotti",
-    "position": "Goalkeeper",
-    "age": 27,
-    "number": 16,
-    "photo": "https://media.api-sports.io/football/players/571852.png"
-  },
-  {
-    "id": 361621,
-    "name": "J. Darbon",
-    "position": "Goalkeeper",
-    "age": 22,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/361621.png"
-  },
-  {
-    "id": 571854,
-    "name": "K. Jean-Louis",
-    "position": "Goalkeeper",
-    "age": 36,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/571854.png"
-  },
-  {
-    "id": 571856,
-    "name": "B. Antoine",
-    "position": "Defender",
-    "age": 22,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/571856.png"
-  },
-  {
-    "id": 571853,
-    "name": "Y. Aristide",
-    "position": "Defender",
-    "age": 24,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/571853.png"
-  },
-  {
-    "id": 571855,
-    "name": "B. Citorah",
-    "position": "Defender",
-    "age": 31,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/571855.png"
-  },
-  {
-    "id": 142142,
-    "name": "D. Collard",
-    "position": "Defender",
-    "age": 25,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/142142.png"
-  },
-  {
-    "id": 571787,
-    "name": "J. Francois",
-    "position": "Defender",
-    "age": 23,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/571787.png"
-  },
-  {
-    "id": 361626,
-    "name": "F. Jackson",
-    "position": "Defender",
-    "age": 26,
-    "number": 15,
-    "photo": "https://media.api-sports.io/football/players/361626.png"
-  },
-  {
-    "id": 21553,
-    "name": "R. Latouchent",
-    "position": "Defender",
-    "age": 29,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/21553.png"
-  },
-  {
-    "id": 524047,
-    "name": "W. Mootoo",
-    "position": "Defender",
-    "age": 23,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/524047.png"
-  },
-  {
-    "id": 68187,
-    "name": "L. Rose",
-    "position": "Defender",
-    "age": 33,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/68187.png"
-  },
-  {
-    "id": 167725,
-    "name": "E. Vincent",
-    "position": "Defender",
-    "age": 28,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/167725.png"
-  },
-  {
-    "id": 571790,
-    "name": "K. Bru",
-    "position": "Midfielder",
-    "age": 36,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/571790.png"
-  },
-  {
-    "id": 417010,
-    "name": "G. Caliste",
-    "position": "Midfielder",
-    "age": 19,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/417010.png"
-  },
-  {
-    "id": 571857,
-    "name": "A. Langue",
-    "position": "Midfielder",
-    "age": 28,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/571857.png"
-  },
-  {
-    "id": 571860,
-    "name": "C. Legrand",
-    "position": "Midfielder",
-    "age": 26,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/571860.png"
-  },
-  {
-    "id": 571788,
-    "name": "L. Rita",
-    "position": "Midfielder",
-    "age": 31,
-    "number": 19,
-    "photo": "https://media.api-sports.io/football/players/571788.png"
-  },
-  {
-    "id": 524035,
-    "name": "A. Arthee",
-    "position": "Attacker",
-    "age": 22,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/524035.png"
-  },
-  {
-    "id": 571858,
-    "name": "A. Botlar",
-    "position": "Attacker",
-    "age": 29,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/571858.png"
-  },
-  {
-    "id": 571859,
-    "name": "J. Ferre",
-    "position": "Attacker",
-    "age": 26,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/571859.png"
-  },
-  {
-    "id": 167729,
-    "name": "Steven Ashley Rex Nazira",
-    "position": "Attacker",
-    "age": 30,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/167729.png"
-  },
-  {
-    "id": 571789,
-    "name": "J. Villeneuve",
-    "position": "Attacker",
-    "age": 31,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/571789.png"
-  }
+	{
+		"id": 571852,
+		"name": "D. Chiotti",
+		"position": "Goalkeeper",
+		"age": 27,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/571852.png"
+	},
+	{
+		"id": 361621,
+		"name": "J. Darbon",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/361621.png"
+	},
+	{
+		"id": 571854,
+		"name": "K. Jean-Louis",
+		"position": "Goalkeeper",
+		"age": 36,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/571854.png"
+	},
+	{
+		"id": 571856,
+		"name": "B. Antoine",
+		"position": "Defender",
+		"age": 22,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/571856.png"
+	},
+	{
+		"id": 571853,
+		"name": "Y. Aristide",
+		"position": "Defender",
+		"age": 24,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/571853.png"
+	},
+	{
+		"id": 571855,
+		"name": "B. Citorah",
+		"position": "Defender",
+		"age": 31,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/571855.png"
+	},
+	{
+		"id": 142142,
+		"name": "D. Collard",
+		"position": "Defender",
+		"age": 25,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/142142.png"
+	},
+	{
+		"id": 571787,
+		"name": "J. Francois",
+		"position": "Defender",
+		"age": 23,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/571787.png"
+	},
+	{
+		"id": 361626,
+		"name": "F. Jackson",
+		"position": "Defender",
+		"age": 26,
+		"number": 15,
+		"photo": "https://media.api-sports.io/football/players/361626.png"
+	},
+	{
+		"id": 21553,
+		"name": "R. Latouchent",
+		"position": "Defender",
+		"age": 29,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/21553.png"
+	},
+	{
+		"id": 524047,
+		"name": "W. Mootoo",
+		"position": "Defender",
+		"age": 23,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/524047.png"
+	},
+	{
+		"id": 68187,
+		"name": "L. Rose",
+		"position": "Defender",
+		"age": 33,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/68187.png"
+	},
+	{
+		"id": 167725,
+		"name": "E. Vincent",
+		"position": "Defender",
+		"age": 28,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/167725.png"
+	},
+	{
+		"id": 571790,
+		"name": "K. Bru",
+		"position": "Midfielder",
+		"age": 36,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/571790.png"
+	},
+	{
+		"id": 417010,
+		"name": "G. Caliste",
+		"position": "Midfielder",
+		"age": 19,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/417010.png"
+	},
+	{
+		"id": 571857,
+		"name": "A. Langue",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/571857.png"
+	},
+	{
+		"id": 571860,
+		"name": "C. Legrand",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/571860.png"
+	},
+	{
+		"id": 571788,
+		"name": "L. Rita",
+		"position": "Midfielder",
+		"age": 31,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/571788.png"
+	},
+	{
+		"id": 524035,
+		"name": "A. Arthee",
+		"position": "Attacker",
+		"age": 22,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/524035.png"
+	},
+	{
+		"id": 571858,
+		"name": "A. Botlar",
+		"position": "Attacker",
+		"age": 29,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/571858.png"
+	},
+	{
+		"id": 571859,
+		"name": "J. Ferre",
+		"position": "Attacker",
+		"age": 26,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/571859.png"
+	},
+	{
+		"id": 167729,
+		"name": "Steven Ashley Rex Nazira",
+		"position": "Attacker",
+		"age": 30,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/167729.png"
+	},
+	{
+		"id": 571789,
+		"name": "J. Villeneuve",
+		"position": "Attacker",
+		"age": 31,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/571789.png"
+	}
 ]

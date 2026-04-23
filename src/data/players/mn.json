@@ -1,282 +1,282 @@
 [
-  {
-    "id": 164268,
-    "name": "Ariunbold Batsaikhan",
-    "position": "Goalkeeper",
-    "age": 35,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/164268.png"
-  },
-  {
-    "id": 345878,
-    "name": "T. Khandaa",
-    "position": "Goalkeeper",
-    "age": 23,
-    "number": 25,
-    "photo": "https://media.api-sports.io/football/players/345878.png"
-  },
-  {
-    "id": 441104,
-    "name": "E. Gan-Erdene",
-    "position": "Goalkeeper",
-    "age": 22,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/441104.png"
-  },
-  {
-    "id": 165540,
-    "name": "Mönkh-Erdene Enkhtaivan",
-    "position": "Goalkeeper",
-    "age": 30,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/165540.png"
-  },
-  {
-    "id": 503495,
-    "name": "T. Batsukh",
-    "position": "Defender",
-    "age": 21,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/503495.png"
-  },
-  {
-    "id": 167979,
-    "name": "Uuganbat Bat-Erdene",
-    "position": "Defender",
-    "age": 28,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/167979.png"
-  },
-  {
-    "id": 309372,
-    "name": "Purevdorj Bayartsengel",
-    "position": "Defender",
-    "age": 28,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/309372.png"
-  },
-  {
-    "id": 348145,
-    "name": "F. Andersen",
-    "position": "Defender",
-    "age": 20,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/348145.png"
-  },
-  {
-    "id": 165541,
-    "name": "Turbat Daginaa",
-    "position": "Defender",
-    "age": 33,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/165541.png"
-  },
-  {
-    "id": 167966,
-    "name": "G. Bat-Orgil",
-    "position": "Defender",
-    "age": 23,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/167966.png"
-  },
-  {
-    "id": 318390,
-    "name": "Enkh-Orgil Otgonbaatar",
-    "position": "Defender",
-    "age": 27,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/318390.png"
-  },
-  {
-    "id": 167906,
-    "name": "A. Dulguun",
-    "position": "Defender",
-    "age": 24,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/167906.png"
-  },
-  {
-    "id": 370088,
-    "name": "T. Khurelbaatar",
-    "position": "Defender",
-    "age": 28,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/370088.png"
-  },
-  {
-    "id": 165542,
-    "name": "Mönkh-Orgil Orkhon",
-    "position": "Defender",
-    "age": 26,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/165542.png"
-  },
-  {
-    "id": 345884,
-    "name": "M. Munkhkhuslen",
-    "position": "Defender",
-    "age": 23,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/345884.png"
-  },
-  {
-    "id": 323053,
-    "name": "Tsogtbayar Batbayar",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 19,
-    "photo": "https://media.api-sports.io/football/players/323053.png"
-  },
-  {
-    "id": 441516,
-    "name": "B. Amgalanbat",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 21,
-    "photo": "https://media.api-sports.io/football/players/441516.png"
-  },
-  {
-    "id": 497354,
-    "name": "O. Saikhanbayar",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 13,
-    "photo": "https://media.api-sports.io/football/players/497354.png"
-  },
-  {
-    "id": 236977,
-    "name": "Gantogtokh Gantuya",
-    "position": "Midfielder",
-    "age": 27,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/236977.png"
-  },
-  {
-    "id": 164274,
-    "name": "Munkh-Erdene Tuguldur",
-    "position": "Midfielder",
-    "age": 30,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/164274.png"
-  },
-  {
-    "id": 167946,
-    "name": "G. Ganbold",
-    "position": "Midfielder",
-    "age": 25,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/167946.png"
-  },
-  {
-    "id": 318393,
-    "name": "Munkh-Erdene Batkhuyag",
-    "position": "Midfielder",
-    "age": 34,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/318393.png"
-  },
-  {
-    "id": 165550,
-    "name": "Temuujin Altansukh",
-    "position": "Midfielder",
-    "age": 28,
-    "number": 26,
-    "photo": "https://media.api-sports.io/football/players/165550.png"
-  },
-  {
-    "id": 441082,
-    "name": "T. Sodbilguun",
-    "position": "Midfielder",
-    "age": 20,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/441082.png"
-  },
-  {
-    "id": 441106,
-    "name": "G. Erdenebat",
-    "position": "Midfielder",
-    "age": 20,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/441106.png"
-  },
-  {
-    "id": 167974,
-    "name": "Batmunkh Baljinnyam",
-    "position": "Midfielder",
-    "age": 30,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/167974.png"
-  },
-  {
-    "id": 165534,
-    "name": "Tsend-Ayush Khurelbaatar",
-    "position": "Midfielder",
-    "age": 35,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/165534.png"
-  },
-  {
-    "id": 441107,
-    "name": "T. Munkhbaatar",
-    "position": "Midfielder",
-    "age": 26,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/441107.png"
-  },
-  {
-    "id": 441083,
-    "name": "A. Sodmunkh",
-    "position": "Attacker",
-    "age": 21,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/441083.png"
-  },
-  {
-    "id": 345889,
-    "name": "D. Tuvshinjargal",
-    "position": "Attacker",
-    "age": 22,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/345889.png"
-  },
-  {
-    "id": 167905,
-    "name": "Mijiddorj Oyunbaatar",
-    "position": "Attacker",
-    "age": 29,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/167905.png"
-  },
-  {
-    "id": 345890,
-    "name": "U. Baatar",
-    "position": "Attacker",
-    "age": 23,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/345890.png"
-  },
-  {
-    "id": 441081,
-    "name": "N. Sainbuyan",
-    "position": "Attacker",
-    "age": 23,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/441081.png"
-  },
-  {
-    "id": 441084,
-    "name": "T. Zayat",
-    "position": "Attacker",
-    "age": 22,
-    "number": 16,
-    "photo": "https://media.api-sports.io/football/players/441084.png"
-  },
-  {
-    "id": 165532,
-    "name": "Naranbold Nyam-Osor",
-    "position": "Attacker",
-    "age": 33,
-    "number": 0,
-    "photo": "https://media.api-sports.io/football/players/165532.png"
-  }
+	{
+		"id": 164268,
+		"name": "Ariunbold Batsaikhan",
+		"position": "Goalkeeper",
+		"age": 35,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/164268.png"
+	},
+	{
+		"id": 345878,
+		"name": "T. Khandaa",
+		"position": "Goalkeeper",
+		"age": 23,
+		"number": 25,
+		"photo": "https://media.api-sports.io/football/players/345878.png"
+	},
+	{
+		"id": 441104,
+		"name": "E. Gan-Erdene",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/441104.png"
+	},
+	{
+		"id": 165540,
+		"name": "Mönkh-Erdene Enkhtaivan",
+		"position": "Goalkeeper",
+		"age": 30,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/165540.png"
+	},
+	{
+		"id": 503495,
+		"name": "T. Batsukh",
+		"position": "Defender",
+		"age": 21,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/503495.png"
+	},
+	{
+		"id": 167979,
+		"name": "Uuganbat Bat-Erdene",
+		"position": "Defender",
+		"age": 28,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/167979.png"
+	},
+	{
+		"id": 309372,
+		"name": "Purevdorj Bayartsengel",
+		"position": "Defender",
+		"age": 28,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/309372.png"
+	},
+	{
+		"id": 348145,
+		"name": "F. Andersen",
+		"position": "Defender",
+		"age": 20,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/348145.png"
+	},
+	{
+		"id": 165541,
+		"name": "Turbat Daginaa",
+		"position": "Defender",
+		"age": 33,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/165541.png"
+	},
+	{
+		"id": 167966,
+		"name": "G. Bat-Orgil",
+		"position": "Defender",
+		"age": 23,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/167966.png"
+	},
+	{
+		"id": 318390,
+		"name": "Enkh-Orgil Otgonbaatar",
+		"position": "Defender",
+		"age": 27,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/318390.png"
+	},
+	{
+		"id": 167906,
+		"name": "A. Dulguun",
+		"position": "Defender",
+		"age": 24,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/167906.png"
+	},
+	{
+		"id": 370088,
+		"name": "T. Khurelbaatar",
+		"position": "Defender",
+		"age": 28,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/370088.png"
+	},
+	{
+		"id": 165542,
+		"name": "Mönkh-Orgil Orkhon",
+		"position": "Defender",
+		"age": 26,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/165542.png"
+	},
+	{
+		"id": 345884,
+		"name": "M. Munkhkhuslen",
+		"position": "Defender",
+		"age": 23,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/345884.png"
+	},
+	{
+		"id": 323053,
+		"name": "Tsogtbayar Batbayar",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 19,
+		"photo": "https://media.api-sports.io/football/players/323053.png"
+	},
+	{
+		"id": 441516,
+		"name": "B. Amgalanbat",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 21,
+		"photo": "https://media.api-sports.io/football/players/441516.png"
+	},
+	{
+		"id": 497354,
+		"name": "O. Saikhanbayar",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/497354.png"
+	},
+	{
+		"id": 236977,
+		"name": "Gantogtokh Gantuya",
+		"position": "Midfielder",
+		"age": 27,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/236977.png"
+	},
+	{
+		"id": 164274,
+		"name": "Munkh-Erdene Tuguldur",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/164274.png"
+	},
+	{
+		"id": 167946,
+		"name": "G. Ganbold",
+		"position": "Midfielder",
+		"age": 25,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/167946.png"
+	},
+	{
+		"id": 318393,
+		"name": "Munkh-Erdene Batkhuyag",
+		"position": "Midfielder",
+		"age": 34,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/318393.png"
+	},
+	{
+		"id": 165550,
+		"name": "Temuujin Altansukh",
+		"position": "Midfielder",
+		"age": 28,
+		"number": 26,
+		"photo": "https://media.api-sports.io/football/players/165550.png"
+	},
+	{
+		"id": 441082,
+		"name": "T. Sodbilguun",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/441082.png"
+	},
+	{
+		"id": 441106,
+		"name": "G. Erdenebat",
+		"position": "Midfielder",
+		"age": 20,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/441106.png"
+	},
+	{
+		"id": 167974,
+		"name": "Batmunkh Baljinnyam",
+		"position": "Midfielder",
+		"age": 30,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/167974.png"
+	},
+	{
+		"id": 165534,
+		"name": "Tsend-Ayush Khurelbaatar",
+		"position": "Midfielder",
+		"age": 35,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/165534.png"
+	},
+	{
+		"id": 441107,
+		"name": "T. Munkhbaatar",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/441107.png"
+	},
+	{
+		"id": 441083,
+		"name": "A. Sodmunkh",
+		"position": "Attacker",
+		"age": 21,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/441083.png"
+	},
+	{
+		"id": 345889,
+		"name": "D. Tuvshinjargal",
+		"position": "Attacker",
+		"age": 22,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/345889.png"
+	},
+	{
+		"id": 167905,
+		"name": "Mijiddorj Oyunbaatar",
+		"position": "Attacker",
+		"age": 29,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/167905.png"
+	},
+	{
+		"id": 345890,
+		"name": "U. Baatar",
+		"position": "Attacker",
+		"age": 23,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/345890.png"
+	},
+	{
+		"id": 441081,
+		"name": "N. Sainbuyan",
+		"position": "Attacker",
+		"age": 23,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/441081.png"
+	},
+	{
+		"id": 441084,
+		"name": "T. Zayat",
+		"position": "Attacker",
+		"age": 22,
+		"number": 16,
+		"photo": "https://media.api-sports.io/football/players/441084.png"
+	},
+	{
+		"id": 165532,
+		"name": "Naranbold Nyam-Osor",
+		"position": "Attacker",
+		"age": 33,
+		"number": 0,
+		"photo": "https://media.api-sports.io/football/players/165532.png"
+	}
 ]

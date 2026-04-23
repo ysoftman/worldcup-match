@@ -1,218 +1,218 @@
 [
-  {
-    "id": 542971,
-    "name": "H. Ali",
-    "position": "Goalkeeper",
-    "age": 22,
-    "number": 20,
-    "photo": "https://media.api-sports.io/football/players/542971.png"
-  },
-  {
-    "id": 542900,
-    "name": "U. Ali",
-    "position": "Goalkeeper",
-    "age": 21,
-    "number": 22,
-    "photo": "https://media.api-sports.io/football/players/542900.png"
-  },
-  {
-    "id": 166441,
-    "name": "Saqib Hanif",
-    "position": "Goalkeeper",
-    "age": 31,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/166441.png"
-  },
-  {
-    "id": 624857,
-    "name": "Adam Najeeb",
-    "position": "Goalkeeper",
-    "age": 20,
-    "number": 1,
-    "photo": "https://media.api-sports.io/football/players/624857.png"
-  },
-  {
-    "id": 310496,
-    "name": "M. Fazal",
-    "position": "Defender",
-    "age": 23,
-    "number": 13,
-    "photo": "https://media.api-sports.io/football/players/310496.png"
-  },
-  {
-    "id": 472343,
-    "name": "Waqar Ihtisham",
-    "position": "Defender",
-    "age": 29,
-    "number": 5,
-    "photo": "https://media.api-sports.io/football/players/472343.png"
-  },
-  {
-    "id": 305443,
-    "name": "Abdullah Iqbal",
-    "position": "Defender",
-    "age": 23,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/305443.png"
-  },
-  {
-    "id": 166438,
-    "name": "Omer Rao",
-    "position": "Defender",
-    "age": 29,
-    "number": 2,
-    "photo": "https://media.api-sports.io/football/players/166438.png"
-  },
-  {
-    "id": 570839,
-    "name": "A. Shah",
-    "position": "Defender",
-    "age": 25,
-    "number": 4,
-    "photo": "https://media.api-sports.io/football/players/570839.png"
-  },
-  {
-    "id": 444737,
-    "name": "Junaid Shah",
-    "position": "Defender",
-    "age": 25,
-    "number": 6,
-    "photo": "https://media.api-sports.io/football/players/444737.png"
-  },
-  {
-    "id": 542685,
-    "name": "M. Ullah",
-    "position": "Defender",
-    "age": 20,
-    "number": 3,
-    "photo": "https://media.api-sports.io/football/players/542685.png"
-  },
-  {
-    "id": 422827,
-    "name": "Ali Uzair",
-    "position": "Defender",
-    "age": 29,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/422827.png"
-  },
-  {
-    "id": 645821,
-    "name": "S. Dost",
-    "position": "Midfielder",
-    "age": 23,
-    "number": 11,
-    "photo": "https://media.api-sports.io/football/players/645821.png"
-  },
-  {
-    "id": 542573,
-    "name": "A. K. Ghazi A.",
-    "position": "Midfielder",
-    "age": 24,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/542573.png"
-  },
-  {
-    "id": 39045,
-    "name": "E. Hussain",
-    "position": "Midfielder",
-    "age": 33,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/39045.png"
-  },
-  {
-    "id": 573277,
-    "name": "M. H. Khattak",
-    "position": "Midfielder",
-    "age": 0,
-    "number": 8,
-    "photo": "https://media.api-sports.io/football/players/573277.png"
-  },
-  {
-    "id": 542576,
-    "name": "R. Nabi",
-    "position": "Midfielder",
-    "age": 26,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/542576.png"
-  },
-  {
-    "id": 570838,
-    "name": "T. Shinwari",
-    "position": "Midfielder",
-    "age": 0,
-    "number": 18,
-    "photo": "https://media.api-sports.io/football/players/570838.png"
-  },
-  {
-    "id": 408766,
-    "name": "M. Abdullah",
-    "position": "Attacker",
-    "age": 20,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/408766.png"
-  },
-  {
-    "id": 375753,
-    "name": "Abdul Arshad",
-    "position": "Attacker",
-    "age": 22,
-    "number": 13,
-    "photo": "https://media.api-sports.io/football/players/375753.png"
-  },
-  {
-    "id": 573276,
-    "name": "A. F. Gulzari",
-    "position": "Attacker",
-    "age": 0,
-    "number": 23,
-    "photo": "https://media.api-sports.io/football/players/573276.png"
-  },
-  {
-    "id": 570840,
-    "name": "K. Khan",
-    "position": "Attacker",
-    "age": 33,
-    "number": 10,
-    "photo": "https://media.api-sports.io/football/players/570840.png"
-  },
-  {
-    "id": 17463,
-    "name": "Otis Khan",
-    "position": "Attacker",
-    "age": 30,
-    "number": 7,
-    "photo": "https://media.api-sports.io/football/players/17463.png"
-  },
-  {
-    "id": 542574,
-    "name": "A. Moin",
-    "position": "Attacker",
-    "age": 21,
-    "number": 14,
-    "photo": "https://media.api-sports.io/football/players/542574.png"
-  },
-  {
-    "id": 624858,
-    "name": "Umar Nawaz",
-    "position": "Attacker",
-    "age": 17,
-    "number": 17,
-    "photo": "https://media.api-sports.io/football/players/624858.png"
-  },
-  {
-    "id": 573278,
-    "name": "S. A. Raza",
-    "position": "Attacker",
-    "age": 0,
-    "number": 9,
-    "photo": "https://media.api-sports.io/football/players/573278.png"
-  },
-  {
-    "id": 38871,
-    "name": "H. Zeb",
-    "position": "Attacker",
-    "age": 24,
-    "number": 12,
-    "photo": "https://media.api-sports.io/football/players/38871.png"
-  }
+	{
+		"id": 542971,
+		"name": "H. Ali",
+		"position": "Goalkeeper",
+		"age": 22,
+		"number": 20,
+		"photo": "https://media.api-sports.io/football/players/542971.png"
+	},
+	{
+		"id": 542900,
+		"name": "U. Ali",
+		"position": "Goalkeeper",
+		"age": 21,
+		"number": 22,
+		"photo": "https://media.api-sports.io/football/players/542900.png"
+	},
+	{
+		"id": 166441,
+		"name": "Saqib Hanif",
+		"position": "Goalkeeper",
+		"age": 31,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/166441.png"
+	},
+	{
+		"id": 624857,
+		"name": "Adam Najeeb",
+		"position": "Goalkeeper",
+		"age": 20,
+		"number": 1,
+		"photo": "https://media.api-sports.io/football/players/624857.png"
+	},
+	{
+		"id": 310496,
+		"name": "M. Fazal",
+		"position": "Defender",
+		"age": 23,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/310496.png"
+	},
+	{
+		"id": 472343,
+		"name": "Waqar Ihtisham",
+		"position": "Defender",
+		"age": 29,
+		"number": 5,
+		"photo": "https://media.api-sports.io/football/players/472343.png"
+	},
+	{
+		"id": 305443,
+		"name": "Abdullah Iqbal",
+		"position": "Defender",
+		"age": 23,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/305443.png"
+	},
+	{
+		"id": 166438,
+		"name": "Omer Rao",
+		"position": "Defender",
+		"age": 29,
+		"number": 2,
+		"photo": "https://media.api-sports.io/football/players/166438.png"
+	},
+	{
+		"id": 570839,
+		"name": "A. Shah",
+		"position": "Defender",
+		"age": 25,
+		"number": 4,
+		"photo": "https://media.api-sports.io/football/players/570839.png"
+	},
+	{
+		"id": 444737,
+		"name": "Junaid Shah",
+		"position": "Defender",
+		"age": 25,
+		"number": 6,
+		"photo": "https://media.api-sports.io/football/players/444737.png"
+	},
+	{
+		"id": 542685,
+		"name": "M. Ullah",
+		"position": "Defender",
+		"age": 20,
+		"number": 3,
+		"photo": "https://media.api-sports.io/football/players/542685.png"
+	},
+	{
+		"id": 422827,
+		"name": "Ali Uzair",
+		"position": "Defender",
+		"age": 29,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/422827.png"
+	},
+	{
+		"id": 645821,
+		"name": "S. Dost",
+		"position": "Midfielder",
+		"age": 23,
+		"number": 11,
+		"photo": "https://media.api-sports.io/football/players/645821.png"
+	},
+	{
+		"id": 542573,
+		"name": "A. K. Ghazi A.",
+		"position": "Midfielder",
+		"age": 24,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/542573.png"
+	},
+	{
+		"id": 39045,
+		"name": "E. Hussain",
+		"position": "Midfielder",
+		"age": 33,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/39045.png"
+	},
+	{
+		"id": 573277,
+		"name": "M. H. Khattak",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 8,
+		"photo": "https://media.api-sports.io/football/players/573277.png"
+	},
+	{
+		"id": 542576,
+		"name": "R. Nabi",
+		"position": "Midfielder",
+		"age": 26,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/542576.png"
+	},
+	{
+		"id": 570838,
+		"name": "T. Shinwari",
+		"position": "Midfielder",
+		"age": 0,
+		"number": 18,
+		"photo": "https://media.api-sports.io/football/players/570838.png"
+	},
+	{
+		"id": 408766,
+		"name": "M. Abdullah",
+		"position": "Attacker",
+		"age": 20,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/408766.png"
+	},
+	{
+		"id": 375753,
+		"name": "Abdul Arshad",
+		"position": "Attacker",
+		"age": 22,
+		"number": 13,
+		"photo": "https://media.api-sports.io/football/players/375753.png"
+	},
+	{
+		"id": 573276,
+		"name": "A. F. Gulzari",
+		"position": "Attacker",
+		"age": 0,
+		"number": 23,
+		"photo": "https://media.api-sports.io/football/players/573276.png"
+	},
+	{
+		"id": 570840,
+		"name": "K. Khan",
+		"position": "Attacker",
+		"age": 33,
+		"number": 10,
+		"photo": "https://media.api-sports.io/football/players/570840.png"
+	},
+	{
+		"id": 17463,
+		"name": "Otis Khan",
+		"position": "Attacker",
+		"age": 30,
+		"number": 7,
+		"photo": "https://media.api-sports.io/football/players/17463.png"
+	},
+	{
+		"id": 542574,
+		"name": "A. Moin",
+		"position": "Attacker",
+		"age": 21,
+		"number": 14,
+		"photo": "https://media.api-sports.io/football/players/542574.png"
+	},
+	{
+		"id": 624858,
+		"name": "Umar Nawaz",
+		"position": "Attacker",
+		"age": 17,
+		"number": 17,
+		"photo": "https://media.api-sports.io/football/players/624858.png"
+	},
+	{
+		"id": 573278,
+		"name": "S. A. Raza",
+		"position": "Attacker",
+		"age": 0,
+		"number": 9,
+		"photo": "https://media.api-sports.io/football/players/573278.png"
+	},
+	{
+		"id": 38871,
+		"name": "H. Zeb",
+		"position": "Attacker",
+		"age": 24,
+		"number": 12,
+		"photo": "https://media.api-sports.io/football/players/38871.png"
+	}
 ]

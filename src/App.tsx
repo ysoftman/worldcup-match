@@ -185,15 +185,20 @@ function App() {
 		setPresetLabel(null);
 	}, []);
 
-	// 프리셋 적용 — 팀만 로드하고 select 단계에 머무른다. 사용자가
-	// 카드/바운스볼 중 어느 대회로 시작할지 선택할 수 있다.
+	// 프리셋 적용 — 팀 로드와 동시에 카드 대회를 바로 시작한다.
 	const applyPreset = useCallback((preset: Preset) => {
+		const allTeams = preset.groups.flatMap((g) => g.teams);
 		setTournamentSize(preset.size);
 		setPresetLabel(preset.label);
 		setAppliedPreset(preset);
 		setSwapSelection(null);
-		const allTeams = preset.groups.flatMap((g) => g.teams);
 		setSelectedTeams(allTeams);
+		setGroups(createGroupsFromPreset(preset.groups));
+		setTeamFormations(randomFormations(allTeams));
+		setRounds([]);
+		setCurrentRoundIndex(-1);
+		setChampion(null);
+		setPhase("group");
 	}, []);
 
 	// TeamSelector에서 팀을 바꾸면 프리셋과 명단이 더 이상 일치하지
@@ -687,7 +692,7 @@ function App() {
 							onClick={startTournament}
 							disabled={selectedTeams.length !== tournamentSize}
 						>
-							🏆 카드 대회 시작 ({selectedTeams.length}/{tournamentSize})
+							🏆 대회 시작 ({selectedTeams.length}/{tournamentSize})
 						</button>
 						<button
 							type="button"

@@ -1,6 +1,7 @@
 import confetti from "canvas-confetti";
 import { useEffect, useRef } from "react";
 import type { Country } from "../data/countries";
+import { useI18n } from "../i18nContext";
 import type { TeamStats } from "../types";
 
 interface ChampionProps {
@@ -83,6 +84,7 @@ function fireConfetti() {
 }
 
 export function Champion({ team, stats }: ChampionProps) {
+	const { t, tName, locale } = useI18n();
 	const fired = useRef(false);
 
 	useEffect(() => {
@@ -128,14 +130,22 @@ export function Champion({ team, stats }: ChampionProps) {
 					<div className="champion-flag">{team.flag}</div>
 				</div>
 				<h2 className="champion-name">
-					{team.nameKo}({team.name})
+					{tName(team)}
+					{locale === "ko" ? `(${team.name})` : ""}
 				</h2>
-				<p className="champion-rank">FIFA 랭킹 #{team.rank}</p>
-				<p className="champion-label">월드컵 우승</p>
+				<p className="champion-rank">
+					{t("champion.rank", { rank: team.rank })}
+				</p>
+				<p className="champion-label">{t("champion.label")}</p>
 				{stats && (
 					<p className="champion-stats">
-						{stats.played}경기 {stats.wins}승 {stats.draws}무 {stats.losses}패
-						(승률 {stats.winRate}%)
+						{t("champion.stats", {
+							played: stats.played,
+							wins: stats.wins,
+							draws: stats.draws,
+							losses: stats.losses,
+							winRate: stats.winRate,
+						})}
 					</p>
 				)}
 			</div>

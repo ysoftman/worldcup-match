@@ -1,6 +1,7 @@
 import * as planck from "planck";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Country } from "../data/countries";
+import { useI18n } from "../i18nContext";
 import { playBounce, playClick, playDrain } from "../utils/sounds";
 
 interface BallTournamentProps {
@@ -145,12 +146,13 @@ export function BallTournament({
 	size,
 	onChampion,
 }: BallTournamentProps) {
+	const { t, tName } = useI18n();
 	// preload every team's flag into the Twemoji cache on mount so the first
 	// round can render images instead of emoji text (especially important on
 	// iPad where canvas emoji-flag support is spotty).
 	useEffect(() => {
-		for (const t of teams) {
-			void preloadFlag(t.flag);
+		for (const team of teams) {
+			void preloadFlag(team.flag);
 		}
 	}, [teams]);
 
@@ -1397,8 +1399,9 @@ export function BallTournament({
 	const showNextButton = roundEnded && !isFinalRound;
 	const showRestartButton = roundActive && !roundEnded;
 
-	// label helper: "결승" for 2-ball round, "{n}강" otherwise
-	const roundLabel = (count: number) => (count === 2 ? "결승" : `${count}강`);
+	// label helper: "final" for 2-ball round, round-of-N otherwise
+	const roundLabel = (count: number) =>
+		count === 2 ? t("ball.final") : t("ball.roundN", { n: count });
 
 	// list of teams that have advanced this round (in exit order)
 	const advancers = useMemo(
@@ -1411,11 +1414,13 @@ export function BallTournament({
 			<div className="ball-tour-header">
 				<div className="ball-tour-round-title">{roundLabel(currentCount)}</div>
 				<div className="ball-tour-hint">
-					<span aria-hidden="true">✋</span> 공을 잡아 원하는 곳으로 이동시킬 수
-					있어요
+					<span aria-hidden="true">✋</span> {t("ball.hint")}
 				</div>
 				<div className="ball-tour-round-progress">
-					진출 {advancedCount} / {targetExits}
+					{t("ball.progress", {
+						advanced: advancedCount,
+						target: targetExits,
+					})}
 				</div>
 			</div>
 
@@ -1429,7 +1434,7 @@ export function BallTournament({
 								className="btn btn-round"
 								onClick={startRound}
 							>
-								{roundLabel(currentCount)} 시작
+								{t("ball.startRound", { round: roundLabel(currentCount) })}
 							</button>
 						</div>
 					)}
@@ -1440,7 +1445,7 @@ export function BallTournament({
 								className="btn btn-round"
 								onClick={goNextRound}
 							>
-								{roundLabel(nextCount)} 시작
+								{t("ball.startRound", { round: roundLabel(nextCount) })}
 							</button>
 						</div>
 					)}
@@ -1449,33 +1454,33 @@ export function BallTournament({
 							type="button"
 							className="ball-tour-restart"
 							onClick={restartRound}
-							title="이번 라운드를 처음부터 다시"
+							title={t("ball.restartTitle")}
 						>
-							↺ 다시
+							{t("ball.restart")}
 						</button>
 					)}
 				</div>
 
 				<aside className="ball-tour-sidebar">
 					<section className="ball-tour-survivors">
-						<h3>진출</h3>
+						<h3>{t("ball.advanced")}</h3>
 						<ol>
-							{advancers.map((t, i) => (
-								<li key={t.code} className="ball-tour-team-row">
+							{advancers.map((team, i) => (
+								<li key={team.code} className="ball-tour-team-row">
 									<span className="ball-tour-seed">{i + 1}</span>
-									<span className="ball-tour-flag">{t.flag}</span>
-									<span className="ball-tour-name">{t.nameKo}</span>
+									<span className="ball-tour-flag">{team.flag}</span>
+									<span className="ball-tour-name">{tName(team)}</span>
 								</li>
 							))}
 						</ol>
 					</section>
 					<section className="ball-tour-eliminated">
-						<h3>탈락 (이번 라운드)</h3>
+						<h3>{t("ball.eliminated")}</h3>
 						<ol>
-							{eliminatedThisRound.map((t) => (
-								<li key={t.code} className="ball-tour-team-row eliminated">
-									<span className="ball-tour-flag">{t.flag}</span>
-									<span className="ball-tour-name">{t.nameKo}</span>
+							{eliminatedThisRound.map((team) => (
+								<li key={team.code} className="ball-tour-team-row eliminated">
+									<span className="ball-tour-flag">{team.flag}</span>
+									<span className="ball-tour-name">{tName(team)}</span>
 								</li>
 							))}
 						</ol>

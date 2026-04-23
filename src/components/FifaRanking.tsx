@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import {
-	ALL_COUNTRIES,
-	CONFEDERATION_LABELS,
-	type Confederation,
-} from "../data/countries";
+import { ALL_COUNTRIES, type Confederation } from "../data/countries";
+import { useI18n } from "../i18nContext";
 
 const CONF_ORDER: Confederation[] = [
 	"UEFA",
@@ -15,6 +12,7 @@ const CONF_ORDER: Confederation[] = [
 ];
 
 export function FifaRanking() {
+	const { t, tName } = useI18n();
 	const [open, setOpen] = useState(false);
 	const [filter, setFilter] = useState<Confederation | "ALL">("ALL");
 	const panelRef = useRef<HTMLDivElement>(null);
@@ -43,21 +41,19 @@ export function FifaRanking() {
 				className="ranking-toggle"
 				onClick={() => setOpen(!open)}
 			>
-				📊 {open ? "닫기" : "FIFA 랭킹"}
+				📊 {open ? t("ranking.toggle.open") : t("ranking.toggle.closed")}
 			</button>
 
 			{open && (
 				<div className="ranking-body">
-					<div className="ranking-source">
-						FIFA/Coca-Cola 세계 랭킹 · 2026년 4월 기준
-					</div>
+					<div className="ranking-source">{t("ranking.source")}</div>
 					<div className="ranking-filters">
 						<button
 							type="button"
 							className={`ranking-filter ${filter === "ALL" ? "active" : ""}`}
 							onClick={() => setFilter("ALL")}
 						>
-							전체
+							{t("ranking.all")}
 						</button>
 						{CONF_ORDER.map((conf) => (
 							<button
@@ -66,7 +62,7 @@ export function FifaRanking() {
 								className={`ranking-filter ${filter === conf ? "active" : ""}`}
 								onClick={() => setFilter(conf)}
 							>
-								{CONFEDERATION_LABELS[conf]}
+								{t(`conf.${conf}`)}
 							</button>
 						))}
 					</div>
@@ -75,10 +71,8 @@ export function FifaRanking() {
 							<div className="ranking-item" key={c.code}>
 								<span className="ranking-pos">{c.rank}</span>
 								<span className="ranking-flag">{c.flag}</span>
-								<span className="ranking-name">{c.nameKo}</span>
-								<span className="ranking-conf">
-									{CONFEDERATION_LABELS[c.conf]}
-								</span>
+								<span className="ranking-name">{tName(c)}</span>
+								<span className="ranking-conf">{t(`conf.${c.conf}`)}</span>
 							</div>
 						))}
 					</div>

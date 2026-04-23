@@ -120,12 +120,15 @@
 	display: flex;
 	align-items: center;
 	gap: 6px;
+	min-width: 0;
 }
 
 .history-row2 {
 	display: flex;
-	align-items: center;
-	gap: 6px;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 4px 8px;
 	padding-left: 28px;
 }
 
@@ -151,19 +154,27 @@
 .history-name {
 	font-weight: 600;
 	flex: 1;
+	min-width: 0;
 	color: #2c3e50;
+	word-break: break-word;
+	line-height: 1.25;
 }
 
 .history-meta {
 	font-size: 0.65rem;
 	color: var(--color-gray-dark);
-	white-space: nowrap;
+	flex: 1 1 auto;
+	min-width: 0;
+	word-break: break-word;
+	line-height: 1.35;
 }
 
 .history-date {
 	font-size: 0.6rem;
 	color: var(--color-gray);
 	white-space: nowrap;
+	flex-shrink: 0;
+	margin-left: auto;
 }
 
 /* 사운드 토글 */
@@ -288,6 +299,69 @@
 .theme-toggle:hover {
 	transform: scale(1.1);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lang-select-wrap {
+	position: relative;
+	height: 36px;
+	padding: 0 8px;
+	border: 2px solid var(--color-border);
+	border-radius: 18px;
+	background: #fff;
+	font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	transition: all 0.2s;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	color: var(--color-text);
+	box-sizing: border-box;
+}
+
+.lang-select-wrap .lang-flag {
+	font-size: 0.85rem;
+	line-height: 1;
+}
+
+.lang-select-wrap .lang-code {
+	font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+	font-feature-settings: normal;
+}
+
+.lang-select-wrap .lang-caret {
+	font-size: 0.65rem;
+	opacity: 0.55;
+	margin-left: 1px;
+}
+
+.lang-select-wrap:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lang-select {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	appearance: none;
+	font: inherit;
+}
+
+.lang-select-wrap:focus-within {
+	outline: 2px solid #3498db;
+	outline-offset: 2px;
 }
 
 .history-clear {
@@ -2688,6 +2762,13 @@
 		font-size: 0.8rem;
 	}
 
+	.lang-select-wrap {
+		height: 28px;
+		padding: 0 5px;
+		font-size: 0.6rem;
+		gap: 2px;
+	}
+
 	.ranking-toggle {
 		padding: 3px 8px;
 		font-size: 0.65rem;
@@ -2843,9 +2924,16 @@
 [data-theme="dark"] .sound-toggle,
 [data-theme="dark"] .bgm-toggle,
 [data-theme="dark"] .theme-toggle,
-[data-theme="dark"] .dadjoke-link {
+[data-theme="dark"] .dadjoke-link,
+[data-theme="dark"] .lang-select-wrap {
 	background: #2c3e50;
 	border-color: #34495e;
+	color: #ecf0f1;
+}
+
+[data-theme="dark"] .lang-select option {
+	background: #2c3e50;
+	color: #ecf0f1;
 }
 
 [data-theme="dark"] .sound-toggle.off,

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Country } from "../data/countries";
+import { useI18n } from "../i18nContext";
 import type { Position } from "../types";
 import { POSITION_LABELS } from "../types";
 import { autoSelectXI, getSquad, hasRealPlayers } from "../utils/playerLoader";
@@ -29,12 +30,15 @@ type SortKey =
 	| "height"
 	| "age";
 type SortDir = "asc" | "desc";
-const POSITION_FILTERS: Array<{ label: string; value: Position | "ALL" }> = [
-	{ label: "전체", value: "ALL" },
-	{ label: "GK", value: "GK" },
-	{ label: "DF", value: "DEF" },
-	{ label: "MF", value: "MID" },
-	{ label: "FW", value: "FWD" },
+const POSITION_FILTERS: Array<{
+	labelKey: string;
+	value: Position | "ALL";
+}> = [
+	{ labelKey: "squad.filter.all", value: "ALL" },
+	{ labelKey: "GK", value: "GK" },
+	{ labelKey: "DF", value: "DEF" },
+	{ labelKey: "MF", value: "MID" },
+	{ labelKey: "FW", value: "FWD" },
 ];
 
 function statColor(val: number): string {
@@ -70,6 +74,7 @@ export function SquadModal({
 	onClose,
 	readOnly = false,
 }: SquadModalProps) {
+	const { t, tName } = useI18n();
 	const modalRef = useRef<HTMLDivElement>(null);
 	const [filter, setFilter] = useState<Position | "ALL">("ALL");
 	const [localXI, setLocalXI] = useState<Set<number>>(() => {
@@ -222,14 +227,16 @@ export function SquadModal({
 			<div className="squad-modal" ref={modalRef}>
 				<div className="squad-header">
 					<h3 id="squad-title">
-						{team.flag} {team.nameKo} 스쿼드
+						{t("squad.title", { flag: team.flag, name: tName(team) })}
 					</h3>
-					<span className="squad-avg">팀 평균 OVR: {avgOverall}</span>
+					<span className="squad-avg">
+						{t("squad.avg", { value: avgOverall })}
+					</span>
 					<button
 						type="button"
 						className="squad-close"
 						onClick={onClose}
-						aria-label="모달 닫기"
+						aria-label={t("squad.close")}
 					>
 						✕
 					</button>
@@ -237,8 +244,12 @@ export function SquadModal({
 
 				<div className="squad-xi-info">
 					<span className="xi-count">
-						선발 {localXI.size}/11명
-						{xiAvg > 0 && <span className="xi-avg"> (평균 OVR: {xiAvg})</span>}
+						{t("squad.starting", { count: localXI.size })}
+						{xiAvg > 0 && (
+							<span className="xi-avg">
+								{t("squad.startingAvg", { value: xiAvg })}
+							</span>
+						)}
 					</span>
 					<span className="xi-positions">
 						GK:{xiCounts.GK} / DF:{xiCounts.DEF} / MF:{xiCounts.MID} / FW:
@@ -246,12 +257,13 @@ export function SquadModal({
 					</span>
 					{!isReal && (
 						<span className="xi-legend">
-							<span className="name-generated">*</span>가상 선수
+							<span className="name-generated">*</span>
+							{t("squad.generated")}
 						</span>
 					)}
 				</div>
 
-				<fieldset className="squad-filters" aria-label="포지션 필터">
+				<fieldset className="squad-filters" aria-label={t("squad.filter")}>
 					{POSITION_FILTERS.map((f) => (
 						<button
 							key={f.value}
@@ -260,7 +272,7 @@ export function SquadModal({
 							onClick={() => setFilter(f.value)}
 							aria-pressed={filter === f.value}
 						>
-							{f.label}
+							{f.value === "ALL" ? t(f.labelKey) : f.labelKey}
 						</button>
 					))}
 				</fieldset>
@@ -269,7 +281,9 @@ export function SquadModal({
 					<table className="squad-table">
 						<thead>
 							<tr>
-								{!readOnly && <th className="th-check">선발</th>}
+								{!readOnly && (
+									<th className="th-check">{t("squad.column.starter")}</th>
+								)}
 								<th
 									className="th-num th-sortable"
 									onClick={() => toggleSort("number")}
@@ -285,14 +299,14 @@ export function SquadModal({
 									className="th-name th-sortable"
 									onClick={() => toggleSort("name")}
 								>
-									이름
+									{t("squad.column.name")}
 									{sortKey === "name" ? (sortDir === "desc" ? " ▼" : " ▲") : ""}
 								</th>
 								<th
 									className="th-pos th-sortable"
 									onClick={() => toggleSort("position")}
 								>
-									포지션
+									{t("squad.column.position")}
 									{sortKey === "position"
 										? sortDir === "desc"
 											? " ▼"
@@ -314,14 +328,14 @@ export function SquadModal({
 									className="th-stat th-sortable"
 									onClick={() => toggleSort("pace")}
 								>
-									속도
+									{t("squad.column.pace")}
 									{sortKey === "pace" ? (sortDir === "desc" ? " ▼" : " ▲") : ""}
 								</th>
 								<th
 									className="th-stat th-sortable"
 									onClick={() => toggleSort("shooting")}
 								>
-									슈팅
+									{t("squad.column.shooting")}
 									{sortKey === "shooting"
 										? sortDir === "desc"
 											? " ▼"
@@ -332,7 +346,7 @@ export function SquadModal({
 									className="th-stat th-sortable"
 									onClick={() => toggleSort("passing")}
 								>
-									패스
+									{t("squad.column.passing")}
 									{sortKey === "passing"
 										? sortDir === "desc"
 											? " ▼"
@@ -343,7 +357,7 @@ export function SquadModal({
 									className="th-stat th-sortable"
 									onClick={() => toggleSort("dribbling")}
 								>
-									드리블
+									{t("squad.column.dribbling")}
 									{sortKey === "dribbling"
 										? sortDir === "desc"
 											? " ▼"
@@ -354,7 +368,7 @@ export function SquadModal({
 									className="th-stat th-sortable"
 									onClick={() => toggleSort("defending")}
 								>
-									수비
+									{t("squad.column.defending")}
 									{sortKey === "defending"
 										? sortDir === "desc"
 											? " ▼"
@@ -365,7 +379,7 @@ export function SquadModal({
 									className="th-stat th-sortable"
 									onClick={() => toggleSort("physical")}
 								>
-									체력
+									{t("squad.column.physical")}
 									{sortKey === "physical"
 										? sortDir === "desc"
 											? " ▼"
@@ -376,7 +390,7 @@ export function SquadModal({
 									className="th-height th-sortable"
 									onClick={() => toggleSort("height")}
 								>
-									키
+									{t("squad.column.height")}
 									{sortKey === "height"
 										? sortDir === "desc"
 											? " ▼"
@@ -387,7 +401,7 @@ export function SquadModal({
 									className="th-age th-sortable"
 									onClick={() => toggleSort("age")}
 								>
-									나이
+									{t("squad.column.age")}
 									{sortKey === "age" ? (sortDir === "desc" ? " ▼" : " ▲") : ""}
 								</th>
 							</tr>
@@ -480,27 +494,27 @@ export function SquadModal({
 								className="btn btn-auto"
 								onClick={handleAutoSelect}
 							>
-								자동 선택
+								{t("squad.autoSelect")}
 							</button>
 							<button
 								type="button"
 								className="btn btn-squad-reset"
 								onClick={handleReset}
 							>
-								초기화
+								{t("squad.reset")}
 							</button>
 							<button
 								type="button"
 								className="btn btn-confirm"
 								onClick={handleConfirm}
 							>
-								확인
+								{t("squad.confirm")}
 							</button>
 						</>
 					)}
 					{readOnly && (
 						<button type="button" className="btn btn-confirm" onClick={onClose}>
-							닫기
+							{t("squad.closeBtn")}
 						</button>
 					)}
 				</div>

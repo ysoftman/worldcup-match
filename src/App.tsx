@@ -10,13 +10,16 @@ import { saveWinner, WinnerHistory } from "./components/WinnerHistory";
 import type { Country } from "./data/countries";
 import type { Preset } from "./data/presets";
 import { ALL_PRESETS } from "./data/presets";
-import type { Group, Match, RoundName, TournamentSize } from "./types";
 import {
-	FORMATIONS,
-	ROUND_LABELS,
-	ROUND_ORDER_32,
-	ROUND_ORDER_48,
-} from "./types";
+	LOCALE_FLAG,
+	LOCALE_LABELS,
+	LOCALE_SHORT,
+	LOCALES,
+	type Locale,
+} from "./i18n";
+import { useI18n } from "./i18nContext";
+import type { Group, Match, RoundName, TournamentSize } from "./types";
+import { FORMATIONS, ROUND_ORDER_32, ROUND_ORDER_48 } from "./types";
 import {
 	isBgmOn,
 	isMuted,
@@ -51,7 +54,6 @@ const SCORE_ANIM_DELAY = 2200;
 
 interface RoundData {
 	name: RoundName;
-	label: string;
 	matches: Match[];
 }
 
@@ -73,6 +75,7 @@ function randomFormations(teams: Country[]): Map<string, string> {
 }
 
 function App() {
+	const { t, locale, setLocale } = useI18n();
 	const [theme, setTheme] = useState<"light" | "dark">(getInitialTheme);
 
 	useEffect(() => {
@@ -100,7 +103,7 @@ function App() {
 
 	const [phase, setPhase] = useState<Phase>("select");
 	const [tournamentSize, setTournamentSize] = useState<TournamentSize>(32);
-	const [presetLabel, setPresetLabel] = useState<string | null>(null);
+	const [presetId, setPresetId] = useState<string | null>(null);
 	const [appliedPreset, setAppliedPreset] = useState<Preset | null>(null);
 	const [selectedTeams, setSelectedTeams] = useState<Country[]>(() =>
 		selectTeams(32),
@@ -166,6 +169,7 @@ function App() {
 				date: new Date().toLocaleDateString("ko-KR"),
 				opponentFlag: opponent?.flag,
 				opponentNameKo: opponent?.nameKo,
+				opponentName: opponent?.name,
 			});
 		},
 		[teamStats, tournamentSize],
@@ -182,14 +186,14 @@ function App() {
 		setTournamentSize(size);
 		setSelectedTeams(selectTeams(size));
 		setAppliedPreset(null);
-		setPresetLabel(null);
+		setPresetId(null);
 	}, []);
 
 	// 프리셋 적용 — 팀 로드와 동시에 카드 대회를 바로 시작한다.
 	const applyPreset = useCallback((preset: Preset) => {
 		const allTeams = preset.groups.flatMap((g) => g.teams);
 		setTournamentSize(preset.size);
-		setPresetLabel(preset.label);
+		setPresetId(preset.id);
 		setAppliedPreset(preset);
 		setSwapSelection(null);
 		setSelectedTeams(allTeams);
@@ -206,7 +210,7 @@ function App() {
 	const handleUpdateSelectedTeams = useCallback((teams: Country[]) => {
 		setSelectedTeams(teams);
 		setAppliedPreset(null);
-		setPresetLabel(null);
+		setPresetId(null);
 	}, []);
 
 	// 대회 시작
@@ -218,7 +222,7 @@ function App() {
 		const newGroups = usePreset
 			? createGroupsFromPreset(appliedPreset.groups)
 			: createGroups(shuffle(selectedTeams), tournamentSize);
-		if (!usePreset) setPresetLabel(null);
+		if (!usePreset) setPresetId(null);
 		setGroups(newGroups);
 		setTeamFormations(randomFormations(selectedTeams));
 		setRounds([]);
@@ -422,7 +426,6 @@ function App() {
 		const firstRoundName = roundOrder[0];
 		const firstRound: RoundData = {
 			name: firstRoundName,
-			label: ROUND_LABELS[firstRoundName],
 			matches: createMatches(advancers, firstRoundName),
 		};
 		setRounds([firstRound]);
@@ -469,7 +472,6 @@ function App() {
 				const nextRoundName = roundOrder[nextIdx];
 				const nextRoundData: RoundData = {
 					name: nextRoundName,
-					label: ROUND_LABELS[nextRoundName],
 					matches: createMatches(winners, nextRoundName),
 				};
 				updatedRounds.push(nextRoundData);
@@ -525,7 +527,6 @@ function App() {
 			const nextRoundName = roundOrder[nextIdx];
 			const nextRoundData: RoundData = {
 				name: nextRoundName,
-				label: ROUND_LABELS[nextRoundName],
 				matches: createMatches(winners, nextRoundName),
 			};
 			updatedRounds.push(nextRoundData);
@@ -554,7 +555,7 @@ function App() {
 		setSquadModal(null);
 		setSelectedTeams(selectTeams(tournamentSize));
 		setAppliedPreset(null);
-		setPresetLabel(null);
+		setPresetId(null);
 		setGroups([]);
 		setRounds([]);
 		setCurrentRoundIndex(-1);
@@ -562,7 +563,7 @@ function App() {
 		setPhase("select");
 	}, [tournamentSize]);
 
-	const firstKnockoutLabel = ROUND_LABELS[roundOrder[0]];
+	const firstKnockoutLabel = t(`round.${roundOrder[0]}`);
 
 	return (
 		<div className="app">
@@ -571,9 +572,13 @@ function App() {
 					type="button"
 					className="theme-toggle"
 					onClick={toggleTheme}
-					title={theme === "dark" ? "라이트 모드" : "다크 모드"}
+					title={
+						theme === "dark"
+							? t("toggle.theme.titleLight")
+							: t("toggle.theme.titleDark")
+					}
 					aria-label={
-						theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"
+						theme === "dark" ? t("toggle.theme.light") : t("toggle.theme.dark")
 					}
 				>
 					{theme === "dark" ? "☀️" : "🌙"}
@@ -582,8 +587,8 @@ function App() {
 					type="button"
 					className={`sound-toggle ${soundOn ? "on" : "off"}`}
 					onClick={toggleSound}
-					title={soundOn ? "사운드 끄기" : "사운드 켜기"}
-					aria-label={soundOn ? "사운드 끄기" : "사운드 켜기"}
+					title={soundOn ? t("toggle.sound.off") : t("toggle.sound.on")}
+					aria-label={soundOn ? t("toggle.sound.off") : t("toggle.sound.on")}
 				>
 					🔊
 				</button>
@@ -591,16 +596,37 @@ function App() {
 					type="button"
 					className={`bgm-toggle ${bgmOn ? "on" : "off"}`}
 					onClick={toggleBgm}
-					title={bgmOn ? "배경음악 끄기" : "배경음악 켜기"}
-					aria-label={bgmOn ? "배경음악 끄기" : "배경음악 켜기"}
+					title={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
+					aria-label={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
 				>
 					🎧
 				</button>
+				<label className="lang-select-wrap" title={t("toggle.language")}>
+					<span className="lang-flag" aria-hidden="true">
+						{LOCALE_FLAG[locale]}
+					</span>
+					<span className="lang-code">{LOCALE_SHORT[locale]}</span>
+					<span className="lang-caret" aria-hidden="true">
+						▾
+					</span>
+					<select
+						className="lang-select"
+						value={locale}
+						onChange={(e) => setLocale(e.target.value as Locale)}
+						aria-label={t("toggle.language")}
+					>
+						{LOCALES.map((l) => (
+							<option key={l} value={l}>
+								{LOCALE_FLAG[l]} {LOCALE_LABELS[l]}
+							</option>
+						))}
+					</select>
+				</label>
 				<a
 					href="https://ysoftman.github.io/dadjoke/"
 					className="dadjoke-link"
-					title="아재개그"
-					aria-label="아재개그"
+					title={t("toggle.dadjoke")}
+					aria-label={t("toggle.dadjoke")}
 				>
 					😄
 				</a>
@@ -609,13 +635,13 @@ function App() {
 			</div>
 			<header className="header">
 				<h1 className="title">
-					<span className="title-author">윤준영의</span>
+					<span className="title-author">{t("app.title.author")}</span>
 					<span className="title-main">
-						<span className="title-fifa">FIFA</span>{" "}
-						<span className="title-worldcup">World Cup</span>
+						<span className="title-fifa">{t("app.title.fifa")}</span>{" "}
+						<span className="title-worldcup">{t("app.title.worldcup")}</span>
 					</span>
 				</h1>
-				<p className="update-date">FIFA 랭킹 데이터: 2026년 4월 기준</p>
+				<p className="update-date">{t("app.rankingNote")}</p>
 			</header>
 
 			{phase !== "select" && (
@@ -634,24 +660,13 @@ function App() {
 								}`}
 							>
 								<span className="phase-dot" />
-								<span className="phase-label">
-									{p === "select"
-										? "선택"
-										: p === "ball"
-											? "바운스볼"
-											: p === "group"
-												? "조별리그"
-												: p === "knockout"
-													? "토너먼트"
-													: "완료"}
-								</span>
+								<span className="phase-label">{t(`phase.${p}`)}</span>
 							</div>
 						));
 					})()}
 				</div>
 			)}
 
-			{/* 대회 규모 선택 + 프리셋 */}
 			{phase === "select" && (
 				<div className="size-selector">
 					<button
@@ -659,14 +674,14 @@ function App() {
 						className={`btn btn-size ${tournamentSize === 32 ? "active" : ""}`}
 						onClick={() => changeTournamentSize(32)}
 					>
-						32강 (8조)
+						{t("size.32")}
 					</button>
 					<button
 						type="button"
 						className={`btn btn-size ${tournamentSize === 48 ? "active" : ""}`}
 						onClick={() => changeTournamentSize(48)}
 					>
-						48강 (12조)
+						{t("size.48")}
 					</button>
 					{ALL_PRESETS.map((p) => (
 						<button
@@ -677,7 +692,7 @@ function App() {
 							}`}
 							onClick={() => applyPreset(p)}
 						>
-							{p.label}
+							{t(`preset.${p.id}`)}
 						</button>
 					))}
 				</div>
@@ -692,7 +707,7 @@ function App() {
 							onClick={startTournament}
 							disabled={selectedTeams.length !== tournamentSize}
 						>
-							🏆 대회 시작 ({selectedTeams.length}/{tournamentSize})
+							{t("btn.start")} ({selectedTeams.length}/{tournamentSize})
 						</button>
 						<button
 							type="button"
@@ -700,7 +715,7 @@ function App() {
 							onClick={startBallTournament}
 							disabled={selectedTeams.length !== tournamentSize}
 						>
-							⚽ 바운스볼 대회 시작 ({selectedTeams.length}/{tournamentSize})
+							{t("btn.startBall")} ({selectedTeams.length}/{tournamentSize})
 						</button>
 					</>
 				)}
@@ -712,7 +727,7 @@ function App() {
 						onClick={playAllGroupMatches}
 						disabled={animatingMatchIds.size > 0}
 					>
-						조별 리그 전체 진행
+						{t("btn.playAllGroup")}
 					</button>
 				)}
 
@@ -722,7 +737,7 @@ function App() {
 						className="btn btn-start"
 						onClick={advanceToKnockout}
 					>
-						{firstKnockoutLabel} 진출
+						{t("btn.advanceTo", { round: firstKnockoutLabel })}
 					</button>
 				)}
 
@@ -734,7 +749,9 @@ function App() {
 							className="btn btn-next"
 							onClick={playAllCurrentRound}
 						>
-							{ROUND_LABELS[currentRound.name]} 전체 진행
+							{t("btn.playAllRound", {
+								round: t(`round.${currentRound.name}`),
+							})}
 						</button>
 					)}
 
@@ -744,7 +761,7 @@ function App() {
 						className="btn btn-reset"
 						onClick={resetTournament}
 					>
-						새 대회
+						{t("btn.reset")}
 					</button>
 				)}
 			</div>
@@ -772,7 +789,8 @@ function App() {
 			{rounds.length > 0 && (
 				<div>
 					<h2 className="section-title">
-						{presetLabel ? `${presetLabel} ` : ""}토너먼트
+						{presetId ? `${t(`preset.${presetId}`)} ` : ""}
+						{t("section.tournament")}
 					</h2>
 					<BracketView
 						rounds={rounds}
@@ -786,25 +804,29 @@ function App() {
 			{groups.length > 0 && (
 				<div className="groups-section">
 					<h2 className="section-title">
-						{presetLabel ? `${presetLabel} ` : ""}조별 리그
+						{presetId ? `${t(`preset.${presetId}`)} ` : ""}
+						{t("section.groupStage")}
 					</h2>
 					{!groupAllDone &&
 						(swapSelection ? (
 							<p className="swap-hint">
-								{swapSelection.team.flag} {swapSelection.team.nameKo} 선택됨
-								&mdash; 다른 조의 팀을 클릭하면 교환됩니다
+								{t("swap.selected", {
+									flag: swapSelection.team.flag,
+									name:
+										locale === "ko"
+											? swapSelection.team.nameKo
+											: swapSelection.team.name,
+								})}
 								<button
 									type="button"
 									className="btn-cancel-swap"
 									onClick={() => setSwapSelection(null)}
 								>
-									취소
+									{t("swap.cancel")}
 								</button>
 							</p>
 						) : (
-							<p className="swap-hint-info">
-								팀을 클릭하면 다른 조의 팀과 교환할 수 있습니다
-							</p>
+							<p className="swap-hint-info">{t("swap.hint")}</p>
 						))}
 					<div className="groups-grid">
 						{groups.map((group) => (

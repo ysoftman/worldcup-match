@@ -1,4 +1,5 @@
 import type { Country } from "../data/countries";
+import { useI18n } from "../i18nContext";
 import type { Group, TeamStats } from "../types";
 import {
 	DEFAULT_FORMATION_ID,
@@ -37,20 +38,21 @@ export function GroupView({
 	animatingMatchIds,
 	onOpenSquad,
 }: GroupViewProps) {
+	const { t, tName, tGroup } = useI18n();
 	const hasPlayedMatches = group.matches.some((m) => m.played);
 	const canSwap = !hasPlayedMatches;
 
 	return (
 		<div className="group-card">
-			<h3 className="group-name">{group.name}</h3>
+			<h3 className="group-name">{tGroup(group.name)}</h3>
 
 			{/* 팀 목록 (경기 시작 전: 원형 배치, 클릭으로 교환 + 승률 조절) */}
 			{!hasPlayedMatches && (
 				<div className="group-circle">
-					{group.teams.map((t, idx) => {
+					{group.teams.map((team, idx) => {
 						const isSelected =
 							swapSelection?.groupName === group.name &&
-							swapSelection?.team.code === t.code;
+							swapSelection?.team.code === team.code;
 						const isSwapTarget =
 							swapSelection !== null && swapSelection.groupName !== group.name;
 						const angle = (idx / group.teams.length) * 360 - 90;
@@ -58,12 +60,12 @@ export function GroupView({
 						const radius = 35;
 						const x = 50 + radius * Math.cos(rad);
 						const y = 50 + radius * Math.sin(rad);
-						const mod = teamModifiers.get(t.code) ?? 0;
+						const mod = teamModifiers.get(team.code) ?? 0;
 						const formation =
-							teamFormations.get(t.code) ?? DEFAULT_FORMATION_ID;
+							teamFormations.get(team.code) ?? DEFAULT_FORMATION_ID;
 						return (
 							<div
-								key={t.code}
+								key={team.code}
 								className="circle-slot"
 								style={{ left: `${x}%`, top: `${y}%` }}
 							>
@@ -72,10 +74,12 @@ export function GroupView({
 									className="squad-btn"
 									onClick={(e) => {
 										e.stopPropagation();
-										onOpenSquad(t, false);
+										onOpenSquad(team, false);
 									}}
-									title="스쿼드 보기"
-									aria-label={`${t.nameKo} 스쿼드 보기`}
+									title={t("groupCircle.squadView")}
+									aria-label={t("groupCircle.squadViewOf", {
+										name: tName(team),
+									})}
 								>
 									👥
 								</button>
@@ -86,19 +90,19 @@ export function GroupView({
 										disabled={mod >= 2}
 										onClick={(e) => {
 											e.stopPropagation();
-											onChangeModifier(t.code, 1);
+											onChangeModifier(team.code, 1);
 										}}
-										aria-label={`${t.nameKo} 공격력 증가`}
+										aria-label={t("groupCircle.atkUpOf", { name: tName(team) })}
 									>
 										🗡️
 									</button>
 									<button
 										type="button"
 										className={`circle-team ${isSelected ? "swap-selected" : ""} ${isSwapTarget ? "swap-target" : ""}`}
-										onClick={() => canSwap && onSwapSelect(group.name, t)}
+										onClick={() => canSwap && onSwapSelect(group.name, team)}
 									>
-										<span className="circle-flag">{t.flag}</span>
-										<span className="circle-name">{t.nameKo}</span>
+										<span className="circle-flag">{team.flag}</span>
+										<span className="circle-name">{tName(team)}</span>
 										{mod !== 0 && (
 											<span
 												className={`mod-indicator ${mod > 0 ? "mod-up" : "mod-down"}`}
@@ -113,9 +117,9 @@ export function GroupView({
 										disabled={mod <= -2}
 										onClick={(e) => {
 											e.stopPropagation();
-											onChangeModifier(t.code, -1);
+											onChangeModifier(team.code, -1);
 										}}
-										aria-label={`${t.nameKo} 수비력 증가`}
+										aria-label={t("groupCircle.defUpOf", { name: tName(team) })}
 									>
 										🛡️
 									</button>
@@ -125,7 +129,7 @@ export function GroupView({
 									value={formation}
 									onChange={(e) => {
 										e.stopPropagation();
-										onChangeFormation(t.code, e.target.value);
+										onChangeFormation(team.code, e.target.value);
 									}}
 									onClick={(e) => e.stopPropagation()}
 								>
@@ -181,16 +185,16 @@ export function GroupView({
 					<thead>
 						<tr>
 							<th className="th-rank">#</th>
-							<th className="th-team">팀</th>
-							<th>경기</th>
-							<th>승</th>
-							<th>무</th>
-							<th>패</th>
-							<th>득</th>
-							<th>실</th>
-							<th>득실</th>
-							<th>승점</th>
-							<th className="th-winrate">승률</th>
+							<th className="th-team">{t("groupTable.team")}</th>
+							<th>{t("groupTable.played")}</th>
+							<th>{t("groupTable.wins")}</th>
+							<th>{t("groupTable.draws")}</th>
+							<th>{t("groupTable.losses")}</th>
+							<th>{t("groupTable.goalsFor")}</th>
+							<th>{t("groupTable.goalsAgainst")}</th>
+							<th>{t("groupTable.goalDiff")}</th>
+							<th>{t("groupTable.points")}</th>
+							<th className="th-winrate">{t("groupTable.winRate")}</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -214,7 +218,7 @@ export function GroupView({
 									<td className="rank">{idx + 1}</td>
 									<td className="team-cell">
 										<span className="flag-sm">{s.team.flag}</span>
-										{s.team.nameKo}
+										{tName(s.team)}
 										{isWildcard && <span className="wildcard-badge">WC</span>}
 										{formation !== DEFAULT_FORMATION_ID && (
 											<span className="formation-badge">{formation}</span>

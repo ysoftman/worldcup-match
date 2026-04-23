@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import type { Country } from "../data/countries";
+import { useI18n } from "../i18nContext";
 import type { Match, RoundName, TeamStats } from "../types";
-import { ROUND_LABELS, ROUND_ORDER_32, ROUND_ORDER_48 } from "../types";
+import { ROUND_ORDER_32, ROUND_ORDER_48 } from "../types";
 import { AnimatedScore } from "./AnimatedScore";
 
 interface BracketRound {
 	name: RoundName;
-	label: string;
 	matches: Match[];
 }
 
@@ -29,6 +29,7 @@ function BracketMatchCard({
 	onClick: () => void;
 	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }) {
+	const { tName } = useI18n();
 	const { team1, team2, score1, score2, played, winner, penalties } = match;
 	const s1 = teamStats.get(team1.code);
 	const s2 = teamStats.get(team2.code);
@@ -67,7 +68,7 @@ function BracketMatchCard({
 							}
 						: {})}
 				>
-					{team1.nameKo}
+					{tName(team1)}
 				</span>
 				{s1 && <span className="bm-rate">{s1.winRate}%</span>}
 				<AnimatedScore target={score1} active={played} className="bm-score" />
@@ -106,7 +107,7 @@ function BracketMatchCard({
 							}
 						: {})}
 				>
-					{team2.nameKo}
+					{tName(team2)}
 				</span>
 				{s2 && <span className="bm-rate">{s2.winRate}%</span>}
 				<AnimatedScore target={score2} active={played} className="bm-score" />
@@ -149,6 +150,7 @@ function FinalMatchCard({
 	onClick: () => void;
 	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }) {
+	const { tName } = useI18n();
 	const { team1, team2, score1, score2, played, winner } = match;
 	const s1 = teamStats.get(team1.code);
 	const s2 = teamStats.get(team2.code);
@@ -189,7 +191,7 @@ function FinalMatchCard({
 							}
 						: {})}
 				>
-					{team1.nameKo}
+					{tName(team1)}
 				</span>
 				<AnimatedScore
 					target={score1}
@@ -226,7 +228,7 @@ function FinalMatchCard({
 							}
 						: {})}
 				>
-					{team2.nameKo}
+					{tName(team2)}
 				</span>
 				<AnimatedScore
 					target={score2}
@@ -273,10 +275,11 @@ function RoundColumn({
 	onPlayMatch: (id: string) => void;
 	onOpenSquad: (team: Country, readOnly: boolean) => void;
 }) {
+	const { t } = useI18n();
 	if (!round) return null;
 	return (
 		<div className="b-round">
-			<div className="b-label">{round.label}</div>
+			<div className="b-label">{t(`round.${round.name}`)}</div>
 			<div className="b-slots">
 				{round.matches.map((m) => (
 					<div className="b-slot" key={m.id}>
@@ -347,6 +350,7 @@ export function BracketView({
 	onPlayMatch,
 	onOpenSquad,
 }: BracketViewProps) {
+	const { t } = useI18n();
 	// 결승 분리 + 좌/우 분할
 	const leftRounds: (BracketRound | null)[] = [];
 	const rightRounds: (BracketRound | null)[] = [];
@@ -387,7 +391,7 @@ export function BracketView({
 		firstRoundName === "round32" ? ROUND_ORDER_48 : ROUND_ORDER_32;
 	const roundLabels = fullOrder
 		.filter((r) => r !== "final")
-		.map((r) => ROUND_LABELS[r]);
+		.map((r) => t(`round.${r}`));
 
 	// 우측 대진표는 뒤집어서 렌더 (4강→8강→16강 순으로 표시)
 	const reversedRight = [...rightRounds].reverse();
@@ -399,8 +403,8 @@ export function BracketView({
 				<div className="bracket-half bracket-left">
 					{leftRounds.map((round, rIdx) => {
 						const label = round
-							? round.label
-							: roundLabels[rIdx] || ROUND_LABELS.quarter;
+							? t(`round.${round.name}`)
+							: roundLabels[rIdx] || t("round.quarter");
 						const matchCount = round
 							? round.matches.length
 							: firstLeftCount / 2 ** rIdx;
@@ -434,7 +438,7 @@ export function BracketView({
 
 				{/* 결승 */}
 				<div className="bracket-center">
-					<div className="b-label">{ROUND_LABELS.final}</div>
+					<div className="b-label">{t("round.final")}</div>
 					{finalRound ? (
 						<FinalMatchCard
 							match={finalRound.matches[0]}
@@ -455,8 +459,8 @@ export function BracketView({
 					{reversedRight.map((round, rIdx) => {
 						const origIdx = reversedRight.length - 1 - rIdx;
 						const label = round
-							? round.label
-							: roundLabels[origIdx] || ROUND_LABELS.quarter;
+							? t(`round.${round.name}`)
+							: roundLabels[origIdx] || t("round.quarter");
 						const matchCount = round
 							? round.matches.length
 							: firstLeftCount / 2 ** origIdx;

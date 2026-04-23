@@ -1,4 +1,5 @@
 import type { Country } from "../data/countries";
+import { useI18n } from "../i18nContext";
 import type { GroupMatch } from "../types";
 import { DEFAULT_FORMATION_ID, MOD_LABELS } from "../types";
 import { AnimatedScore } from "./AnimatedScore";
@@ -20,6 +21,7 @@ export function GroupMatchCard({
 	isAnimating,
 	onOpenSquad,
 }: GroupMatchCardProps) {
+	const { t, tName, locale } = useI18n();
 	const { team1, team2, score1, score2, played } = match;
 	const isDraw = played && score1 === score2;
 	const team1Win = played && score1 > score2;
@@ -64,8 +66,8 @@ export function GroupMatchCard({
 						onOpenSquad(team1, played);
 					}}
 				>
-					{team1.nameKo}
-					<span className="name-en">({team1.name})</span>
+					{tName(team1)}
+					{locale === "ko" && <span className="name-en">({team1.name})</span>}
 					{hasSettings1 && (
 						<span className="match-team-settings">
 							{f1 !== DEFAULT_FORMATION_ID && (
@@ -90,7 +92,9 @@ export function GroupMatchCard({
 					</span>
 				)}
 			</div>
-			<div className="vs">{played ? (isDraw ? "무" : "-") : "vs"}</div>
+			<div className="vs">
+				{played ? (isDraw ? t("match.draw") : "-") : "vs"}
+			</div>
 			<div
 				className={`team ${played ? (team2Win ? "winner" : isDraw ? "draw" : "loser") : ""}`}
 			>
@@ -112,8 +116,8 @@ export function GroupMatchCard({
 						onOpenSquad(team2, played);
 					}}
 				>
-					{team2.nameKo}
-					<span className="name-en">({team2.name})</span>
+					{tName(team2)}
+					{locale === "ko" && <span className="name-en">({team2.name})</span>}
 					{hasSettings2 && (
 						<span className="match-team-settings">
 							{f2 !== DEFAULT_FORMATION_ID && (

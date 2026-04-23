@@ -1,20 +1,21 @@
 import { useState } from "react";
 import type { Confederation, Country } from "../data/countries";
 import { ALL_COUNTRIES } from "../data/countries";
+import { useI18n } from "../i18nContext";
 import { shuffle } from "../utils/tournament";
 
 type RegionFilter = "all" | Confederation | "europe-africa" | "americas";
 
-const REGION_FILTERS: { key: RegionFilter; label: string }[] = [
-	{ key: "all", label: "전세계" },
-	{ key: "AFC", label: "아시아" },
-	{ key: "UEFA", label: "유럽" },
-	{ key: "europe-africa", label: "유럽+아프리카" },
-	{ key: "CAF", label: "아프리카" },
-	{ key: "americas", label: "아메리카" },
-	{ key: "CONCACAF", label: "북중미" },
-	{ key: "CONMEBOL", label: "남미" },
-	{ key: "OFC", label: "오세아니아" },
+const REGION_FILTERS: { key: RegionFilter; tKey: string }[] = [
+	{ key: "all", tKey: "selector.region.all" },
+	{ key: "AFC", tKey: "selector.region.AFC" },
+	{ key: "UEFA", tKey: "selector.region.UEFA" },
+	{ key: "europe-africa", tKey: "selector.region.europe-africa" },
+	{ key: "CAF", tKey: "selector.region.CAF" },
+	{ key: "americas", tKey: "selector.region.americas" },
+	{ key: "CONCACAF", tKey: "selector.region.CONCACAF" },
+	{ key: "CONMEBOL", tKey: "selector.region.CONMEBOL" },
+	{ key: "OFC", tKey: "selector.region.OFC" },
 ];
 
 function filterByRegion(countries: Country[], region: RegionFilter): Country[] {
@@ -39,6 +40,7 @@ export function TeamSelector({
 	onUpdate,
 	maxTeams,
 }: TeamSelectorProps) {
+	const { t, tName } = useI18n();
 	const [search, setSearch] = useState("");
 	const selectedCodes = new Set(selectedTeams.map((t) => t.code));
 
@@ -60,7 +62,7 @@ export function TeamSelector({
 		<div className="team-selector">
 			<div className="selector-header">
 				<h2>
-					참가국 선택 ({selectedTeams.length}/{maxTeams})
+					{t("selector.title")} ({selectedTeams.length}/{maxTeams})
 				</h2>
 				<div className="region-filters">
 					{REGION_FILTERS.map((r) => (
@@ -70,7 +72,7 @@ export function TeamSelector({
 							className="btn btn-shuffle"
 							onClick={() => shuffleFromRegion(r.key)}
 						>
-							{r.label} 랜덤
+							{t("selector.regionRandom", { region: t(r.tKey) })}
 						</button>
 					))}
 				</div>
@@ -78,7 +80,7 @@ export function TeamSelector({
 			<input
 				type="text"
 				className="country-search"
-				placeholder="국가 검색 (한글/영어)"
+				placeholder={t("selector.searchPlaceholder")}
 				value={search}
 				onChange={(e) => setSearch(e.target.value)}
 			/>
@@ -112,7 +114,8 @@ export function TeamSelector({
 						>
 							<span>{country.flag}</span>
 							<span>
-								{country.nameKo}({country.name})
+								{tName(country)}
+								{tName(country) !== country.name ? `(${country.name})` : ""}
 							</span>
 						</button>
 					))}

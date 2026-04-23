@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useI18n } from "../i18nContext";
 
 export interface WinnerRecord {
 	flag: string;
@@ -10,6 +11,7 @@ export interface WinnerRecord {
 	date: string;
 	opponentFlag?: string;
 	opponentNameKo?: string;
+	opponentName?: string;
 }
 
 const STORAGE_KEY = "worldcup-winners";
@@ -35,6 +37,7 @@ export function clearHistory() {
 }
 
 export function WinnerHistory() {
+	const { t, locale } = useI18n();
 	const [open, setOpen] = useState(false);
 	const [history, setHistory] = useState(loadHistory);
 	const panelRef = useRef<HTMLDivElement>(null);
@@ -63,48 +66,65 @@ export function WinnerHistory() {
 	return (
 		<div ref={panelRef} className={`history-panel ${open ? "open" : ""}`}>
 			<button type="button" className="history-toggle" onClick={handleToggle}>
-				🏆 {open ? "닫기" : `우승 기록 (${loadHistory().length})`}
+				🏆{" "}
+				{open
+					? t("history.toggle.open")
+					: t("history.toggle.closed", { count: loadHistory().length })}
 			</button>
 
 			{open && (
 				<div className="history-body">
 					{history.length === 0 ? (
-						<p className="history-empty">아직 우승 기록이 없습니다</p>
+						<p className="history-empty">{t("history.empty")}</p>
 					) : (
 						<>
 							<div className="history-list">
-								{history.map((r, i) => (
-									<div
-										className="history-item"
-										key={`${r.date}-${
-											// biome-ignore lint/suspicious/noArrayIndexKey: 타임스탬프+인덱스로 고유
-											i
-										}`}
-									>
-										<div className="history-row1">
-											<span className="history-rank">
-												#{history.length - i}
-											</span>
-											<span className="history-flag">{r.flag}</span>
-											<span className="history-name">{r.nameKo}</span>
+								{history.map((r, i) => {
+									const displayName = locale === "ko" ? r.nameKo : r.name;
+									const opponentName =
+										(locale === "ko" ? r.opponentNameKo : r.opponentName) ??
+										r.opponentNameKo ??
+										r.opponentName ??
+										"";
+									return (
+										<div
+											className="history-item"
+											key={`${r.date}-${
+												// biome-ignore lint/suspicious/noArrayIndexKey: 타임스탬프+인덱스로 고유
+												i
+											}`}
+										>
+											<div className="history-row1">
+												<span className="history-rank">
+													#{history.length - i}
+												</span>
+												<span className="history-flag">{r.flag}</span>
+												<span className="history-name">{displayName}</span>
+											</div>
+											<div className="history-row2">
+												<span className="history-meta">
+													{t("history.meta", {
+														size: r.size,
+														winRate: r.winRate,
+													})}
+													{r.opponentFlag &&
+														t("history.metaVs", {
+															flag: r.opponentFlag,
+															name: opponentName,
+														})}
+												</span>
+												<span className="history-date">{r.date}</span>
+											</div>
 										</div>
-										<div className="history-row2">
-											<span className="history-meta">
-												{r.size}강 | 승률 {r.winRate}%
-												{r.opponentFlag &&
-													` | vs ${r.opponentFlag} ${r.opponentNameKo}`}
-											</span>
-											<span className="history-date">{r.date}</span>
-										</div>
-									</div>
-								))}
+									);
+								})}
 							</div>
 							<button
 								type="button"
 								className="history-clear"
 								onClick={handleClear}
 							>
-								기록 삭제
+								{t("history.clear")}
 							</button>
 						</>
 					)}

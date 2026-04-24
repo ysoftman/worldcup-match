@@ -698,7 +698,9 @@ export function BallTournament({
 		rebuildPegs(widthCss, heightCss);
 		rebuildCrowd(widthCss, heightCss);
 
-		canvas.style.touchAction = "none";
+		// pan-y (not "none") so mobile users can still scroll the page
+		// vertically when the touch happens to start on the canvas.
+		canvas.style.touchAction = "pan-y";
 
 		// pointer-drag via MouseJoint — works for mouse + touch + pen.
 		const pointerToWorld = (e: PointerEvent) => {

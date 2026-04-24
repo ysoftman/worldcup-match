@@ -4061,7 +4061,10 @@ input:focus-visible {
 	display: block;
 	width: 100%;
 	height: 100%;
-	touch-action: none;
+	/* pan-y lets the browser handle vertical page scroll even when the
+	   touch starts on the canvas; horizontal drags still fire pointer
+	   events so ball-dragging (MouseJoint) keeps working. */
+	touch-action: pan-y;
 }
 
 .ball-tour-overlay {

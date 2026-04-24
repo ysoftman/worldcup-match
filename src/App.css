@@ -745,8 +745,8 @@
 .btn-preset {
 	background: linear-gradient(135deg, #c0392b, #e74c3c);
 	color: white;
-	padding: 8px 20px;
-	font-size: 0.95rem;
+	padding: 12px 28px;
+	font-size: 1.1rem;
 }
 
 .btn-preset.active {
@@ -771,6 +771,47 @@
 	flex-direction: column;
 	gap: 8px;
 	margin-bottom: 12px;
+}
+
+.selector-title-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.selector-size-toggle {
+	display: flex;
+	gap: 6px;
+}
+
+.selector-start-actions {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+/* unify all buttons in the title row (32/48 + start buttons) so they
+   share the same height. base `.btn` rule declares `border: none` after
+   `.btn-size`, which would otherwise drop the size buttons' outline and
+   leave heights mismatched — so we re-declare border/padding/font-size
+   at higher specificity here. */
+.selector-title-row .btn {
+	padding: 8px 24px;
+	font-size: 1rem;
+	border: 2px solid transparent;
+}
+
+.selector-title-row .btn-size {
+	border-color: var(--color-border);
+}
+
+.selector-title-row .btn-size.active {
+	border-color: #2980b9;
+}
+
+.selector-title-row .btn-size:hover:not(.active) {
+	border-color: var(--color-primary);
 }
 
 .selector-header h2 {
@@ -2549,6 +2590,16 @@
 	.size-selector {
 		gap: 6px;
 		flex-wrap: wrap;
+	}
+
+	.btn-preset {
+		padding: 8px 18px;
+		font-size: 0.9rem;
+	}
+
+	.selector-title-row .btn {
+		padding: 6px 16px;
+		font-size: 0.85rem;
 	}
 
 	.btn-size {

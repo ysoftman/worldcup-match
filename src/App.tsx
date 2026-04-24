@@ -669,20 +669,6 @@ function App() {
 
 			{phase === "select" && (
 				<div className="size-selector">
-					<button
-						type="button"
-						className={`btn btn-size ${tournamentSize === 32 ? "active" : ""}`}
-						onClick={() => changeTournamentSize(32)}
-					>
-						{t("size.32")}
-					</button>
-					<button
-						type="button"
-						className={`btn btn-size ${tournamentSize === 48 ? "active" : ""}`}
-						onClick={() => changeTournamentSize(48)}
-					>
-						{t("size.48")}
-					</button>
 					{ALL_PRESETS.map((p) => (
 						<button
 							type="button"
@@ -699,27 +685,6 @@ function App() {
 			)}
 
 			<div className="controls">
-				{phase === "select" && (
-					<>
-						<button
-							type="button"
-							className="btn btn-start"
-							onClick={startTournament}
-							disabled={selectedTeams.length !== tournamentSize}
-						>
-							{t("btn.start")} ({selectedTeams.length}/{tournamentSize})
-						</button>
-						<button
-							type="button"
-							className="btn btn-ball-tour"
-							onClick={startBallTournament}
-							disabled={selectedTeams.length !== tournamentSize}
-						>
-							{t("btn.startBall")} ({selectedTeams.length}/{tournamentSize})
-						</button>
-					</>
-				)}
-
 				{phase === "group" && hasUnplayedGroupMatches && (
 					<button
 						type="button"
@@ -771,6 +736,10 @@ function App() {
 					selectedTeams={selectedTeams}
 					onUpdate={handleUpdateSelectedTeams}
 					maxTeams={tournamentSize}
+					tournamentSize={tournamentSize}
+					onChangeTournamentSize={changeTournamentSize}
+					onStart={startTournament}
+					onStartBall={startBallTournament}
 				/>
 			)}
 

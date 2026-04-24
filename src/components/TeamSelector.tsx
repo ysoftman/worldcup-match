@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Confederation, Country } from "../data/countries";
 import { ALL_COUNTRIES } from "../data/countries";
 import { useI18n } from "../i18nContext";
+import type { TournamentSize } from "../types";
 import { shuffle } from "../utils/tournament";
 
 type RegionFilter = "all" | Confederation | "europe-africa" | "americas";
@@ -33,12 +34,20 @@ interface TeamSelectorProps {
 	selectedTeams: Country[];
 	onUpdate: (teams: Country[]) => void;
 	maxTeams: number;
+	tournamentSize: TournamentSize;
+	onChangeTournamentSize: (size: TournamentSize) => void;
+	onStart: () => void;
+	onStartBall: () => void;
 }
 
 export function TeamSelector({
 	selectedTeams,
 	onUpdate,
 	maxTeams,
+	tournamentSize,
+	onChangeTournamentSize,
+	onStart,
+	onStartBall,
 }: TeamSelectorProps) {
 	const { t, tName } = useI18n();
 	const [search, setSearch] = useState("");
@@ -61,9 +70,45 @@ export function TeamSelector({
 	return (
 		<div className="team-selector">
 			<div className="selector-header">
-				<h2>
-					{t("selector.title")} ({selectedTeams.length}/{maxTeams})
-				</h2>
+				<div className="selector-title-row">
+					<h2>
+						{t("selector.title")} ({selectedTeams.length}/{maxTeams})
+					</h2>
+					<div className="selector-size-toggle">
+						<button
+							type="button"
+							className={`btn btn-size ${tournamentSize === 32 ? "active" : ""}`}
+							onClick={() => onChangeTournamentSize(32)}
+						>
+							{t("size.32")}
+						</button>
+						<button
+							type="button"
+							className={`btn btn-size ${tournamentSize === 48 ? "active" : ""}`}
+							onClick={() => onChangeTournamentSize(48)}
+						>
+							{t("size.48")}
+						</button>
+					</div>
+					<div className="selector-start-actions">
+						<button
+							type="button"
+							className="btn btn-start"
+							onClick={onStart}
+							disabled={selectedTeams.length !== maxTeams}
+						>
+							{t("btn.start")} ({selectedTeams.length}/{maxTeams})
+						</button>
+						<button
+							type="button"
+							className="btn btn-ball-tour"
+							onClick={onStartBall}
+							disabled={selectedTeams.length !== maxTeams}
+						>
+							{t("btn.startBall")} ({selectedTeams.length}/{maxTeams})
+						</button>
+					</div>
+				</div>
 				<div className="region-filters">
 					{REGION_FILTERS.map((r) => (
 						<button

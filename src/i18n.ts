@@ -152,7 +152,6 @@ const ko: Dict = {
 	"ranking.source": "FIFA/Coca-Cola 세계 랭킹 · 2026년 4월 기준",
 	"ranking.all": "전체",
 
-	"ball.hint": "공을 잡아 원하는 곳으로 이동시킬 수 있어요",
 	"ball.progress": "진출 {advanced} / {target}",
 	"ball.startRound": "{round} 시작",
 	"ball.restart": "↺ 다시",
@@ -301,7 +300,6 @@ const en: Dict = {
 	"ranking.source": "FIFA/Coca-Cola World Ranking · As of April 2026",
 	"ranking.all": "All",
 
-	"ball.hint": "Drag a ball and move it wherever you want",
 	"ball.progress": "Advanced {advanced} / {target}",
 	"ball.startRound": "Start {round}",
 	"ball.restart": "↺ Restart",
@@ -450,7 +448,6 @@ const ja: Dict = {
 	"ranking.source": "FIFA/Coca-Cola 世界ランキング · 2026年4月時点",
 	"ranking.all": "全体",
 
-	"ball.hint": "ボールを掴んで好きな場所に移動できます",
 	"ball.progress": "進出 {advanced} / {target}",
 	"ball.startRound": "{round} 開始",
 	"ball.restart": "↺ やり直し",
@@ -598,7 +595,6 @@ const cn: Dict = {
 	"ranking.source": "FIFA/可口可乐世界排名 · 2026年4月",
 	"ranking.all": "全部",
 
-	"ball.hint": "抓住球并移动到任意位置",
 	"ball.progress": "晋级 {advanced} / {target}",
 	"ball.startRound": "开始 {round}",
 	"ball.restart": "↺ 重来",
@@ -748,8 +744,6 @@ const fr: Dict = {
 	"ranking.source": "Classement FIFA/Coca-Cola · avril 2026",
 	"ranking.all": "Tous",
 
-	"ball.hint":
-		"Saisissez une balle et déplacez-la où vous voulez",
 	"ball.progress": "Qualifiés {advanced} / {target}",
 	"ball.startRound": "Démarrer — {round}",
 	"ball.restart": "↺ Recommencer",

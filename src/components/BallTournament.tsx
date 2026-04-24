@@ -193,8 +193,6 @@ export function BallTournament({
 		flagColor?: string;
 	};
 	const crowdRef = useRef<CrowdPerson[]>([]);
-	const groundBodyRef = useRef<planck.Body | null>(null);
-	const mouseJointRef = useRef<planck.MouseJoint | null>(null);
 	const rafRef = useRef<number | null>(null);
 	const drainedBodiesRef = useRef<Set<planck.Body>>(new Set());
 	const lastDrainAtRef = useRef<number>(0);
@@ -645,10 +643,6 @@ export function BallTournament({
 		const world = new planck.World(planck.Vec2(0, 30));
 		worldRef.current = world;
 
-		// static anchor body for mouse-joint drag.
-		const ground = world.createBody();
-		groundBodyRef.current = ground;
-
 		// play a soft "tock" on ball-vs-obstacle contact. uses pre-solve so we
 		// can read the relative normal velocity before the collision resolves
 		// — this maps directly to perceived impact strength. balls hitting
@@ -697,69 +691,6 @@ export function BallTournament({
 		applySize();
 		rebuildPegs(widthCss, heightCss);
 		rebuildCrowd(widthCss, heightCss);
-
-		// pan-y (not "none") so mobile users can still scroll the page
-		// vertically when the touch happens to start on the canvas.
-		canvas.style.touchAction = "pan-y";
-
-		// pointer-drag via MouseJoint — works for mouse + touch + pen.
-		const pointerToWorld = (e: PointerEvent) => {
-			const rect = canvas.getBoundingClientRect();
-			return planck.Vec2(
-				pxToM(e.clientX - rect.left),
-				pxToM(e.clientY - rect.top),
-			);
-		};
-		const onPointerDown = (e: PointerEvent) => {
-			if (!groundBodyRef.current) return;
-			const target = pointerToWorld(e);
-			let hit: planck.Body | null = null;
-			world.queryAABB(
-				{
-					lowerBound: planck.Vec2(target.x - 0.001, target.y - 0.001),
-					upperBound: planck.Vec2(target.x + 0.001, target.y + 0.001),
-				},
-				(fixture) => {
-					const body = fixture.getBody();
-					if (body.getType() !== "dynamic") return true;
-					if (!fixture.testPoint(target)) return true;
-					hit = body;
-					return false;
-				},
-			);
-			if (!hit) return;
-			const joint = planck.MouseJoint(
-				{
-					maxForce: 1000 * (hit as planck.Body).getMass(),
-					frequencyHz: 5,
-					dampingRatio: 0.7,
-				},
-				groundBodyRef.current,
-				hit,
-				target,
-			);
-			world.createJoint(joint);
-			mouseJointRef.current = joint;
-			canvas.setPointerCapture(e.pointerId);
-		};
-		const onPointerMove = (e: PointerEvent) => {
-			if (!mouseJointRef.current) return;
-			mouseJointRef.current.setTarget(pointerToWorld(e));
-		};
-		const onPointerUp = (e: PointerEvent) => {
-			if (!mouseJointRef.current) return;
-			world.destroyJoint(mouseJointRef.current);
-			mouseJointRef.current = null;
-			try {
-				canvas.releasePointerCapture(e.pointerId);
-			} catch {
-				// pointer capture may already be released
-			}
-		};
-		canvas.addEventListener("pointerdown", onPointerDown);
-		canvas.addEventListener("pointermove", onPointerMove);
-		canvas.addEventListener("pointerup", onPointerUp);
-		canvas.addEventListener("pointercancel", onPointerUp);
 
 		let lastShakeAt = performance.now();
 		const tickDrainAndShake = () => {
@@ -1154,10 +1085,6 @@ export function BallTournament({
 		return () => {
 			ro.disconnect();
 			if (rafRef.current) cancelAnimationFrame(rafRef.current);
-			canvas.removeEventListener("pointerdown", onPointerDown);
-			canvas.removeEventListener("pointermove", onPointerMove);
-			canvas.removeEventListener("pointerup", onPointerUp);
-			canvas.removeEventListener("pointercancel", onPointerUp);
 			world.off("pre-solve", onPreSolve);
 			for (const h of pendingTimeoutsRef.current) clearTimeout(h);
 			pendingTimeoutsRef.current.clear();
@@ -1166,8 +1093,6 @@ export function BallTournament({
 			wallsRef.current = [];
 			pegsRef.current = [];
 			worldRef.current = null;
-			groundBodyRef.current = null;
-			mouseJointRef.current = null;
 		};
 	}, [rebuildWalls, rebuildPegs, rebuildCrowd]);
 
@@ -1415,9 +1340,6 @@ export function BallTournament({
 		<div className="ball-tour">
 			<div className="ball-tour-header">
 				<div className="ball-tour-round-title">{roundLabel(currentCount)}</div>
-				<div className="ball-tour-hint">
-					<span aria-hidden="true">✋</span> {t("ball.hint")}
-				</div>
 				<div className="ball-tour-round-progress">
 					{t("ball.progress", {
 						advanced: advancedCount,

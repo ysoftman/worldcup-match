@@ -746,7 +746,6 @@ function App() {
 			{phase === "ball" && (
 				<BallTournament
 					teams={selectedTeams}
-					size={tournamentSize}
 					onChampion={finishBallTournament}
 				/>
 			)}

@@ -153,6 +153,7 @@ const ko: Dict = {
 	"ranking.all": "전체",
 
 	"ball.progress": "진출 {advanced} / {target}",
+	"ball.progressElim": "탈락 {eliminated} / {target}",
 	"ball.startRound": "{round} 시작",
 	"ball.restart": "↺ 다시",
 	"ball.restartTitle": "이번 라운드를 처음부터 다시",
@@ -160,6 +161,9 @@ const ko: Dict = {
 	"ball.eliminated": "탈락 (이번 라운드)",
 	"ball.final": "결승",
 	"ball.roundN": "{n}강",
+	"ball.elimConfig": "라운드당 탈락국가 수",
+	"ball.elimHalving": "기본 (절반 진출)",
+	"ball.elimN": "{n}개 탈락",
 
 	"conf.AFC": "아시아",
 	"conf.UEFA": "유럽",
@@ -301,6 +305,7 @@ const en: Dict = {
 	"ranking.all": "All",
 
 	"ball.progress": "Advanced {advanced} / {target}",
+	"ball.progressElim": "Eliminated {eliminated} / {target}",
 	"ball.startRound": "Start {round}",
 	"ball.restart": "↺ Restart",
 	"ball.restartTitle": "Restart this round from the beginning",
@@ -308,6 +313,9 @@ const en: Dict = {
 	"ball.eliminated": "Eliminated (this round)",
 	"ball.final": "Final",
 	"ball.roundN": "Round of {n}",
+	"ball.elimConfig": "Eliminations per round",
+	"ball.elimHalving": "Default (halve each round)",
+	"ball.elimN": "Eliminate {n}",
 
 	"conf.AFC": "Asia",
 	"conf.UEFA": "Europe",
@@ -449,6 +457,7 @@ const ja: Dict = {
 	"ranking.all": "全体",
 
 	"ball.progress": "進出 {advanced} / {target}",
+	"ball.progressElim": "敗退 {eliminated} / {target}",
 	"ball.startRound": "{round} 開始",
 	"ball.restart": "↺ やり直し",
 	"ball.restartTitle": "このラウンドを最初からやり直す",
@@ -456,6 +465,9 @@ const ja: Dict = {
 	"ball.eliminated": "敗退 (今ラウンド)",
 	"ball.final": "決勝",
 	"ball.roundN": "ベスト{n}",
+	"ball.elimConfig": "1ラウンドの敗退国数",
+	"ball.elimHalving": "デフォルト (半数進出)",
+	"ball.elimN": "{n}カ国敗退",
 
 	"conf.AFC": "アジア",
 	"conf.UEFA": "ヨーロッパ",
@@ -596,6 +608,7 @@ const cn: Dict = {
 	"ranking.all": "全部",
 
 	"ball.progress": "晋级 {advanced} / {target}",
+	"ball.progressElim": "淘汰 {eliminated} / {target}",
 	"ball.startRound": "开始 {round}",
 	"ball.restart": "↺ 重来",
 	"ball.restartTitle": "从头重新开始这一轮",
@@ -603,6 +616,9 @@ const cn: Dict = {
 	"ball.eliminated": "淘汰 (本轮)",
 	"ball.final": "决赛",
 	"ball.roundN": "{n}强",
+	"ball.elimConfig": "每轮淘汰国家数",
+	"ball.elimHalving": "默认 (半数晋级)",
+	"ball.elimN": "淘汰 {n} 国",
 
 	"conf.AFC": "亚洲",
 	"conf.UEFA": "欧洲",
@@ -745,6 +761,7 @@ const fr: Dict = {
 	"ranking.all": "Tous",
 
 	"ball.progress": "Qualifiés {advanced} / {target}",
+	"ball.progressElim": "Éliminés {eliminated} / {target}",
 	"ball.startRound": "Démarrer — {round}",
 	"ball.restart": "↺ Recommencer",
 	"ball.restartTitle": "Recommencer cette manche depuis le début",
@@ -752,6 +769,9 @@ const fr: Dict = {
 	"ball.eliminated": "Éliminés (cette manche)",
 	"ball.final": "Finale",
 	"ball.roundN": "{n}es",
+	"ball.elimConfig": "Éliminés par manche",
+	"ball.elimHalving": "Défaut (moitié qualifiée)",
+	"ball.elimN": "Éliminer {n}",
 
 	"conf.AFC": "Asie",
 	"conf.UEFA": "Europe",

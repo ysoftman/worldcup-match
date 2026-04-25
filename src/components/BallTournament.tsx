@@ -6,7 +6,6 @@ import { playBounce, playClick, playDrain } from "../utils/sounds";
 
 interface BallTournamentProps {
 	teams: Country[];
-	size: 32 | 48;
 	onChampion: (champion: Country, runnerUp: Country) => void;
 }
 
@@ -39,10 +38,10 @@ const SCALE = 30;
 const pxToM = (p: number) => p / SCALE;
 const mToPx = (m: number) => m * SCALE;
 
-function buildRoundSequence(size: 32 | 48): number[] {
-	if (size === 48) return [48, 32, 16, 8, 4, 2, 1];
-	return [32, 16, 8, 4, 2, 1];
-}
+// nextCount/targetExits are computed dynamically from currentCount + the
+// user's current picker value — see the BallTournament body for the
+// formula. helpers that used to pre-compute the entire round sequence
+// were removed once the picker became reconfigurable per round.
 
 // --- Twemoji flag loader ------------------------------------------------
 // iPad Safari's canvas sometimes fails to render regional-indicator flag
@@ -141,11 +140,7 @@ function buildBallTexture(team: Country, radius: number, dpr: number) {
 	return canvas;
 }
 
-export function BallTournament({
-	teams,
-	size,
-	onChampion,
-}: BallTournamentProps) {
+export function BallTournament({ teams, onChampion }: BallTournamentProps) {
 	const { t, tName } = useI18n();
 	// preload every team's flag into the Twemoji cache on mount so the first
 	// round can render images instead of emoji text (especially important on
@@ -212,18 +207,46 @@ export function BallTournament({
 	// running (async flag flipped true until the round actually ends).
 	const spawnBusyRef = useRef<boolean>(false);
 
-	const rounds = useMemo(() => buildRoundSequence(size), [size]);
+	// 0 = halving mode (default). >0 = eliminate that many teams per round
+	// until 2 remain for the final. user picks this fresh at every
+	// round-start overlay, so the sequence is computed dynamically rather
+	// than locked at tournament start.
+	const [eliminationN, setEliminationN] = useState(0);
+	const isEliminationMode = eliminationN > 0;
+
 	const [roundIdx, setRoundIdx] = useState(0);
 	const [survivorsByRound, setSurvivorsByRound] = useState<Country[]>(teams);
 	const [exitedThisRound, setExitedThisRound] = useState<Country[]>([]);
 	const [eliminatedThisRound, setEliminatedThisRound] = useState<Country[]>([]);
+	// advancers captured at round-end so the between-round overlay can show
+	// a stable next-round count and the picker can be retoggled without
+	// retroactively rewriting the just-finished round's outcome.
+	const [advancersThisRound, setAdvancersThisRound] = useState<Country[]>([]);
 	const [roundActive, setRoundActive] = useState(false);
 	const [roundEnded, setRoundEnded] = useState(false);
 
-	const currentCount = rounds[roundIdx];
-	const nextCount = rounds[roundIdx + 1] ?? 1;
+	const currentCount = survivorsByRound.length;
+	// next-round count is reactive to the picker so the user sees the label
+	// update as they choose. halving keeps the original sequence's 48→32
+	// special case; otherwise it's a straight halving down to 2.
+	const nextCount = useMemo(() => {
+		if (currentCount <= 2) return 1;
+		if (isEliminationMode) {
+			return Math.max(2, currentCount - eliminationN);
+		}
+		if (currentCount === 48) return 32;
+		return Math.max(2, Math.floor(currentCount / 2));
+	}, [currentCount, isEliminationMode, eliminationN]);
 	const isFinalRound = nextCount === 1;
-	const targetExits = isFinalRound ? 1 : nextCount;
+	// drains needed to end the round.
+	// halving: drain N/2 (= advancers); final: drain 1 (= champion).
+	// elimination: drain currentCount-nextCount (= eliminated this round);
+	// final: drain 1 (= loser, leftover ball is the champion).
+	const targetExits = isFinalRound
+		? 1
+		: isEliminationMode
+			? currentCount - nextCount
+			: nextCount;
 
 	const computeRadius = useCallback(
 		(w: number, h: number) => {
@@ -747,6 +770,11 @@ export function BallTournament({
 			for (const [body, meta] of ballsRef.current) {
 				if (drainedBodiesRef.current.has(body)) continue;
 				if (meta.eliminated) continue;
+				// after the round ended (elimination mode: leftover advancers
+				// can still bounce around for a moment before goNextRound),
+				// don't count any further drains — they'd corrupt the
+				// already-captured advancer / eliminated lists.
+				if (roundEndedRef.current) continue;
 				const pos = body.getPosition();
 				const px = mToPx(pos.x);
 				const py = mToPx(pos.y);
@@ -1226,17 +1254,34 @@ export function BallTournament({
 		if (isFinalRound) {
 			if (finalDoneRef.current) return;
 			finalDoneRef.current = true;
-			const champion = exitedThisRound[0];
-			// runnerUp = the ball still on stage (not yet drained)
+			let champion: Country;
 			let runnerUp: Country | undefined;
-			for (const [body, meta] of ballsRef.current) {
-				if (!drainedBodiesRef.current.has(body)) {
-					runnerUp = meta.team;
-					break;
+			if (isEliminationMode) {
+				// drain = loser; the ball still on stage = champion.
+				runnerUp = exitedThisRound[0];
+				let onStage: Country | undefined;
+				for (const [body, meta] of ballsRef.current) {
+					if (!drainedBodiesRef.current.has(body)) {
+						onStage = meta.team;
+						break;
+					}
 				}
-			}
-			if (!runnerUp) {
-				runnerUp = survivorsByRound.find((t) => t.code !== champion.code);
+				champion =
+					onStage ??
+					survivorsByRound.find((t) => t.code !== runnerUp?.code) ??
+					survivorsByRound[0];
+			} else {
+				// halving: drain = champion; ball still on stage = runner-up.
+				champion = exitedThisRound[0];
+				for (const [body, meta] of ballsRef.current) {
+					if (!drainedBodiesRef.current.has(body)) {
+						runnerUp = meta.team;
+						break;
+					}
+				}
+				if (!runnerUp) {
+					runnerUp = survivorsByRound.find((t) => t.code !== champion.code);
+				}
 			}
 			const fallback = runnerUp ?? survivorsByRound[1] ?? survivorsByRound[0];
 			const handle = setTimeout(() => {
@@ -1247,7 +1292,28 @@ export function BallTournament({
 			return;
 		}
 
-		// non-final: remaining balls become eliminated (fade out)
+		if (isEliminationMode) {
+			// drained balls = eliminated; remaining balls = advancers (will
+			// respawn next round). leave the leftover balls visible so the
+			// player sees the survivors before pressing "next". snapshot the
+			// advancer roster now so a post-round picker toggle can't rewrite
+			// what just happened.
+			const drainedCodes = new Set(exitedThisRound.map((tt) => tt.code));
+			const advancers = survivorsByRound.filter(
+				(tt) => !drainedCodes.has(tt.code),
+			);
+			setAdvancersThisRound(advancers);
+			setEliminatedThisRound([...exitedThisRound]);
+			setRoundEnded(true);
+			setRoundActive(false);
+			spawnBusyRef.current = false;
+			return;
+		}
+
+		// halving non-final: remaining balls = eliminated, fade them out.
+		// snapshot the drained-balls (= advancers) order so the picker on
+		// the next-round overlay can't change what's already settled.
+		setAdvancersThisRound(exitedThisRound.slice(0, targetExits));
 		const eliminated: Country[] = [];
 		for (const [body, meta] of ballsRef.current) {
 			if (drainedBodiesRef.current.has(body)) continue;
@@ -1277,6 +1343,7 @@ export function BallTournament({
 	}, [
 		exitedThisRound,
 		isFinalRound,
+		isEliminationMode,
 		onChampion,
 		roundActive,
 		survivorsByRound,
@@ -1298,15 +1365,17 @@ export function BallTournament({
 	}, [spawnRound]);
 
 	const goNextRound = useCallback(() => {
-		const advancers = exitedThisRound.slice(0, nextCount);
-		setSurvivorsByRound(advancers);
+		// advancers were snapshotted at round-end so the picker can be
+		// changed between rounds without altering the just-finished result.
+		setSurvivorsByRound(advancersThisRound);
 		setRoundIdx((i) => i + 1);
+		setAdvancersThisRound([]);
 		setRoundEnded(false);
 		setRoundActive(false);
 		setExitedThisRound([]);
 		setEliminatedThisRound([]);
 		roundEndedRef.current = false;
-	}, [exitedThisRound, nextCount]);
+	}, [advancersThisRound]);
 
 	// when survivorsByRound updates after advancing, auto-spawn next round
 	const prevRoundIdxRef = useRef(roundIdx);
@@ -1320,31 +1389,114 @@ export function BallTournament({
 		return () => clearTimeout(t);
 	}, [roundIdx, spawnRound]);
 
-	// count-up: how many teams have already advanced this round
-	const advancedCount = Math.min(exitedThisRound.length, targetExits);
+	// progress count — drains so far, capped at the target.
+	// halving: this is the "advanced" count. elimination: this is the
+	// "eliminated" count.
+	const drainedCount = Math.min(exitedThisRound.length, targetExits);
 	const showStartOverlay = !roundActive && !roundEnded && roundIdx === 0;
 	const showNextButton = roundEnded && !isFinalRound;
 	const showRestartButton = roundActive && !roundEnded;
+	// max eliminations per round, capped so at least 2 elimination rounds
+	// happen before the final (avoids a degenerate "drop everyone in one
+	// round" tournament). uses live currentCount so the picker tightens as
+	// the field shrinks (e.g. 4 teams left → max n = 2).
+	const maxEliminationN = Math.max(1, Math.floor(currentCount / 2));
+	// keep the user's pick within the live max — if they picked 16 with
+	// 32 teams and now only 8 remain, drop the value to 4 so the displayed
+	// nextCount stays sensible. fires only when the round is paused so we
+	// don't trample a value that's actively in use.
+	useEffect(() => {
+		if (roundActive) return;
+		if (eliminationN > maxEliminationN) {
+			setEliminationN(maxEliminationN);
+		}
+	}, [eliminationN, maxEliminationN, roundActive]);
 
 	// label helper: "final" for 2-ball round, round-of-N otherwise
 	const roundLabel = (count: number) =>
 		count === 2 ? t("ball.final") : t("ball.roundN", { n: count });
 
-	// list of teams that have advanced this round (in exit order)
-	const advancers = useMemo(
-		() => exitedThisRound.slice(0, targetExits),
-		[exitedThisRound, targetExits],
-	);
+	// what to show in each sidebar.
+	// halving: "advanced" = drained balls in exit order (first wave through
+	// the funnel). "eliminated" = leftover balls captured at round-end.
+	// elimination: "eliminated" = drained balls in exit order. "advanced" =
+	// the live roster minus drained, so the list updates in real time as
+	// teams fall through. once the round ends we switch to the captured
+	// snapshots so retoggling the picker between rounds doesn't visually
+	// rewrite the just-finished round's outcome.
+	const sideAdvancers = useMemo(() => {
+		if (roundEnded) return advancersThisRound;
+		if (isEliminationMode) {
+			const drainedCodes = new Set(exitedThisRound.map((t) => t.code));
+			return survivorsByRound.filter((t) => !drainedCodes.has(t.code));
+		}
+		return exitedThisRound.slice(0, targetExits);
+	}, [
+		roundEnded,
+		advancersThisRound,
+		isEliminationMode,
+		exitedThisRound,
+		survivorsByRound,
+		targetExits,
+	]);
+
+	const sideEliminated = useMemo(() => {
+		if (roundEnded) return eliminatedThisRound;
+		if (isEliminationMode) {
+			return exitedThisRound.slice(0, targetExits);
+		}
+		return [];
+	}, [
+		roundEnded,
+		eliminatedThisRound,
+		isEliminationMode,
+		exitedThisRound,
+		targetExits,
+	]);
+
+	// reusable picker block — appears in both the round-0 start overlay
+	// and the between-round next overlay. hidden when the upcoming round
+	// is the final (only 2 balls; nothing to configure).
+	const renderEliminationPicker = (upcomingCount: number) => {
+		if (upcomingCount <= 2) return null;
+		const upcomingMaxN = Math.max(1, Math.floor(upcomingCount / 2));
+		const clampedValue = Math.min(eliminationN, upcomingMaxN);
+		return (
+			<div className="ball-tour-elim-config">
+				<label className="ball-tour-elim-label" htmlFor="ball-tour-elim-select">
+					{t("ball.elimConfig")}
+				</label>
+				<select
+					id="ball-tour-elim-select"
+					className="ball-tour-elim-select"
+					value={clampedValue}
+					onChange={(e) => setEliminationN(Number(e.target.value) || 0)}
+				>
+					<option value={0}>{t("ball.elimHalving")}</option>
+					{Array.from({ length: upcomingMaxN }, (_, i) => i + 1).map((n) => (
+						<option key={n} value={n}>
+							{t("ball.elimN", { n })}
+						</option>
+					))}
+				</select>
+			</div>
+		);
+	};
 
 	return (
 		<div className="ball-tour">
 			<div className="ball-tour-header">
 				<div className="ball-tour-round-title">{roundLabel(currentCount)}</div>
 				<div className="ball-tour-round-progress">
-					{t("ball.progress", {
-						advanced: advancedCount,
-						target: targetExits,
-					})}
+					{isEliminationMode
+						? t("ball.progressElim", {
+								eliminated: drainedCount,
+								target: targetExits,
+							})
+						: t("ball.progress", {
+								advanced: drainedCount,
+								target: targetExits,
+							})}
 				</div>
 			</div>
 
@@ -1353,6 +1505,7 @@ export function BallTournament({
 					<canvas ref={canvasRef} className="ball-tour-canvas" />
 					{showStartOverlay && (
 						<div className="ball-tour-overlay ball-tour-overlay-next">
+							{renderEliminationPicker(currentCount)}
 							<button
 								type="button"
 								className="btn btn-round"
@@ -1364,12 +1517,15 @@ export function BallTournament({
 					)}
 					{showNextButton && (
 						<div className="ball-tour-overlay ball-tour-overlay-next">
+							{renderEliminationPicker(advancersThisRound.length)}
 							<button
 								type="button"
 								className="btn btn-round"
 								onClick={goNextRound}
 							>
-								{t("ball.startRound", { round: roundLabel(nextCount) })}
+								{t("ball.startRound", {
+									round: roundLabel(advancersThisRound.length),
+								})}
 							</button>
 						</div>
 					)}
@@ -1389,7 +1545,7 @@ export function BallTournament({
 					<section className="ball-tour-survivors">
 						<h3>{t("ball.advanced")}</h3>
 						<ol>
-							{advancers.map((team, i) => (
+							{sideAdvancers.map((team, i) => (
 								<li key={team.code} className="ball-tour-team-row">
 									<span className="ball-tour-seed">{i + 1}</span>
 									<span className="ball-tour-flag">{team.flag}</span>
@@ -1401,7 +1557,7 @@ export function BallTournament({
 					<section className="ball-tour-eliminated">
 						<h3>{t("ball.eliminated")}</h3>
 						<ol>
-							{eliminatedThisRound.map((team) => (
+							{sideEliminated.map((team) => (
 								<li key={team.code} className="ball-tour-team-row eliminated">
 									<span className="ball-tour-flag">{team.flag}</span>
 									<span className="ball-tour-name">{tName(team)}</span>

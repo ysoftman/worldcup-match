@@ -152,7 +152,6 @@ const ko: Dict = {
 	"ranking.source": "FIFA/Coca-Cola 세계 랭킹 · 2026년 4월 기준",
 	"ranking.all": "전체",
 
-	"ball.progress": "진출 {advanced} / {target}",
 	"ball.progressElim": "탈락 {eliminated} / {target}",
 	"ball.startRound": "{round} 시작",
 	"ball.restart": "↺ 다시",
@@ -162,7 +161,7 @@ const ko: Dict = {
 	"ball.final": "결승",
 	"ball.roundN": "{n}강",
 	"ball.elimConfig": "라운드당 탈락국가 수",
-	"ball.elimHalving": "기본 (절반 진출)",
+	"ball.elimHalving": "기본 (절반 탈락)",
 	"ball.elimN": "{n}개 탈락",
 
 	"conf.AFC": "아시아",
@@ -304,7 +303,6 @@ const en: Dict = {
 	"ranking.source": "FIFA/Coca-Cola World Ranking · As of April 2026",
 	"ranking.all": "All",
 
-	"ball.progress": "Advanced {advanced} / {target}",
 	"ball.progressElim": "Eliminated {eliminated} / {target}",
 	"ball.startRound": "Start {round}",
 	"ball.restart": "↺ Restart",
@@ -314,7 +312,7 @@ const en: Dict = {
 	"ball.final": "Final",
 	"ball.roundN": "Round of {n}",
 	"ball.elimConfig": "Eliminations per round",
-	"ball.elimHalving": "Default (halve each round)",
+	"ball.elimHalving": "Default (eliminate half)",
 	"ball.elimN": "Eliminate {n}",
 
 	"conf.AFC": "Asia",
@@ -456,7 +454,6 @@ const ja: Dict = {
 	"ranking.source": "FIFA/Coca-Cola 世界ランキング · 2026年4月時点",
 	"ranking.all": "全体",
 
-	"ball.progress": "進出 {advanced} / {target}",
 	"ball.progressElim": "敗退 {eliminated} / {target}",
 	"ball.startRound": "{round} 開始",
 	"ball.restart": "↺ やり直し",
@@ -466,7 +463,7 @@ const ja: Dict = {
 	"ball.final": "決勝",
 	"ball.roundN": "ベスト{n}",
 	"ball.elimConfig": "1ラウンドの敗退国数",
-	"ball.elimHalving": "デフォルト (半数進出)",
+	"ball.elimHalving": "デフォルト (半数敗退)",
 	"ball.elimN": "{n}カ国敗退",
 
 	"conf.AFC": "アジア",
@@ -607,7 +604,6 @@ const cn: Dict = {
 	"ranking.source": "FIFA/可口可乐世界排名 · 2026年4月",
 	"ranking.all": "全部",
 
-	"ball.progress": "晋级 {advanced} / {target}",
 	"ball.progressElim": "淘汰 {eliminated} / {target}",
 	"ball.startRound": "开始 {round}",
 	"ball.restart": "↺ 重来",
@@ -617,7 +613,7 @@ const cn: Dict = {
 	"ball.final": "决赛",
 	"ball.roundN": "{n}强",
 	"ball.elimConfig": "每轮淘汰国家数",
-	"ball.elimHalving": "默认 (半数晋级)",
+	"ball.elimHalving": "默认 (半数淘汰)",
 	"ball.elimN": "淘汰 {n} 国",
 
 	"conf.AFC": "亚洲",
@@ -760,7 +756,6 @@ const fr: Dict = {
 	"ranking.source": "Classement FIFA/Coca-Cola · avril 2026",
 	"ranking.all": "Tous",
 
-	"ball.progress": "Qualifiés {advanced} / {target}",
 	"ball.progressElim": "Éliminés {eliminated} / {target}",
 	"ball.startRound": "Démarrer — {round}",
 	"ball.restart": "↺ Recommencer",
@@ -770,7 +765,7 @@ const fr: Dict = {
 	"ball.final": "Finale",
 	"ball.roundN": "{n}es",
 	"ball.elimConfig": "Éliminés par manche",
-	"ball.elimHalving": "Défaut (moitié qualifiée)",
+	"ball.elimHalving": "Défaut (éliminer la moitié)",
 	"ball.elimN": "Éliminer {n}",
 
 	"conf.AFC": "Asie",

@@ -630,6 +630,14 @@ function App() {
 				>
 					😄
 				</a>
+				<a
+					href="https://ysoftman.github.io/numberbaseball/"
+					className="numberbaseball-link"
+					title={t("toggle.numberbaseball")}
+					aria-label={t("toggle.numberbaseball")}
+				>
+					⚾
+				</a>
 				<FifaRanking />
 				<WinnerHistory />
 			</div>

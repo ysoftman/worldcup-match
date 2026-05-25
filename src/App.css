@@ -256,8 +256,9 @@
 	box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
-/* 아재개그 링크 */
-.dadjoke-link {
+/* 아재개그 / 숫자야구 링크 */
+.dadjoke-link,
+.numberbaseball-link {
 	width: 36px;
 	height: 36px;
 	border: 2px solid var(--color-border);
@@ -274,7 +275,8 @@
 	text-decoration: none;
 }
 
-.dadjoke-link:hover {
+.dadjoke-link:hover,
+.numberbaseball-link:hover {
 	transform: scale(1.1);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -2807,7 +2809,8 @@
 		font-size: 0.8rem;
 	}
 
-	.dadjoke-link {
+	.dadjoke-link,
+	.numberbaseball-link {
 		width: 28px;
 		height: 28px;
 		font-size: 0.8rem;
@@ -2976,6 +2979,7 @@
 [data-theme="dark"] .bgm-toggle,
 [data-theme="dark"] .theme-toggle,
 [data-theme="dark"] .dadjoke-link,
+[data-theme="dark"] .numberbaseball-link,
 [data-theme="dark"] .lang-select-wrap {
 	background: #2c3e50;
 	border-color: #34495e;

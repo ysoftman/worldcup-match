@@ -39,6 +39,7 @@ const GROUP_NAMES_12 = [
 	"K조",
 	"L조",
 ];
+const GROUP_NAMES_16 = [...GROUP_NAMES_12, "M조", "N조", "O조", "P조"];
 
 // 프리셋 조편성으로 그룹 생성
 export function createGroupsFromPreset(
@@ -68,9 +69,10 @@ export function createGroupsFromPreset(
 
 // 팀을 조로 나누기
 export function createGroups(teams: Country[], size: TournamentSize): Group[] {
-	const groupCount = size === 48 ? 12 : 8;
-	const teamsPerGroup = size === 48 ? 4 : 4;
-	const groupNames = size === 48 ? GROUP_NAMES_12 : GROUP_NAMES_8;
+	const groupCount = size === 64 ? 16 : size === 48 ? 12 : 8;
+	const teamsPerGroup = 4;
+	const groupNames =
+		size === 64 ? GROUP_NAMES_16 : size === 48 ? GROUP_NAMES_12 : GROUP_NAMES_8;
 	const groups: Group[] = [];
 
 	for (let i = 0; i < groupCount; i++) {
@@ -255,7 +257,7 @@ export function simulateGroup(
 	return { ...updated, standings, played: true };
 }
 
-// 32팀 대회: 각 조 상위 2팀 (8조 × 2 = 16팀, 교차 대진)
+// 각 조 상위 2팀 교차 대진 (8조→16팀, 16조→32팀 등 조 개수 무관)
 export function getGroupAdvancers32(groups: Group[]): Country[] {
 	const advancers: Country[] = [];
 	for (let i = 0; i < groups.length; i += 2) {
@@ -327,6 +329,7 @@ export function getGroupAdvancers(
 	groups: Group[],
 	size: TournamentSize,
 ): Country[] {
+	// 64팀(16조)·32팀(8조)은 각 조 상위 2팀 그대로 32/16강행, 48팀만 3위 와일드카드 필요
 	return size === 48
 		? getGroupAdvancers48(groups)
 		: getGroupAdvancers32(groups);

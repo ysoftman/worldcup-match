@@ -15,9 +15,43 @@ export interface PresetGroup {
 export interface Preset {
 	id: string;
 	label: string;
-	size: 32 | 48;
+	size: 32 | 48 | 64;
 	groups: PresetGroup[];
 }
+
+/** 2030 스페인·포르투갈·모로코 월드컵 (64팀, 16조 — 가상 조편성) */
+export const PRESET_2030: Preset = {
+	id: "2030",
+	label: "2030 스페인·모로코·포르투갈 월드컵",
+	size: 64,
+	groups: [
+		{ name: "A조", teams: [find("ES"), find("MX"), find("AT"), find("UZ")] },
+		{ name: "B조", teams: [find("PT"), find("US"), find("NO"), find("IQ")] },
+		{ name: "C조", teams: [find("MA"), find("JP"), find("UA"), find("JO")] },
+		{ name: "D조", teams: [find("AR"), find("CH"), find("RS"), find("GH")] },
+		{ name: "E조", teams: [find("UY"), find("DK"), find("PL"), find("CM")] },
+		{ name: "F조", teams: [find("PY"), find("IR"), find("HU"), find("TN")] },
+		{ name: "G조", teams: [find("FR"), find("TR"), find("CZ"), find("CD")] },
+		{
+			name: "H조",
+			teams: [find("GB-ENG"), find("EC"), find("GR"), find("NZ")],
+		},
+		{
+			name: "I조",
+			teams: [find("BR"), find("NG"), find("PE"), find("GB-SCT")],
+		},
+		{
+			name: "J조",
+			teams: [find("NL"), find("DZ"), find("CL"), find("GB-WLS")],
+		},
+		{ name: "K조", teams: [find("BE"), find("EG"), find("PA"), find("IE")] },
+		{ name: "L조", teams: [find("DE"), find("CI"), find("CR"), find("IS")] },
+		{ name: "M조", teams: [find("IT"), find("KR"), find("JM"), find("BA")] },
+		{ name: "N조", teams: [find("HR"), find("AU"), find("HN"), find("KP")] },
+		{ name: "O조", teams: [find("CO"), find("CA"), find("SA"), find("ZM")] },
+		{ name: "P조", teams: [find("SN"), find("SE"), find("QA"), find("BO")] },
+	],
+};
 
 /** 2026 북중미 월드컵 (48팀, 12조) */
 export const PRESET_2026: Preset = {
@@ -167,6 +201,7 @@ export const PRESET_2002: Preset = {
 };
 
 export const ALL_PRESETS: Preset[] = [
+	PRESET_2030,
 	PRESET_2026,
 	PRESET_2022,
 	PRESET_2018,

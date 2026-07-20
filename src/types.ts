@@ -105,7 +105,7 @@ export function getFormation(id?: string): Formation {
 	return FORMATIONS.find((f) => f.id === id) ?? FORMATIONS[0];
 }
 
-export type TournamentSize = 32 | 48;
+export type TournamentSize = 32 | 48 | 64;
 
 export type RoundName = "round32" | "round16" | "quarter" | "semi" | "final";
 
@@ -117,6 +117,7 @@ export const ROUND_LABELS: Record<RoundName, string> = {
 	final: "결승",
 };
 
+// 64팀: 16조 → 32강 → 16강 → 8강 → 4강 → 결승 (녹아웃은 48팀과 동일)
 // 48팀: 12조 → 32강 → 16강 → 8강 → 4강 → 결승
 // 32팀: 8조 → 16강 → 8강 → 4강 → 결승
 export const ROUND_ORDER_48: RoundName[] = [

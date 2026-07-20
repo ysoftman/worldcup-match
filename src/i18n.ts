@@ -56,6 +56,7 @@ const ko: Dict = {
 
 	"size.32": "32강 (8조)",
 	"size.48": "48강 (12조)",
+	"size.64": "64강 (16조)",
 
 	"btn.start": "🏆 대회 시작",
 	"btn.startBall": "⚽ 바운스볼 대회 시작",
@@ -172,6 +173,7 @@ const ko: Dict = {
 	"conf.CAF": "아프리카",
 	"conf.OFC": "오세아니아",
 
+	"preset.2030": "2030 스페인·모로코·포르투갈 월드컵",
 	"preset.2026": "2026 북중미 월드컵",
 	"preset.2022": "2022 카타르 월드컵",
 	"preset.2018": "2018 러시아 월드컵",
@@ -207,6 +209,7 @@ const en: Dict = {
 
 	"size.32": "32 teams (8 groups)",
 	"size.48": "48 teams (12 groups)",
+	"size.64": "64 teams (16 groups)",
 
 	"btn.start": "🏆 Start Tournament",
 	"btn.startBall": "⚽ Start Bounce Ball",
@@ -324,6 +327,7 @@ const en: Dict = {
 	"conf.CAF": "Africa",
 	"conf.OFC": "Oceania",
 
+	"preset.2030": "2030 Spain·Morocco·Portugal World Cup",
 	"preset.2026": "2026 North America World Cup",
 	"preset.2022": "2022 Qatar World Cup",
 	"preset.2018": "2018 Russia World Cup",
@@ -359,6 +363,7 @@ const ja: Dict = {
 
 	"size.32": "32チーム (8組)",
 	"size.48": "48チーム (12組)",
+	"size.64": "64チーム (16組)",
 
 	"btn.start": "🏆 大会開始",
 	"btn.startBall": "⚽ バウンスボール開始",
@@ -476,6 +481,7 @@ const ja: Dict = {
 	"conf.CAF": "アフリカ",
 	"conf.OFC": "オセアニア",
 
+	"preset.2030": "2030 スペイン・モロッコ・ポルトガルワールドカップ",
 	"preset.2026": "2026 北中米ワールドカップ",
 	"preset.2022": "2022 カタールワールドカップ",
 	"preset.2018": "2018 ロシアワールドカップ",
@@ -511,6 +517,7 @@ const cn: Dict = {
 
 	"size.32": "32强 (8组)",
 	"size.48": "48强 (12组)",
+	"size.64": "64强 (16组)",
 
 	"btn.start": "🏆 开始比赛",
 	"btn.startBall": "⚽ 开始弹球赛",
@@ -627,6 +634,7 @@ const cn: Dict = {
 	"conf.CAF": "非洲",
 	"conf.OFC": "大洋洲",
 
+	"preset.2030": "2030 西班牙·摩洛哥·葡萄牙世界杯",
 	"preset.2026": "2026 中北美世界杯",
 	"preset.2022": "2022 卡塔尔世界杯",
 	"preset.2018": "2018 俄罗斯世界杯",
@@ -662,6 +670,7 @@ const fr: Dict = {
 
 	"size.32": "32 équipes (8 groupes)",
 	"size.48": "48 équipes (12 groupes)",
+	"size.64": "64 équipes (16 groupes)",
 
 	"btn.start": "🏆 Démarrer le tournoi",
 	"btn.startBall": "⚽ Démarrer les balles",
@@ -780,6 +789,7 @@ const fr: Dict = {
 	"conf.CAF": "Afrique",
 	"conf.OFC": "Océanie",
 
+	"preset.2030": "Coupe du Monde 2030 (Espagne·Maroc·Portugal)",
 	"preset.2026": "Coupe du Monde 2026 (Amérique du Nord)",
 	"preset.2022": "Coupe du Monde 2022 (Qatar)",
 	"preset.2018": "Coupe du Monde 2018 (Russie)",

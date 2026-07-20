@@ -89,6 +89,13 @@ export function TeamSelector({
 						>
 							{t("size.48")}
 						</button>
+						<button
+							type="button"
+							className={`btn btn-size ${tournamentSize === 64 ? "active" : ""}`}
+							onClick={() => onChangeTournamentSize(64)}
+						>
+							{t("size.64")}
+						</button>
 					</div>
 					<div className="selector-start-actions">
 						<button

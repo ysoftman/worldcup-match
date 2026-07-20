@@ -5,11 +5,11 @@ FIFA 212 member nations, group stage and knockout tournament simulation web app.
 ## Features
 
 - 212 FIFA member nations with real rankings (April 2026)
-- 32-team (8 groups) and 48-team (12 groups) tournament formats
+- 32-team (8 groups), 48-team (12 groups), and 64-team (16 groups) tournament formats
 - **Two tournament modes:**
   - **Card tournament** (카드 대회) — group stage + knockout bracket with FIFA-ranking-based match simulation
   - **Bounce ball tournament** (바운스볼 대회) — physics-based knockout where balls drop through a funnel and exit order decides who advances each round (drag to stir)
-- Presets: 2002, 2006, 2010, 2014, 2018, 2022, 2026 World Cup
+- Presets: 2002, 2006, 2010, 2014, 2018, 2022, 2026 World Cup, and a speculative 64-team 2030 draw
 - Region-based random selection (Asia, Europe, Africa, Americas, Oceania, etc.)
 - Group stage with standings table and wildcard 3rd-place advancement (48-team)
 - Knockout bracket with visual connectors and final match circle layout

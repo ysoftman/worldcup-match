@@ -136,7 +136,7 @@ function App() {
 		new Map(),
 	);
 
-	const roundOrder = tournamentSize === 48 ? ROUND_ORDER_48 : ROUND_ORDER_32;
+	const roundOrder = tournamentSize === 32 ? ROUND_ORDER_32 : ROUND_ORDER_48;
 
 	const allKnockoutMatches = useMemo(
 		() => rounds.flatMap((r) => r.matches),

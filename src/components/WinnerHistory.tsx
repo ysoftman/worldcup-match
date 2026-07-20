@@ -6,7 +6,7 @@ export interface WinnerRecord {
 	nameKo: string;
 	name: string;
 	rank: number;
-	size: 32 | 48;
+	size: 32 | 48 | 64;
 	winRate: number;
 	date: string;
 	opponentFlag?: string;

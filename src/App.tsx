@@ -605,7 +605,7 @@ function App() {
 					title={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
 					aria-label={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
 				>
-					🎧
+					🎵
 				</button>
 				<label className="lang-select-wrap" title={t("toggle.language")}>
 					<span className="lang-flag" aria-hidden="true">

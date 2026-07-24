@@ -164,7 +164,8 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 		return () => cancelAnimationFrame(raf);
 	}, [phase]);
 
-	// tap the pitch to lock the aim, then again to lock the power and shoot.
+	// tap the pitch to lock the aim, then to lock the power and shoot,
+	// then anywhere on the result screen to line up the next attempt.
 	const advance = () => {
 		if (phase === "aim") {
 			setAimDir(oscRef.current);
@@ -173,6 +174,8 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 		} else if (phase === "power") {
 			playClick();
 			startShot(aimDir, oscRef.current * 100);
+		} else if (phase === "result") {
+			nextShot();
 		}
 	};
 
@@ -747,13 +750,14 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 					</g>
 				</svg>
 
-				{/* transparent capture layer — accessible click target while aiming */}
-				{(phase === "aim" || phase === "power") && (
+				{/* transparent capture layer — accessible click target while aiming
+				    and for tapping through the result screen */}
+				{phase !== "shooting" && (
 					<button
 						type="button"
 						className="penalty-capture"
 						onClick={advance}
-						aria-label={hint}
+						aria-label={hint || t("penalty.again")}
 					/>
 				)}
 
@@ -765,22 +769,6 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 							{resultTag}
 						</div>
 						<div className="penalty-result-msg">{resultMsg}</div>
-						<div className="penalty-actions">
-							<button
-								type="button"
-								className="btn penalty-again"
-								onClick={nextShot}
-							>
-								{t("penalty.again")}
-							</button>
-							<button
-								type="button"
-								className="btn penalty-exit"
-								onClick={onExit}
-							>
-								{t("penalty.exit")}
-							</button>
-						</div>
 					</div>
 				)}
 			</div>

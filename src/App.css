@@ -4410,6 +4410,7 @@ input:focus-visible {
 	background: rgba(0, 0, 0, 0.45);
 	backdrop-filter: blur(2px);
 	animation: penalty-pop 0.25s ease-out;
+	pointer-events: none;
 }
 
 @keyframes penalty-pop {
@@ -4447,18 +4448,6 @@ input:focus-visible {
 	text-align: center;
 	padding: 0 16px;
 	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-.penalty-actions {
-	display: flex;
-	gap: 12px;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.penalty-again {
-	background: linear-gradient(135deg, #27ae60, #2ecc71);
-	color: white;
 }
 
 @media (max-width: 720px) {

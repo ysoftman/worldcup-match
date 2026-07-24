@@ -4,6 +4,7 @@ import { BracketView } from "./components/BracketView";
 import { Champion } from "./components/Champion";
 import { FifaRanking } from "./components/FifaRanking";
 import { GroupView } from "./components/GroupView";
+import { PenaltyShootout } from "./components/PenaltyShootout";
 import { SquadModal } from "./components/SquadModal";
 import { TeamSelector } from "./components/TeamSelector";
 import { saveWinner, WinnerHistory } from "./components/WinnerHistory";
@@ -47,7 +48,7 @@ import {
 } from "./utils/tournament";
 import "./App.css";
 
-type Phase = "select" | "ball" | "group" | "knockout" | "finished";
+type Phase = "select" | "ball" | "penalty" | "group" | "knockout" | "finished";
 
 // 골 카운트업 애니메이션 대기 시간 (ms)
 const SCORE_ANIM_DELAY = 2200;
@@ -241,6 +242,11 @@ function App() {
 		setChampion(null);
 		setPhase("ball");
 	}, [selectedTeams, tournamentSize]);
+
+	// 승부차기 미니게임 시작 (팀 선택과 무관한 독립 게임)
+	const startPenalty = useCallback(() => {
+		setPhase("penalty");
+	}, []);
 
 	// 바운스볼 대회 완료
 	const finishBallTournament = useCallback(
@@ -652,7 +658,7 @@ function App() {
 				<p className="update-date">{t("app.rankingNote")}</p>
 			</header>
 
-			{phase !== "select" && (
+			{phase !== "select" && phase !== "penalty" && (
 				<div className="phase-indicator">
 					{(() => {
 						const steps: Phase[] =
@@ -728,7 +734,7 @@ function App() {
 						</button>
 					)}
 
-				{phase !== "select" && (
+				{phase !== "select" && phase !== "penalty" && (
 					<button
 						type="button"
 						className="btn btn-reset"
@@ -748,6 +754,7 @@ function App() {
 					onChangeTournamentSize={changeTournamentSize}
 					onStart={startTournament}
 					onStartBall={startBallTournament}
+					onStartPenalty={startPenalty}
 				/>
 			)}
 
@@ -756,6 +763,10 @@ function App() {
 					teams={selectedTeams}
 					onChampion={finishBallTournament}
 				/>
+			)}
+
+			{phase === "penalty" && (
+				<PenaltyShootout onExit={() => setPhase("select")} />
 			)}
 
 			{phase === "finished" && champion && (

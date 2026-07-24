@@ -38,6 +38,7 @@ interface TeamSelectorProps {
 	onChangeTournamentSize: (size: TournamentSize) => void;
 	onStart: () => void;
 	onStartBall: () => void;
+	onStartPenalty: () => void;
 }
 
 export function TeamSelector({
@@ -48,6 +49,7 @@ export function TeamSelector({
 	onChangeTournamentSize,
 	onStart,
 	onStartBall,
+	onStartPenalty,
 }: TeamSelectorProps) {
 	const { t, tName } = useI18n();
 	const [search, setSearch] = useState("");
@@ -113,6 +115,13 @@ export function TeamSelector({
 							disabled={selectedTeams.length !== maxTeams}
 						>
 							{t("btn.startBall")} ({selectedTeams.length}/{maxTeams})
+						</button>
+						<button
+							type="button"
+							className="btn btn-ball-tour"
+							onClick={onStartPenalty}
+						>
+							{t("btn.startPenalty")}
 						</button>
 					</div>
 				</div>

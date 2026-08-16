@@ -44,8 +44,6 @@ const ko: Dict = {
 	"toggle.sound.off": "사운드 끄기",
 	"toggle.bgm.on": "배경음악 켜기",
 	"toggle.bgm.off": "배경음악 끄기",
-	"toggle.dadjoke": "아재개그",
-	"toggle.numberbaseball": "숫자야구",
 	"toggle.language": "언어 변경",
 
 	"phase.select": "선택",
@@ -212,8 +210,6 @@ const en: Dict = {
 	"toggle.sound.off": "Turn sound off",
 	"toggle.bgm.on": "Turn BGM on",
 	"toggle.bgm.off": "Turn BGM off",
-	"toggle.dadjoke": "Dad jokes",
-	"toggle.numberbaseball": "Number Baseball",
 	"toggle.language": "Change language",
 
 	"phase.select": "Select",
@@ -381,8 +377,6 @@ const ja: Dict = {
 	"toggle.sound.off": "サウンドをオフ",
 	"toggle.bgm.on": "BGMをオン",
 	"toggle.bgm.off": "BGMをオフ",
-	"toggle.dadjoke": "おやじギャグ",
-	"toggle.numberbaseball": "数字野球",
 	"toggle.language": "言語を変更",
 
 	"phase.select": "選択",
@@ -550,8 +544,6 @@ const cn: Dict = {
 	"toggle.sound.off": "关闭音效",
 	"toggle.bgm.on": "开启背景音乐",
 	"toggle.bgm.off": "关闭背景音乐",
-	"toggle.dadjoke": "冷笑话",
-	"toggle.numberbaseball": "数字棒球",
 	"toggle.language": "切换语言",
 
 	"phase.select": "选择",
@@ -718,8 +710,6 @@ const fr: Dict = {
 	"toggle.sound.off": "Couper le son",
 	"toggle.bgm.on": "Activer la musique",
 	"toggle.bgm.off": "Couper la musique",
-	"toggle.dadjoke": "Blagues de papa",
-	"toggle.numberbaseball": "Baseball des nombres",
 	"toggle.language": "Changer de langue",
 
 	"phase.select": "Sélection",

@@ -628,22 +628,6 @@ function App() {
 						))}
 					</select>
 				</label>
-				<a
-					href="https://ysoftman.github.io/dadjoke/"
-					className="dadjoke-link"
-					title={t("toggle.dadjoke")}
-					aria-label={t("toggle.dadjoke")}
-				>
-					😄
-				</a>
-				<a
-					href="https://ysoftman.github.io/numberbaseball/"
-					className="numberbaseball-link"
-					title={t("toggle.numberbaseball")}
-					aria-label={t("toggle.numberbaseball")}
-				>
-					⚾
-				</a>
 				<FifaRanking />
 				<WinnerHistory />
 			</div>

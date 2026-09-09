@@ -1,0 +1,85 @@
+/* Design tokens. One accent (gold), flat surfaces, 1px borders.
+   Radius rule: controls/cards 8px, chips/badges/icon buttons pill.
+   Type rule: display (Barlow Condensed) for headlines, scores, group letters;
+   body (Barlow) for everything else. Numbers use tabular figures. */
+:root {
+	--font-body:
+		"Barlow", system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic",
+		"Hiragino Sans", "PingFang SC", sans-serif;
+	--font-display: "Barlow Condensed", var(--font-body);
+
+	--fs-xs: 0.75rem;
+	--fs-sm: 0.8125rem;
+	--fs-md: 0.9375rem;
+	--fs-lg: 1.125rem;
+	--fs-xl: 1.5rem;
+	--fs-2xl: 2rem;
+	--fs-3xl: 2.75rem;
+
+	--sp-1: 4px;
+	--sp-2: 8px;
+	--sp-3: 12px;
+	--sp-4: 16px;
+	--sp-5: 24px;
+	--sp-6: 32px;
+	--sp-7: 48px;
+
+	--r: 8px;
+	--r-pill: 999px;
+
+	--ease: cubic-bezier(0.16, 1, 0.3, 1);
+	--dur: 180ms;
+
+	--control-h: 40px;
+	--control-h-sm: 32px;
+	--control-h-lg: 48px;
+
+	/* light */
+	--bg: #f2f4f7;
+	--bg-elev: #ffffff;
+	--bg-elev-2: #e9edf2;
+	--border: #d5dbe4;
+	--border-strong: #b9c2cf;
+	--text: #141a26;
+	--text-muted: #566275;
+	--text-faint: #8391a5;
+	--accent: #d4a72c;
+	--accent-strong: #c2961f;
+	--accent-ink: #1a1408;
+	--accent-text: #8a6410;
+	--accent-soft: rgba(212, 167, 44, 0.16);
+	--win: #1f9d55;
+	--lose: #d9433e;
+	--draw: #5d7290;
+	--win-soft: rgba(31, 157, 85, 0.12);
+	--lose-soft: rgba(217, 67, 62, 0.12);
+	--draw-soft: rgba(93, 114, 144, 0.12);
+	--overlay: rgba(20, 26, 38, 0.55);
+	--shadow-pop: 0 12px 32px rgba(20, 26, 38, 0.18);
+	--focus: 0 0 0 3px var(--accent-soft), 0 0 0 1.5px var(--accent);
+}
+
+[data-theme="dark"] {
+	color-scheme: dark;
+	--bg: #0e1420;
+	--bg-elev: #151d2c;
+	--bg-elev-2: #1c2638;
+	--border: #2a3648;
+	--border-strong: #3a4860;
+	--text: #e8ecf2;
+	--text-muted: #9aa6b8;
+	--text-faint: #6b788c;
+	--accent: #e6b73c;
+	--accent-strong: #f0c65a;
+	--accent-ink: #1a1408;
+	--accent-text: #e6b73c;
+	--accent-soft: rgba(230, 183, 60, 0.14);
+	--win: #3ccf7a;
+	--lose: #f0625d;
+	--draw: #8ea0b8;
+	--win-soft: rgba(60, 207, 122, 0.14);
+	--lose-soft: rgba(240, 98, 93, 0.14);
+	--draw-soft: rgba(142, 160, 184, 0.14);
+	--overlay: rgba(6, 9, 15, 0.7);
+	--shadow-pop: 0 12px 32px rgba(0, 0, 0, 0.45);
+}

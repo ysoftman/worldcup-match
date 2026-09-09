@@ -1,0 +1,553 @@
+/* Group stage: group panels, pre-match team circle, standings table,
+   match rows. Section markup (.groups-section, .swap-hint*) lives in App.tsx. */
+
+.groups-section {
+	margin-top: var(--sp-5);
+}
+
+.groups-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+	gap: var(--sp-4);
+}
+
+.group-card {
+	min-width: 0;
+	padding: var(--sp-4);
+}
+
+.group-name {
+	margin: 0 0 var(--sp-3);
+	font-family: var(--font-display);
+	font-size: var(--fs-xl);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+}
+
+/* ---- Swap hint ---- */
+.swap-hint,
+.swap-hint-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+	min-height: var(--control-h-sm);
+	margin: 0 0 var(--sp-4);
+	font-size: var(--fs-sm);
+	color: var(--text-muted);
+	text-align: center;
+}
+
+.swap-hint {
+	color: var(--accent-text);
+	font-weight: 600;
+}
+
+/* ---- Team circle (before any match is played) ---- */
+.group-circle {
+	position: relative;
+	width: 100%;
+	max-width: 340px;
+	aspect-ratio: 1;
+	margin: var(--sp-6) auto;
+}
+
+.circle-slot {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-1);
+	transform: translate(-50%, -50%);
+}
+
+.circle-row {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--sp-1);
+}
+
+.circle-team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-1);
+	width: 88px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+}
+
+.circle-flag {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 1px solid var(--border);
+	background: var(--bg-elev-2);
+	font-size: 1.5rem;
+	line-height: 1;
+	transition:
+		border-color var(--dur) var(--ease),
+		background var(--dur) var(--ease);
+}
+
+.circle-name {
+	max-width: 100%;
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	line-height: 1.2;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.circle-team:hover .circle-flag {
+	border-color: var(--border-strong);
+}
+
+.circle-team.swap-selected .circle-flag {
+	border-color: var(--accent);
+	background: var(--accent-soft);
+	box-shadow: var(--focus);
+}
+
+.circle-team.swap-selected .circle-name {
+	color: var(--accent-text);
+}
+
+.circle-team.swap-target:hover .circle-flag {
+	border-color: var(--accent);
+	background: var(--accent-soft);
+}
+
+/* Small round controls: squad viewer, attack/defense modifier */
+.squad-btn,
+.mod-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	border-radius: var(--r-pill);
+	border: 1px solid var(--border);
+	background: var(--bg-elev);
+	color: var(--text-muted);
+	cursor: pointer;
+	transition:
+		background var(--dur) var(--ease),
+		color var(--dur) var(--ease),
+		border-color var(--dur) var(--ease);
+}
+
+.squad-btn:hover,
+.mod-btn:hover:not(:disabled) {
+	color: var(--text);
+	background: var(--bg-elev-2);
+	border-color: var(--border-strong);
+}
+
+.mod-btn {
+	margin-top: 10px;
+}
+
+.mod-btn:disabled {
+	opacity: 0.35;
+	cursor: not-allowed;
+}
+
+/* Modifier marks: attack (sword) / defense (shield) */
+.mod-mark {
+	display: inline-flex;
+	align-items: center;
+	gap: 1px;
+	line-height: 1;
+}
+
+.mod-up {
+	color: var(--win);
+}
+
+.mod-down {
+	color: var(--lose);
+}
+
+.formation-select {
+	height: 24px;
+	padding: 0 var(--sp-2);
+	border-radius: var(--r);
+	border: 1px solid var(--border);
+	background: var(--bg-elev);
+	color: var(--text);
+	font-family: var(--font-display);
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+	cursor: pointer;
+	transition: border-color var(--dur) var(--ease);
+}
+
+.formation-select:hover {
+	border-color: var(--border-strong);
+}
+
+.formation-stats {
+	display: flex;
+	gap: var(--sp-2);
+	font-family: var(--font-display);
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+	color: var(--text-muted);
+}
+
+.formation-stats span {
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+}
+
+/* ---- Standings ---- */
+.standings-scroll {
+	overflow-x: auto;
+}
+
+.standings-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: var(--fs-sm);
+}
+
+.standings-table th,
+.standings-table td {
+	padding: var(--sp-2) var(--sp-1);
+	text-align: center;
+	white-space: nowrap;
+}
+
+.standings-table th {
+	font-family: var(--font-display);
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--text-faint);
+	border-bottom: 1px solid var(--border);
+}
+
+.standings-table .th-team,
+.standings-table .team-cell {
+	text-align: left;
+}
+
+.standings-table .team-cell {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-1);
+	font-weight: 500;
+}
+
+.standings-table tbody tr {
+	transition: background var(--dur) var(--ease);
+}
+
+.standings-table tbody tr:hover {
+	background: var(--bg-elev-2);
+}
+
+.standings-table .eliminated {
+	color: var(--text-muted);
+}
+
+.standings-table .qualified td:first-child,
+.standings-table .qualified-wildcard td:first-child {
+	box-shadow: inset 2px 0 0 var(--accent);
+}
+
+.standings-table .rank {
+	color: var(--text-faint);
+}
+
+.standings-table .points {
+	font-weight: 700;
+}
+
+.standings-table .winrate {
+	color: var(--text-muted);
+}
+
+.flag-sm {
+	font-size: 1.1rem;
+	line-height: 1;
+}
+
+/* ---- Match rows ---- */
+.group-matches {
+	margin-top: var(--sp-3);
+	border-top: 1px solid var(--border);
+}
+
+.match-row {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	gap: var(--sp-2);
+	min-height: 44px;
+	padding: var(--sp-1) var(--sp-2);
+	border-radius: var(--r);
+	transition:
+		background var(--dur) var(--ease),
+		color var(--dur) var(--ease);
+}
+
+.match-row + .match-row {
+	border-top: 1px solid var(--border);
+}
+
+.match-row.pending {
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.match-row.pending:hover {
+	background: var(--bg-elev-2);
+	color: var(--text);
+}
+
+/* Result reveal: one-shot */
+.match-row.played {
+	animation: match-reveal 400ms var(--ease) both;
+}
+
+/* Scores are ticking up */
+.match-row.is-live {
+	box-shadow: inset 2px 0 0 var(--accent);
+}
+
+.mr-team {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-2);
+	min-width: 0;
+}
+
+.mr-away {
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.mr-flag {
+	flex-shrink: 0;
+	font-size: 1.25rem;
+	line-height: 1;
+}
+
+.mr-label {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2px;
+	min-width: 0;
+}
+
+.mr-away .mr-label {
+	align-items: flex-end;
+}
+
+.mr-name {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: var(--fs-sm);
+	font-weight: 500;
+}
+
+.mr-name-en {
+	margin-left: var(--sp-1);
+	font-size: var(--fs-xs);
+	color: var(--text-faint);
+}
+
+.mr-team.win .mr-name {
+	font-weight: 700;
+}
+
+.mr-team.lose {
+	color: var(--text-muted);
+}
+
+.mr-team .team-clickable {
+	cursor: pointer;
+}
+
+.mr-team .team-clickable:hover {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.mr-tags {
+	display: inline-flex;
+	gap: var(--sp-1);
+}
+
+.mr-score {
+	display: grid;
+	grid-template-columns: 28px auto 28px;
+	align-items: center;
+	justify-items: center;
+	gap: var(--sp-1);
+}
+
+.mr-num {
+	font-size: var(--fs-xl);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.mr-num.win {
+	color: var(--win);
+}
+
+.mr-num.lose {
+	color: var(--lose);
+}
+
+.mr-num.draw {
+	color: var(--draw);
+}
+
+.mr-sep {
+	display: inline-flex;
+	align-items: center;
+	min-width: 20px;
+	justify-content: center;
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	color: var(--text-faint);
+}
+
+.goal-tick {
+	display: inline-block;
+	animation: goal-tick 350ms var(--ease);
+}
+
+@keyframes match-reveal {
+	from {
+		opacity: 0;
+		transform: translateY(4px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes goal-tick {
+	from {
+		opacity: 0;
+		transform: translateY(6px) scale(0.6);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media (max-width: 1024px) {
+	.groups-grid {
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	}
+}
+
+@media (max-width: 768px) {
+	.groups-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.group-card {
+		padding: var(--sp-3);
+	}
+
+	/* Circle collapses to a vertical roster list */
+	.group-circle {
+		display: flex;
+		flex-direction: column;
+		max-width: none;
+		aspect-ratio: auto;
+		margin: 0 0 var(--sp-3);
+	}
+
+	.circle-slot {
+		position: static;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--sp-2);
+		padding: var(--sp-2) 0;
+		transform: none;
+	}
+
+	.circle-slot + .circle-slot {
+		border-top: 1px solid var(--border);
+	}
+
+	.circle-row {
+		flex: 1 1 100%;
+		align-items: center;
+		min-width: 0;
+	}
+
+	.circle-team {
+		flex-direction: row;
+		gap: var(--sp-2);
+		width: auto;
+		min-width: 0;
+	}
+
+	.circle-flag {
+		width: 36px;
+		height: 36px;
+		font-size: 1.25rem;
+	}
+
+	.circle-name {
+		font-size: var(--fs-sm);
+	}
+
+	.mod-btn {
+		margin-top: 0;
+	}
+
+	.formation-select {
+		order: 1;
+		height: var(--control-h-sm);
+	}
+
+	.formation-stats {
+		order: 2;
+	}
+
+	.circle-slot .squad-btn {
+		order: 3;
+		margin-left: auto;
+	}
+
+	.mr-name-en {
+		display: none;
+	}
+
+	.mr-num {
+		font-size: var(--fs-lg);
+	}
+}

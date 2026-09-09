@@ -11,6 +11,7 @@ interface AnimatedScoreProps {
  * 경기 진행 시 골이 0에서 1씩 올라가는 애니메이션 + 골 사운드
  * - active가 false → true로 전환될 때만 애니메이션 실행
  * - 이미 played 상태로 마운트되면 최종 점수 바로 표시
+ * - 미진행 상태에서는 빈 자리만 차지한다(레이아웃 고정)
  */
 export function AnimatedScore({
 	target,
@@ -49,7 +50,7 @@ export function AnimatedScore({
 	}, [active, target]);
 
 	if (!active) {
-		return <span className={className}>-</span>;
+		return <span className={className} />;
 	}
 
 	return (

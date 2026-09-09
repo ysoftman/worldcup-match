@@ -1,3 +1,4 @@
+import { Trophy } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "../i18nContext";
 
@@ -64,16 +65,21 @@ export function WinnerHistory() {
 	};
 
 	return (
-		<div ref={panelRef} className={`history-panel ${open ? "open" : ""}`}>
-			<button type="button" className="history-toggle" onClick={handleToggle}>
-				🏆{" "}
+		<div ref={panelRef} className="history-panel">
+			<button
+				type="button"
+				className="btn btn-sm"
+				aria-expanded={open}
+				onClick={handleToggle}
+			>
+				<Trophy size={16} weight="bold" />
 				{open
 					? t("history.toggle.open")
 					: t("history.toggle.closed", { count: loadHistory().length })}
 			</button>
 
 			{open && (
-				<div className="history-body">
+				<div className="popover history-body">
 					{history.length === 0 ? (
 						<p className="history-empty">{t("history.empty")}</p>
 					) : (
@@ -95,8 +101,8 @@ export function WinnerHistory() {
 											}`}
 										>
 											<div className="history-row1">
-												<span className="history-rank">
-													#{history.length - i}
+												<span className="num history-rank">
+													{history.length - i}
 												</span>
 												<span className="history-flag">{r.flag}</span>
 												<span className="history-name">{displayName}</span>
@@ -113,7 +119,7 @@ export function WinnerHistory() {
 															name: opponentName,
 														})}
 												</span>
-												<span className="history-date">{r.date}</span>
+												<span className="num history-date">{r.date}</span>
 											</div>
 										</div>
 									);
@@ -121,7 +127,7 @@ export function WinnerHistory() {
 							</div>
 							<button
 								type="button"
-								className="history-clear"
+								className="btn btn-ghost btn-sm history-clear"
 								onClick={handleClear}
 							>
 								{t("history.clear")}

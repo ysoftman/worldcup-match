@@ -1,3 +1,9 @@
+import {
+	MagnifyingGlass,
+	SoccerBall,
+	Target,
+	Trophy,
+} from "@phosphor-icons/react";
 import { useState } from "react";
 import type { Confederation, Country } from "../data/countries";
 import { ALL_COUNTRIES } from "../data/countries";
@@ -18,6 +24,8 @@ const REGION_FILTERS: { key: RegionFilter; tKey: string }[] = [
 	{ key: "CONMEBOL", tKey: "selector.region.CONMEBOL" },
 	{ key: "OFC", tKey: "selector.region.OFC" },
 ];
+
+const SIZES: TournamentSize[] = [32, 48, 64];
 
 function filterByRegion(countries: Country[], region: RegionFilter): Country[] {
 	if (region === "all") return countries;
@@ -54,97 +62,95 @@ export function TeamSelector({
 	const { t, tName } = useI18n();
 	const [search, setSearch] = useState("");
 	const selectedCodes = new Set(selectedTeams.map((t) => t.code));
+	const full = selectedTeams.length >= maxTeams;
+	const ready = selectedTeams.length === maxTeams;
 
 	const toggle = (country: Country) => {
 		if (selectedCodes.has(country.code)) {
 			onUpdate(selectedTeams.filter((t) => t.code !== country.code));
-		} else if (selectedTeams.length < maxTeams) {
+		} else if (!full) {
 			onUpdate([...selectedTeams, country]);
 		}
 	};
 
 	const shuffleFromRegion = (region: RegionFilter) => {
 		const pool = filterByRegion(ALL_COUNTRIES, region);
-		const shuffled = shuffle(pool).slice(0, maxTeams);
-		onUpdate(shuffled);
+		onUpdate(shuffle(pool).slice(0, maxTeams));
 	};
 
 	return (
-		<div className="team-selector">
-			<div className="selector-header">
-				<div className="selector-title-row">
-					<h2>
-						{t("selector.title")} ({selectedTeams.length}/{maxTeams})
-					</h2>
-					<div className="selector-size-toggle">
-						<button
-							type="button"
-							className={`btn btn-size ${tournamentSize === 32 ? "active" : ""}`}
-							onClick={() => onChangeTournamentSize(32)}
-						>
-							{t("size.32")}
-						</button>
-						<button
-							type="button"
-							className={`btn btn-size ${tournamentSize === 48 ? "active" : ""}`}
-							onClick={() => onChangeTournamentSize(48)}
-						>
-							{t("size.48")}
-						</button>
-						<button
-							type="button"
-							className={`btn btn-size ${tournamentSize === 64 ? "active" : ""}`}
-							onClick={() => onChangeTournamentSize(64)}
-						>
-							{t("size.64")}
-						</button>
-					</div>
-					<div className="selector-start-actions">
-						<button
-							type="button"
-							className="btn btn-start"
-							onClick={onStart}
-							disabled={selectedTeams.length !== maxTeams}
-						>
-							{t("btn.start")} ({selectedTeams.length}/{maxTeams})
-						</button>
-						<button
-							type="button"
-							className="btn btn-ball-tour"
-							onClick={onStartBall}
-							disabled={selectedTeams.length !== maxTeams}
-						>
-							{t("btn.startBall")} ({selectedTeams.length}/{maxTeams})
-						</button>
-						<button
-							type="button"
-							className="btn btn-ball-tour"
-							onClick={onStartPenalty}
-						>
-							{t("btn.startPenalty")}
-						</button>
-					</div>
-				</div>
-				<div className="region-filters">
-					{REGION_FILTERS.map((r) => (
-						<button
-							type="button"
-							key={r.key}
-							className="btn btn-shuffle"
-							onClick={() => shuffleFromRegion(r.key)}
-						>
-							{t("selector.regionRandom", { region: t(r.tKey) })}
-						</button>
-					))}
-				</div>
+		<section className="team-selector">
+			<div className="size-seg">
+				{SIZES.map((size) => (
+					<button
+						type="button"
+						key={size}
+						className="btn"
+						aria-pressed={tournamentSize === size}
+						onClick={() => onChangeTournamentSize(size)}
+					>
+						{t(`size.${size}`)}
+					</button>
+				))}
 			</div>
-			<input
-				type="text"
-				className="country-search"
-				placeholder={t("selector.searchPlaceholder")}
-				value={search}
-				onChange={(e) => setSearch(e.target.value)}
-			/>
+
+			<h2 className="section-title">
+				{t("selector.title")}{" "}
+				<span className="num selector-count">
+					({selectedTeams.length}/{maxTeams})
+				</span>
+			</h2>
+
+			<div className="selector-actions">
+				<button
+					type="button"
+					className="btn btn-primary btn-lg"
+					onClick={onStart}
+					disabled={!ready}
+				>
+					<Trophy size={18} weight="bold" />
+					{t("btn.start")}
+				</button>
+				<button
+					type="button"
+					className="btn"
+					onClick={onStartBall}
+					disabled={!ready}
+				>
+					<SoccerBall size={18} weight="bold" />
+					{t("btn.startBall")}
+				</button>
+				<button type="button" className="btn" onClick={onStartPenalty}>
+					<Target size={18} weight="bold" />
+					{t("btn.startPenalty")}
+				</button>
+			</div>
+
+			<div className="region-filters">
+				{REGION_FILTERS.map((r) => (
+					<button
+						type="button"
+						key={r.key}
+						className="btn btn-ghost btn-sm"
+						onClick={() => shuffleFromRegion(r.key)}
+					>
+						{t("selector.regionRandom", { region: t(r.tKey) })}
+					</button>
+				))}
+			</div>
+
+			<div className="country-search-wrap">
+				<MagnifyingGlass size={18} weight="bold" aria-hidden="true" />
+				<input
+					type="search"
+					className="country-search"
+					placeholder={t("selector.searchPlaceholder")}
+					aria-label={t("selector.searchPlaceholder")}
+					value={search}
+					onChange={(e) => setSearch(e.target.value)}
+				/>
+			</div>
+
 			<div className="country-grid">
 				{[...ALL_COUNTRIES]
 					.sort((a, b) => a.rank - b.rank)
@@ -157,30 +163,25 @@ export function TeamSelector({
 							c.code.toLowerCase().includes(q)
 						);
 					})
-					.map((country) => (
-						<button
-							type="button"
-							key={country.code}
-							className={`country-chip ${selectedCodes.has(country.code) ? "selected" : ""} ${
-								!selectedCodes.has(country.code) &&
-								selectedTeams.length >= maxTeams
-									? "disabled"
-									: ""
-							}`}
-							onClick={() => toggle(country)}
-							disabled={
-								!selectedCodes.has(country.code) &&
-								selectedTeams.length >= maxTeams
-							}
-						>
-							<span>{country.flag}</span>
-							<span>
-								{tName(country)}
-								{tName(country) !== country.name ? `(${country.name})` : ""}
-							</span>
-						</button>
-					))}
+					.map((country) => {
+						const selected = selectedCodes.has(country.code);
+						return (
+							<button
+								type="button"
+								key={country.code}
+								className={`chip ${selected ? "is-selected" : ""}`}
+								onClick={() => toggle(country)}
+								disabled={!selected && full}
+							>
+								<span>{country.flag}</span>
+								<span>
+									{tName(country)}
+									{tName(country) !== country.name ? `(${country.name})` : ""}
+								</span>
+							</button>
+						);
+					})}
 			</div>
-		</div>
+		</section>
 	);
 }

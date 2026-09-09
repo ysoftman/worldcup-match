@@ -1,3 +1,9 @@
+import {
+	ArrowLeft,
+	HandPalm,
+	SoccerBall,
+	XCircle,
+} from "@phosphor-icons/react";
 import confetti from "canvas-confetti";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "../i18nContext";
@@ -62,7 +68,7 @@ function judge(dir: number, power: number, keeperDive: number): Outcome {
 	return "goal";
 }
 
-// a quick, celebratory burst — lighter than the champion finale so it can
+// a quick, celebratory burst - lighter than the champion finale so it can
 // fire on every scored penalty without overwhelming the screen.
 function fireGoalConfetti() {
 	const colors = ["#d4ac0d", "#f1c40f", "#2ecc71", "#3498db", "#e74c3c"];
@@ -146,7 +152,7 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 				raf = requestAnimationFrame(loop);
 				return;
 			}
-			// landed — reveal the verdict and tally it.
+			// landed - reveal the verdict and tally it.
 			setOutcome(shot.result);
 			setAttempts((a) => a + 1);
 			if (shot.result === "goal") {
@@ -247,14 +253,12 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 			? t(`penalty.cheer${cheerIdx + 1}`)
 			: t(`penalty.boo${cheerIdx + 1}`)
 		: "";
+	const ResultIcon =
+		outcome === "goal" ? SoccerBall : outcome === "save" ? HandPalm : XCircle;
 	const resultTag =
-		outcome === "goal"
-			? "⚽ GOAL!"
-			: outcome === "save"
-				? "🧤 SAVE!"
-				: "😖 MISS!";
+		outcome === "goal" ? "GOAL!" : outcome === "save" ? "SAVE!" : "MISS!";
 
-	// net grid lines — keyed by their coordinate so keys stay stable/unique.
+	// net grid lines - keyed by their coordinate so keys stay stable/unique.
 	const netVerticals = [];
 	for (let x = GOAL_LEFT + 8; x < GOAL_RIGHT - 4; x += 15) netVerticals.push(x);
 	const netHorizontals = [];
@@ -266,15 +270,17 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 				<h2 className="penalty-title">{t("penalty.title")}</h2>
 				<div className="penalty-header-right">
 					<span className="penalty-stats">
-						{t("penalty.stats", { attempts, goals })}
+						<span className="badge">{t("penalty.shots", { attempts })}</span>
+						<span className="badge">{t("penalty.goals", { goals })}</span>
 					</span>
-					<button type="button" className="btn penalty-exit" onClick={onExit}>
+					<button type="button" className="btn btn-ghost" onClick={onExit}>
+						<ArrowLeft size={16} weight="bold" />
 						{t("penalty.exit")}
 					</button>
 				</div>
 			</div>
 
-			<div className="penalty-stage">
+			<div className="penalty-stage panel">
 				<svg
 					className="penalty-svg"
 					viewBox="0 0 400 300"
@@ -750,7 +756,7 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 					</g>
 				</svg>
 
-				{/* transparent capture layer — accessible click target while aiming
+				{/* transparent capture layer - accessible click target while aiming
 				    and for tapping through the result screen */}
 				{phase !== "shooting" && (
 					<button
@@ -765,10 +771,13 @@ export function PenaltyShootout({ onExit }: { onExit: () => void }) {
 
 				{phase === "result" && outcome && (
 					<div className="penalty-result">
-						<div className={`penalty-result-tag penalty-${outcome}`}>
-							{resultTag}
+						<div className="penalty-result-card">
+							<div className={`penalty-result-tag penalty-${outcome}`}>
+								<ResultIcon size={36} weight="fill" />
+								{resultTag}
+							</div>
+							<div className="penalty-result-msg">{resultMsg}</div>
 						</div>
-						<div className="penalty-result-msg">{resultMsg}</div>
 					</div>
 				)}
 			</div>

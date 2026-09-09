@@ -1,0 +1,254 @@
+/* Start screen (presets, size, CTAs, region shuffles, search, country grid)
+   and the two top-bar popovers (FIFA ranking, winner history). */
+
+/* ---- Presets + size ---- */
+.preset-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+	margin-bottom: var(--sp-3);
+}
+
+.size-seg {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+}
+
+/* ---- Team selector ---- */
+.team-selector .section-title {
+	margin-top: var(--sp-5);
+}
+
+.selector-count {
+	color: var(--text-muted);
+	font-weight: 500;
+}
+
+.selector-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+	margin-bottom: var(--sp-4);
+}
+
+.region-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-1);
+	margin-bottom: var(--sp-4);
+}
+
+.country-search-wrap {
+	position: relative;
+	margin-bottom: var(--sp-4);
+	color: var(--text-muted);
+}
+
+.country-search-wrap > svg {
+	position: absolute;
+	top: 50%;
+	left: var(--sp-3);
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+
+.country-search {
+	width: 100%;
+	height: var(--control-h);
+	padding: 0 var(--sp-4) 0 40px;
+	border: 1px solid var(--border);
+	border-radius: var(--r);
+	background: var(--bg-elev);
+	color: var(--text);
+	font-size: var(--fs-md);
+	transition: border-color var(--dur) var(--ease);
+}
+
+.country-search::placeholder {
+	color: var(--text-muted);
+}
+
+.country-search:hover {
+	border-color: var(--border-strong);
+}
+
+.country-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+}
+
+.country-grid .chip {
+	max-width: 100%;
+}
+
+.country-grid .chip > span:last-child {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* ---- Top bar popovers ---- */
+.ranking-panel,
+.history-panel {
+	position: relative;
+}
+
+/* match the 36px icon buttons and language select in the same row */
+.ranking-panel > .btn,
+.history-panel > .btn {
+	height: 36px;
+}
+
+.ranking-body {
+	width: 320px;
+	max-width: calc(100vw - 2 * var(--sp-4));
+	max-height: min(480px, 70dvh);
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	text-align: left;
+}
+
+.ranking-source {
+	padding: var(--sp-3) var(--sp-3) 0;
+	font-size: var(--fs-xs);
+	color: var(--text-faint);
+}
+
+.ranking-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-1);
+	padding: var(--sp-2) var(--sp-3) var(--sp-3);
+	border-bottom: 1px solid var(--border);
+}
+
+.ranking-list {
+	flex: 1;
+	overflow-y: auto;
+	padding: 0 var(--sp-3);
+}
+
+.ranking-item {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-2);
+	padding: var(--sp-2) 0;
+	font-size: var(--fs-sm);
+}
+
+.ranking-item + .ranking-item {
+	border-top: 1px solid var(--border);
+}
+
+.ranking-pos {
+	min-width: 28px;
+	text-align: right;
+	font-size: var(--fs-md);
+	font-weight: 600;
+	color: var(--text-muted);
+}
+
+.ranking-flag,
+.history-flag {
+	font-size: var(--fs-lg);
+	line-height: 1;
+}
+
+.ranking-name {
+	flex: 1;
+	min-width: 0;
+	font-weight: 500;
+}
+
+.history-body {
+	width: 340px;
+	max-width: calc(100vw - 2 * var(--sp-4));
+	max-height: min(420px, 70dvh);
+	overflow-y: auto;
+	text-align: left;
+}
+
+.history-empty {
+	padding: var(--sp-4) 0;
+	text-align: center;
+	font-size: var(--fs-sm);
+	color: var(--text-muted);
+}
+
+.history-item {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: var(--sp-2) 0;
+	font-size: var(--fs-sm);
+}
+
+.history-item + .history-item {
+	border-top: 1px solid var(--border);
+}
+
+.history-row1 {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-2);
+	min-width: 0;
+}
+
+.history-row2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: var(--sp-1) var(--sp-2);
+	padding-left: 36px;
+	font-size: var(--fs-xs);
+	color: var(--text-muted);
+}
+
+.history-rank {
+	min-width: 28px;
+	text-align: right;
+	font-size: var(--fs-md);
+	font-weight: 600;
+	color: var(--text-muted);
+}
+
+.history-name {
+	flex: 1;
+	min-width: 0;
+	font-weight: 600;
+	line-height: 1.25;
+	word-break: break-word;
+}
+
+.history-meta {
+	flex: 1 1 auto;
+	min-width: 0;
+	word-break: break-word;
+}
+
+.history-date {
+	margin-left: auto;
+	white-space: nowrap;
+	color: var(--text-faint);
+}
+
+.history-clear {
+	width: 100%;
+	margin-top: var(--sp-2);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+	/* the toggle may sit anywhere in the wrapped top bar, so anchor the
+	   popover to the viewport bottom instead of the button */
+	.ranking-body,
+	.history-body {
+		position: fixed;
+		inset: auto var(--sp-3) var(--sp-3);
+		width: auto;
+		max-width: none;
+		max-height: 70dvh;
+	}
+}

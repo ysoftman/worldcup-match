@@ -1,0 +1,221 @@
+/* Bounce ball tournament: round header, canvas stage with start/next
+   overlay, restart button, advanced/eliminated side panels. */
+
+.ball-tour {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-3);
+	margin-bottom: var(--sp-5);
+}
+
+/* ---- Round header ---- */
+.ball-tour-header {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: var(--sp-3);
+}
+
+.ball-tour-round-title {
+	font-family: var(--font-display);
+	font-size: var(--fs-2xl);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
+}
+
+.ball-tour-round-progress {
+	font-size: var(--fs-lg);
+	font-weight: 600;
+	color: var(--text-muted);
+	white-space: nowrap;
+}
+
+/* ---- Stage ---- */
+.ball-tour-main {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--sp-4);
+}
+
+.ball-tour-stage {
+	position: relative;
+	width: 100%;
+	height: 560px;
+	border: 1px solid var(--border);
+	border-radius: var(--r);
+	background: var(--bg-elev);
+	overflow: hidden;
+}
+
+.ball-tour-canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* start / next-round overlay: non-blocking so the stage stays draggable */
+.ball-tour-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.ball-tour-overlay-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-3);
+	padding: var(--sp-4) var(--sp-5);
+	box-shadow: var(--shadow-pop);
+	pointer-events: auto;
+	animation: pop-in var(--dur) var(--ease);
+}
+
+.ball-tour-elim-config {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-2);
+}
+
+.ball-tour-elim-label {
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	color: var(--text-muted);
+}
+
+.ball-tour-elim-select {
+	height: var(--control-h-sm);
+	min-width: 220px;
+	padding: 0 var(--sp-3);
+	border: 1px solid var(--border);
+	border-radius: var(--r);
+	background: var(--bg-elev);
+	color: var(--text);
+	font: inherit;
+	font-size: var(--fs-sm);
+	cursor: pointer;
+}
+
+.ball-tour-elim-select:hover {
+	border-color: var(--border-strong);
+}
+
+.ball-tour-elim-select:focus-visible {
+	outline: none;
+	box-shadow: var(--focus);
+}
+
+/* ghost button needs a backdrop to stay readable over the pitch */
+.ball-tour-restart {
+	position: absolute;
+	top: var(--sp-2);
+	right: var(--sp-2);
+	z-index: 5;
+	background: var(--bg-elev);
+	color: var(--text);
+}
+
+/* ---- Side panels ---- */
+.ball-tour-sidebar {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--sp-3);
+	align-items: start;
+}
+
+.ball-tour-survivors,
+.ball-tour-eliminated {
+	padding: var(--sp-3) var(--sp-4);
+}
+
+.ball-tour-sidebar h3 {
+	margin: 0 0 var(--sp-1);
+	padding-bottom: var(--sp-2);
+	border-bottom: 1px solid var(--border);
+	font-family: var(--font-display);
+	font-size: var(--fs-lg);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
+
+.ball-tour-eliminated h3 {
+	color: var(--text-muted);
+}
+
+.ball-tour-sidebar ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.ball-tour-team-row {
+	display: grid;
+	grid-template-columns: 28px 24px 1fr;
+	align-items: center;
+	gap: var(--sp-2);
+	min-width: 0;
+	padding: var(--sp-2) var(--sp-1);
+	border-bottom: 1px solid var(--border);
+	font-size: var(--fs-md);
+}
+
+.ball-tour-team-row:last-child {
+	border-bottom: 0;
+}
+
+.ball-tour-team-row.eliminated {
+	grid-template-columns: 24px 1fr;
+	opacity: 0.55;
+}
+
+.ball-tour-seed {
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	color: var(--text-muted);
+	text-align: right;
+}
+
+.ball-tour-flag {
+	font-size: var(--fs-lg);
+	line-height: 1;
+	text-align: center;
+}
+
+.ball-tour-name {
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+	.ball-tour-round-title {
+		font-size: var(--fs-xl);
+	}
+
+	.ball-tour-round-progress {
+		font-size: var(--fs-md);
+	}
+
+	.ball-tour-stage {
+		height: 58vh;
+		min-height: 380px;
+	}
+
+	.ball-tour-sidebar {
+		grid-template-columns: 1fr;
+	}
+
+	.ball-tour-survivors,
+	.ball-tour-eliminated {
+		max-height: 240px;
+		overflow-y: auto;
+	}
+}

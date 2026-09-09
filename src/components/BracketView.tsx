@@ -37,10 +37,12 @@ function BracketMatchCard({
 		// biome-ignore lint/a11y/noStaticElementInteractions: 경기 카드 클릭으로 시뮬레이션 실행
 		// biome-ignore lint/a11y/useKeyWithClickEvents: 경기 카드 클릭으로 시뮬레이션 실행
 		<div
-			className={`bm-card ${played ? "bm-played" : "bm-pending"}`}
+			className={`bm-card panel ${played ? "bm-played" : "bm-pending"}`}
 			onClick={played ? undefined : onClick}
 		>
-			{played && penalties && <span className="pk-badge">PK</span>}
+			{played && penalties && (
+				<span className="badge badge-accent bm-pk">PK</span>
+			)}
 			<div
 				className={`bm-team ${played ? (winner?.code === team1.code ? "bm-win" : "bm-lose") : ""}`}
 			>
@@ -70,15 +72,12 @@ function BracketMatchCard({
 				>
 					{tName(team1)}
 				</span>
-				{s1 && <span className="bm-rate">{s1.winRate}%</span>}
-				<AnimatedScore target={score1} active={played} className="bm-score" />
-				{played && (
-					<span
-						className={`result-icon ${winner?.code === team1.code ? "win" : "lose"}`}
-					>
-						{winner?.code === team1.code ? "✓" : "✗"}
-					</span>
-				)}
+				{s1 && <span className="bm-rate num">{s1.winRate}%</span>}
+				<AnimatedScore
+					target={score1}
+					active={played}
+					className="bm-score num"
+				/>
 			</div>
 			<div
 				className={`bm-team ${played ? (winner?.code === team2.code ? "bm-win" : "bm-lose") : ""}`}
@@ -109,15 +108,12 @@ function BracketMatchCard({
 				>
 					{tName(team2)}
 				</span>
-				{s2 && <span className="bm-rate">{s2.winRate}%</span>}
-				<AnimatedScore target={score2} active={played} className="bm-score" />
-				{played && (
-					<span
-						className={`result-icon ${winner?.code === team2.code ? "win" : "lose"}`}
-					>
-						{winner?.code === team2.code ? "✓" : "✗"}
-					</span>
-				)}
+				{s2 && <span className="bm-rate num">{s2.winRate}%</span>}
+				<AnimatedScore
+					target={score2}
+					active={played}
+					className="bm-score num"
+				/>
 			</div>
 		</div>
 	);
@@ -125,14 +121,14 @@ function BracketMatchCard({
 
 function PlaceholderCard() {
 	return (
-		<div className="bm-card bm-placeholder">
+		<div className="bm-card panel bm-placeholder">
 			<div className="bm-team">
 				<span className="bm-name">?</span>
-				<span className="bm-score">-</span>
+				<span className="bm-score num">-</span>
 			</div>
 			<div className="bm-team">
 				<span className="bm-name">?</span>
-				<span className="bm-score">-</span>
+				<span className="bm-score num">-</span>
 			</div>
 		</div>
 	);
@@ -161,7 +157,7 @@ function FinalMatchCard({
 		// biome-ignore lint/a11y/noStaticElementInteractions: 경기 카드 클릭으로 시뮬레이션 실행
 		// biome-ignore lint/a11y/useKeyWithClickEvents: 경기 카드 클릭으로 시뮬레이션 실행
 		<div
-			className={`final-card ${played ? "final-played" : "final-pending"}`}
+			className={`final-card panel ${played ? "final-played" : "final-pending"}`}
 			onClick={played ? undefined : onClick}
 		>
 			<div
@@ -196,9 +192,9 @@ function FinalMatchCard({
 				<AnimatedScore
 					target={score1}
 					active={played}
-					className="final-score"
+					className="final-score num"
 				/>
-				{s1 && <span className="final-rate">{s1.winRate}%</span>}
+				{s1 && <span className="final-rate num">{s1.winRate}%</span>}
 			</div>
 			<div className="final-vs">{played ? "-" : "VS"}</div>
 			<div
@@ -233,9 +229,9 @@ function FinalMatchCard({
 				<AnimatedScore
 					target={score2}
 					active={played}
-					className="final-score"
+					className="final-score num"
 				/>
-				{s2 && <span className="final-rate">{s2.winRate}%</span>}
+				{s2 && <span className="final-rate num">{s2.winRate}%</span>}
 			</div>
 		</div>
 	);
@@ -243,13 +239,13 @@ function FinalMatchCard({
 
 function FinalPlaceholder() {
 	return (
-		<div className="final-card final-placeholder">
+		<div className="final-card panel final-placeholder">
 			<div className="final-team">
 				<div className="final-circle">
 					<span className="final-flag">?</span>
 				</div>
 				<span className="final-name">?</span>
-				<span className="final-score">-</span>
+				<span className="final-score num">-</span>
 			</div>
 			<div className="final-vs">VS</div>
 			<div className="final-team">
@@ -257,7 +253,7 @@ function FinalPlaceholder() {
 					<span className="final-flag">?</span>
 				</div>
 				<span className="final-name">?</span>
-				<span className="final-score">-</span>
+				<span className="final-score num">-</span>
 			</div>
 		</div>
 	);

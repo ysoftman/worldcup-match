@@ -1410,7 +1410,7 @@ export function BallTournament({ teams, onChampion }: BallTournamentProps) {
 		<div className="ball-tour">
 			<div className="ball-tour-header">
 				<div className="ball-tour-round-title">{roundLabel(currentCount)}</div>
-				<div className="ball-tour-round-progress">
+				<div className="ball-tour-round-progress num">
 					{t("ball.progressElim", {
 						eliminated: drainedCount,
 						target: targetExits,
@@ -1422,35 +1422,39 @@ export function BallTournament({ teams, onChampion }: BallTournamentProps) {
 				<div className="ball-tour-stage" ref={hostRef}>
 					<canvas ref={canvasRef} className="ball-tour-canvas" />
 					{showStartOverlay && (
-						<div className="ball-tour-overlay ball-tour-overlay-next">
-							{renderEliminationPicker(currentCount)}
-							<button
-								type="button"
-								className="btn btn-round"
-								onClick={startRound}
-							>
-								{t("ball.startRound", { round: roundLabel(currentCount) })}
-							</button>
+						<div className="ball-tour-overlay">
+							<div className="ball-tour-overlay-card panel">
+								{renderEliminationPicker(currentCount)}
+								<button
+									type="button"
+									className="btn btn-primary btn-lg"
+									onClick={startRound}
+								>
+									{t("ball.startRound", { round: roundLabel(currentCount) })}
+								</button>
+							</div>
 						</div>
 					)}
 					{showNextButton && (
-						<div className="ball-tour-overlay ball-tour-overlay-next">
-							{renderEliminationPicker(advancersThisRound.length)}
-							<button
-								type="button"
-								className="btn btn-round"
-								onClick={goNextRound}
-							>
-								{t("ball.startRound", {
-									round: roundLabel(advancersThisRound.length),
-								})}
-							</button>
+						<div className="ball-tour-overlay">
+							<div className="ball-tour-overlay-card panel">
+								{renderEliminationPicker(advancersThisRound.length)}
+								<button
+									type="button"
+									className="btn btn-primary btn-lg"
+									onClick={goNextRound}
+								>
+									{t("ball.startRound", {
+										round: roundLabel(advancersThisRound.length),
+									})}
+								</button>
+							</div>
 						</div>
 					)}
 					{showRestartButton && (
 						<button
 							type="button"
-							className="ball-tour-restart"
+							className="btn btn-ghost btn-sm ball-tour-restart"
 							onClick={restartRound}
 							title={t("ball.restartTitle")}
 						>
@@ -1460,19 +1464,19 @@ export function BallTournament({ teams, onChampion }: BallTournamentProps) {
 				</div>
 
 				<aside className="ball-tour-sidebar">
-					<section className="ball-tour-survivors">
+					<section className="ball-tour-survivors panel">
 						<h3>{t("ball.advanced")}</h3>
 						<ol>
 							{sideAdvancers.map((team, i) => (
 								<li key={team.code} className="ball-tour-team-row">
-									<span className="ball-tour-seed">{i + 1}</span>
+									<span className="ball-tour-seed num">{i + 1}</span>
 									<span className="ball-tour-flag">{team.flag}</span>
 									<span className="ball-tour-name">{tName(team)}</span>
 								</li>
 							))}
 						</ol>
 					</section>
-					<section className="ball-tour-eliminated">
+					<section className="ball-tour-eliminated panel">
 						<h3>{t("ball.eliminated")}</h3>
 						<ol>
 							{sideEliminated.map((team) => (

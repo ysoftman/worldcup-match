@@ -21,7 +21,7 @@ FIFA 212 member nations, group stage and knockout tournament simulation web app.
 - Real player data for 140 countries via API-Football (fallback: generated players marked with `*`)
 - Formation selector for group stage teams (8 formations with attack/defense modifiers)
 - Team strength modifier (-2 to +2) and team swap between groups
-- Win/lose/draw color indicators (green/red/orange)
+- Win/lose/draw color indicators (green/red/slate)
 - Winner history stored in localStorage
 - Dark/light mode toggle
 - Sound effects (whistle, goal, victory, crowd ambience)
@@ -46,13 +46,15 @@ Rounds eliminate teams by ball-drop order rather than simulated matches:
 - 32-team path: 32 → 16 → 8 → 4 → 2 → 1 (first half to exit advances each round)
 - 48-team path: 48 → 32 → 16 → 8 → 4 → 2 → 1 (first round advances 32, then halves)
 - Final round: first of 2 balls to exit = champion; the other = runner-up
-- Physics: `matter-js` with custom RAF-driven `Engine.update`, funnel chute, auto-shake to break arching piles, drag-to-stir via `MouseConstraint` (mouse + touch)
+- Physics: `planck.js` with a RAF-driven world step, funnel chute, plinko obstacles, auto-shake to break arching piles
 - Balls render as flag-emoji + country-code textures on a canvas
 
 ## Tech Stack
 
 - Vite + React + TypeScript
-- matter-js (bounce ball physics)
+- planck.js (bounce ball physics)
+- Barlow / Barlow Condensed via @fontsource (self-hosted fonts)
+- Phosphor Icons (@phosphor-icons/react)
 - Biome (linter/formatter)
 - bun (package manager)
 
@@ -115,8 +117,12 @@ src/
 │   ├── BallTournament.tsx    # Bounce ball physics tournament
 │   └── FifaRanking.tsx       # FIFA ranking popup
 ├── App.tsx                   # Main app (tournament state management)
-├── App.css                   # App styles (dark mode, bracket, etc.)
-└── index.css                 # Global styles
+├── styles/
+│   ├── tokens.css           # Design tokens (colors, type, spacing, radius)
+│   ├── base.css             # Shared chrome (top bar, buttons, chips, badges, panels)
+│   └── *.css                # Per-screen styles (start, group, bracket, squad, ball, penalty)
+├── App.css                   # Font and style imports only
+└── index.css                 # Reset and body defaults
 scripts/
 ├── fetchWorldcup.ts          # API-Football squad fetch script
 └── teamIds.json              # Cached national team IDs (no bulk API available)

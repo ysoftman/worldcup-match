@@ -1,0 +1,156 @@
+/* Penalty shootout mini game. The SVG scene is content; the chrome around
+   it (header, stage frame, hint, result) uses the shared tokens. */
+.penalty {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-3);
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.penalty-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: var(--sp-3);
+}
+
+.penalty-title {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: var(--fs-2xl);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
+}
+
+.penalty-header-right {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-2);
+}
+
+.penalty-stats {
+	display: flex;
+	gap: var(--sp-1);
+}
+
+.penalty-stage {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+}
+
+.penalty-svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.penalty-capture {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.penalty-hint {
+	position: absolute;
+	left: 50%;
+	bottom: var(--sp-3);
+	transform: translateX(-50%);
+	padding: var(--sp-1) var(--sp-3);
+	border-radius: var(--r);
+	border: 1px solid var(--border);
+	background: var(--bg-elev);
+	color: var(--text);
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	white-space: nowrap;
+	pointer-events: none;
+}
+
+.penalty-result {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--sp-4);
+	background: var(--overlay);
+	pointer-events: none;
+	animation: penalty-in var(--dur) var(--ease);
+}
+
+.penalty-result-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-2);
+	padding: var(--sp-4) var(--sp-6);
+	border: 1px solid var(--border);
+	border-radius: var(--r);
+	background: var(--bg-elev);
+	text-align: center;
+}
+
+.penalty-result-tag {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-2);
+	font-family: var(--font-display);
+	font-size: var(--fs-3xl);
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.penalty-result-tag.penalty-goal {
+	color: var(--win);
+}
+
+.penalty-result-tag.penalty-save,
+.penalty-result-tag.penalty-miss {
+	color: var(--lose);
+}
+
+.penalty-result-msg {
+	font-size: var(--fs-md);
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+@keyframes penalty-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.penalty-title {
+		font-size: var(--fs-xl);
+	}
+
+	.penalty-result-card {
+		padding: var(--sp-3) var(--sp-4);
+	}
+
+	.penalty-result-tag {
+		font-size: var(--fs-2xl);
+	}
+
+	.penalty-result-msg {
+		font-size: var(--fs-sm);
+	}
+}

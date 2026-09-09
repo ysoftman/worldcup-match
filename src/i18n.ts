@@ -57,9 +57,9 @@ const ko: Dict = {
 	"size.48": "48강 (12조)",
 	"size.64": "64강 (16조)",
 
-	"btn.start": "🏆 대회 시작",
-	"btn.startBall": "⚽ 바운스볼 대회 시작",
-	"btn.startPenalty": "🥅 승부차기",
+	"btn.start": "대회 시작",
+	"btn.startBall": "바운스볼 대회 시작",
+	"btn.startPenalty": "승부차기",
 	"btn.playAllGroup": "조별 리그 전체 진행",
 	"btn.reset": "새 대회",
 	"btn.playAllRound": "{round} 전체 진행",
@@ -67,7 +67,7 @@ const ko: Dict = {
 
 	"section.tournament": "토너먼트",
 	"section.groupStage": "조별 리그",
-	"swap.selected": "{flag} {name} 선택됨 — 다른 조의 팀을 클릭하면 교환됩니다",
+	"swap.selected": "{flag} {name} 선택됨. 다른 조의 팀을 클릭하면 교환됩니다",
 	"swap.cancel": "취소",
 	"swap.hint": "팀을 클릭하면 다른 조의 팀과 교환할 수 있습니다",
 
@@ -167,11 +167,12 @@ const ko: Dict = {
 	"ball.elimN": "{n}개 탈락",
 
 	"penalty.title": "승부차기",
-	"penalty.stats": "시도 {attempts} · 골 {goals}",
+	"penalty.shots": "시도 {attempts}",
+	"penalty.goals": "골 {goals}",
 	"penalty.aimHint": "클릭해서 방향을 정하세요!",
 	"penalty.powerHint": "클릭해서 슈팅 강도를 정하세요!",
 	"penalty.again": "다음 슈팅",
-	"penalty.exit": "← 나가기",
+	"penalty.exit": "나가기",
 	"penalty.cheer1": "골인!!! 🎉 완벽한 슛!",
 	"penalty.cheer2": "키퍼가 손도 못 댔어요!",
 	"penalty.cheer3": "환상적인 골! 관중이 열광합니다!",
@@ -223,9 +224,9 @@ const en: Dict = {
 	"size.48": "48 teams (12 groups)",
 	"size.64": "64 teams (16 groups)",
 
-	"btn.start": "🏆 Start Tournament",
-	"btn.startBall": "⚽ Start Bounce Ball",
-	"btn.startPenalty": "🥅 Penalty Shootout",
+	"btn.start": "Start Tournament",
+	"btn.startBall": "Start Bounce Ball",
+	"btn.startPenalty": "Penalty Shootout",
 	"btn.playAllGroup": "Play all group matches",
 	"btn.reset": "New Tournament",
 	"btn.playAllRound": "Play all {round} matches",
@@ -234,7 +235,7 @@ const en: Dict = {
 	"section.tournament": "Tournament",
 	"section.groupStage": "Group Stage",
 	"swap.selected":
-		"{flag} {name} selected — click a team in another group to swap",
+		"{flag} {name} selected. Click a team in another group to swap",
 	"swap.cancel": "Cancel",
 	"swap.hint": "Click a team to swap it with a team from another group",
 
@@ -334,11 +335,12 @@ const en: Dict = {
 	"ball.elimN": "Eliminate {n}",
 
 	"penalty.title": "Penalty Shootout",
-	"penalty.stats": "Shots {attempts} · Goals {goals}",
+	"penalty.shots": "Shots {attempts}",
+	"penalty.goals": "Goals {goals}",
 	"penalty.aimHint": "Click to aim your shot!",
 	"penalty.powerHint": "Click to set the shot power!",
 	"penalty.again": "Next Shot",
-	"penalty.exit": "← Exit",
+	"penalty.exit": "Exit",
 	"penalty.cheer1": "GOAL!!! 🎉 What a strike!",
 	"penalty.cheer2": "The keeper never had a chance!",
 	"penalty.cheer3": "Fantastic goal! The crowd goes wild!",
@@ -360,7 +362,7 @@ const en: Dict = {
 	"preset.2014": "2014 Brazil World Cup",
 	"preset.2010": "2010 South Africa World Cup",
 	"preset.2006": "2006 Germany World Cup",
-	"preset.2002": "2002 Korea–Japan World Cup",
+	"preset.2002": "2002 Korea-Japan World Cup",
 };
 
 const ja: Dict = {
@@ -390,9 +392,9 @@ const ja: Dict = {
 	"size.48": "48チーム (12組)",
 	"size.64": "64チーム (16組)",
 
-	"btn.start": "🏆 大会開始",
-	"btn.startBall": "⚽ バウンスボール開始",
-	"btn.startPenalty": "🥅 PK戦",
+	"btn.start": "大会開始",
+	"btn.startBall": "バウンスボール開始",
+	"btn.startPenalty": "PK戦",
 	"btn.playAllGroup": "グループリーグ全試合",
 	"btn.reset": "新規大会",
 	"btn.playAllRound": "{round} 全試合",
@@ -401,7 +403,7 @@ const ja: Dict = {
 	"section.tournament": "トーナメント",
 	"section.groupStage": "グループリーグ",
 	"swap.selected":
-		"{flag} {name} 選択中 — 他の組のチームをクリックすると交換します",
+		"{flag} {name} 選択中。他の組のチームをクリックすると交換します",
 	"swap.cancel": "キャンセル",
 	"swap.hint": "チームをクリックすると他の組のチームと交換できます",
 
@@ -501,11 +503,12 @@ const ja: Dict = {
 	"ball.elimN": "{n}カ国敗退",
 
 	"penalty.title": "PK戦",
-	"penalty.stats": "シュート {attempts} · ゴール {goals}",
+	"penalty.shots": "シュート {attempts}",
+	"penalty.goals": "ゴール {goals}",
 	"penalty.aimHint": "クリックして方向を決めよう!",
 	"penalty.powerHint": "クリックしてシュートの強さを決めよう!",
 	"penalty.again": "次のシュート",
-	"penalty.exit": "← 戻る",
+	"penalty.exit": "戻る",
 	"penalty.cheer1": "ゴール!!! 🎉 完璧なシュート!",
 	"penalty.cheer2": "キーパーは手も足も出ません!",
 	"penalty.cheer3": "見事なゴール! 観客が沸き上がります!",
@@ -557,9 +560,9 @@ const cn: Dict = {
 	"size.48": "48强 (12组)",
 	"size.64": "64强 (16组)",
 
-	"btn.start": "🏆 开始比赛",
-	"btn.startBall": "⚽ 开始弹球赛",
-	"btn.startPenalty": "🥅 点球大战",
+	"btn.start": "开始比赛",
+	"btn.startBall": "开始弹球赛",
+	"btn.startPenalty": "点球大战",
 	"btn.playAllGroup": "进行所有小组赛",
 	"btn.reset": "新比赛",
 	"btn.playAllRound": "进行 {round} 全部比赛",
@@ -567,7 +570,7 @@ const cn: Dict = {
 
 	"section.tournament": "淘汰赛",
 	"section.groupStage": "小组赛",
-	"swap.selected": "{flag} {name} 已选中 — 点击其他组的球队进行交换",
+	"swap.selected": "{flag} {name} 已选中。点击其他组的球队进行交换",
 	"swap.cancel": "取消",
 	"swap.hint": "点击球队可与其他组的球队交换",
 
@@ -667,11 +670,12 @@ const cn: Dict = {
 	"ball.elimN": "淘汰 {n} 国",
 
 	"penalty.title": "点球大战",
-	"penalty.stats": "射门 {attempts} · 进球 {goals}",
+	"penalty.shots": "射门 {attempts}",
+	"penalty.goals": "进球 {goals}",
 	"penalty.aimHint": "点击确定射门方向!",
 	"penalty.powerHint": "点击确定射门力度!",
 	"penalty.again": "下一球",
-	"penalty.exit": "← 退出",
+	"penalty.exit": "退出",
 	"penalty.cheer1": "进啦!!! 🎉 精彩一击!",
 	"penalty.cheer2": "门将根本碰不到球!",
 	"penalty.cheer3": "精彩进球! 全场沸腾!",
@@ -697,7 +701,7 @@ const cn: Dict = {
 };
 
 const fr: Dict = {
-	"app.title.author": "Junyoung Yoon —",
+	"app.title.author": "Junyoung Yoon",
 	"app.title.fifa": "FIFA",
 	"app.title.worldcup": "Coupe du Monde",
 	"app.rankingNote": "Classement FIFA : avril 2026",
@@ -723,9 +727,9 @@ const fr: Dict = {
 	"size.48": "48 équipes (12 groupes)",
 	"size.64": "64 équipes (16 groupes)",
 
-	"btn.start": "🏆 Démarrer le tournoi",
-	"btn.startBall": "⚽ Démarrer les balles",
-	"btn.startPenalty": "🥅 Tirs au but",
+	"btn.start": "Démarrer le tournoi",
+	"btn.startBall": "Démarrer les balles",
+	"btn.startPenalty": "Tirs au but",
 	"btn.playAllGroup": "Jouer toute la phase de groupes",
 	"btn.reset": "Nouveau tournoi",
 	"btn.playAllRound": "Jouer tous les matchs : {round}",
@@ -734,7 +738,7 @@ const fr: Dict = {
 	"section.tournament": "Phase finale",
 	"section.groupStage": "Phase de groupes",
 	"swap.selected":
-		"{flag} {name} sélectionné — cliquez une équipe d'un autre groupe pour échanger",
+		"{flag} {name} sélectionné. Cliquez une équipe d'un autre groupe pour échanger",
 	"swap.cancel": "Annuler",
 	"swap.hint":
 		"Cliquez sur une équipe pour l'échanger avec une équipe d'un autre groupe",
@@ -786,7 +790,7 @@ const fr: Dict = {
 	"champion.stats":
 		"{played} joués, {wins}V {draws}N {losses}D (taux de victoire {winRate}%)",
 
-	"squad.title": "{flag} Effectif — {name}",
+	"squad.title": "{flag} Effectif {name}",
 	"squad.avg": "OVR moyen : {value}",
 	"squad.close": "Fermer la fenêtre",
 	"squad.starting": "Titulaires {count}/11",
@@ -823,7 +827,7 @@ const fr: Dict = {
 	"ranking.all": "Tous",
 
 	"ball.progressElim": "Éliminés {eliminated} / {target}",
-	"ball.startRound": "Démarrer — {round}",
+	"ball.startRound": "Démarrer {round}",
 	"ball.restart": "↺ Recommencer",
 	"ball.restartTitle": "Recommencer cette manche depuis le début",
 	"ball.advanced": "Qualifiés",
@@ -835,11 +839,12 @@ const fr: Dict = {
 	"ball.elimN": "Éliminer {n}",
 
 	"penalty.title": "Séance de tirs au but",
-	"penalty.stats": "Tirs {attempts} · Buts {goals}",
+	"penalty.shots": "Tirs {attempts}",
+	"penalty.goals": "Buts {goals}",
 	"penalty.aimHint": "Cliquez pour viser votre tir !",
 	"penalty.powerHint": "Cliquez pour régler la puissance du tir !",
 	"penalty.again": "Tir suivant",
-	"penalty.exit": "← Quitter",
+	"penalty.exit": "Quitter",
 	"penalty.cheer1": "BUT !!! 🎉 Quelle frappe !",
 	"penalty.cheer2": "Le gardien n'a rien pu faire !",
 	"penalty.cheer3": "But magnifique ! La foule s'enflamme !",
@@ -861,7 +866,7 @@ const fr: Dict = {
 	"preset.2014": "Coupe du Monde 2014 (Brésil)",
 	"preset.2010": "Coupe du Monde 2010 (Afrique du Sud)",
 	"preset.2006": "Coupe du Monde 2006 (Allemagne)",
-	"preset.2002": "Coupe du Monde 2002 (Corée–Japon)",
+	"preset.2002": "Coupe du Monde 2002 (Corée-Japon)",
 };
 
 const DICTIONARIES: Record<Locale, Dict> = { ko, en, ja, cn, fr };
@@ -890,7 +895,7 @@ export function createTranslator(locale: Locale): Translator {
 	};
 }
 
-/** Team display name — Korean uses `nameKo`, others fall back to English `name`. */
+/** Team display name. Korean uses `nameKo`, others fall back to English `name`. */
 export function getTeamName(team: Country, locale: Locale): string {
 	return locale === "ko" ? team.nameKo : team.name;
 }

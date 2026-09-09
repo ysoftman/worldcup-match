@@ -1,0 +1,483 @@
+/* Knockout bracket, final card, champion panel.
+   Flat panels, 1px connectors, gold only on the final label and champion. */
+
+/* ---- Champion ---- */
+.champion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-2);
+	margin-bottom: var(--sp-5);
+	padding: var(--sp-6) var(--sp-5);
+	text-align: center;
+	background: var(--accent-soft);
+	border: 1px solid var(--accent);
+	border-radius: var(--r);
+	animation: champion-in 500ms var(--ease) both;
+}
+
+.champion-trophy {
+	color: var(--accent);
+}
+
+.champion-flag {
+	font-size: 3rem;
+	line-height: 1;
+}
+
+.champion-name {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: var(--fs-3xl);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.01em;
+}
+
+.champion-label {
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: var(--fs-lg);
+	font-weight: 600;
+	color: var(--accent-text);
+}
+
+.champion-meta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--sp-2);
+	margin-top: var(--sp-2);
+}
+
+@keyframes champion-in {
+	from {
+		opacity: 0;
+		transform: scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/* ---- Bracket layout ---- */
+.bracket-scroll {
+	max-width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	margin-bottom: var(--sp-5);
+	padding: var(--sp-2) 0;
+}
+
+.bracket {
+	display: flex;
+	align-items: stretch;
+	width: fit-content;
+	min-height: 360px;
+	margin: 0 auto;
+}
+
+.bracket-half {
+	display: flex;
+}
+
+.b-round {
+	display: flex;
+	flex-direction: column;
+	min-width: 166px;
+}
+
+.b-label {
+	height: 24px;
+	margin-bottom: var(--sp-1);
+	text-align: center;
+	font-family: var(--font-display);
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	white-space: nowrap;
+}
+
+.b-slots {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.b-slot {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--sp-1) var(--sp-2);
+}
+
+/* ---- Connectors (1px, drawn with pseudo elements) ---- */
+.b-conn {
+	display: flex;
+	flex-direction: column;
+	width: 28px;
+	min-width: 28px;
+	padding-top: 28px; /* = .b-label height + margin */
+}
+
+.b-conn-pair {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.b-conn-top,
+.b-conn-bot {
+	flex: 1;
+	position: relative;
+}
+
+.b-conn-pair::before,
+.b-conn-pair::after,
+.b-conn-top::after,
+.b-conn-bot::after,
+.b-final-line::after {
+	content: "";
+	position: absolute;
+	background: var(--border-strong);
+}
+
+/* vertical: from top match center (25%) to bottom match center (75%) */
+.b-conn-pair::before {
+	top: 25%;
+	bottom: 25%;
+	width: 1px;
+}
+
+/* horizontal stub from the merge point into the next round's slot padding */
+.b-conn-pair::after {
+	top: 50%;
+	width: 8px;
+	height: 1px;
+}
+
+/* horizontal from each match into the vertical line */
+.b-conn-top::after,
+.b-conn-bot::after {
+	top: 50%;
+	height: 1px;
+}
+
+.b-conn-left .b-conn-pair::before {
+	right: 0;
+}
+
+.b-conn-left .b-conn-pair::after {
+	right: -8px;
+}
+
+.b-conn-left .b-conn-top::after,
+.b-conn-left .b-conn-bot::after {
+	left: -8px;
+	right: 0;
+}
+
+.b-conn-right .b-conn-pair::before {
+	left: 0;
+}
+
+.b-conn-right .b-conn-pair::after {
+	left: -8px;
+}
+
+.b-conn-right .b-conn-top::after,
+.b-conn-right .b-conn-bot::after {
+	left: 0;
+	right: -8px;
+}
+
+/* semifinal to final */
+.b-final-line {
+	position: relative;
+	width: 20px;
+	min-width: 20px;
+	padding-top: 28px;
+}
+
+.b-final-line::after {
+	top: calc(50% + 14px);
+	left: -8px;
+	right: -8px;
+	height: 1px;
+}
+
+.bracket-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+}
+
+.bracket-center .b-label {
+	color: var(--accent-text);
+}
+
+/* ---- Match card ---- */
+.bm-card {
+	width: 150px;
+	overflow: hidden;
+	text-align: left;
+	transition:
+		border-color var(--dur) var(--ease),
+		background var(--dur) var(--ease);
+}
+
+.bm-card.bm-pending {
+	cursor: pointer;
+}
+
+.bm-card.bm-pending:hover {
+	border-color: var(--border-strong);
+	background: var(--bg-elev-2);
+}
+
+.bm-card.bm-placeholder {
+	border-style: dashed;
+	color: var(--text-faint);
+}
+
+.bm-team {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-1);
+	padding: var(--sp-1) var(--sp-2);
+	font-size: var(--fs-sm);
+	line-height: 1.4;
+}
+
+.bm-team + .bm-team {
+	border-top: 1px solid var(--border);
+}
+
+.bm-flag {
+	flex-shrink: 0;
+	line-height: 1;
+}
+
+.bm-name {
+	flex: 1;
+	min-width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.bm-rate {
+	flex-shrink: 0;
+	font-size: var(--fs-xs);
+	color: var(--text-faint);
+}
+
+.bm-score {
+	flex-shrink: 0;
+	min-width: 14px;
+	text-align: right;
+	font-size: var(--fs-md);
+	font-weight: 600;
+}
+
+.bm-win .bm-name {
+	font-weight: 600;
+}
+
+.bm-win .bm-score {
+	color: var(--win);
+}
+
+.bm-lose {
+	color: var(--text-faint);
+}
+
+.bm-card .bm-pk {
+	position: absolute;
+	top: -10px;
+	right: -6px;
+	z-index: 1;
+}
+
+.bm-card.bm-played {
+	position: relative;
+	overflow: visible;
+}
+
+/* ---- Final card ---- */
+.final-card {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-4);
+	padding: var(--sp-4);
+	text-align: center;
+	transition:
+		border-color var(--dur) var(--ease),
+		background var(--dur) var(--ease);
+}
+
+.final-card.final-pending {
+	cursor: pointer;
+}
+
+.final-card.final-pending:hover {
+	border-color: var(--border-strong);
+	background: var(--bg-elev-2);
+}
+
+.final-card.final-placeholder {
+	border-style: dashed;
+	color: var(--text-faint);
+}
+
+.final-team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-1);
+	min-width: 76px;
+}
+
+.final-circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	border: 1px solid var(--border-strong);
+	background: var(--bg-elev-2);
+	transition:
+		border-color var(--dur) var(--ease),
+		background var(--dur) var(--ease);
+}
+
+.final-flag {
+	font-size: 1.75rem;
+	line-height: 1;
+}
+
+.final-name {
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.final-score {
+	font-size: var(--fs-2xl);
+	font-weight: 700;
+	line-height: 1;
+}
+
+.final-rate {
+	font-size: var(--fs-xs);
+	color: var(--text-faint);
+}
+
+.final-vs {
+	flex-shrink: 0;
+	font-family: var(--font-display);
+	font-size: var(--fs-md);
+	font-weight: 600;
+	color: var(--text-faint);
+}
+
+.final-team.final-win .final-circle {
+	border-color: var(--accent);
+	background: var(--accent-soft);
+}
+
+.final-team.final-win .final-score {
+	color: var(--win);
+}
+
+.final-team.final-lose {
+	color: var(--text-faint);
+}
+
+/* squad open targets inside played cards */
+.bm-card .team-clickable,
+.final-card .team-clickable {
+	cursor: pointer;
+}
+
+.bm-card .team-clickable:hover,
+.final-card .team-clickable:hover {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.final-card .final-circle.team-clickable:hover {
+	text-decoration: none;
+	border-color: var(--accent);
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+	.champion {
+		padding: var(--sp-5) var(--sp-4);
+	}
+
+	.champion-name {
+		font-size: var(--fs-2xl);
+	}
+
+	.champion-flag {
+		font-size: 2.25rem;
+	}
+
+	.bm-card {
+		width: 136px;
+	}
+
+	.b-round {
+		min-width: 152px;
+	}
+
+	.bm-team {
+		font-size: var(--fs-xs);
+	}
+
+	.bm-score {
+		font-size: var(--fs-sm);
+	}
+
+	.b-conn {
+		width: 20px;
+		min-width: 20px;
+	}
+
+	.final-card {
+		gap: var(--sp-3);
+		padding: var(--sp-3) var(--sp-4);
+	}
+
+	.final-team {
+		min-width: 64px;
+	}
+
+	.final-circle {
+		width: 44px;
+		height: 44px;
+	}
+
+	.final-flag {
+		font-size: 1.375rem;
+	}
+
+	.final-name {
+		font-size: var(--fs-xs);
+	}
+
+	.final-score {
+		font-size: var(--fs-xl);
+	}
+}

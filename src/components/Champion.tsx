@@ -1,3 +1,4 @@
+import { Trophy } from "@phosphor-icons/react";
 import confetti from "canvas-confetti";
 import { useEffect, useRef } from "react";
 import type { Country } from "../data/countries";
@@ -95,50 +96,20 @@ export function Champion({ team, stats }: ChampionProps) {
 	}, []);
 
 	return (
-		<div className="champion-wrapper">
-			{/* 빛나는 배경 링 */}
-			<div className="champion-rings">
-				<div className="ring ring-1" />
-				<div className="ring ring-2" />
-				<div className="ring ring-3" />
-			</div>
-
-			{/* 떨어지는 별 파티클 */}
-			<div className="star-field">
-				{Array.from({ length: 20 }).map((_, i) => (
-					<div
-						key={`star-${
-							// biome-ignore lint/suspicious/noArrayIndexKey: 고정 장식 요소
-							i
-						}`}
-						className="falling-star"
-						style={{
-							left: `${Math.random() * 100}%`,
-							animationDelay: `${Math.random() * 3}s`,
-							animationDuration: `${2 + Math.random() * 3}s`,
-						}}
-					/>
-				))}
-			</div>
-
-			<div className="champion">
-				<div className="trophy-container">
-					<div className="trophy-glow" />
-					<div className="trophy">🏆</div>
-				</div>
-				<div className="champion-flag-container">
-					<div className="champion-flag">{team.flag}</div>
-				</div>
-				<h2 className="champion-name">
-					{tName(team)}
-					{locale === "ko" ? `(${team.name})` : ""}
-				</h2>
-				<p className="champion-rank">
+		<div className="champion">
+			<Trophy size={56} weight="fill" className="champion-trophy" />
+			<div className="champion-flag">{team.flag}</div>
+			<h2 className="champion-name">
+				{tName(team)}
+				{locale === "ko" ? `(${team.name})` : ""}
+			</h2>
+			<p className="champion-label">{t("champion.label")}</p>
+			<div className="champion-meta">
+				<span className="badge badge-accent">
 					{t("champion.rank", { rank: team.rank })}
-				</p>
-				<p className="champion-label">{t("champion.label")}</p>
+				</span>
 				{stats && (
-					<p className="champion-stats">
+					<span className="badge">
 						{t("champion.stats", {
 							played: stats.played,
 							wins: stats.wins,
@@ -146,7 +117,7 @@ export function Champion({ team, stats }: ChampionProps) {
 							losses: stats.losses,
 							winRate: stats.winRate,
 						})}
-					</p>
+					</span>
 				)}
 			</div>
 		</div>

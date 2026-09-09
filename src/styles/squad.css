@@ -1,0 +1,371 @@
+/* Squad modal: overlay, header, XI summary, position chips, roster table,
+   actions, photo zoom. Uses .panel / .chip / .badge / .btn / .icon-btn / .num
+   from base.css. */
+
+.squad-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--sp-4);
+	background: var(--overlay);
+}
+
+.squad-modal {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 1040px;
+	max-height: 85vh;
+	box-shadow: var(--shadow-pop);
+	animation: squad-enter var(--dur) var(--ease);
+}
+
+/* ---- Header ---- */
+.squad-header {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-3);
+	padding: var(--sp-4) var(--sp-5);
+	border-bottom: 1px solid var(--border);
+}
+
+.squad-header h3 {
+	flex: 1;
+	min-width: 0;
+	margin: 0;
+	font-family: var(--font-display);
+	font-size: var(--fs-xl);
+	font-weight: 700;
+	line-height: 1.1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.squad-avg {
+	font-size: var(--fs-md);
+	font-weight: 600;
+	color: var(--text-muted);
+	white-space: nowrap;
+}
+
+/* ---- Starting XI summary ---- */
+.squad-xi-info {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--sp-2) var(--sp-4);
+	padding: var(--sp-2) var(--sp-5);
+	border-bottom: 1px solid var(--border);
+	font-size: var(--fs-sm);
+	color: var(--text-muted);
+}
+
+.xi-count {
+	font-size: var(--fs-md);
+	font-weight: 700;
+	color: var(--text);
+}
+
+.xi-avg {
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+.xi-legend {
+	margin-left: auto;
+	font-size: var(--fs-xs);
+	color: var(--text-faint);
+}
+
+/* ---- Position filter chips ---- */
+.squad-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sp-2);
+	min-width: 0;
+	margin: 0;
+	padding: var(--sp-2) var(--sp-5);
+	border: 0;
+	border-bottom: 1px solid var(--border);
+}
+
+/* ---- Roster table ---- */
+.squad-table-wrap {
+	flex: 1;
+	min-height: 0;
+	overflow: auto;
+}
+
+.squad-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: var(--fs-sm);
+}
+
+.squad-table thead {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.squad-table th {
+	padding: var(--sp-2);
+	background: var(--bg-elev);
+	color: var(--text-muted);
+	font-size: var(--fs-xs);
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+	/* border-bottom does not stick with border-collapse; inset shadow does */
+	box-shadow: inset 0 -1px 0 var(--border);
+}
+
+.squad-table .th-check {
+	width: 36px;
+}
+.squad-table .th-num {
+	width: 32px;
+}
+.squad-table .th-name {
+	min-width: 140px;
+	text-align: left;
+}
+.squad-table .th-pos {
+	width: 48px;
+}
+.squad-table .th-ovr {
+	width: 44px;
+}
+.squad-table .th-stat {
+	width: 64px;
+}
+.squad-table .th-height {
+	width: 44px;
+}
+.squad-table .th-age {
+	width: 40px;
+}
+
+.squad-table .th-sortable {
+	cursor: pointer;
+	user-select: none;
+	transition: color var(--dur) var(--ease);
+}
+
+.squad-table .th-sortable:hover {
+	color: var(--text);
+}
+
+.squad-row {
+	border-bottom: 1px solid var(--border);
+	cursor: pointer;
+	transition: background var(--dur) var(--ease);
+}
+
+.squad-row:hover {
+	background: var(--bg-elev-2);
+}
+
+.squad-row.selected-row {
+	background: var(--accent-soft);
+}
+
+.squad-row.selected-row td:first-child {
+	box-shadow: inset 2px 0 0 var(--accent);
+}
+
+.squad-row td {
+	padding: var(--sp-2);
+	text-align: center;
+	vertical-align: middle;
+}
+
+.check-cell input[type="checkbox"] {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin: 0 auto;
+	cursor: pointer;
+	accent-color: var(--accent);
+}
+
+.num-cell {
+	color: var(--text-faint);
+}
+
+.squad-table .name-cell {
+	max-width: 220px;
+	font-weight: 600;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.player-photo {
+	width: 24px;
+	height: 24px;
+	margin-right: var(--sp-2);
+	border-radius: 50%;
+	border: 1px solid var(--border);
+	object-fit: cover;
+	vertical-align: middle;
+	cursor: zoom-in;
+	transition: transform var(--dur) var(--ease);
+}
+
+.player-photo:hover {
+	transform: scale(1.25);
+}
+
+button.name-clickable {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+button.name-clickable:hover {
+	color: var(--accent-text);
+	text-decoration: underline;
+}
+
+.name-generated {
+	margin-left: 2px;
+	color: var(--accent-text);
+	font-size: var(--fs-xs);
+	vertical-align: super;
+}
+
+.ovr-cell {
+	font-size: var(--fs-md);
+	font-weight: 700;
+}
+
+/* stat: number with a thin track-less bar underneath */
+.stat-cell {
+	padding: var(--sp-1) var(--sp-2);
+}
+
+.stat-value {
+	display: block;
+	font-weight: 500;
+}
+
+.stat-bar {
+	display: block;
+	height: 3px;
+	margin: 2px auto 0;
+	border-radius: 2px;
+	background: var(--text-faint);
+}
+
+.height-cell,
+.age-cell {
+	color: var(--text-muted);
+}
+
+/* ---- Footer actions ---- */
+.squad-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: var(--sp-2);
+	padding: var(--sp-3) var(--sp-5);
+	border-top: 1px solid var(--border);
+}
+
+/* ---- Photo zoom ---- */
+.photo-zoom-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 1100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border: 0;
+	background: var(--overlay);
+	color: inherit;
+	font: inherit;
+	cursor: zoom-out;
+}
+
+.photo-zoom-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--sp-3);
+	padding: var(--sp-5);
+	animation: squad-enter var(--dur) var(--ease);
+}
+
+.photo-zoom-card img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 1px solid var(--border);
+	object-fit: cover;
+}
+
+.photo-zoom-name {
+	font-family: var(--font-display);
+	font-size: var(--fs-lg);
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	.squad-overlay {
+		padding: var(--sp-3);
+	}
+
+	.squad-modal {
+		width: calc(100vw - 24px);
+		max-width: none;
+		max-height: 90vh;
+	}
+
+	.squad-header,
+	.squad-xi-info,
+	.squad-filters,
+	.squad-actions {
+		padding-left: var(--sp-3);
+		padding-right: var(--sp-3);
+	}
+
+	.squad-header h3 {
+		font-size: var(--fs-lg);
+	}
+
+	.squad-table-wrap {
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.squad-table {
+		min-width: 720px;
+	}
+
+	.check-cell input[type="checkbox"] {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+@keyframes squad-enter {
+	from {
+		opacity: 0;
+		transform: scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}

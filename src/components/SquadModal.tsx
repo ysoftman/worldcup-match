@@ -1,3 +1,4 @@
+import { X } from "@phosphor-icons/react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Country } from "../data/countries";
 import { useI18n } from "../i18nContext";
@@ -41,27 +42,12 @@ const POSITION_FILTERS: Array<{
 	{ labelKey: "FW", value: "FWD" },
 ];
 
-function statColor(val: number): string {
-	if (val >= 80) return "#27ae60";
-	if (val >= 60) return "#f1c40f";
-	if (val >= 50) return "#e67e22";
-	return "#e74c3c";
-}
-
 function StatCell({ value }: { value: number }) {
 	const pct = Math.min(100, ((value - 30) / 69) * 100);
 	return (
 		<td className="stat-cell">
-			<div className="stat-bar-bg">
-				<div
-					className="stat-bar-fill"
-					style={{
-						width: `${pct}%`,
-						backgroundColor: statColor(value),
-					}}
-				/>
-			</div>
-			<span className="stat-value">{value}</span>
+			<span className="stat-value num">{value}</span>
+			<span className="stat-bar" style={{ width: `${pct}%` }} />
 		</td>
 	);
 }
@@ -224,26 +210,26 @@ export function SquadModal({
 			aria-modal="true"
 			aria-labelledby="squad-title"
 		>
-			<div className="squad-modal" ref={modalRef}>
+			<div className="squad-modal panel" ref={modalRef}>
 				<div className="squad-header">
 					<h3 id="squad-title">
 						{t("squad.title", { flag: team.flag, name: tName(team) })}
 					</h3>
-					<span className="squad-avg">
+					<span className="squad-avg num">
 						{t("squad.avg", { value: avgOverall })}
 					</span>
 					<button
 						type="button"
-						className="squad-close"
+						className="icon-btn squad-close"
 						onClick={onClose}
 						aria-label={t("squad.close")}
 					>
-						✕
+						<X size={18} weight="bold" />
 					</button>
 				</div>
 
 				<div className="squad-xi-info">
-					<span className="xi-count">
+					<span className="xi-count num">
 						{t("squad.starting", { count: localXI.size })}
 						{xiAvg > 0 && (
 							<span className="xi-avg">
@@ -251,7 +237,7 @@ export function SquadModal({
 							</span>
 						)}
 					</span>
-					<span className="xi-positions">
+					<span className="xi-positions num">
 						GK:{xiCounts.GK} / DF:{xiCounts.DEF} / MF:{xiCounts.MID} / FW:
 						{xiCounts.FWD}
 					</span>
@@ -268,7 +254,7 @@ export function SquadModal({
 						<button
 							key={f.value}
 							type="button"
-							className={`squad-filter ${filter === f.value ? "active" : ""}`}
+							className={`chip ${filter === f.value ? "is-selected" : ""}`}
 							onClick={() => setFilter(f.value)}
 							aria-pressed={filter === f.value}
 						>
@@ -426,7 +412,7 @@ export function SquadModal({
 												/>
 											</td>
 										)}
-										<td className="num-cell">{p.number}</td>
+										<td className="num-cell num">{p.number}</td>
 										<td className="name-cell">
 											{p.photo && (
 												<img
@@ -462,23 +448,20 @@ export function SquadModal({
 											)}
 											{!isReal && <span className="name-generated">*</span>}
 										</td>
-										<td className={`pos-cell pos-${p.position.toLowerCase()}`}>
-											{POSITION_LABELS[p.position]}
+										<td className="pos-cell">
+											<span className="badge">
+												{POSITION_LABELS[p.position]}
+											</span>
 										</td>
-										<td
-											className="ovr-cell"
-											style={{ color: statColor(p.overall) }}
-										>
-											{p.overall}
-										</td>
+										<td className="ovr-cell num">{p.overall}</td>
 										<StatCell value={p.pace} />
 										<StatCell value={p.shooting} />
 										<StatCell value={p.passing} />
 										<StatCell value={p.dribbling} />
 										<StatCell value={p.defending} />
 										<StatCell value={p.physical} />
-										<td className="height-cell">{p.height}</td>
-										<td className="age-cell">{p.age}</td>
+										<td className="height-cell num">{p.height}</td>
+										<td className="age-cell num">{p.age}</td>
 									</tr>
 								);
 							})}
@@ -489,23 +472,19 @@ export function SquadModal({
 				<div className="squad-actions">
 					{!readOnly && (
 						<>
-							<button
-								type="button"
-								className="btn btn-auto"
-								onClick={handleAutoSelect}
-							>
+							<button type="button" className="btn" onClick={handleAutoSelect}>
 								{t("squad.autoSelect")}
 							</button>
 							<button
 								type="button"
-								className="btn btn-squad-reset"
+								className="btn btn-ghost"
 								onClick={handleReset}
 							>
 								{t("squad.reset")}
 							</button>
 							<button
 								type="button"
-								className="btn btn-confirm"
+								className="btn btn-primary"
 								onClick={handleConfirm}
 							>
 								{t("squad.confirm")}
@@ -513,7 +492,7 @@ export function SquadModal({
 						</>
 					)}
 					{readOnly && (
-						<button type="button" className="btn btn-confirm" onClick={onClose}>
+						<button type="button" className="btn btn-primary" onClick={onClose}>
 							{t("squad.closeBtn")}
 						</button>
 					)}
@@ -529,7 +508,7 @@ export function SquadModal({
 					}}
 					onMouseDown={(e) => e.stopPropagation()}
 				>
-					<div className="photo-zoom-card">
+					<div className="photo-zoom-card panel">
 						<img src={zoomPhoto.src} alt={zoomPhoto.name} />
 						<span className="photo-zoom-name">{zoomPhoto.name}</span>
 					</div>

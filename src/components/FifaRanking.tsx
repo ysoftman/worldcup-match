@@ -1,3 +1,4 @@
+import { ListNumbers } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { ALL_COUNTRIES, type Confederation } from "../data/countries";
 import { useI18n } from "../i18nContext";
@@ -35,22 +36,24 @@ export function FifaRanking() {
 	).toSorted((a, b) => a.rank - b.rank);
 
 	return (
-		<div ref={panelRef} className={`ranking-panel ${open ? "open" : ""}`}>
+		<div ref={panelRef} className="ranking-panel">
 			<button
 				type="button"
-				className="ranking-toggle"
+				className="btn btn-sm"
+				aria-expanded={open}
 				onClick={() => setOpen(!open)}
 			>
-				📊 {open ? t("ranking.toggle.open") : t("ranking.toggle.closed")}
+				<ListNumbers size={16} weight="bold" />
+				{open ? t("ranking.toggle.open") : t("ranking.toggle.closed")}
 			</button>
 
 			{open && (
-				<div className="ranking-body">
+				<div className="popover ranking-body">
 					<div className="ranking-source">{t("ranking.source")}</div>
 					<div className="ranking-filters">
 						<button
 							type="button"
-							className={`ranking-filter ${filter === "ALL" ? "active" : ""}`}
+							className={`chip ${filter === "ALL" ? "is-selected" : ""}`}
 							onClick={() => setFilter("ALL")}
 						>
 							{t("ranking.all")}
@@ -59,7 +62,7 @@ export function FifaRanking() {
 							<button
 								type="button"
 								key={conf}
-								className={`ranking-filter ${filter === conf ? "active" : ""}`}
+								className={`chip ${filter === conf ? "is-selected" : ""}`}
 								onClick={() => setFilter(conf)}
 							>
 								{t(`conf.${conf}`)}
@@ -69,10 +72,10 @@ export function FifaRanking() {
 					<div className="ranking-list">
 						{filtered.map((c) => (
 							<div className="ranking-item" key={c.code}>
-								<span className="ranking-pos">{c.rank}</span>
+								<span className="num ranking-pos">{c.rank}</span>
 								<span className="ranking-flag">{c.flag}</span>
 								<span className="ranking-name">{tName(c)}</span>
-								<span className="ranking-conf">{t(`conf.${c.conf}`)}</span>
+								<span className="badge">{t(`conf.${c.conf}`)}</span>
 							</div>
 						))}
 					</div>

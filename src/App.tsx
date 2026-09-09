@@ -1,3 +1,11 @@
+import {
+	CaretDown,
+	Moon,
+	MusicNotes,
+	SpeakerHigh,
+	SpeakerSlash,
+	Sun,
+} from "@phosphor-icons/react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BallTournament } from "./components/BallTournament";
 import { BracketView } from "./components/BracketView";
@@ -573,73 +581,82 @@ function App() {
 
 	return (
 		<div className="app">
-			<div className="top-panels">
-				<button
-					type="button"
-					className="theme-toggle"
-					onClick={toggleTheme}
-					title={
-						theme === "dark"
-							? t("toggle.theme.titleLight")
-							: t("toggle.theme.titleDark")
-					}
-					aria-label={
-						theme === "dark" ? t("toggle.theme.light") : t("toggle.theme.dark")
-					}
-				>
-					{theme === "dark" ? "☀️" : "🌙"}
-				</button>
-				<button
-					type="button"
-					className={`sound-toggle ${soundOn ? "on" : "off"}`}
-					onClick={toggleSound}
-					title={soundOn ? t("toggle.sound.off") : t("toggle.sound.on")}
-					aria-label={soundOn ? t("toggle.sound.off") : t("toggle.sound.on")}
-				>
-					🔊
-				</button>
-				<button
-					type="button"
-					className={`bgm-toggle ${bgmOn ? "on" : "off"}`}
-					onClick={toggleBgm}
-					title={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
-					aria-label={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
-				>
-					🎵
-				</button>
-				<label className="lang-select-wrap" title={t("toggle.language")}>
-					<span className="lang-flag" aria-hidden="true">
-						{LOCALE_FLAG[locale]}
-					</span>
-					<span className="lang-code">{LOCALE_SHORT[locale]}</span>
-					<span className="lang-caret" aria-hidden="true">
-						▾
-					</span>
-					<select
-						className="lang-select"
-						value={locale}
-						onChange={(e) => setLocale(e.target.value as Locale)}
-						aria-label={t("toggle.language")}
-					>
-						{LOCALES.map((l) => (
-							<option key={l} value={l}>
-								{LOCALE_FLAG[l]} {LOCALE_LABELS[l]}
-							</option>
-						))}
-					</select>
-				</label>
-				<FifaRanking />
-				<WinnerHistory />
-			</div>
-			<header className="header">
-				<h1 className="title">
-					<span className="title-author">{t("app.title.author")}</span>
-					<span className="title-main">
-						<span className="title-fifa">{t("app.title.fifa")}</span>{" "}
-						<span className="title-worldcup">{t("app.title.worldcup")}</span>
+			<header className="topbar">
+				<h1 className="brand">
+					<span className="brand-author">{t("app.title.author")}</span>
+					<span className="brand-main">
+						<span className="brand-fifa">{t("app.title.fifa")}</span>{" "}
+						{t("app.title.worldcup")}
 					</span>
 				</h1>
-				<p className="update-date">{t("app.rankingNote")}</p>
+				<div className="top-panels">
+					<button
+						type="button"
+						className="icon-btn"
+						onClick={toggleTheme}
+						title={
+							theme === "dark"
+								? t("toggle.theme.titleLight")
+								: t("toggle.theme.titleDark")
+						}
+						aria-label={
+							theme === "dark"
+								? t("toggle.theme.light")
+								: t("toggle.theme.dark")
+						}
+					>
+						{theme === "dark" ? (
+							<Sun size={18} weight="bold" />
+						) : (
+							<Moon size={18} weight="bold" />
+						)}
+					</button>
+					<button
+						type="button"
+						className="icon-btn"
+						aria-pressed={soundOn}
+						onClick={toggleSound}
+						title={soundOn ? t("toggle.sound.off") : t("toggle.sound.on")}
+						aria-label={soundOn ? t("toggle.sound.off") : t("toggle.sound.on")}
+					>
+						{soundOn ? (
+							<SpeakerHigh size={18} weight="bold" />
+						) : (
+							<SpeakerSlash size={18} weight="bold" />
+						)}
+					</button>
+					<button
+						type="button"
+						className="icon-btn"
+						aria-pressed={bgmOn}
+						onClick={toggleBgm}
+						title={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
+						aria-label={bgmOn ? t("toggle.bgm.off") : t("toggle.bgm.on")}
+					>
+						<MusicNotes size={18} weight="bold" />
+					</button>
+					<label className="lang-select-wrap" title={t("toggle.language")}>
+						<span className="lang-flag" aria-hidden="true">
+							{LOCALE_FLAG[locale]}
+						</span>
+						<span className="lang-code">{LOCALE_SHORT[locale]}</span>
+						<CaretDown size={12} weight="bold" aria-hidden="true" />
+						<select
+							className="lang-select"
+							value={locale}
+							onChange={(e) => setLocale(e.target.value as Locale)}
+							aria-label={t("toggle.language")}
+						>
+							{LOCALES.map((l) => (
+								<option key={l} value={l}>
+									{LOCALE_FLAG[l]} {LOCALE_LABELS[l]}
+								</option>
+							))}
+						</select>
+					</label>
+					<FifaRanking />
+					<WinnerHistory />
+				</div>
 			</header>
 
 			{phase !== "select" && phase !== "penalty" && (
@@ -657,7 +674,6 @@ function App() {
 									currentIdx > i ? "done" : ""
 								}`}
 							>
-								<span className="phase-dot" />
 								<span className="phase-label">{t(`phase.${p}`)}</span>
 							</div>
 						));
@@ -666,14 +682,12 @@ function App() {
 			)}
 
 			{phase === "select" && (
-				<div className="size-selector">
+				<div className="preset-row">
 					{ALL_PRESETS.map((p) => (
 						<button
 							type="button"
 							key={p.id}
-							className={`btn btn-preset ${
-								appliedPreset?.id === p.id ? "active" : ""
-							}`}
+							className={`chip ${appliedPreset?.id === p.id ? "is-selected" : ""}`}
 							onClick={() => applyPreset(p)}
 						>
 							{t(`preset.${p.id}`)}
@@ -686,7 +700,7 @@ function App() {
 				{phase === "group" && hasUnplayedGroupMatches && (
 					<button
 						type="button"
-						className="btn btn-next"
+						className="btn btn-primary"
 						onClick={playAllGroupMatches}
 						disabled={animatingMatchIds.size > 0}
 					>
@@ -697,7 +711,7 @@ function App() {
 				{phase === "group" && groupAllDone && (
 					<button
 						type="button"
-						className="btn btn-start"
+						className="btn btn-primary"
 						onClick={advanceToKnockout}
 					>
 						{t("btn.advanceTo", { round: firstKnockoutLabel })}
@@ -709,7 +723,7 @@ function App() {
 					currentRound.matches.some((m) => !m.played) && (
 						<button
 							type="button"
-							className="btn btn-next"
+							className="btn btn-primary"
 							onClick={playAllCurrentRound}
 						>
 							{t("btn.playAllRound", {
@@ -721,7 +735,7 @@ function App() {
 				{phase !== "select" && phase !== "penalty" && (
 					<button
 						type="button"
-						className="btn btn-reset"
+						className="btn btn-ghost"
 						onClick={resetTournament}
 					>
 						{t("btn.reset")}
@@ -790,7 +804,7 @@ function App() {
 								})}
 								<button
 									type="button"
-									className="btn-cancel-swap"
+									className="btn btn-ghost btn-sm"
 									onClick={() => setSwapSelection(null)}
 								>
 									{t("swap.cancel")}
@@ -832,8 +846,13 @@ function App() {
 					readOnly={squadModal.readOnly}
 				/>
 			)}
-			<footer className="app-version">
-				{__APP_VERSION__} · {__APP_COMMIT__} · {__APP_BUILD_TIME__}
+			<footer className="app-footer">
+				<span>{t("app.rankingNote")}</span>
+				<span className="app-version">
+					<span>{__APP_VERSION__}</span>
+					<span>{__APP_COMMIT__}</span>
+					<span>{__APP_BUILD_TIME__}</span>
+				</span>
 			</footer>
 		</div>
 	);

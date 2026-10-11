@@ -17,6 +17,8 @@ export default defineConfig({
 	define: {
 		__APP_VERSION__: JSON.stringify(git("describe --tags --abbrev=0") || "develop"),
 		__APP_COMMIT__: JSON.stringify(git("rev-parse --short HEAD")),
-		__APP_BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+		__APP_BUILD_TIME__: JSON.stringify(
+			`${new Date().toLocaleString("sv-SE", { timeZone: "Asia/Seoul" })} KST`,
+		),
 	},
 });

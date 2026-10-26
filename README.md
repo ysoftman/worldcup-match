@@ -51,12 +51,12 @@ Rounds eliminate teams by ball-drop order rather than simulated matches:
 
 ## Tech Stack
 
-- Vite + React + TypeScript
+- React + TypeScript
 - planck.js (bounce ball physics)
 - Barlow / Barlow Condensed via @fontsource (self-hosted fonts)
 - Phosphor Icons (@phosphor-icons/react)
 - Biome (linter/formatter)
-- bun (package manager)
+- bun (package manager, dev server, bundler)
 
 ## Getting Started
 

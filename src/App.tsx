@@ -849,9 +849,15 @@ function App() {
 			<footer className="app-footer">
 				<span>{t("app.rankingNote")}</span>
 				<span className="app-version">
-					<span>{__APP_VERSION__}</span>
-					<span>{__APP_COMMIT__}</span>
-					<span>{__APP_BUILD_TIME__}</span>
+					<span>
+						{typeof __APP_VERSION__ === "string" ? __APP_VERSION__ : "develop"}
+					</span>
+					<span>
+						{typeof __APP_COMMIT__ === "string" ? __APP_COMMIT__ : ""}
+					</span>
+					<span>
+						{typeof __APP_BUILD_TIME__ === "string" ? __APP_BUILD_TIME__ : ""}
+					</span>
 				</span>
 			</footer>
 		</div>

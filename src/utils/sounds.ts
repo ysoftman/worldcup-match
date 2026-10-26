@@ -1,3 +1,8 @@
+import goalUrl from "../sounds/goal.wav";
+import bgmUrl from "../sounds/Raise That Flag.mp3";
+import victoryUrl from "../sounds/victory.wav";
+import whistleUrl from "../sounds/whistle.wav";
+
 let ctx: AudioContext | null = null;
 let muted = localStorage.getItem("soundMuted") === "true";
 
@@ -42,11 +47,10 @@ function playSoundFile(key: string, volume = 0.4) {
 	src.start(0);
 }
 
-// 앱 시작 시 사전 로드 (Vite base path 반영)
-const base = import.meta.env.BASE_URL;
-loadSound("whistle", `${base}sounds/whistle.wav`);
-loadSound("goal", `${base}sounds/goal.wav`);
-loadSound("victory", `${base}sounds/victory.wav`);
+// 앱 시작 시 사전 로드
+loadSound("whistle", whistleUrl);
+loadSound("goal", goalUrl);
+loadSound("victory", victoryUrl);
 
 export function isMuted(): boolean {
 	return muted;
@@ -162,14 +166,13 @@ export function playClick() {
 
 // --- 배경음악 (BGM) ---
 // SFX mute와는 독립적. HTMLAudioElement 싱글턴으로 loop 재생.
-const BGM_URL = `${base}sounds/${encodeURIComponent("Raise That Flag.mp3")}`;
 let bgmEl: HTMLAudioElement | null = null;
 let bgmOn = localStorage.getItem("bgmOn") === "true";
 let gestureListenerAttached = false;
 
 function getBgmEl(): HTMLAudioElement {
 	if (!bgmEl) {
-		bgmEl = new Audio(BGM_URL);
+		bgmEl = new Audio(bgmUrl);
 		bgmEl.loop = true;
 		bgmEl.volume = 0.3;
 		bgmEl.preload = "auto";
